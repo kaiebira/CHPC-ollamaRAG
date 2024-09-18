@@ -1,0 +1,558 @@
+<!DOCTYPE HTML><html lang="en-US" class="no-js">
+   <head><!-- PAGE HEAD -->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+      <title>Advanced Modules Tutorial - Center for High Performance Computing - The University of Utah</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="robots" content="index,follow">
+      <link rel="icon" href="//templates.utah.edu/_main-v3-1/images/template/favicon.ico">
+      <link rel="apple-touch-icon-precomposed" href="//templates.utah.edu/_main-v3-1/images/template/apple-touch-icon.png">
+      <link rel="stylesheet" href="//templates.utah.edu/_main-v3-1/css/main.min.css" type="text/css"><noscript>
+         <link rel="stylesheet" href="//templates.utah.edu/_main-v3-1/css/assets/fontawesome/css/all.min.css" type="text/css"></noscript><link href="/_resources/css/custom.css" rel="stylesheet" type="text/css">
+      <script src="//templates.utah.edu/_main-v3-1/js/head-code.min.js"></script>
+      <!-- HEAD CODE -->
+      
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y160DVJ0DZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y160DVJ0DZ');
+</script>
+
+      
+      <!-- END HEAD CODE -->
+      <!-- END PAGE HEAD -->
+      </head>
+   <body class="has-headernav"><!-- PAGE BODY -->
+      <a class="uu-skip-link" href="#skip-link-target">Skip to content</a>
+      <!-- BODY TOP CODE -->
+            <!-- END BODY TOP CODE -->
+      
+      <div id="uu-top-target" class="uu-site"><!-- SEARCH -->
+         <div class="uu-search" role="search">
+    <div class="uu-search__container">
+        <!-- SITE SEARCH -->
+        <form method="get" id="search-site" class="uu-search__form" action="/search/index.php">
+
+            <label for="inputSearchSite" class="sr-only">Search Site:</label>
+            <input type="text" id="inputSearchSite" name="q" value="" placeholder="Search Site" />
+            <input type="hidden" name="gcse_action" value="site" />
+
+            <div class="form-powered-by">
+                <span>Powered by</span> 
+                <img src="https://templates.utah.edu/_main-v3-1/images/template/google-logo.png" alt="Google Search">
+            </div>
+
+        </form>
+        <!-- END SITE SEARCH -->
+        <!-- CAMPUS SEARCH -->
+        <form method="get" id="search-campus" class="uu-search__form" action="/search/index.php">
+
+            <label for="inputSearchCampus" class="sr-only">Search Campus:</label>
+            <input type="text" id="inputSearchCampus" name="q" value="" placeholder="Search Campus" />
+            <input type="hidden" name="gcse_action" value="campus" />
+
+            <div class="form-powered-by">
+                <span>Powered by</span> 
+                <img src="https://templates.utah.edu/_main-v3-1/images/template/google-logo.png" alt="Google Search">
+            </div>
+        </form>
+        <!-- END CAMPUS SEARCH -->
+
+        <!-- SEARCH TYPE TOGGLE -->
+        <div class="search-type-toggle">
+            <label class="uu-switch" for="search_campus_checkbox">
+                <input type="checkbox" name="search_campus_checkbox" value="" id="search_campus_checkbox">
+                <span class="uu-switch-slider"></span>
+                <span class="uu-switch-label">Search Campus</span>
+            </label>
+        </div>
+        <!-- END SEARCH TYPE TOGGLE -->
+
+    </div>
+</div><!-- END SEARCH -->
+         <!-- HEADER -->
+         
+         <header class="uu-header">
+            <div class="uu-header__container">
+               <!-- ALERT AREA -->
+               <div id="alert_bar" class="uu-alert-bar"> 
+	<a href="https://coronavirus.utah.edu/">University of Utah COVID-19 Updates</a>
+</div><!-- END ALERT AREA -->
+               
+               <div class="uu-header__top"> <a href="https://www.utah.edu/" class="uu-header__logo"><span class="sr-only">The University of Utah</span></a>                  <div class="uu-header__middle">
+                     <!-- HEADER TITLE -->
+                     <div class="uu-header__title">
+<h2><a href="/">CHPC - Research Computing and Data Support for the University</a></h2>
+<!-- <h3><a href="http://it.utah.edu">University Information Technology</a></h3> --></div><!-- END HEADER TITLE -->
+                     <!-- HEADER NAVIGATION -->
+                     
+<nav class="uu-header__nav">
+	
+<ul class="uu-menu__level1">
+<ul class="uu-menu__level1">
+<li class="has-sub"><a href="#">About Us</a>
+<ul class="sub-menu">
+<li><a href="/about/index.php">About Us</a></li>
+<li><a href="https://www.chpc.utah.edu/about/vision.php">Vision</a></li>
+<li><a href="/about/staff.php">Staff</a></li>
+<li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Information</a></li>
+<li><a href="https://www.chpc.utah.edu/about/acknowledge.php">Acknowledging CHPC</a></li>
+<li><a href="https://www.chpc.utah.edu/highlights.php">Research Highlights</a></li>
+<li><a href="https://www.chpc.utah.edu/about/partners.php">Partners</a></li>
+<li><a href="/news/index.php">News</a></li>
+<li><a href="/about/governance.php">Governance</a></li>
+</ul>
+</li>
+<li class="has-sub"><a href="#">Resources</a>
+<ul class="sub-menu">
+<li><a href="https://www.chpc.utah.edu/resources/index.php">Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/HPC_Clusters.php">HPC Clusters</a></li>
+<li><a href="/resources/storage_services.php">Storage Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="/resources/virtualmachines.php">Virtual Machines</a></li>
+<li><a href="/resources/hosting.php">Hosting Services</a></li>
+<li><a href="/resources/Networking.php">Networking</a></li>
+<li><a href="/resources/ProtectedEnvironment.php">Protected Environment</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="/userservices/index.php">User Services</a></li>
+</ul>
+</li>
+<li class="has-sub sub-width-lg"><a href="#">Documentation</a>
+<ul class="sub-menu">
+<li><a href="https://www.chpc.utah.edu/documentation/index.php">Documentation</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/gettingstarted.php">Getting Started</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/access.php">Accessing Our Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/videos/index.php">Short Training Videos</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/index.php">Cluster Guides</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/beehive.php">Beehive User Guide (Windows Server)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/gpus-accelerators.php">GPU &amp; Accelerators</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/frisco-nodes.php">Frisco Nodes</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/narwhal.php">Narwhal User Guide (Protected Environment Statistics)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/software/index.php">Software</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php">Programming Guide</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/policies/index.php">Policy Manual</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/HelloWorldMPI.php">HPC Basics - Hello World MPI</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/faq.php">Frequently Asked Questions</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/white_papers/index.php">White Papers</a></li>
+</ul>
+</li>
+<li class="has-sub"><a href="#">User Services</a>
+<ul class="sub-menu">
+<li><a href="/userservices/index.php">User Services</a></li>
+<li><a href="https://www.chpc.utah.edu/userservices/accounts.php">Accounts</a></li>
+<li><a href="/userservices/allocations.php">Allocations</a></li>
+<li><a href="/userservices/gettinghelp.php">Getting Help</a></li>
+<li><a href="https://www.chpc.utah.edu/presentations/index.php">Training</a></li>
+</ul>
+</li>
+<li class="has-sub sub-width-lg"><a href="#">Usage</a>
+<ul class="sub-menu">
+<li><a href="/usage/cluster/index.php">Cluster Usage</a>
+<ul>
+<li><a href="/usage/cluster/current-project-general.php">General Allocation Pool</a></li>
+<li><a href="/usage/cluster/current-project-lonepeak.php">Lonepeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-kingspeak.php">Kingspeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-ash.php">Ash Cluster</a></li>
+<li><a href="/usage/cluster/current-project-redwood.php">Redwood Cluster</a></li>
+</ul>
+</li>
+<li><a href="/usage/graphs.php?g=cluster%20utilization&amp;host=combined&amp;type=daily_utilization">Cluster Utilization Graphs</a></li>
+<li><a href="/usage/graphs.php?g=hpc%20cluster%20scratch&amp;host=chpc_gen&amp;type=cpu">HPC Cluster Scratch</a></li>
+<li><a href="/usage/graphs.php?g=network&amp;host=Campus+Gateway&amp;type=daily_traffic">Network</a>
+<ul>
+<li><a href="/resources/maddash-dashboards.php">Maddash Dashboards</a></li>
+</ul>
+</li>
+<li><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">UEN Weathermap (Only Available on UEN Networks)</a></li>
+<li><a href="http://snapp2.bldc.grnoc.iu.edu/i2al2s/#&amp;p=3%2C42&amp;ccid=3&amp;tab=1&amp;search=undefined&amp;pwidth=undefined&amp;ccat=undefined&amp;url=show-graph.cgi%3Fcollection_ids%3D145%26end%3D1461772131%26start%3D1461771831%26cf%3DAVERAGE%26ds%3Doutput%2Cinput%26collection_ids%3D145" target="_blank" rel="noopener">UEN Aggregate Utilization</a></li>
+<li><a href="http://uofu.status.io">UofU IT Services Status</a></li>
+<li><a href="https://status.it.utah.edu">University Application Heath Summary - NOC</a></li>
+</ul>
+</li>
+<li><a href="/role/">My Account</a></li>
+</ul>
+</ul>	
+</nav>
+
+<!-- END HEADER NAVIGATION -->
+                     </div>
+                  <div class="uu-search-toggle"><button class="uu-search__trigger"><span class="far fa-search" aria-hidden="true"></span><span class="sr-only">Search</span></button></div><button id="jsNavTrigger" class="uu-nav__trigger" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Reveal Menu</span><span></span></button></div>
+            </div>
+         </header>
+         <!-- END HEADER -->
+         <!-- PUSH NAVIGATION -->
+         
+         <section class="uu-nav">
+            <div class="uu-nav__container"><button id="jsMobileNavTrigger" class="uu-nav__trigger" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Reveal Menu</span><span></span></button><header class="uu-nav__header">
+                  <h2 class="sr-only">Main Navigation</h2>
+                  <!-- Navigation Logo -->
+<a href="https://utah.edu/" class="uu-nav__logo">
+	<img src="https://templates.utah.edu/_main-v3-1/images/template/university-of-utah-logo.svg" alt="The University of Utah"/>
+</a></header>
+               <nav class="uu-menu"><p><h2 class="uu-menu__title">Main Menu</h2>
+<hr />
+<ul class="uu-menu__level1">
+<li><a href="/">Home</a></li>
+<li class="has-sublist"><a href="#">About Us</a>
+<ul class="uu-menu__level2">
+<li><a href="/about/index.php">About Us</a></li>
+<li><a href="https://www.chpc.utah.edu/about/vision.php">Vision</a></li>
+<li><a href="/about/staff.php">Staff</a></li>
+<li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Information</a></li>
+<li><a href="https://www.chpc.utah.edu/about/acknowledge.php">Acknowledging CHPC</a></li>
+<!--<li><a href="/about/bibliography/CHPC%20BIB.pdf" target="_blank" rel="noopener">CHPC Bibliography</a></li>-->
+<li><a href="https://www.chpc.utah.edu/about/SupportedResearch.php">Supported Research</a></li>
+<li><a href="https://www.chpc.utah.edu/highlights.php">Research Highlights</a></li>
+<li><a href="https://www.chpc.utah.edu/about/partners.php">Partners</a></li>
+<li><a href="/news/index.php">News</a></li>
+<li><a title="University Information Technology" href="https://it.utah.edu/" target="_blank" rel="noopener">UIT</a></li>
+<li><a href="/about/governance.php">Governance</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Resources</a>
+<ul class="uu-menu__level2">
+<li><a href="https://www.chpc.utah.edu/resources/index.php">Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/HPC_Clusters.php">HPC Clusters</a></li>
+<li><a href="/resources/storage_services.php">Storage Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="/resources/virtualmachines.php">Virtual Machines</a></li>
+<li><a href="/resources/hosting.php">Hosting Services</a></li>
+<li><a href="/resources/Networking.php">Networking</a></li>
+<li><a href="/resources/ProtectedEnvironment.php">Protected Environment</a></li>
+<li><a href="/documentation/software/ai.php">AI/ML Resources</a></li>
+<li><a href="/userservices/index.php">User Services</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Documentation</a>
+<ul class="uu-menu__level2">
+<li><a href="https://www.chpc.utah.edu/documentation/index.php">Documentation</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/gettingstarted.php">Getting Started</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/access.php">Accessing Our Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/videos/index.php">Short Training Videos</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/index.php">Cluster Guides</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/beehive.php">Beehive User Guide (Windows Server)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/gpus-accelerators.php">GPU &amp; Accelerators</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/frisco-nodes.php">Frisco Nodes</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/narwhal.php">Narwhal User Guide (Protected Environment Statistics)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/software/index.php">Software</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php">Programming Guide</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/policies/index.php">Policy Manual</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/HelloWorldMPI.php">HPC Basics - Hello World MPI</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/faq.php">Frequently Asked Questions</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/white_papers/index.php">White Papers</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">User Services</a>
+<ul class="uu-menu__level2">
+<li><a href="/userservices/index.php">User Services</a></li>
+<li><a href="https://www.chpc.utah.edu/userservices/accounts.php">Accounts</a></li>
+<li><a href="/userservices/allocations.php">Allocations</a></li>
+<li><a href="/userservices/gettinghelp.php">Getting Help</a></li>
+<li><a href="https://www.chpc.utah.edu/presentations/index.php">Training</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Usage</a>
+<ul class="uu-menu__level2">
+<li class="has-sublist"><a href="/usage/cluster/index.php">Cluster Usage</a>
+<ul class="uu-menu__level3">
+<li><a href="/usage/cluster/current-project-general.php">General Allocation Pool</a></li>
+<li><a href="/usage/cluster/current-project-lonepeak.php">Lonepeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-kingspeak.php">Kingspeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-ash.php">Ash Cluster</a></li>
+<li><a href="/usage/cluster/current-project-redwood.php">Redwood Cluster</a></li>
+</ul>
+</li>
+<li><a href="/usage/graphs.php?g=cluster%20utilization&amp;host=combined&amp;type=daily_utilization">Cluster Utilization Graphs</a></li>
+<li><a href="/usage/graphs.php?g=hpc%20cluster%20scratch&amp;host=chpc_gen&amp;type=cpu">HPC Cluster Scratch</a></li>
+<li class="has-sublist"><a href="/usage/graphs.php?g=network&amp;host=Campus+Gateway&amp;type=daily_traffic">Network</a>
+<ul class="uu-menu__level3">
+<li><a href="/resources/maddash-dashboards.php">Maddash Dashboards</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">UEN Weathermap</a>
+<ul class="uu-menu__level3">
+<li><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">(Only Available on UEN Networks)</a></li>
+</ul>
+</li>
+<li><a href="http://snapp2.bldc.grnoc.iu.edu/i2al2s/#&amp;p=3%2C42&amp;ccid=3&amp;tab=1&amp;search=undefined&amp;pwidth=undefined&amp;ccat=undefined&amp;url=show-graph.cgi%3Fcollection_ids%3D145%26end%3D1461772131%26start%3D1461771831%26cf%3DAVERAGE%26ds%3Doutput%2Cinput%26collection_ids%3D145" target="_blank" rel="noopener">UEN Aggregate Utilization</a></li>
+<li><a href="http://uofu.status.io">UofU IT Services Status</a></li>
+<li><a href="https://status.it.utah.edu">University Application Heath Summary - NOC</a></li>
+</ul>
+</li>
+<li><a href="/role/">My Account</a></li>
+</ul></p></nav>
+            </div>
+         </section>
+         <!-- END PUSH NAVIGATION -->
+         
+         <!-- MAIN CONTENT -->
+         <main class="uu-main" id="skip-link-target">
+            <nav aria-label="Breadcrumb" class="uu-breadcrumb">
+               <ol>
+                  <li><a href="/"></a></li>
+                  <li><a href="/documentation/">documentation</a></li>
+                  <li><a href="/documentation/software/">software</a></li>
+                  <li><span class="sr-only">Current Page: </span>Advanced Modules Tutorial</li>
+               </ol>
+            </nav>
+            <!-- SECTION 1 -->
+            
+            <section class="uu-section bg-white text-default uu-section--region-1" style="">
+               <div class="uu-section__container"><!-- SECTION HEADER -->
+                  
+                  <div class="uu-section__header  ">
+                     <h1>Advanced Modules Tutorial</h1>
+                     <p>Modules has a number of advanced features that can make working with modules even
+                        easier. Users can &nbsp;build custom module files so that they can use a custom modules
+                        environment.</p>
+                     <p>CHPC uses the Lmod version of modules produced by TACC. For more information, please
+                        visit the <a href="https://www.tacc.utexas.edu/research-development/tacc-projects/lmod">Lmod Homepage</a>.</p>
+                     <ul id="in_text_nav">
+                        <li><a href="#saving">Saving module environments</a></li>
+                        <li><a href="#custom">Creating a custom module environment</a></li>
+                        <li><a href="#writing">Writing module files</a></li>
+                     </ul>
+                     <h3><a id="saving"></a>Saving module environments</h3>
+                     <p>The commands <strong>module save </strong>and <strong>module restore</strong> can be used to save a loaded module environment for later use. This is useful if
+                        one needs different environments at different times. To create the same default environment
+                        at every login, <a href="https://www.chpc.utah.edu/documentation/software/modules.php#ctme">load the modules in ~/.cshrc[sh,csh]</a> instead. However, if you are using different sets of modules repeatedly, saving a
+                        module environment can same time, especially if there are multiple modules needed
+                        in the environment. <br><br>Suppose you want to use the Amber14 package to perform some molecular dynamics experiments
+                        with a small molecule, a process that may require a compiler, MPI library, amber,
+                        the visualization program VMD, and gaussian09, and possibly access to the CSD database
+                        to obtain a structure, and the structure file converter openbabel.</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>$ module list<br>Currently Loaded Modules:<br>&nbsp; 1) csd/2015&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3) mpich2/3.0.4&nbsp;&nbsp; 5) openbabel/2.3.2&nbsp;&nbsp; 7) gaussian09/EM64T.D01<br>&nbsp; 2) intel/2015.1.133&nbsp;&nbsp; 4) amber/14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6) vmd/1.9.1</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>In total, this comprises 7 modules; if the user needs this environment on a regular
+                        basis, instead of typing these in each time, the user can save this environment with
+                        the use of&nbsp;<strong>module save</strong>:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>$ module save md-setup<br>Saved current collection of modules to: md-setup</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>If no name is specified, the name "default" will be used. To load this list again
+                        use <strong>module restore</strong>:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>$ module purge<br>$ module list<br>No modules loaded<br>$ module restore md-setup<br>Restoring modules to user's md-setup<br>$ module list<br>Currently Loaded Modules:<br>&nbsp; 1) csd/2015&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3) mpich2/3.0.4 &nbsp; 5) openbabel/2.3.2&nbsp;&nbsp; 7) gaussian09/EM64T.D01<br>&nbsp; 2) intel/2015.1.133&nbsp;&nbsp; 4) amber/14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6) vmd/1.9.1</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>To see a list of your module savepacks, use the command <strong>module savelist</strong>:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>$ module savelist<br>Named collection list:<br>&nbsp; 1) md-setup&nbsp; 2) default</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>The files for these savepacks are stored in <strong>$HOME/.lmod.d</strong>. If you delete this directory, you will lose all savepacks!</p>
+                     <p>The same topic is also described in <a href="http://lmod.readthedocs.io/en/latest/010_user.html#user-collections" target="_blank">Lmod documentation</a>.</p>
+                     <h3><a id="custom"></a>Creating a custom module environment</h3>
+                     <p>A module environment is started by creating a directory, putting <strong>modulefiles</strong> into that directory in a specifically organized way, and then adding that directory
+                        to the $MODULEPATH variable using <strong>module use</strong>. Under Lmod, a modulefile is a simple lua script containing Lmod specific commands
+                        to set up environment variables. Other versions of modules use TCL/TK scripts; Lmod
+                        is compatible with these scripts, but the CHPC module installaton only supports modulefiles
+                        written in lua. &nbsp;Writing modulefiles will be discussed in a later section.</p>
+                     <p>The hierarchy of a modulefiles directory is straightforward. The top level directory
+                        should contain a folder called <strong>Core</strong>. This directory is the landing place for modules which have no particular dependencies.
+                        Within this directory should be additional directories, one for each package that
+                        the user anticipates using:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>mymodules$ ls<br>Core Compiler MPI<br>mymodules$ cd Core<br>mymodules/Core$ ls<br>package1 package2 package3</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>Each folder inside Core should contain one or more modulefiles, named according to
+                        the version of the package it references:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>mymodules/Core$ cd package1<br>mymodules/Core/package1$ ls<br>1.0.lua 1.2.lua 2.0.lua</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>There are two important details about the contents of this directory: <strong>1) Lmod treats ALL files in this directory as if they are modulefile</strong><strong>s, and 2) All files that do not have the extension .lua will be treated as TCL/TK
+                           scripts. </strong>This means that if you put a file in the directory modulefiles/Core that is NOT a
+                        modulefile, it will be treated like a modulefile. Attempting to load this will result
+                        in errors, and possibly unpredictable behaviour. Therefore, do not put anything besides
+                        modulefiles in a modulefile directory.</p>
+                     <p>To use a modulefile directory, the command <strong>module use</strong> is utilized. This command modifies the environment variable $MODULEPATH by prepending
+                        the given path:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>$ echo $MODULEPATH<br>/some/path/to/modulefiles<br>$ module use $HOME/mymodules/Core<br>$ echo $MODULEPATH<br>/home/u0123456/mymodules/Core:/some/path/to/modulefiles</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>The user then should be able to use any modules contained in users modulefiles directory.</p>
+                     <p>There is a way to remove this directory from the path, but first, some important notes:</p>
+                     <p><strong>1) Be extremely careful when unloading paths from modules. Unloading the wrong path
+                           can result in a broken CHPC environment.<br>2) Adding the wrong path to modules will break your spider cache and cause major errors
+                           when using module commands. <br></strong><strong>3) Do NOT modify $MODULEPATH directly; if you do this you will break modules and cause
+                           yourself headaches.</strong></p>
+                     <p>The command to unload a modulepath is <strong>module unuse</strong>:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>$ module unuse $HOME/mymodules/Core<br>$ echo $MODULEPATH<br>/some/path/to/modulefiles</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>For a more detailed explanation of module hierarchies, please visit the following
+                        page: <a href="https://lmod.readthedocs.io/en/latest/080_hierarchy.html">Module hierarchies</a></p>
+                     <h3><a id="writing"></a>Writing module files</h3>
+                     <p>Lmod's <a href="http://lmod.readthedocs.io/en/latest/015_writing_modules.html" target="_blank">Introduction to Writing Module Files</a>&nbsp; page gives an alternative instruction to what is described below.</p>
+                     <p>A detailed list of functions that can be used in a modulefile can be found at Lmod's
+                        <a href="http://lmod.readthedocs.io/en/latest/050_lua_modulefiles.html" target="_blank">Lua Modulefile Functions</a> page. In addition to these functions, any valid lua code may be used in a modulefile,
+                        however, complex modulefiles that use extensive logic are discouraged for security
+                        reasons and the sake of simplicity<strong>.</strong></p>
+                     <p>A template for users to pattern their own modulefiles after can be found at the following
+                        path:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>/uufs/chpc.utah.edu/sys/modulefiles/templates/template.lua</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>The most basic and most used function in a modulefile is <strong>prepend_path</strong>. The first argument is the variable that will be prepended; generally this is PATH
+                        or LD_LIBRARY_PATH. The second argument is the path to be prepended. Prepend_path
+                        will create the variable if it does not already exist (as may be the case for $MANPATH
+                        or $LD_LIBRARY_PATH).</p>
+                     <p>The second basic function that users will find the most value in is <strong>setenv</strong>. This is essentially identical to prepend_path, except that instead of prepending
+                        to the path, the environment variable is replaced with the given value or created
+                        from scratch.</p>
+                     <p>Users may find value in the <strong>help</strong> and <strong>whatis</strong> functions, which are useful for providing information to users on the contents and
+                        nature of a package, as well as any particular instructions which may apply to a particular
+                        module.</p>
+                     <p>If users need help creating more complex modulefiles, please contact CHPC at <a href="mailto:helpdesk@chpc.utah.edu?subject=Help%20with%20module%20files">helpdesk@chpc.utah.edu</a>. You can also look at CHPC's <a href="https://github.com/CHPC-UofU/Lmod-setup/#moduleformat" target="_blank">module format guidelines</a>. If your software comes with an environment setup script, CHPC has a scripting utility
+                        available that can automate the creation process, or consult Lmod's <a href="http://lmod.readthedocs.io/en/latest/260_sh_to_modulefile.html" target="_blank">Converting shell scripts to module files</a> page.</p>
+                     <p>Here is a simple example of a modulefile written in lua for openbabel, which covers
+                        the basic commands a user might need. Here we also utilize the <strong>pathJoin</strong> function to combine paths and temporary variables <strong>version</strong> and <strong>base</strong> to reduce the amount of typing needed to create the module.</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>-- -*- lua -*-<br>help([[<br>Openbabel is a software for converting between different chemical structure formats. This module loads Openbabel.<br>Once loaded, the command to execute openbabel is "obabel"<br>]]) <br>
+local version = "2.3.2"
+local base = pathJoin("/uufs/chpc.utah.edu/sys/installdir/openbabel", version)
+<br>prepend_path("PATH",pathJoin(base,"bin")<br>prepend_path("LD_LIBRARY_PATH",pathJoin(base,"lib")<br>setenv("BABEL_LIBDIR",pathJoin(base,"lib")<br>setenv("BABEL_DATADIR",pathJoin(base,"data/data")<br><br>whatis("Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : OpenBabel")<br>whatis("Version&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : 2.3.2")<br>whatis("Category&nbsp;&nbsp;&nbsp;&nbsp; : Application")<br>whatis("Description&nbsp; : Chemical Structure Format Converter")<br>whatis("URL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : http://openbabel.org/")<br>whatis("Installed on : 05 Feb 2015")</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     </div>
+                  <!-- END SECTION HEADER -->
+                  <!-- REGION 1 -->
+                  <!-- END REGION 1 -->
+                  <!-- SECTION FOOTER -->
+                  
+                  <div class="uu-section__footer  ">
+                     <p></p>
+                  </div>
+                  <!-- END SECTION FOOTER -->
+                  </div>
+            </section>
+            <!-- END SECTION 1 -->
+            <!-- SECTION 2 -->
+            <!-- END SECTION 2 -->
+            <!-- SECTION 3 -->
+            <!-- END SECTION 3 -->
+            <!-- SECTION 4 -->
+            <!-- END SECTION 4 -->
+            <!-- SECTION 5 -->
+            <!-- END SECTION 5 -->
+            </main>
+         <!-- END MAIN CONTENT -->
+         <!-- FOOTER -->
+         
+         <footer class="uu-footer"><div class="uu-footer__top">
+   <div class="uu-footer__top-container">
+      <div class="uu-footer__top-col1"><a href="https://www.utah.edu"><img src="https://templates.utah.edu/_main-v3-1/images/template/blocku.svg" alt="The University of Utah" class="uu-block-logo"></a><div class="department-name">
+            <h2>The Center For High Performance Computing</h2>
+         </div>
+         <div class="department-address">
+            <p>155 S 1452 E, RM. 405<br>SLC, UT 84112-0190<br>801.585.3791&nbsp;</p>
+         </div>
+      </div>
+      <div class="uu-footer__top-col2">
+         <h2 class="footer-heading">Stay in Touch</h2>
+         <hr>
+         <ul>
+            <li><a href="https://map.utah.edu/index.html?code=inscc">Find Us</a></li>
+            <li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Us</a></li>
+            <li><a href="mailto:helpdesk@chpc.utah.edu">Webmaster</a></li>
+         </ul>
+      </div>
+      <div class="uu-footer__top-col5">
+         <h2 class="footer-heading">Quick Links</h2>
+         <hr>
+         <ul>
+            <li><a href="https://www.utah.edu/a-z/">A-Z Index</a></li>
+            <li><a href="https://people.utah.edu/uWho/basic.hml">Campus Directory</a></li>
+            <li><a href="https://www.map.utah.edu">Campus Map</a></li>
+            <li><a href="https://map.utah.edu/?allshuttle=on">Shuttle Tracker </a></li>
+            <li><a href="https://cis.utah.edu/">CIS</a></li>
+            <li><a href="https://www.umail.utah.edu/">UMail</a></li>
+            <li><a href="https://attheu.utah.edu/">@ The U</a></li>
+         </ul>
+      </div>
+   </div>
+</div><div class="uu-footer__bottom">
+   <div class="uu-footer__bottom-container">
+      <div class="uu-footer__bottom-col1"><a href="https://www.utah.edu/"><img src="https://templates.utah.edu/_main-v3-1/images/template/university-of-utah-logo.svg" alt="The University of Utah" class="uu-site-logo"></a></div>
+      <div class="uu-footer__bottom-col2">
+         <div class="legal">
+            <p>© 2024 The University of Utah</p>
+            <ul>
+               <li><a href="https://www.utah.edu/indigenous-land-acknowledgment/index.php">Indigenous Land Acknowledgment</a></li>
+               <li><a href="https://www.utah.edu/nondiscrimination/">Nondiscrimination &amp; Accessibility</a></li>
+               <li><a href="https://www.utah.edu/disclaimer/">Disclaimer</a></li>
+               <li><a href="https://www.utah.edu/privacy/">Privacy</a></li>
+               <li><a href="https://www.utah.edu/credits-v3.php">Credits &amp; Attributions</a></li>
+               <li><a href="https://attheu.utah.edu/media-contacts/">Media Contacts</a></li>
+               <li><span id="directedit"></span></li>
+            </ul>
+         </div>
+      </div>
+      <div class="uu-footer__bottom-col3">
+         <ul class="uu-social-list">
+            <li><a href="https://twitter.com/uutah"><span class="fa-brands fa-x-twitter" aria-hidden="true"></span><span class="sr-only">X</span></a></li>
+            <li><a href="https://www.facebook.com/universityofutah"><span class="fab fa-facebook" aria-hidden="true"></span><span class="sr-only">Facebook</span></a></li>
+            <li><a href="https://www.instagram.com/universityofutah/"><span class="fab fa-instagram" aria-hidden="true"></span><span class="sr-only">Instagram</span></a></li>
+            <li><a href="https://www.youtube.com/user/theuniversityofutah"><span class="fab fa-youtube" aria-hidden="true"></span><span class="sr-only">Youtube</span></a></li>
+         </ul>
+      </div>
+   </div>
+</div></footer>
+         <!-- END FOOTER -->
+         </div>
+      <!-- FOOT CODE -->
+      <script src="//templates.utah.edu/_main-v3-1/js/main.min.js"></script>
+      
+      
+      
+      
+      
+      
+      <script src="//templates.utah.edu/_main-v3-1/js/directedit.js"></script><script><!--
+window.onload = function(){ directedit(); }
+//
+			--></script>
+      <script src="/_resources/js/custom.js"></script>
+            
+      <!-- END FOOT CODE -->
+      
+      <div id="hidden"><a id="de" href="https://a.cms.omniupdate.com/11/?skin=utah&amp;account=utah_home&amp;site=chpc2&amp;action=de&amp;path=/documentation/software/modules-advanced.pcf">Last Updated: 7/5/23</a></div>
+      <!-- END PAGE BODY -->
+      </body>
+</html>

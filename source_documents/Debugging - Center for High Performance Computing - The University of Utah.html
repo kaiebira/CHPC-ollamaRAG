@@ -1,0 +1,593 @@
+<!DOCTYPE HTML><html lang="en-US" class="no-js">
+   <head><!-- PAGE HEAD -->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+      <title>Debugging - Center for High Performance Computing - The University of Utah</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="robots" content="index,follow">
+      <link rel="icon" href="//templates.utah.edu/_main-v3-1/images/template/favicon.ico">
+      <link rel="apple-touch-icon-precomposed" href="//templates.utah.edu/_main-v3-1/images/template/apple-touch-icon.png">
+      <link rel="stylesheet" href="//templates.utah.edu/_main-v3-1/css/main.min.css" type="text/css"><noscript>
+         <link rel="stylesheet" href="//templates.utah.edu/_main-v3-1/css/assets/fontawesome/css/all.min.css" type="text/css"></noscript><link href="/_resources/css/custom.css" rel="stylesheet" type="text/css">
+      <script src="//templates.utah.edu/_main-v3-1/js/head-code.min.js"></script>
+      <!-- HEAD CODE -->
+      
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y160DVJ0DZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y160DVJ0DZ');
+</script>
+
+      
+      <!-- END HEAD CODE -->
+      <!-- END PAGE HEAD -->
+      </head>
+   <body class="has-headernav"><!-- PAGE BODY -->
+      <a class="uu-skip-link" href="#skip-link-target">Skip to content</a>
+      <!-- BODY TOP CODE -->
+            <!-- END BODY TOP CODE -->
+      
+      <div id="uu-top-target" class="uu-site"><!-- SEARCH -->
+         <div class="uu-search" role="search">
+    <div class="uu-search__container">
+        <!-- SITE SEARCH -->
+        <form method="get" id="search-site" class="uu-search__form" action="/search/index.php">
+
+            <label for="inputSearchSite" class="sr-only">Search Site:</label>
+            <input type="text" id="inputSearchSite" name="q" value="" placeholder="Search Site" />
+            <input type="hidden" name="gcse_action" value="site" />
+
+            <div class="form-powered-by">
+                <span>Powered by</span> 
+                <img src="https://templates.utah.edu/_main-v3-1/images/template/google-logo.png" alt="Google Search">
+            </div>
+
+        </form>
+        <!-- END SITE SEARCH -->
+        <!-- CAMPUS SEARCH -->
+        <form method="get" id="search-campus" class="uu-search__form" action="/search/index.php">
+
+            <label for="inputSearchCampus" class="sr-only">Search Campus:</label>
+            <input type="text" id="inputSearchCampus" name="q" value="" placeholder="Search Campus" />
+            <input type="hidden" name="gcse_action" value="campus" />
+
+            <div class="form-powered-by">
+                <span>Powered by</span> 
+                <img src="https://templates.utah.edu/_main-v3-1/images/template/google-logo.png" alt="Google Search">
+            </div>
+        </form>
+        <!-- END CAMPUS SEARCH -->
+
+        <!-- SEARCH TYPE TOGGLE -->
+        <div class="search-type-toggle">
+            <label class="uu-switch" for="search_campus_checkbox">
+                <input type="checkbox" name="search_campus_checkbox" value="" id="search_campus_checkbox">
+                <span class="uu-switch-slider"></span>
+                <span class="uu-switch-label">Search Campus</span>
+            </label>
+        </div>
+        <!-- END SEARCH TYPE TOGGLE -->
+
+    </div>
+</div><!-- END SEARCH -->
+         <!-- HEADER -->
+         
+         <header class="uu-header">
+            <div class="uu-header__container">
+               <!-- ALERT AREA -->
+               <div id="alert_bar" class="uu-alert-bar"> 
+	<a href="https://coronavirus.utah.edu/">University of Utah COVID-19 Updates</a>
+</div><!-- END ALERT AREA -->
+               
+               <div class="uu-header__top"> <a href="https://www.utah.edu/" class="uu-header__logo"><span class="sr-only">The University of Utah</span></a>                  <div class="uu-header__middle">
+                     <!-- HEADER TITLE -->
+                     <div class="uu-header__title">
+<h2><a href="/">CHPC - Research Computing and Data Support for the University</a></h2>
+<!-- <h3><a href="http://it.utah.edu">University Information Technology</a></h3> --></div><!-- END HEADER TITLE -->
+                     <!-- HEADER NAVIGATION -->
+                     
+<nav class="uu-header__nav">
+	
+<ul class="uu-menu__level1">
+<ul class="uu-menu__level1">
+<li class="has-sub"><a href="#">About Us</a>
+<ul class="sub-menu">
+<li><a href="/about/index.php">About Us</a></li>
+<li><a href="https://www.chpc.utah.edu/about/vision.php">Vision</a></li>
+<li><a href="/about/staff.php">Staff</a></li>
+<li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Information</a></li>
+<li><a href="https://www.chpc.utah.edu/about/acknowledge.php">Acknowledging CHPC</a></li>
+<li><a href="https://www.chpc.utah.edu/highlights.php">Research Highlights</a></li>
+<li><a href="https://www.chpc.utah.edu/about/partners.php">Partners</a></li>
+<li><a href="/news/index.php">News</a></li>
+<li><a href="/about/governance.php">Governance</a></li>
+</ul>
+</li>
+<li class="has-sub"><a href="#">Resources</a>
+<ul class="sub-menu">
+<li><a href="https://www.chpc.utah.edu/resources/index.php">Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/HPC_Clusters.php">HPC Clusters</a></li>
+<li><a href="/resources/storage_services.php">Storage Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="/resources/virtualmachines.php">Virtual Machines</a></li>
+<li><a href="/resources/hosting.php">Hosting Services</a></li>
+<li><a href="/resources/Networking.php">Networking</a></li>
+<li><a href="/resources/ProtectedEnvironment.php">Protected Environment</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="/userservices/index.php">User Services</a></li>
+</ul>
+</li>
+<li class="has-sub sub-width-lg"><a href="#">Documentation</a>
+<ul class="sub-menu">
+<li><a href="https://www.chpc.utah.edu/documentation/index.php">Documentation</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/gettingstarted.php">Getting Started</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/access.php">Accessing Our Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/videos/index.php">Short Training Videos</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/index.php">Cluster Guides</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/beehive.php">Beehive User Guide (Windows Server)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/gpus-accelerators.php">GPU &amp; Accelerators</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/frisco-nodes.php">Frisco Nodes</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/narwhal.php">Narwhal User Guide (Protected Environment Statistics)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/software/index.php">Software</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php">Programming Guide</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/policies/index.php">Policy Manual</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/HelloWorldMPI.php">HPC Basics - Hello World MPI</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/faq.php">Frequently Asked Questions</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/white_papers/index.php">White Papers</a></li>
+</ul>
+</li>
+<li class="has-sub"><a href="#">User Services</a>
+<ul class="sub-menu">
+<li><a href="/userservices/index.php">User Services</a></li>
+<li><a href="https://www.chpc.utah.edu/userservices/accounts.php">Accounts</a></li>
+<li><a href="/userservices/allocations.php">Allocations</a></li>
+<li><a href="/userservices/gettinghelp.php">Getting Help</a></li>
+<li><a href="https://www.chpc.utah.edu/presentations/index.php">Training</a></li>
+</ul>
+</li>
+<li class="has-sub sub-width-lg"><a href="#">Usage</a>
+<ul class="sub-menu">
+<li><a href="/usage/cluster/index.php">Cluster Usage</a>
+<ul>
+<li><a href="/usage/cluster/current-project-general.php">General Allocation Pool</a></li>
+<li><a href="/usage/cluster/current-project-lonepeak.php">Lonepeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-kingspeak.php">Kingspeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-ash.php">Ash Cluster</a></li>
+<li><a href="/usage/cluster/current-project-redwood.php">Redwood Cluster</a></li>
+</ul>
+</li>
+<li><a href="/usage/graphs.php?g=cluster%20utilization&amp;host=combined&amp;type=daily_utilization">Cluster Utilization Graphs</a></li>
+<li><a href="/usage/graphs.php?g=hpc%20cluster%20scratch&amp;host=chpc_gen&amp;type=cpu">HPC Cluster Scratch</a></li>
+<li><a href="/usage/graphs.php?g=network&amp;host=Campus+Gateway&amp;type=daily_traffic">Network</a>
+<ul>
+<li><a href="/resources/maddash-dashboards.php">Maddash Dashboards</a></li>
+</ul>
+</li>
+<li><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">UEN Weathermap (Only Available on UEN Networks)</a></li>
+<li><a href="http://snapp2.bldc.grnoc.iu.edu/i2al2s/#&amp;p=3%2C42&amp;ccid=3&amp;tab=1&amp;search=undefined&amp;pwidth=undefined&amp;ccat=undefined&amp;url=show-graph.cgi%3Fcollection_ids%3D145%26end%3D1461772131%26start%3D1461771831%26cf%3DAVERAGE%26ds%3Doutput%2Cinput%26collection_ids%3D145" target="_blank" rel="noopener">UEN Aggregate Utilization</a></li>
+<li><a href="http://uofu.status.io">UofU IT Services Status</a></li>
+<li><a href="https://status.it.utah.edu">University Application Heath Summary - NOC</a></li>
+</ul>
+</li>
+<li><a href="/role/">My Account</a></li>
+</ul>
+</ul>	
+</nav>
+
+<!-- END HEADER NAVIGATION -->
+                     </div>
+                  <div class="uu-search-toggle"><button class="uu-search__trigger"><span class="far fa-search" aria-hidden="true"></span><span class="sr-only">Search</span></button></div><button id="jsNavTrigger" class="uu-nav__trigger" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Reveal Menu</span><span></span></button></div>
+            </div>
+         </header>
+         <!-- END HEADER -->
+         <!-- PUSH NAVIGATION -->
+         
+         <section class="uu-nav">
+            <div class="uu-nav__container"><button id="jsMobileNavTrigger" class="uu-nav__trigger" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Reveal Menu</span><span></span></button><header class="uu-nav__header">
+                  <h2 class="sr-only">Main Navigation</h2>
+                  <!-- Navigation Logo -->
+<a href="https://utah.edu/" class="uu-nav__logo">
+	<img src="https://templates.utah.edu/_main-v3-1/images/template/university-of-utah-logo.svg" alt="The University of Utah"/>
+</a></header>
+               <nav class="uu-menu" aria-label="main"><p><h2 class="uu-menu__title">Main Menu</h2>
+<hr />
+<ul class="uu-menu__level1">
+<li><a href="/">Home</a></li>
+<li class="has-sublist"><a href="#">About Us</a>
+<ul class="uu-menu__level2">
+<li><a href="/about/index.php">About Us</a></li>
+<li><a href="https://www.chpc.utah.edu/about/vision.php">Vision</a></li>
+<li><a href="/about/staff.php">Staff</a></li>
+<li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Information</a></li>
+<li><a href="https://www.chpc.utah.edu/about/acknowledge.php">Acknowledging CHPC</a></li>
+<!--<li><a href="/about/bibliography/CHPC%20BIB.pdf" target="_blank" rel="noopener">CHPC Bibliography</a></li>-->
+<li><a href="https://www.chpc.utah.edu/about/SupportedResearch.php">Supported Research</a></li>
+<li><a href="https://www.chpc.utah.edu/highlights.php">Research Highlights</a></li>
+<li><a href="https://www.chpc.utah.edu/about/partners.php">Partners</a></li>
+<li><a href="/news/index.php">News</a></li>
+<li><a title="University Information Technology" href="https://it.utah.edu/" target="_blank" rel="noopener">UIT</a></li>
+<li><a href="/about/governance.php">Governance</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Resources</a>
+<ul class="uu-menu__level2">
+<li><a href="https://www.chpc.utah.edu/resources/index.php">Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/HPC_Clusters.php">HPC Clusters</a></li>
+<li><a href="/resources/storage_services.php">Storage Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="/resources/virtualmachines.php">Virtual Machines</a></li>
+<li><a href="/resources/hosting.php">Hosting Services</a></li>
+<li><a href="/resources/Networking.php">Networking</a></li>
+<li><a href="/resources/ProtectedEnvironment.php">Protected Environment</a></li>
+<li><a href="/documentation/software/ai.php">AI/ML Resources</a></li>
+<li><a href="/userservices/index.php">User Services</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Documentation</a>
+<ul class="uu-menu__level2">
+<li><a href="https://www.chpc.utah.edu/documentation/index.php">Documentation</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/gettingstarted.php">Getting Started</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/access.php">Accessing Our Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/videos/index.php">Short Training Videos</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/index.php">Cluster Guides</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/beehive.php">Beehive User Guide (Windows Server)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/gpus-accelerators.php">GPU &amp; Accelerators</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/frisco-nodes.php">Frisco Nodes</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/narwhal.php">Narwhal User Guide (Protected Environment Statistics)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/software/index.php">Software</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php">Programming Guide</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/policies/index.php">Policy Manual</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/HelloWorldMPI.php">HPC Basics - Hello World MPI</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/faq.php">Frequently Asked Questions</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/white_papers/index.php">White Papers</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">User Services</a>
+<ul class="uu-menu__level2">
+<li><a href="/userservices/index.php">User Services</a></li>
+<li><a href="https://www.chpc.utah.edu/userservices/accounts.php">Accounts</a></li>
+<li><a href="/userservices/allocations.php">Allocations</a></li>
+<li><a href="/userservices/gettinghelp.php">Getting Help</a></li>
+<li><a href="https://www.chpc.utah.edu/presentations/index.php">Training</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Usage</a>
+<ul class="uu-menu__level2">
+<li class="has-sublist"><a href="/usage/cluster/index.php">Cluster Usage</a>
+<ul class="uu-menu__level3">
+<li><a href="/usage/cluster/current-project-general.php">General Allocation Pool</a></li>
+<li><a href="/usage/cluster/current-project-lonepeak.php">Lonepeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-kingspeak.php">Kingspeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-ash.php">Ash Cluster</a></li>
+<li><a href="/usage/cluster/current-project-redwood.php">Redwood Cluster</a></li>
+</ul>
+</li>
+<li><a href="/usage/graphs.php?g=cluster%20utilization&amp;host=combined&amp;type=daily_utilization">Cluster Utilization Graphs</a></li>
+<li><a href="/usage/graphs.php?g=hpc%20cluster%20scratch&amp;host=chpc_gen&amp;type=cpu">HPC Cluster Scratch</a></li>
+<li class="has-sublist"><a href="/usage/graphs.php?g=network&amp;host=Campus+Gateway&amp;type=daily_traffic">Network</a>
+<ul class="uu-menu__level3">
+<li><a href="/resources/maddash-dashboards.php">Maddash Dashboards</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">UEN Weathermap</a>
+<ul class="uu-menu__level3">
+<li><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">(Only Available on UEN Networks)</a></li>
+</ul>
+</li>
+<li><a href="http://snapp2.bldc.grnoc.iu.edu/i2al2s/#&amp;p=3%2C42&amp;ccid=3&amp;tab=1&amp;search=undefined&amp;pwidth=undefined&amp;ccat=undefined&amp;url=show-graph.cgi%3Fcollection_ids%3D145%26end%3D1461772131%26start%3D1461771831%26cf%3DAVERAGE%26ds%3Doutput%2Cinput%26collection_ids%3D145" target="_blank" rel="noopener">UEN Aggregate Utilization</a></li>
+<li><a href="http://uofu.status.io">UofU IT Services Status</a></li>
+<li><a href="https://status.it.utah.edu">University Application Heath Summary - NOC</a></li>
+</ul>
+</li>
+<li><a href="/role/">My Account</a></li>
+</ul></p></nav>
+            </div>
+         </section>
+         <!-- END PUSH NAVIGATION -->
+         
+         <!-- MAIN CONTENT -->
+         <main class="uu-main" id="skip-link-target">
+            <nav aria-label="Breadcrumb" class="uu-breadcrumb">
+               <ol>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/documentation/">documentation</a></li>
+                  <li><a href="/documentation/software/">software</a></li>
+                  <li><span class="sr-only">current page: </span>Debugging</li>
+               </ol>
+            </nav>
+            <!-- SECTION 1 -->
+            
+            <section class="uu-section bg-white text-default uu-section--region-1" style="">
+               <div class="uu-section__container"><!-- SECTION HEADER -->
+                  
+                  <div class="uu-section__header  ">
+                     <h1>Debugging</h1>
+                     <ul id="in_text_nav" class="crawl_skip">
+                        <li class="crawl_skip" style="margin-left: 0px;"><a href="#ddt">DDT</a><ul id="in_text_nav" class="crawl_skip">
+                              <li class="crawl_skip" style="margin-left: 0px;"><a href="#scddt">Serial Code</a></li>
+                              <li class="crawl_skip" style="margin-left: 0px;"><a href="#pmpiddt">Parallel MPI/Open MP Code</a></li>
+                              <li class="crawl_skip" style="margin-left: 0px;"><a href="#pdebugintddt">Parallel debugging on personal desktops or on cluster interactive nodes</a></li>
+                              <li class="crawl_skip" style="margin-left: 0px;"><a href="#pdebugcompddt">Parallel debugging on compute nodes</a></li>
+                              <li class="crawl_skip" style="margin-left: 0px;"><a href="#pythonddt">Python Code</a></li>
+                           </ul>
+                        </li>
+                        <li><a href="#tv">Totalview</a><ul id="in_text_nav" class="crawl_skip">
+                              <li class="crawl_skip" style="margin-left: 0px;"><a href="#sctv">Serial Code</a></li>
+                              <li class="crawl_skip" style="margin-left: 0px;"><a href="#pmpitv">Parallel MPI/Open MP Code</a></li>
+                              <li class="crawl_skip" style="margin-left: 0px;"><a href="#pdebuginttv">Parallel debugging on personal desktops or on cluster interactive nodes</a></li>
+                              <li class="crawl_skip" style="margin-left: 0px;"><a href="#pdebugcomptv">Parallel debugging on compute nodes</a></li>
+                              <li><a href="#eretv">Enabling ReplayEngine</a></li>
+                              <li><a href="#emdtv">Enabling memory debugging</a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                     <p>As of January 2017, CHPC has obtained a license of the Distributed Debugging Tool
+                        (DDT) from Allinea Software and will be maintaining that as compared to the Totalview
+                        debugger, which maintenance we have dropped. You can keep using the Totalview but
+                        it will be limited to the latest 2016 update. This documentation page lists both DDT
+                        and Totalview information, although Totalview documentation will not be updated.</p>
+                     <!--crawl_skip--></div>
+                  <!-- END SECTION HEADER -->
+                  <!-- REGION 1 -->
+                  
+                  <div class="uu-section__region bg-white text-default no-border">
+                     <h2><a id="ddt"></a>DDT</h2>
+                     <p>Allinea Distributed Debugging Tool (DDT) is a multi-process, multi-thread graphical
+                        debugger for C, C++, Fortran, assembler and mixed source codes with GPU and accelerator
+                        support. Its feature set is similar to Totalview, although the user interface is different
+                        and more modern.&nbsp;</p>
+                     <h6>More information</h6>
+                     <p>Allinea was purchased by ARM in late 2016, which has committed to continuous development
+                        and support of Allinea tools. For more information on DDT, see the <a href="https://www.allinea.com/products/ddt" target="_blank" rel="noopener">Allinea DDT information</a>.</p>
+                     <p>For details on every aspect of DDT use see the <a href="https://www.allinea.com/user-guide/forge/userguide.html" target="_blank" rel="noopener">DDT User Guide</a>.&nbsp;</p>
+                     <p>Allinea also has a few <a href="https://www.allinea.com/products/allinea-forge-videos" target="_blank" rel="noopener">introductory videos</a>.</p>
+                     <h6>Differences from Totalview</h6>
+                     <p>Among the advantages to Totalview are more modern GUI with syntax highlighting with
+                        program checking, built in editor and version control.</p>
+                     <p>The basic use of DDT is fairly similar to Totalview, though variable examination is
+                        different, especially with arrays. See <a href="https://www.allinea.com/user-guide/forge/ViewingVariablesAndData.html#x12-1190008" target="_blank" rel="noopener">Viewing Variables and Data</a> from DDT user's guide for details.</p>
+                     <p>DDT is installed in /uufs/chpc.utah.edu/sys/installdir/allinea-forge.&nbsp;DDT supports
+                        most available compilers, including GNU, PGI, and Intel.</p>
+                     <p>In order to compile your code and run it in DDT, follow these steps:</p>
+                     <h4><a id="scddt"></a>Serial Code</h4>
+                     <p>Serial code can be debugged on personal desktops or on the interactive nodes, provided
+                        it does not generate high load that can affect responsiveness to other users.</p>
+                     <p>Follow these steps:</p>
+                     <p>1. Set up the environment for the appropriate compiler and DDT:<br><code style="background-color: lightgray;">module load ddt<br></code></p>
+                     <p>2. Compile with <em>-g</em>:<br>For GNU compilers: <code style="background-color: lightgray;">g77 -g source_name.f -o executable_name</code><br>For Intel compilers: <code style="background-color: lightgray;">ifort -g source_name.f -o executable_name</code><br>For PGI compilers: <code style="background-color: lightgray;">pgf77 -g source_name.f -o executable_name</code></p>
+                     <p>3. Run the program in Totalview:<br><code style="background-color: lightgray;">ddt&nbsp;./executable_name</code></p>
+                     <div>4. A start up window shows up that lets one choose other run time parameters. For
+                        serial program, we can leave everything as is and click "Run" button.</div>
+                     <div>&nbsp;</div>
+                     <div>5. Set breakpoints and click the green arrow button (Play/Continue - F9) to run the
+                        program in the debugger.</div>
+                     <h4><a id="pmpiddt"></a>Parallel MPI/OpenMP Code</h4>
+                     <p>Parallel code can be debugged on personal desktops or on the interactive nodes using
+                        MPICH. On the interactive nodes, be considerate to other users and don't run too many
+                        processes at the same time. In case of need for more CPUs in the debugging session
+                        (our DDTlicense has 32 CPU limit), debug on the compute nodes.</p>
+                     <h4><a id="pdebugintddt"></a>Parallel debugging on personal desktops or on cluster interactive nodes</h4>
+                     <p>To debug in parallel on interactive nodes, we recommend to use MPICH MPI implementation
+                        due to ease of set up, although other MPI implementations should also work.&nbsp;<br>Also, since interactive nodes have limited number of processors (12 to 20) and memory
+                        (24 to 64 GB), only parallel programs that need less processors and memory should
+                        be debugged on interactive nodes. Still, most bugs show up on any number of processors
+                        so we recommend debugging on the interactive nodes whenever possible since it's much
+                        easier than debugging on compute nodes. Note that you can debug more MPI processes
+                        than there are physical CPUcores, since debugging in general puts less load on the
+                        CPUs and as such more than one process can be executed at a single core at the time.</p>
+                     <p>The debugging process on interactive nodes is as follows:</p>
+                     <ol>
+                        <li>Load the DDT and MPICH module and check that MPICH is the default compiler<br><p><code style="background-color: lightgray;">module load gcc mpich ddt<br>which mpicc</code></p>
+                           should return<em> /uufs/chpc.utah.edu/sys/installdir/mpich/###/bin/mpicc</em>, where <em>###</em> is version number with a letter suffix. For more details on MPI implementations on
+                           HPC clusters, see <a href="https://www.chpc.utah.edu/documentation/software/mpilibraries.php">CHPC's MPI Documentation</a>.</li>
+                        <li>Compile with<em> -g</em>:<br><p>For GNU compilers: <code style="background-color: lightgray;">g77 -g source_name.f -o executable_name</code><br>For Intel compilers: <code style="background-color: lightgray;">ifort -g source_name.f -o executable_name</code><br>For PGI compilers: <code style="background-color: lightgray;">pgf77 -g source_name.f -o executable_name</code></p>
+                        </li>
+                        <li>Start DDT with the program name:<br><p><code style="background-color: lightgray;">ddt&nbsp;./executable_name</code></p>
+                        </li>
+                        <li>DDT&nbsp;opens Run window. In this window, choose the <strong>MPI</strong>, click Details to expand the MPI menu choose number of MPI processes and pick the
+                           appropriate MPI implementation. If the code also uses OpenMP, choose the <strong>OpenMP</strong> option as well.</li>
+                        <li>Click Run button to load the program into DDT.&nbsp;</li>
+                        <li>Set breakpoints and&nbsp;<span>click the green arrow button (Play/Continue - F9) to run the program in the debugger.</span><span></span></li>
+                     </ol>
+                     <h4><span><a id="pdebugcompddt"></a>Parallel debugging on compute nodes</span></h4>
+                     <p>In order to debug on compute nodes, one has to run a job through the queue. This should
+                        be done only in extreme cases when the bug does not show up during a parallel MPI
+                        run on a single node or if it takes a very long time to reach the point of the bug.
+                        If the queue wait time is too long (there are no nodes available), please, contact
+                        CHPC at helpdesk@chpc.utah.edu to set up a reservation for you so that you can get
+                        the nodes you need right away.</p>
+                     <p>The process is the same as in debugging on the desktop or interactive node, except
+                        that we need to submit an <a href="https://www.chpc.utah.edu/documentation/software/slurm.php#interactive">interactive job through the queue</a>, and then load the DDT module and run DDT inside of the job.</p>
+                     <h4><a id="pythonddt"></a>Python code</h4>
+                     <p>DDT supports Python debugging including MPI (e.g. mpi4py), and Python libraries written
+                        in C/C++, with <a href="https://developer.arm.com/documentation/101136/22-1/DDT/Get-started-with-DDT/Python-debugging?lang=en" target="_blank" rel="noopener">a few caveats</a>.</p>
+                     <p>To debug a Python code, start DDT as follows:<br><code style="background-color: lightgray;">ddt python3 %allinea_python_debug% my_python_code.py</code></p>
+                     <h2><a id="tv"></a>Totalview</h2>
+                     <p>TotalView is a full-featured, source-level, multi-process, multi-thread graphical
+                        debugger f or C, C++, Fortran, assembler, and mixed source/assembler codes.</p>
+                     <p><strong>NOTE</strong>: As of 2023, we have retired the license server that served the discontinued Totalview
+                        license, and due to this Totalview is not available anymore. However, Totalview still
+                        offers <a href="https://totalview.io/student-licenses" target="_blank" rel="noopener">free licenses for students</a>, which we encourage those who are eligible to try. We are leaving the documentation
+                        below for legacy purposes.</p>
+                     <p><strong>NOTE</strong>: As of 2017 we have discontinued the maintenance payment for Totalview and switched
+                        to DDT. We will keep supporting the latest 2016 release of Totalview but will not
+                        update to newer versions.</p>
+                     <h6 id="mi">More information</h6>
+                     <p><strong>RogueWave,</strong> formerly TotalviewTech, manufacturer of Totalview <a href="https://www.roguewave.com/products-services/totalview" target="_blank" rel="noopener">Rogue Wave Software</a><br>Debugging with Totalview <strong>tutorial presentation</strong> (requires a video player like QuickTime, download may take some time). <a href="http://chpc.utah.edu/podcasts/2013_9_26.mov">Video Tutorial on Totalview</a></p>
+                     <p>Totalview is installed in /uufs/chpc.utah.edu/sys/installdir/totalview/std. This version
+                        runs on any Linux workstation with 64 bit OS. Both serial and parallel debugging (MPI,
+                        OpenMP) are supported.</p>
+                     <p>Totalview supports most available compilers, including GNU, PGI, and Intel.</p>
+                     <p>In order to compile your code and run it in Totalview, follow these steps:</p>
+                     <h4><a id="sctv"></a>Serial Code</h4>
+                     <p>Serial code can be debugged on personal desktops or on the interactive nodes, provided
+                        it does not generate high load that can affect responsiveness to other users.</p>
+                     <p>Follow these steps:</p>
+                     <p>1. Set up the environment for the appropriate compiler and Totalview. With modules,
+                        e.g.:<br><code style="background-color: lightgray;">module load intel totalview<br></code>or with the phased out explicit environment sourcing:<br><span style="color: #474747; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 13.5px; line-height: 1.75; background-color: #f1f1f1;">source /uufs/chpc.utah.edu/sys/pkg/intel/ics/bin/compilervars.csh intel64<br></span><code style="background-color: lightgray;">source&nbsp;/uufs/chpc.utah.edu/sys/installdir/totalview/std/etc/totalview.csh</code></p>
+                     <p>2. Compile with <em>-g</em>:<br>For GNU compilers: <code style="background-color: lightgray;">g77 -g source_name.f -o executable_name</code><br>For Intel compilers: <code style="background-color: lightgray;">ifort -g source_name.f -o executable_name</code><br>For PGI compilers: <code style="background-color: lightgray;">pgf77 -g source_name.f -o executable_name</code></p>
+                     <p>3. Run the program in Totalview:<br><code style="background-color: lightgray;">totalview ./executable_name</code></p>
+                     <h4><a id="pmpitv"></a>Parallel MPI/Open MP code</h4>
+                     <p>Parallel code can be debugged on personal desktops or on the interactive nodes using
+                        MPICH. On the interactive nodes, be considerate to other users and don't run too many
+                        processes at the same time. In case of need for more CPUs in the debugging session
+                        (our Totalview license has 32 CPU limit), debug on the compute nodes.</p>
+                     <h4><a id="pdebuginttv"></a>Parallel debugging on personal desktops or on cluster interactive nodes</h4>
+                     <p>To debug in parallel on interactive nodes, we recommend to use MPICH MPI implementation
+                        due to ease of set up, although other MPI implementations should also work.&nbsp;<br>Also, since interactive nodes have limited number of processors (12 to 20) and memory
+                        (24 to 64 GB), only parallel programs that need less processors and memory should
+                        be debugged on interactive nodes. Still, most bugs show up on any number of processors
+                        so we recommend debugging on the interactive nodes whenever possible since it's much
+                        easier than debugging on compute nodes. Note that you can debug more MPI processes
+                        than there are physical CPUcores, since debugging in general puts less load on the
+                        CPUs and as such more than one process can be executed at a single core at the time.</p>
+                     <p>The debugging process on interactive nodes is as follows:</p>
+                     <ol>
+                        <li>Check that MPICH is the default compiler<br>which mpicc<br>should return<em> /uufs/chpc.utah.edu/sys/installdir/mpich/###/bin/mpicc</em>, where <em>###</em> is version number with a letter suffix. For more details on MPI implementations on
+                           HPC clusters, see <a href="https://www.chpc.utah.edu/documentation/software/mpilibraries.php">CHPC's MPI Documentation</a>.</li>
+                        <li>Compile with<em> -g</em>:<br>&nbsp; mpif77 -g source_name.f -o executable_name</li>
+                        <li>Start Totalview:<br>&nbsp; totalview &amp;<br>Totalview opens New Program window. In this window, fill in the following:<br>* In tab Program, field Program, put in the executable program name<br>* In tab Parallel, field Parallel System, choose MPICH3, and for Tasks set the number
+                           of processors you want to run on<br>* Click OK to load the program into Totalview. After a little while, you will get
+                           a dialog box saying: <em>Process executable.exe is a parallel job. Do you want to stop now?</em> Click Yes, set some breakpoints and start debugging.</li>
+                     </ol>
+                     <h4><span><a id="pdebugcomptv"></a>Parallel debugging on compute nodes</span></h4>
+                     <p>In order to debug on compute nodes, one has to run a job through the queue. This should
+                        be done only in extreme cases when the bug does not show up during a parallel MPI
+                        run on a single node or if it takes a very long time to reach the point of the bug.
+                        If the queue wait time is too long (there are no nodes available), please, contact
+                        CHPC at helpdesk@chpc.utah.edu to set up a reservation for you so that you can get
+                        the nodes you need right away.</p>
+                     <ol>
+                        <li>Compile with <em>-g</em>:<br>mpicc -g source_name.c -o executable_name<br>mpif90 -g source_name.f -o executable_name<br>For parallel OpenMP application using PGI compilers, include <em>-mp</em> to invoke OpenMP directives support, <em>-fopenmp</em> for GNU compilers or <em>-openmp</em> for Intel compilers.</li>
+                        <li>Start interactive PBS session, e.g.:<br>sbatch -N 2 -n 24 -A account -p partition -t 2:00:00 --tty /bin/tcsh -l</li>
+                        <li>Start Totalview:<br>totalview &amp;<br>Totalview opens New Program window. In this window, fill in the following:<br>In tab Program, field Program, put in the executable program name<br>In tab Parallel, field Parallel System, choose MPICH3, and for Tasks set the number
+                           of processors you want to run on<br>Click OK to load the program into Totalview. After a little while, you will get a
+                           dialog box saying: <em>Process executable.exe is a parallel job. Do you want to stop now?</em> Click Yes, set some breakpoints and start debugging.</li>
+                     </ol>
+                     <p>If you run Totalview for the first time, you may have to also specify a full path
+                        to the TV Server, <em>tdvsvr</em>. To do that, modify Launch Strings dialog in Menu - Preferences to:<br>&nbsp; /uufs/chpc.utah.edu/sys/installdir/totalview/std/bin/tdvsvr</p>
+                     <p>instead of just plain<br>&nbsp; tdvsvr<br>Click go to run the code. After a little while, you will get a dialog box saying:
+                        <em>Process executable.exe is a parallel job. Do you want to stop now?</em> Click Yes, set some breakpoints and start debugging.</p>
+                     <h4><a id="eretv"></a>Enabling ReplayEngine</h4>
+                     <p>CHPC also owns 16 CPU license for the ReplayEngine plugin for Totalview, which enables
+                        one to step backwards in their debugging session. In order to use ReplayEngine, in
+                        the New Program dialog after starting Totalview, check the <em>Enable ReplayEngine</em> checkbox.</p>
+                     <h4><a id="emdtv"></a>Enabling memory debugging</h4>
+                     <p>Totalview has built in memory debugging options. To enable memory debugging, in the
+                        New Program dialog after starting Totalview, check the <em>Enable memory debugging</em> checkbox. This option checks for array index mismatches, allocation/deallocation
+                        problems and many other common memory bugs and is useful when the program crashes
+                        for no apparent reason or when the program exits with segmentation fault error.</p>
+                  </div>
+                  <!-- END REGION 1 -->
+                  <!-- SECTION FOOTER -->
+                  
+                  <div class="uu-section__footer  ">
+                     <p></p>
+                  </div>
+                  <!-- END SECTION FOOTER -->
+                  </div>
+            </section>
+            <!-- END SECTION 1 -->
+            <!-- SECTION 2 -->
+            <!-- END SECTION 2 -->
+            <!-- SECTION 3 -->
+            <!-- END SECTION 3 -->
+            <!-- SECTION 4 -->
+            <!-- END SECTION 4 -->
+            <!-- SECTION 5 -->
+            <!-- END SECTION 5 -->
+            </main>
+         <!-- END MAIN CONTENT -->
+         <!-- FOOTER -->
+         
+         <footer class="uu-footer"><div class="uu-footer__top">
+   <div class="uu-footer__top-container">
+      <div class="uu-footer__top-col1"><a href="https://www.utah.edu"><img src="https://templates.utah.edu/_main-v3-1/images/template/blocku.svg" alt="The University of Utah" class="uu-block-logo"></a><div class="department-name">
+            <h2>The Center For High Performance Computing</h2>
+         </div>
+         <div class="department-address">
+            <p>155 S 1452 E, RM. 405<br>SLC, UT 84112-0190<br>801.585.3791&nbsp;</p>
+         </div>
+      </div>
+      <div class="uu-footer__top-col2">
+         <h2 class="footer-heading">Stay in Touch</h2>
+         <hr>
+         <ul>
+            <li><a href="https://map.utah.edu/index.html?code=inscc">Find Us</a></li>
+            <li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Us</a></li>
+            <li><a href="mailto:helpdesk@chpc.utah.edu">Webmaster</a></li>
+         </ul>
+      </div>
+      <div class="uu-footer__top-col5">
+         <h2 class="footer-heading">Quick Links</h2>
+         <hr>
+         <ul>
+            <li><a href="https://www.utah.edu/a-z/">A-Z Index</a></li>
+            <li><a href="https://people.utah.edu/uWho/basic.hml">Campus Directory</a></li>
+            <li><a href="https://www.map.utah.edu">Campus Map</a></li>
+            <li><a href="https://map.utah.edu/?allshuttle=on">Shuttle Tracker </a></li>
+            <li><a href="https://cis.utah.edu/">CIS</a></li>
+            <li><a href="https://www.umail.utah.edu/">UMail</a></li>
+            <li><a href="https://attheu.utah.edu/">@ The U</a></li>
+         </ul>
+      </div>
+   </div>
+</div><div class="uu-footer__bottom">
+   <div class="uu-footer__bottom-container">
+      <div class="uu-footer__bottom-col1"><a href="https://www.utah.edu/"><img src="https://templates.utah.edu/_main-v3-1/images/template/university-of-utah-logo.svg" alt="The University of Utah" class="uu-site-logo"></a></div>
+      <div class="uu-footer__bottom-col2">
+         <div class="legal">
+            <p>© 2024 The University of Utah</p>
+            <ul>
+               <li><a href="https://www.utah.edu/indigenous-land-acknowledgment/index.php">Indigenous Land Acknowledgment</a></li>
+               <li><a href="https://www.utah.edu/nondiscrimination/">Nondiscrimination &amp; Accessibility</a></li>
+               <li><a href="https://www.utah.edu/disclaimer/">Disclaimer</a></li>
+               <li><a href="https://www.utah.edu/privacy/">Privacy</a></li>
+               <li><a href="https://www.utah.edu/credits-v3.php">Credits &amp; Attributions</a></li>
+               <li><a href="https://attheu.utah.edu/media-contacts/">Media Contacts</a></li>
+               <li><span id="directedit"></span></li>
+            </ul>
+         </div>
+      </div>
+      <div class="uu-footer__bottom-col3">
+         <ul class="uu-social-list">
+            <li><a href="https://twitter.com/uutah"><span class="fa-brands fa-x-twitter" aria-hidden="true"></span><span class="sr-only">X</span></a></li>
+            <li><a href="https://www.facebook.com/universityofutah"><span class="fab fa-facebook" aria-hidden="true"></span><span class="sr-only">Facebook</span></a></li>
+            <li><a href="https://www.instagram.com/universityofutah/"><span class="fab fa-instagram" aria-hidden="true"></span><span class="sr-only">Instagram</span></a></li>
+            <li><a href="https://www.youtube.com/user/theuniversityofutah"><span class="fab fa-youtube" aria-hidden="true"></span><span class="sr-only">Youtube</span></a></li>
+         </ul>
+      </div>
+   </div>
+</div></footer>
+         <!-- END FOOTER -->
+         </div>
+      <!-- FOOT CODE -->
+      <script src="//templates.utah.edu/_main-v3-1/js/main.min.js"></script>
+      
+      
+      
+      
+      
+      
+      
+      <script src="//templates.utah.edu/_main-v3-1/js/directedit.js"></script><script><!--
+window.onload = function(){ directedit(); }
+//
+			--></script>
+      <script src="/_resources/js/custom.js"></script>
+            
+      <!-- END FOOT CODE -->
+      
+      <div id="hidden"><a id="de" href="https://a.cms.omniupdate.com/11/?skin=utah&amp;account=utah_home&amp;site=chpc2&amp;action=de&amp;path=/documentation/software/debugging.pcf">Last Updated: 5/24/24</a></div>
+      <!-- END PAGE BODY -->
+      </body>
+</html>

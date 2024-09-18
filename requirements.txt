@@ -1,0 +1,6 @@
+nltk
+langchain
+langchain_qdrant
+langchain_huggingface
+langchain_community
+unstructured

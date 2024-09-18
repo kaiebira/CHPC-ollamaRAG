@@ -1,0 +1,793 @@
+<!DOCTYPE HTML><html lang="en-US" class="no-js">
+   <head><!-- PAGE HEAD -->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+      <title>SLURM Scheduler - Center for High Performance Computing - The University of Utah</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="robots" content="index,follow">
+      <link rel="icon" href="//templates.utah.edu/_main-v3-1/images/template/favicon.ico">
+      <link rel="apple-touch-icon-precomposed" href="//templates.utah.edu/_main-v3-1/images/template/apple-touch-icon.png">
+      <link rel="stylesheet" href="//templates.utah.edu/_main-v3-1/css/main.min.css" type="text/css"><noscript>
+         <link rel="stylesheet" href="//templates.utah.edu/_main-v3-1/css/assets/fontawesome/css/all.min.css" type="text/css"></noscript><link href="/_resources/css/custom.css" rel="stylesheet" type="text/css">
+      <script src="//templates.utah.edu/_main-v3-1/js/head-code.min.js"></script>
+      <!-- HEAD CODE -->
+      
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y160DVJ0DZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y160DVJ0DZ');
+</script>
+
+      
+      <!-- END HEAD CODE -->
+      <!-- END PAGE HEAD -->
+      </head>
+   <body class="has-headernav"><!-- PAGE BODY -->
+      <a class="uu-skip-link" href="#skip-link-target">Skip to content</a>
+      <!-- BODY TOP CODE -->
+            <!-- END BODY TOP CODE -->
+      
+      <div id="uu-top-target" class="uu-site"><!-- SEARCH -->
+         <div class="uu-search" role="search">
+    <div class="uu-search__container">
+        <!-- SITE SEARCH -->
+        <form method="get" id="search-site" class="uu-search__form" action="/search/index.php">
+
+            <label for="inputSearchSite" class="sr-only">Search Site:</label>
+            <input type="text" id="inputSearchSite" name="q" value="" placeholder="Search Site" />
+            <input type="hidden" name="gcse_action" value="site" />
+
+            <div class="form-powered-by">
+                <span>Powered by</span> 
+                <img src="https://templates.utah.edu/_main-v3-1/images/template/google-logo.png" alt="Google Search">
+            </div>
+
+        </form>
+        <!-- END SITE SEARCH -->
+        <!-- CAMPUS SEARCH -->
+        <form method="get" id="search-campus" class="uu-search__form" action="/search/index.php">
+
+            <label for="inputSearchCampus" class="sr-only">Search Campus:</label>
+            <input type="text" id="inputSearchCampus" name="q" value="" placeholder="Search Campus" />
+            <input type="hidden" name="gcse_action" value="campus" />
+
+            <div class="form-powered-by">
+                <span>Powered by</span> 
+                <img src="https://templates.utah.edu/_main-v3-1/images/template/google-logo.png" alt="Google Search">
+            </div>
+        </form>
+        <!-- END CAMPUS SEARCH -->
+
+        <!-- SEARCH TYPE TOGGLE -->
+        <div class="search-type-toggle">
+            <label class="uu-switch" for="search_campus_checkbox">
+                <input type="checkbox" name="search_campus_checkbox" value="" id="search_campus_checkbox">
+                <span class="uu-switch-slider"></span>
+                <span class="uu-switch-label">Search Campus</span>
+            </label>
+        </div>
+        <!-- END SEARCH TYPE TOGGLE -->
+
+    </div>
+</div><!-- END SEARCH -->
+         <!-- HEADER -->
+         
+         <header class="uu-header">
+            <div class="uu-header__container">
+               <!-- ALERT AREA -->
+               <div id="alert_bar" class="uu-alert-bar"> 
+	<a href="https://coronavirus.utah.edu/">University of Utah COVID-19 Updates</a>
+</div><!-- END ALERT AREA -->
+               
+               <div class="uu-header__top"> <a href="https://www.utah.edu/" class="uu-header__logo"><span class="sr-only">The University of Utah</span></a>                  <div class="uu-header__middle">
+                     <!-- HEADER TITLE -->
+                     <div class="uu-header__title">
+<h2><a href="/">CHPC - Research Computing and Data Support for the University</a></h2>
+<!-- <h3><a href="http://it.utah.edu">University Information Technology</a></h3> --></div><!-- END HEADER TITLE -->
+                     <!-- HEADER NAVIGATION -->
+                     
+<nav class="uu-header__nav">
+	
+<ul class="uu-menu__level1">
+<ul class="uu-menu__level1">
+<li class="has-sub"><a href="#">About Us</a>
+<ul class="sub-menu">
+<li><a href="/about/index.php">About Us</a></li>
+<li><a href="https://www.chpc.utah.edu/about/vision.php">Vision</a></li>
+<li><a href="/about/staff.php">Staff</a></li>
+<li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Information</a></li>
+<li><a href="https://www.chpc.utah.edu/about/acknowledge.php">Acknowledging CHPC</a></li>
+<li><a href="https://www.chpc.utah.edu/highlights.php">Research Highlights</a></li>
+<li><a href="https://www.chpc.utah.edu/about/partners.php">Partners</a></li>
+<li><a href="/news/index.php">News</a></li>
+<li><a href="/about/governance.php">Governance</a></li>
+</ul>
+</li>
+<li class="has-sub"><a href="#">Resources</a>
+<ul class="sub-menu">
+<li><a href="https://www.chpc.utah.edu/resources/index.php">Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/HPC_Clusters.php">HPC Clusters</a></li>
+<li><a href="/resources/storage_services.php">Storage Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="/resources/virtualmachines.php">Virtual Machines</a></li>
+<li><a href="/resources/hosting.php">Hosting Services</a></li>
+<li><a href="/resources/Networking.php">Networking</a></li>
+<li><a href="/resources/ProtectedEnvironment.php">Protected Environment</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="/userservices/index.php">User Services</a></li>
+</ul>
+</li>
+<li class="has-sub sub-width-lg"><a href="#">Documentation</a>
+<ul class="sub-menu">
+<li><a href="https://www.chpc.utah.edu/documentation/index.php">Documentation</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/gettingstarted.php">Getting Started</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/access.php">Accessing Our Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/videos/index.php">Short Training Videos</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/index.php">Cluster Guides</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/beehive.php">Beehive User Guide (Windows Server)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/gpus-accelerators.php">GPU &amp; Accelerators</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/frisco-nodes.php">Frisco Nodes</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/narwhal.php">Narwhal User Guide (Protected Environment Statistics)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/software/index.php">Software</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php">Programming Guide</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/policies/index.php">Policy Manual</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/HelloWorldMPI.php">HPC Basics - Hello World MPI</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/faq.php">Frequently Asked Questions</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/white_papers/index.php">White Papers</a></li>
+</ul>
+</li>
+<li class="has-sub"><a href="#">User Services</a>
+<ul class="sub-menu">
+<li><a href="/userservices/index.php">User Services</a></li>
+<li><a href="https://www.chpc.utah.edu/userservices/accounts.php">Accounts</a></li>
+<li><a href="/userservices/allocations.php">Allocations</a></li>
+<li><a href="/userservices/gettinghelp.php">Getting Help</a></li>
+<li><a href="https://www.chpc.utah.edu/presentations/index.php">Training</a></li>
+</ul>
+</li>
+<li class="has-sub sub-width-lg"><a href="#">Usage</a>
+<ul class="sub-menu">
+<li><a href="/usage/cluster/index.php">Cluster Usage</a>
+<ul>
+<li><a href="/usage/cluster/current-project-general.php">General Allocation Pool</a></li>
+<li><a href="/usage/cluster/current-project-lonepeak.php">Lonepeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-kingspeak.php">Kingspeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-ash.php">Ash Cluster</a></li>
+<li><a href="/usage/cluster/current-project-redwood.php">Redwood Cluster</a></li>
+</ul>
+</li>
+<li><a href="/usage/graphs.php?g=cluster%20utilization&amp;host=combined&amp;type=daily_utilization">Cluster Utilization Graphs</a></li>
+<li><a href="/usage/graphs.php?g=hpc%20cluster%20scratch&amp;host=chpc_gen&amp;type=cpu">HPC Cluster Scratch</a></li>
+<li><a href="/usage/graphs.php?g=network&amp;host=Campus+Gateway&amp;type=daily_traffic">Network</a>
+<ul>
+<li><a href="/resources/maddash-dashboards.php">Maddash Dashboards</a></li>
+</ul>
+</li>
+<li><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">UEN Weathermap (Only Available on UEN Networks)</a></li>
+<li><a href="http://snapp2.bldc.grnoc.iu.edu/i2al2s/#&amp;p=3%2C42&amp;ccid=3&amp;tab=1&amp;search=undefined&amp;pwidth=undefined&amp;ccat=undefined&amp;url=show-graph.cgi%3Fcollection_ids%3D145%26end%3D1461772131%26start%3D1461771831%26cf%3DAVERAGE%26ds%3Doutput%2Cinput%26collection_ids%3D145" target="_blank" rel="noopener">UEN Aggregate Utilization</a></li>
+<li><a href="http://uofu.status.io">UofU IT Services Status</a></li>
+<li><a href="https://status.it.utah.edu">University Application Heath Summary - NOC</a></li>
+</ul>
+</li>
+<li><a href="/role/">My Account</a></li>
+</ul>
+</ul>	
+</nav>
+
+<!-- END HEADER NAVIGATION -->
+                     </div>
+                  <div class="uu-search-toggle"><button class="uu-search__trigger"><span class="far fa-search" aria-hidden="true"></span><span class="sr-only">Search</span></button></div><button id="jsNavTrigger" class="uu-nav__trigger" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Reveal Menu</span><span></span></button></div>
+            </div>
+         </header>
+         <!-- END HEADER -->
+         <!-- PUSH NAVIGATION -->
+         
+         <section class="uu-nav">
+            <div class="uu-nav__container"><button id="jsMobileNavTrigger" class="uu-nav__trigger" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Reveal Menu</span><span></span></button><header class="uu-nav__header">
+                  <h2 class="sr-only">Main Navigation</h2>
+                  <!-- Navigation Logo -->
+<a href="https://utah.edu/" class="uu-nav__logo">
+	<img src="https://templates.utah.edu/_main-v3-1/images/template/university-of-utah-logo.svg" alt="The University of Utah"/>
+</a></header>
+               <nav class="uu-menu" aria-label="main"><p><h2 class="uu-menu__title">Main Menu</h2>
+<hr />
+<ul class="uu-menu__level1">
+<li><a href="/">Home</a></li>
+<li class="has-sublist"><a href="#">About Us</a>
+<ul class="uu-menu__level2">
+<li><a href="/about/index.php">About Us</a></li>
+<li><a href="https://www.chpc.utah.edu/about/vision.php">Vision</a></li>
+<li><a href="/about/staff.php">Staff</a></li>
+<li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Information</a></li>
+<li><a href="https://www.chpc.utah.edu/about/acknowledge.php">Acknowledging CHPC</a></li>
+<!--<li><a href="/about/bibliography/CHPC%20BIB.pdf" target="_blank" rel="noopener">CHPC Bibliography</a></li>-->
+<li><a href="https://www.chpc.utah.edu/about/SupportedResearch.php">Supported Research</a></li>
+<li><a href="https://www.chpc.utah.edu/highlights.php">Research Highlights</a></li>
+<li><a href="https://www.chpc.utah.edu/about/partners.php">Partners</a></li>
+<li><a href="/news/index.php">News</a></li>
+<li><a title="University Information Technology" href="https://it.utah.edu/" target="_blank" rel="noopener">UIT</a></li>
+<li><a href="/about/governance.php">Governance</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Resources</a>
+<ul class="uu-menu__level2">
+<li><a href="https://www.chpc.utah.edu/resources/index.php">Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/HPC_Clusters.php">HPC Clusters</a></li>
+<li><a href="/resources/storage_services.php">Storage Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="/resources/virtualmachines.php">Virtual Machines</a></li>
+<li><a href="/resources/hosting.php">Hosting Services</a></li>
+<li><a href="/resources/Networking.php">Networking</a></li>
+<li><a href="/resources/ProtectedEnvironment.php">Protected Environment</a></li>
+<li><a href="/documentation/software/ai.php">AI/ML Resources</a></li>
+<li><a href="/userservices/index.php">User Services</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Documentation</a>
+<ul class="uu-menu__level2">
+<li><a href="https://www.chpc.utah.edu/documentation/index.php">Documentation</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/gettingstarted.php">Getting Started</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/access.php">Accessing Our Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/videos/index.php">Short Training Videos</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/index.php">Cluster Guides</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/beehive.php">Beehive User Guide (Windows Server)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/gpus-accelerators.php">GPU &amp; Accelerators</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/frisco-nodes.php">Frisco Nodes</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/narwhal.php">Narwhal User Guide (Protected Environment Statistics)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/software/index.php">Software</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php">Programming Guide</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/policies/index.php">Policy Manual</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/HelloWorldMPI.php">HPC Basics - Hello World MPI</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/faq.php">Frequently Asked Questions</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/white_papers/index.php">White Papers</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">User Services</a>
+<ul class="uu-menu__level2">
+<li><a href="/userservices/index.php">User Services</a></li>
+<li><a href="https://www.chpc.utah.edu/userservices/accounts.php">Accounts</a></li>
+<li><a href="/userservices/allocations.php">Allocations</a></li>
+<li><a href="/userservices/gettinghelp.php">Getting Help</a></li>
+<li><a href="https://www.chpc.utah.edu/presentations/index.php">Training</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Usage</a>
+<ul class="uu-menu__level2">
+<li class="has-sublist"><a href="/usage/cluster/index.php">Cluster Usage</a>
+<ul class="uu-menu__level3">
+<li><a href="/usage/cluster/current-project-general.php">General Allocation Pool</a></li>
+<li><a href="/usage/cluster/current-project-lonepeak.php">Lonepeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-kingspeak.php">Kingspeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-ash.php">Ash Cluster</a></li>
+<li><a href="/usage/cluster/current-project-redwood.php">Redwood Cluster</a></li>
+</ul>
+</li>
+<li><a href="/usage/graphs.php?g=cluster%20utilization&amp;host=combined&amp;type=daily_utilization">Cluster Utilization Graphs</a></li>
+<li><a href="/usage/graphs.php?g=hpc%20cluster%20scratch&amp;host=chpc_gen&amp;type=cpu">HPC Cluster Scratch</a></li>
+<li class="has-sublist"><a href="/usage/graphs.php?g=network&amp;host=Campus+Gateway&amp;type=daily_traffic">Network</a>
+<ul class="uu-menu__level3">
+<li><a href="/resources/maddash-dashboards.php">Maddash Dashboards</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">UEN Weathermap</a>
+<ul class="uu-menu__level3">
+<li><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">(Only Available on UEN Networks)</a></li>
+</ul>
+</li>
+<li><a href="http://snapp2.bldc.grnoc.iu.edu/i2al2s/#&amp;p=3%2C42&amp;ccid=3&amp;tab=1&amp;search=undefined&amp;pwidth=undefined&amp;ccat=undefined&amp;url=show-graph.cgi%3Fcollection_ids%3D145%26end%3D1461772131%26start%3D1461771831%26cf%3DAVERAGE%26ds%3Doutput%2Cinput%26collection_ids%3D145" target="_blank" rel="noopener">UEN Aggregate Utilization</a></li>
+<li><a href="http://uofu.status.io">UofU IT Services Status</a></li>
+<li><a href="https://status.it.utah.edu">University Application Heath Summary - NOC</a></li>
+</ul>
+</li>
+<li><a href="/role/">My Account</a></li>
+</ul></p></nav>
+            </div>
+         </section>
+         <!-- END PUSH NAVIGATION -->
+         
+         <!-- MAIN CONTENT -->
+         <main class="uu-main" id="skip-link-target">
+            <nav aria-label="Breadcrumb" class="uu-breadcrumb">
+               <ol>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/documentation/">documentation</a></li>
+                  <li><a href="/documentation/software/">Software</a></li>
+                  <li><span class="sr-only">current page: </span>SLURM Scheduler</li>
+               </ol>
+            </nav>
+            <!-- SECTION 1 -->
+            
+            <section class="uu-section bg-white text-default uu-section--region-1" style="">
+               <div class="uu-section__container"><!-- SECTION HEADER -->
+                  
+                  <div class="uu-section__header  ">
+                     <h1>Scheduling Jobs at the CHPC with Slurm</h1>
+                     <p>Slurm is a scalable, open-source scheduler used by over 60% of the world's top clusters
+                        and supercomputers. There are <a href="https://www.chpc.utah.edu/documentation/videos/index.php#comp_slurm">several short training videos</a> about Slurm, including concepts such as batch scripts and interactive jobs.</p>
+                  </div>
+                  <!-- END SECTION HEADER -->
+                  <!-- REGION 1 -->
+                  
+                  <div class="uu-section__region bg-white text-default no-border">
+                     <ul>
+                        <li><a href="#about">About Slurm</a></li>
+                        <li><a href="#usingslurm">Using Slurm to Submit Jobs: #SBATCH Directives</a><ul>
+                              <li><a href="#slurmaccounts">Determining Which Slurm Accounts You Are In</a></li>
+                              <li><a href="#othersbatch">Other Important #SBATCH Directives</a></li>
+                              <li><a href="#filesystems">Where to Run Your Slurm Job</a></li>
+                              <li><a href="#runscript">Running Your Program in Slurm</a></li>
+                              <li><a href="#example">Putting it all Together: An Example Slurm Script</a>&nbsp;</li>
+                              <li><a href="#sbatch">Submitting your Job to Slurm</a></li>
+                              <li><a href="#squeue">Checking The Status of your Job</a></li>
+                              <li><a href="#reservations">Special Circumstances: Reservations and QOS</a></li>
+                           </ul>
+                        </li>
+                        <li><a href="#interactive">Running Interactive Jobs</a></li>
+                        <li><a href="#handy">Handy Slurm Aliases</a><br><ul>
+                              <li><a href="#usercomm">Slurm User Commands</a></li>
+                              <li><a href="#aliases">Useful Slurm Aliases</a></li>
+                              <li><a href="#sview">sview GUI tool</a></li>
+                           </ul>
+                        </li>
+                        <li><a href="#nodessh">Logging onto Computational Nodes: Checking Job Stats</a></li>
+                        <li><a href="#otherdocs">Other CHPC Documentation on Slurm</a></li>
+                        <li><a href="#information">Other Good Sources of Information</a></li>
+                     </ul>
+                     <h2>&nbsp;</h2>
+                     <h2><a id="about"></a>About Slurm</h2>
+                     <p style="text-align: left;">Slurm – Simple Linux Utility for Resource Management, is used for managing job scheduling
+                        on clusters. It was originally created by people at the <a class="external-link" href="https://computing.llnl.gov/" rel="nofollow">Livermore Computing Center</a> and has grown into a full-fledged open-source software backed up by a large community,
+                        commercially supported by the <a class="external-link" href="http://www.schedmd.com/" rel="nofollow">original developers</a>, and is installed in many of the <a class="external-link" href="http://www.top500.org/" rel="nofollow">Top500</a> supercomputers. The Slurm development team is based close by to the University of
+                        Utah in Lehi, Utah.</p>
+                     <p>You may submit jobs to the Slurm batch system in two ways:&nbsp;</p>
+                     <ul>
+                        <li>Submitting a <a href="#usingslurm"><strong>batch script&nbsp;</strong></a></li>
+                        <li>Submitting for an <a href="#interactive"><strong>interactive job</strong></a></li>
+                     </ul>
+                     <h2><br><a id="usingslurm"></a>Using Slurm to Submit Jobs: #SBATCH Directives</h2>
+                     <p>To create a <em>batch script</em>, use your favorite text editor to create a text file that details job requirements
+                        and instructions on how to run your job.&nbsp;</p>
+                     <p>All job requirements passed to Slurm are prefaced by <strong>#SBATCH</strong> directives. The #SBATCH commands are used to pass computational requirements of your
+                        job to Slurm, which Slurm uses to determine what resources to give to your job. The
+                        two most important parameters that you can include are <em>account</em> and&nbsp;<em>partition</em> information, in the form:</p>
+                     <p><code style="background-color: lightgray;">#SBATCH --account=&lt;youraccount&gt;</code></p>
+                     <p><code style="background-color: lightgray;">#SBATCH --partition=&lt;yourpartition&gt;</code></p>
+                     <p><strong style="line-height: 1.75;">Accounts</strong><span style="line-height: 1.75;"> are <em>typically</em></span><span style="line-height: 1.75;"> named as your group name, which is likely your PI's lastname. If your group has owner
+                           nodes, the account is usually &lt;</span><em style="line-height: 1.75;">unix_group&gt;</em><span style="line-height: 1.75;">-&lt;</span><em style="line-height: 1.75;">cluster_abbreviation&gt;&nbsp;</em><span style="line-height: 1.75;"> (where cluster abbreviation is&nbsp; np, kp, lp, rw, ash). There are other types of accounts,
+                           typically named for specific partitions. These can include owner-guest, &lt;cluster&gt;-gpu,
+                           notchpeak-shared-short, and smithp-guest.<br></span></p>
+                     <p><strong>Partitions</strong> are virtual groups of node types. Naming mechanisms include <em><code style="background-color: lightgray;">cluster</code></em><span style="line-height: 1.75;">, <em><code style="background-color: lightgray;">cluster-shared</code></em>, <em><code style="background-color: lightgray;">cluster-gpu</code></em>, <code style="background-color: lightgray;"><em>cluster</em>-gpu-guest</code>, <code style="background-color: lightgray;"><em>cluster</em>-guest</code>, <em><code style="background-color: lightgray;">cluster-shared-guest</code></em>, and <em><code style="background-color: lightgray;">pi-cl</code></em></span><span style="line-height: 1.75;">,</span><span style="line-height: 1.75;">&nbsp;where <em>cluster</em> is the full name of the cluster and <em>cl</em> is the abbreviated form. We have our partition names described <a href="/documentation/hpcfaq.php#partitions">here</a>.</span></p>
+                     <h4>&nbsp;</h4>
+                     <h3><a id="slurmaccounts"></a>How to Determine which Slurm Accounts you are in</h3>
+                     <p>The easiest method to find the accounts and partitions you have access to at the CHPC
+                        is to use the <strong><code style="background-color: lightgray;">myallocation</code></strong> command. This command will output the cluster, the applicable account and partition
+                        for that cluster, and your allocation status for that partition.</p>
+                     <p>An example would look like the below:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="" style=" ">
+                        <pre>You have a <span style="text-decoration: underline;">general</span> allocation on <span style="text-decoration: underline;">kingspeak</span>. Account: <span style="text-decoration: underline;">baggins</span>, Partition: <span style="text-decoration: underline;">kingspeak-shared</span></pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>The above shows a&nbsp;<em>general</em> (i.e. non-<a href="/documentation/software/slurm-job-preemption.php">preemptable</a>) allocation on the kingspeak cluster under the baggins account within the kingspeak-shared
+                        partition.</p>
+                     <p>If you notice anything incorrect in the output from the myallocation command that
+                        you feel should be changed, please <a href="mailto:helpdesk@chpc.utah.edu?subject=myallocation%20problem">let us know</a>.</p>
+                     <p>&nbsp;</p>
+                     <h3><a id="othersbatch"></a>Other Important #SBATCH Directives</h3>
+                     <p>Other important <strong>#SBATCH </strong>parameters to inform Slurm of include the amount of <span style="text-decoration: underline;">time your job will run</span>, <span style="text-decoration: underline;">number of&nbsp;nodes</span> needed, <span style="text-decoration: underline;">number of&nbsp;cpus/tasks</span> needed, <span style="text-decoration: underline;">amount of memory</span> needed, and specifications for <span style="text-decoration: underline;">stdout</span> and <span style="text-decoration: underline;">stderr</span> files. These are designated as such:</p>
+                     <p><code style="background-color: lightgray;">#SBATCH --time=DD-HH:MM:SS #DD is days, HH is hours, MM is minutes, SS is seconds</code></p>
+                     <p><code style="background-color: lightgray;">#SBATCH --nodes=&lt;number-of-nodes&gt;</code></p>
+                     <p><code style="background-color: lightgray;">#SBATCH --ntasks=&lt;number-of-cpus&gt;</code></p>
+                     <p><code style="background-color: lightgray;">#SBATCH --mem=&lt;size&gt;[units]</code></p>
+                     <p><code style="background-color: lightgray;">#SBATCH -o slurmjob-%j.out-%N #stdout file in format slurmjob-SLURM_JOB_ID.out-NODEID</code></p>
+                     <p><code style="background-color: lightgray;">#SBATCH -e slurmjob-%j.err-%N #stderr file in format slurmjob-SLURM_JOB_ID.err-NODEID</code></p>
+                     <p><em>**Note**&nbsp;</em>If you would like to request GPU resources, you can find information on the <a href="/documentation/guides/gpus-accelerators.php">GPUs available at the CHPC</a> as well as information on <a href="/documentation/software/slurm-gpus.php">requesting GPUs</a>. Not all software or research benefits from use with GPUs and, therefore, not all
+                        CHPC users have access to GPUs at the CHPC. If you need access to our GPUs, you can
+                        email us at <a href="mailto:helpdesk@chpc.utah.edu">helpdesk@chpc.utah.edu</a> and explain how your research requires GPUs, at which point we will grant you access.</p>
+                     <p>&nbsp;</p>
+                     <p><code style="background-color: lightgray;"></code></p>
+                     <p><code style="background-color: lightgray;"></code></p>
+                     <p><code style="background-color: lightgray;"></code></p>
+                     <p><code style="background-color: lightgray;"></code></p>
+                     <h3 id="TangentUserGuide-ThecreationofabatchscriptontheTangentcluster"><a id="filesystems"></a>Where to Run Your Slurm Job</h3>
+                     <p>There are three main places you can run your job: your&nbsp;<strong>home</strong> directory,&nbsp;<strong>/scratch</strong> spaces, or&nbsp;<strong>group</strong> spaces (available if your group has <a href="/resources/storage_services.php#glsf">purchased group storage</a>). This will determine where I/O is handled during the duration of your job. Each
+                        has its own benefits, outlined below:</p>
+                     <div class="scroll-overflow">
+                        <table class="uu-table bordered striped">
+                           <tbody>
+                              <tr>
+                                 <th>Home</th>
+                                 <th>Scratch</th>
+                                 <th>&nbsp;Group Space</th>
+                              </tr>
+                              <tr>
+                                 <td>Free</td>
+                                 <td>Free</td>
+                                 <td>$150/TB without backups</td>
+                              </tr>
+                              <tr>
+                                 <td>Automatically provisioned per user</td>
+                                 <td>60 day automatic deletion of untouched files</td>
+                                 <td>$450/TB with backups</td>
+                              </tr>
+                              <tr>
+                                 <td>50 GB soft limit</td>
+                                 <td>Two files systems: <em>vast</em> and <em>nfs1</em></td>
+                                 <td>Is shared among your group</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     <p>Due to the memory limits in each users home directory, we recommend setting up your
+                        jobs to run in our <a href="/resources/storage_services.php#sfs">scratch file systems</a>. It must be noted that <strong>files in the CHPC's scratch file systems will be deleted if untouched for 60 days.&nbsp;</strong></p>
+                     <p>To run jobs in the CHPC scratch file systems (vast or nfs1), place the following commands
+                        in your Slurm batch script. The commands that you use depend on what Linux shell you
+                        have. Unsure? Type 'echo $SHELL' in your terminal.</p>
+                     <div class="scroll-overflow">
+                        <table class="uu-table bordered striped">
+                           <tbody>
+                              <tr>
+                                 <th>BASH</th>
+                                 <th>&nbsp;TCSH</th>
+                              </tr>
+                              <tr>
+                                 <td>SCRDIR=/scratch/general/&lt;file-system&gt;/$USER/$SLURM_JOB_ID</td>
+                                 <td>set SCRDIR = /scratch/general/&lt;file-system&gt;/$USER/$SLURM_JOB_ID</td>
+                              </tr>
+                              <tr>
+                                 <td>mkdir -p $SCRDIR</td>
+                                 <td>mkdir -p $SCRDIR</td>
+                              </tr>
+                              <tr>
+                                 <td>cp &lt;input-files&gt; $SCRDIR</td>
+                                 <td>cp &lt;input-files&gt; $SCRDIR</td>
+                              </tr>
+                              <tr>
+                                 <td>cd $SCRDIR</td>
+                                 <td>cd $SCRDIR</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     <p>Replace &lt;file-system&gt; with either vast or nfs1.</p>
+                     <p>$USER points to your uNID and $SLURM_JOB_ID points to the job ID that Slurm assigned
+                        your job.<br><br></p>
+                     <h3><a id="runscript"></a>Running Your Program in Slurm</h3>
+                     <p>To run the software/script you have against your input data, simply pass the same
+                        commands that you would use at the command line to your Slurm script.</p>
+                     <p>&nbsp;</p>
+                     <h3><a id="example"></a>Putting it all Together: An Example Slurm Script</h3>
+                     <p>Below is an example job that combines all of the information from above. In this example
+                        below, we will suppose your PI is Frodo Baggins (group ID baggins) and is requesting
+                        general user access to 1 lonepeak node with at least 8 cpus and 32GB of memory. The
+                        job will run for two hours.</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="" style=" ">
+                        <pre><strong>#!/bin/bash</strong><br>#SBATCH --account=baggins<br>#SBATCH --partition=lonepeak<br>#SBATCH --time=02:00:00<br>#SBATCH --ntasks=8<br>#SBATCH --mem=32G<br>#SBATCH -o slurmjob-%j.out-%N<br>#SBATCH -e slurmjob-%j.err-%N<br><strong>#set up scratch directory</strong><br>SCRDIR=/scratch/general/vast/$USER/$SLURM_JOB_ID<br>mkdir -p $SCRDIR<br><strong>#copy input files and move over to the scratch directory</strong><br>cp inputfile.csv myscript.r $SCRDIR<br>cd $SCRDIR<br><strong>#load your module</strong><br>module load R/4.4.0<br><strong>#run your script</strong><br>Rscript myscript.r inputfile.csv<br><strong>#copy output to your home directory and clean up</strong><br>cp outputfile.csv $HOME<br>cd $HOME<br>rm -rf $SCRDIR</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>&nbsp;</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <div class="well"><strong>NOTE</strong> When specifying an account or paritition, you may use either an equals sign or a
+                           space before the account or parition name, but you may not use both in the same line.
+                           For example, "#SBATCH --account=kingspeak-gpu" and "#SBATCH --account kingspeak-gpu"
+                           are acceptable, but "#SBATCH --account = kingspeak-gpu" is not.</div>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <div style="padding-left: 30px;">&nbsp;</div>
+                     <p>For more examples of SLURM jobs scripts see <a href="https://github.com/CHPC-UofU/chpc-myjobs-templates" target="_blank" rel="noopener">CHPC MyJobs templates</a>.</p>
+                     <p>&nbsp;</p>
+                     <h3><a id="sbatch"></a>Submitting your Job to Slurm</h3>
+                     <p>In order to submit a job, one has to be logged onto the CHPC systems. Once logged
+                        on, job submission is done with the <code style="background-color: lightgray;">sbatch</code>&nbsp;command in slurm.</p>
+                     <p>For example, to submit a script named SlurmScript.sh, type:</p>
+                     <ul>
+                        <li><code class="java plain">sbatch SlurmScript.sh<br></code></li>
+                     </ul>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="" style=" ">
+                        <div class="well">
+                           <p><strong>NOTE:</strong>&nbsp;sbatch by default passes all environment variables to the compute node, which differs
+                              from the behavior in PBS (which started with a clean shell). If you need to start
+                              with a clean environment, you will need to use the following directive in your batch
+                              script:</p>
+                           <ul>
+                              <li><code class="java plain">#SBATCH --export=NONE<br></code></li>
+                           </ul>
+                           <p>This will still execute .bashrc/.tcshrc scripts, but any changes you make in your
+                              interactive environment will not be present in the compute session. As an additional
+                              precaution, if you are using modules, you should use&nbsp;&nbsp;<code style="background-color: lightgray;">module purge</code>&nbsp;to guarantee a fresh environment.</p>
+                        </div>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>&nbsp;</p>
+                     <p><strong>*Note*</strong> There is a hard limit of <em>72 hours</em> for jobs on general cluster nodes and <em>14 days </em>on owner cluster nodes. If your job requires more time than these hard limits, you
+                        can email the CHPC at <a href="mailto:helpdesk@chpc.utah.edu,">helpdesk@chpc.utah.edu,</a> providing the job ID, cluster, and length of time you would like to extend the job
+                        to.</p>
+                     <p>&nbsp;</p>
+                     <h3><a id="squeue"></a> &nbsp;Checking the Status of your Job</h3>
+                     <p>To check the status of your job, use the&nbsp;<code style="background-color: lightgray;">squeue</code> command. The output from the squeue command on its own will output all jobs currently
+                        submitted to the cluster you are logged onto. You can filter the output of squeue
+                        to jobs that only pertain to you in a number of ways:</p>
+                     <ul>
+                        <li><code style="background-color: lightgray;">squeue --me</code></li>
+                        <li><code style="background-color: lightgray;">squeue -u uNID</code></li>
+                        <li><code style="background-color: lightgray;">squeue -j job#</code></li>
+                     </ul>
+                     <p>Adding <code style="background-color: lightgray;">-l</code> (for "long" output) gives more details in the squeue output.</p>
+                     <p>&nbsp;</p>
+                     <h2 id="TangentUserGuide-Interactivejobs"><a id="interactive"></a>Interactive Batch Jobs</h2>
+                     <p>Submitting for an <em>interactive job</em> can happen interactively on the command line. <span style="line-height: 1.75;">In order to launch an interactive session on a compute node, use the <code style="background-color: lightgray;">salloc</code> command and pass flags to it using the same format for #SBATCH directives:</span></p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>salloc --time=02:00:00 --ntasks 2 --nodes=1 --account=baggins --partition=lonepeak </pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>&nbsp;</p>
+                     <p>The salloc flags can be abbreviated as:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>salloc -t 02:00:00 -n 2 -N 1 -A baggins -p lonepeak</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>&nbsp;</p>
+                     <p>CHPC cluster queues tend to be very busy; it may take some time for an interactive
+                        job to start. For this reason, we have added two nodes in a special partition on the
+                        notchpeak cluster that are geared more towards interactive work. Job limits on this
+                        partition are 8 hours wall time, a maximum of ten submitted jobs per user, with a
+                        maximum of two running jobs with a maximum total of 32 tasks and 128 GB memory.&nbsp; To
+                        access this special partition, <code style="background-color: lightgray;">notchpeak-shared-short</code>, request both an account and partition under this name, e.g.:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>salloc -N 1 -n 2 -t 2:00:00 -A notchpeak-shared-short -p notchpeak-shared-short</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>&nbsp;</p>
+                     <h3><a id="reservations"></a>Special Circumstances:&nbsp; Reservations and QOS</h3>
+                     <h5>Reservations</h5>
+                     <p>Upon request we can create reservations for users to guarantee node availability via
+                        an email to <a href="mailto:helpdesk@chpc.utah.edu?subject=">helpdesk@chpc.utah.edu</a>. Once a reservation is in place, reservations can be passed to Slurm with the <code style="background-color: lightgray;">--reservation</code>&nbsp; flag (abbreviated as <code style="background-color: lightgray;">-R</code> ) followed by the reservation name.</p>
+                     <p>For policies regarding reservations see the <a href="https://www.chpc.utah.edu/documentation/policies/2.1GeneralHPCClusterPolicies.php">Batch Policies document</a>.</p>
+                     <h5>QOS</h5>
+                     <p>QOS stands for Quality of Service.&nbsp; While this is not normally specified, it is necessary
+                        in a few cases, such as partitions of nodes owned by colleges. In these cases, there
+                        may be different QOS's that differ on <a href="/documentation/software/slurm-job-preemption.php">preemption</a> status and maximum job walltime.</p>
+                     <p>One example is when a user needs to override the normal 3 day wall time limit. In
+                        this case, the user can request access to a special long qos that we have set up for
+                        the general nodes of a cluster,&nbsp; <code style="background-color: lightgray;">cluster-long</code> , that allow for a longer wal ltime to be specified.&nbsp; In order to get access to the
+                        long qos of a given clusters, send a request with an explanation on why you need a
+                        longer wall time to <a href="mailto:helpdesk@chpc.utah.edu?subject=">helpdesk@chpc.utah.edu</a>.</p>
+                     <p>&nbsp;</p>
+                     <h2><a id="handy"></a> Handy Slurm Information</h2>
+                     <h4 id="TangentUserGuide-SlurmUserCommands"><a id="usercomm"></a> Slurm User Commands</h4>
+                     <div class="uu-table">
+                        <div class="scroll-overflow">
+                           <table class="uu-table bordered striped">
+                              <tbody>
+                                 <tr>
+                                    <th>&nbsp;Slurm&nbsp;Command</th>
+                                    <th>&nbsp;What it does</th>
+                                 </tr>
+                                 <tr>
+                                    <td>&nbsp;sinfo</td>
+                                    <td>
+                                       <p>reports the state of partitions and nodes managed by Slurm. It has a wide variety
+                                          of filtering, sorting, and formatting options. For a personalized view, showing only
+                                          information about the partitions to which you have access, see <a href="/documentation/software/personalslurmqueries.php" target="_blank" rel="noopener">mysinfo</a>.</p>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td>&nbsp;squeue</td>
+                                    <td>reports the state of jobs or job steps. It has a wide variety of filtering, sorting,
+                                       and formatting options. By default, it reports the running jobs in priority order
+                                       and then the pending jobs in priority order. For a personalized view, showing only
+                                       information about the jobs in the queues/partitions to which you have access, see
+                                       <a href="/documentation/software/personalslurmqueries.php" target="_blank" rel="noopener">mysqueue.</a></td>
+                                 </tr>
+                                 <tr>
+                                    <td>&nbsp;sbatch</td>
+                                    <td>is used to submit a job script for later execution. The script will typically contain
+                                       one or more #SBATCH directives.</td>
+                                 </tr>
+                                 <tr>
+                                    <td>&nbsp;scancel</td>
+                                    <td>is used to cancel a pending or running job or job step. It can also be used to send
+                                       an arbitrary signal to all processes associated with a running job or job step.</td>
+                                 </tr>
+                                 <tr>
+                                    <td>&nbsp;sacct</td>
+                                    <td>is used to report job or job step accounting information about active or completed
+                                       jobs.</td>
+                                 </tr>
+                                 <tr>
+                                    <td>&nbsp;srun</td>
+                                    <td>is used to submit a job for execution or initiate job steps in real time. <span class="commandline">srun</span>&nbsp;has a wide variety of options to specify resource requirements, including: minimum
+                                       and maximum node count, processor count, specific nodes to use or not use, and specific
+                                       node characteristics (so much memory, disk space, certain required features, etc.).
+                                       A job can contain multiple job steps executing sequentially or in parallel on independent
+                                       or shared nodes within the job's node allocation.</td>
+                                 </tr>
+                                 <tr>
+                                    <td>spart</td>
+                                    <td>list partitions and their utilization</td>
+                                 </tr>
+                                 <tr>
+                                    <td>pestat</td>
+                                    <td>list efficiency of cluster utilization on per node, per user, or per partition basis.
+                                       By default it prints utilization of all cluster nodes. To select only nodes utilized
+                                       by an user, run <code style="background-color: lightgray;">pestat -u $USER</code>.</td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                     <h4>&nbsp;</h4>
+                     <h4><a id="aliases"></a> Useful Slurm Aliases</h4>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>Bash to add to .aliases file:<br>#SLURM Aliases that provide information in a useful manner for our clusters<br>alias si="sinfo -o \"%20P %5D %14F %8z %10m %10d %11l %32f %N\""<br>alias si2="sinfo -o \"%20P %5D %6t %8z %10m %10d %11l %32f %N\""<br>alias sq="squeue -o \"%8i %12j %4t %10u %20q %20a %10g %20P %10Q %5D %11l %11L %R\""<br><br>Tcsh to add to .aliases file:<br>#SLURM Aliases that provide information in a useful manner for our clusters<br>alias si 'sinfo -o "%20P %5D %14F %8z %10m %11l %32f %N"'<br>alias si2 'sinfo -o "%20P %5D %6t %8z %10m %10d %11l %32f %N"'<br>alias sq 'squeue -o "%8i %12j %4t %10u %20q %20a %10g %20P %10Q %5D %11l %11L %R"'</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <h4>&nbsp;</h4>
+                     <h4><a id="sview"></a> sview GUI Tool</h4>
+                     <p>sview is a graphical user interface to view and modify a Slurm state. Run it by typing
+                        sview in a FastX (or X-11 forwarded) terminal session. It is useful for viewing partitions,
+                        nodes characteristics, and information on jobs. Right clicking on the job, node, or
+                        partition allows you to perform actions on them. Use this carefully so as not to accidentally
+                        modify or remove your job.</p>
+                     <p>&nbsp;<img src="/_resources/images/sview.jpg" alt="sview" width="1004" height="322"></p>
+                     <h2>&nbsp;</h2>
+                     <p class="h2"><a id="nodessh"></a>Logging Onto Computational Nodes: Checking Job Stats</p>
+                     <p>Sometimes it is useful to connect to the node(s) where a job runs to monitor the executable
+                        and determine if it is running correctly and efficiently. For that, we allow users
+                        with active jobs on compute nodes to ssh to these compute nodes. To determine the
+                        name of your compute node, run the <strong><code style="background-color: lightgray;">squeue -u $USER</code></strong> command, and then ssh to the node(s) listed.</p>
+                     <p>Once logged onto the compute node, you can run the <strong><code style="background-color: lightgray;">top</code></strong> command to view CPU and memory usage of the node. If using GPUs, you can view GPU
+                        usage through the <strong><code style="background-color: lightgray;">nvidia-smi</code></strong>&nbsp;command.</p>
+                     <p>&nbsp;</p>
+                     <h2><a id="otherdocs"></a>Other CHPC Documentation on Slurm</h2>
+                     <p>Looking for more information on running Slurm at the CHPC? Check out these pages.
+                        If you have a specific question, please don't hesitate to contact us at <a href="mailto:helpdesk@chpc.utah.edu">helpdesk@chpc.utah.edu</a>.</p>
+                     <p><a href="/documentation/software/slurm-job-preemption.php">Slurm Job Preemption and Restarting of Jobs</a></p>
+                     <p><a href="/documentation/software/slurm-priority-scores.php">Slurm Priority Scoring for Jobs</a></p>
+                     <p><a href="/documentation/software/slurm-mpi-jobarrays.php">MPI with Slurm</a></p>
+                     <p><a href="/documentation/software/slurm-gpus.php">GPUs with Slurm</a></p>
+                     <p><a href="/documentation/software/slurm-datatransfernode.php">Accessing CHPC's Data Transfer Nodes (DTNs) through Slurm</a></p>
+                     <p><a href="/usage/constraints/">Other Slurm Constraint Suggestions and Owner Node Utilization</a></p>
+                     <p><a href="/documentation/software/node-sharing.php">Sharing Nodes Among Jobs with Slurm</a></p>
+                     <p><a href="/documentation/software/personalslurmqueries.php">Personalized Slurm Queries</a></p>
+                     <p><a href="/documentation/software/moab-pbs-to-slurm.php">Moab/PBS to Slurm</a></p>
+                     <p>&nbsp;</p>
+                     <h2><a id="information"></a> Other Good Sources of Information</h2>
+                     <ul>
+                        <li><a href="http://slurm.schedmd.com/pdfs/summary.pdf" target="_blank" rel="noopener">http://slurm.schedmd.com/pdfs/summary.pdf</a>&nbsp;&nbsp; This is a two page summary of common SLURM commands and options.</li>
+                        <li><a class="external-link" href="http://slurm.schedmd.com/documentation.html" target="_blank" rel="nofollow noopener">http://slurm.schedmd.com/documentation.html</a>&nbsp;Best source for online documentation</li>
+                        <li><a href="http://slurm.schedmd.com/slurm.html" target="_blank" rel="noopener">http://slurm.schedmd.com/slurm.html</a></li>
+                        <li><a href="http://slurm.schedmd.com/man_index.html">http://slurm.schedmd.com/man_index.html</a></li>
+                        <li><span style="font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.75; background-color: #f5f5f5;">man </span><em style="font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.75;">&lt;slurm_command&gt; &nbsp;(from the command line)&nbsp;</em></li>
+                        <li><a class="external-link" href="http://www.glue.umd.edu/hpcc/help/slurm-vs-moab.html" target="_blank" rel="nofollow noopener">http://www.glue.umd.edu/hpcc/help/slurm-vs-moab.html</a>&nbsp; A more complete comparison table between slurm and moab</li>
+                        <li><a class="external-link" href="http://www.schedmd.com/slurmdocs/rosetta.pdf" target="_blank" rel="nofollow noopener">http://www.schedmd.com/slurmdocs/rosetta.pdf</a>&nbsp;is a table of slurm commands and their counterparts in a number different batch systems</li>
+                     </ul>
+                  </div>
+                  <!-- END REGION 1 -->
+                  <!-- SECTION FOOTER -->
+                  
+                  <div class="uu-section__footer  ">
+                     <p></p>
+                  </div>
+                  <!-- END SECTION FOOTER -->
+                  </div>
+            </section>
+            <!-- END SECTION 1 -->
+            <!-- SECTION 2 -->
+            <!-- END SECTION 2 -->
+            <!-- SECTION 3 -->
+            <!-- END SECTION 3 -->
+            <!-- SECTION 4 -->
+            <!-- END SECTION 4 -->
+            <!-- SECTION 5 -->
+            <!-- END SECTION 5 -->
+            </main>
+         <!-- END MAIN CONTENT -->
+         <!-- FOOTER -->
+         
+         <footer class="uu-footer"><div class="uu-footer__top">
+   <div class="uu-footer__top-container">
+      <div class="uu-footer__top-col1"><a href="https://www.utah.edu"><img src="https://templates.utah.edu/_main-v3-1/images/template/blocku.svg" alt="The University of Utah" class="uu-block-logo"></a><div class="department-name">
+            <h2>The Center For High Performance Computing</h2>
+         </div>
+         <div class="department-address">
+            <p>155 S 1452 E, RM. 405<br>SLC, UT 84112-0190<br>801.585.3791&nbsp;</p>
+         </div>
+      </div>
+      <div class="uu-footer__top-col2">
+         <h2 class="footer-heading">Stay in Touch</h2>
+         <hr>
+         <ul>
+            <li><a href="https://map.utah.edu/index.html?code=inscc">Find Us</a></li>
+            <li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Us</a></li>
+            <li><a href="mailto:helpdesk@chpc.utah.edu">Webmaster</a></li>
+         </ul>
+      </div>
+      <div class="uu-footer__top-col5">
+         <h2 class="footer-heading">Quick Links</h2>
+         <hr>
+         <ul>
+            <li><a href="https://www.utah.edu/a-z/">A-Z Index</a></li>
+            <li><a href="https://people.utah.edu/uWho/basic.hml">Campus Directory</a></li>
+            <li><a href="https://www.map.utah.edu">Campus Map</a></li>
+            <li><a href="https://map.utah.edu/?allshuttle=on">Shuttle Tracker </a></li>
+            <li><a href="https://cis.utah.edu/">CIS</a></li>
+            <li><a href="https://www.umail.utah.edu/">UMail</a></li>
+            <li><a href="https://attheu.utah.edu/">@ The U</a></li>
+         </ul>
+      </div>
+   </div>
+</div><div class="uu-footer__bottom">
+   <div class="uu-footer__bottom-container">
+      <div class="uu-footer__bottom-col1"><a href="https://www.utah.edu/"><img src="https://templates.utah.edu/_main-v3-1/images/template/university-of-utah-logo.svg" alt="The University of Utah" class="uu-site-logo"></a></div>
+      <div class="uu-footer__bottom-col2">
+         <div class="legal">
+            <p>© 2024 The University of Utah</p>
+            <ul>
+               <li><a href="https://www.utah.edu/indigenous-land-acknowledgment/index.php">Indigenous Land Acknowledgment</a></li>
+               <li><a href="https://www.utah.edu/nondiscrimination/">Nondiscrimination &amp; Accessibility</a></li>
+               <li><a href="https://www.utah.edu/disclaimer/">Disclaimer</a></li>
+               <li><a href="https://www.utah.edu/privacy/">Privacy</a></li>
+               <li><a href="https://www.utah.edu/credits-v3.php">Credits &amp; Attributions</a></li>
+               <li><a href="https://attheu.utah.edu/media-contacts/">Media Contacts</a></li>
+               <li><span id="directedit"></span></li>
+            </ul>
+         </div>
+      </div>
+      <div class="uu-footer__bottom-col3">
+         <ul class="uu-social-list">
+            <li><a href="https://twitter.com/uutah"><span class="fa-brands fa-x-twitter" aria-hidden="true"></span><span class="sr-only">X</span></a></li>
+            <li><a href="https://www.facebook.com/universityofutah"><span class="fab fa-facebook" aria-hidden="true"></span><span class="sr-only">Facebook</span></a></li>
+            <li><a href="https://www.instagram.com/universityofutah/"><span class="fab fa-instagram" aria-hidden="true"></span><span class="sr-only">Instagram</span></a></li>
+            <li><a href="https://www.youtube.com/user/theuniversityofutah"><span class="fab fa-youtube" aria-hidden="true"></span><span class="sr-only">Youtube</span></a></li>
+         </ul>
+      </div>
+   </div>
+</div></footer>
+         <!-- END FOOTER -->
+         </div>
+      <!-- FOOT CODE -->
+      <script src="//templates.utah.edu/_main-v3-1/js/main.min.js"></script>
+      
+      
+      
+      
+      
+      
+      
+      <script src="//templates.utah.edu/_main-v3-1/js/directedit.js"></script><script><!--
+window.onload = function(){ directedit(); }
+//
+			--></script>
+      <script src="/_resources/js/custom.js"></script>
+            
+      <!-- END FOOT CODE -->
+      
+      <div id="hidden"><a id="de" href="https://a.cms.omniupdate.com/11/?skin=utah&amp;account=utah_home&amp;site=chpc2&amp;action=de&amp;path=/documentation/software/slurm.pcf">Last Updated: 9/4/24</a></div>
+      <!-- END PAGE BODY -->
+      </body>
+</html>

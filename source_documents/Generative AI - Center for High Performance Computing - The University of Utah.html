@@ -1,0 +1,587 @@
+<!DOCTYPE HTML><html lang="en-US" class="no-js">
+   <head><!-- PAGE HEAD -->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+      <title>Generative AI - Center for High Performance Computing - The University of Utah</title>
+      <meta name="keywords" content="large language models  natural language processing">
+      <meta name="description" content="">
+      <meta name="robots" content="index,follow">
+      <link rel="icon" href="//templates.utah.edu/_main-v3-1/images/template/favicon.ico">
+      <link rel="apple-touch-icon-precomposed" href="//templates.utah.edu/_main-v3-1/images/template/apple-touch-icon.png">
+      <link rel="stylesheet" href="//templates.utah.edu/_main-v3-1/css/main.min.css" type="text/css"><noscript>
+         <link rel="stylesheet" href="//templates.utah.edu/_main-v3-1/css/assets/fontawesome/css/all.min.css" type="text/css"></noscript><link href="/_resources/css/custom.css" rel="stylesheet" type="text/css">
+      <script src="//templates.utah.edu/_main-v3-1/js/head-code.min.js"></script>
+      <!-- HEAD CODE -->
+      
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y160DVJ0DZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y160DVJ0DZ');
+</script>
+
+      
+      <!-- END HEAD CODE -->
+      <!-- END PAGE HEAD -->
+      </head>
+   <body class="has-headernav"><!-- PAGE BODY -->
+      <a class="uu-skip-link" href="#skip-link-target">Skip to content</a>
+      <!-- BODY TOP CODE -->
+            <!-- END BODY TOP CODE -->
+      
+      <div id="uu-top-target" class="uu-site"><!-- SEARCH -->
+         <div class="uu-search" role="search">
+    <div class="uu-search__container">
+        <!-- SITE SEARCH -->
+        <form method="get" id="search-site" class="uu-search__form" action="/search/index.php">
+
+            <label for="inputSearchSite" class="sr-only">Search Site:</label>
+            <input type="text" id="inputSearchSite" name="q" value="" placeholder="Search Site" />
+            <input type="hidden" name="gcse_action" value="site" />
+
+            <div class="form-powered-by">
+                <span>Powered by</span> 
+                <img src="https://templates.utah.edu/_main-v3-1/images/template/google-logo.png" alt="Google Search">
+            </div>
+
+        </form>
+        <!-- END SITE SEARCH -->
+        <!-- CAMPUS SEARCH -->
+        <form method="get" id="search-campus" class="uu-search__form" action="/search/index.php">
+
+            <label for="inputSearchCampus" class="sr-only">Search Campus:</label>
+            <input type="text" id="inputSearchCampus" name="q" value="" placeholder="Search Campus" />
+            <input type="hidden" name="gcse_action" value="campus" />
+
+            <div class="form-powered-by">
+                <span>Powered by</span> 
+                <img src="https://templates.utah.edu/_main-v3-1/images/template/google-logo.png" alt="Google Search">
+            </div>
+        </form>
+        <!-- END CAMPUS SEARCH -->
+
+        <!-- SEARCH TYPE TOGGLE -->
+        <div class="search-type-toggle">
+            <label class="uu-switch" for="search_campus_checkbox">
+                <input type="checkbox" name="search_campus_checkbox" value="" id="search_campus_checkbox">
+                <span class="uu-switch-slider"></span>
+                <span class="uu-switch-label">Search Campus</span>
+            </label>
+        </div>
+        <!-- END SEARCH TYPE TOGGLE -->
+
+    </div>
+</div><!-- END SEARCH -->
+         <!-- HEADER -->
+         
+         <header class="uu-header">
+            <div class="uu-header__container">
+               <!-- ALERT AREA -->
+               <div id="alert_bar" class="uu-alert-bar"> 
+	<a href="https://coronavirus.utah.edu/">University of Utah COVID-19 Updates</a>
+</div><!-- END ALERT AREA -->
+               
+               <div class="uu-header__top"> <a href="https://www.utah.edu/" class="uu-header__logo"><span class="sr-only">The University of Utah</span></a>                  <div class="uu-header__middle">
+                     <!-- HEADER TITLE -->
+                     <div class="uu-header__title">
+<h2><a href="/">CHPC - Research Computing and Data Support for the University</a></h2>
+<!-- <h3><a href="http://it.utah.edu">University Information Technology</a></h3> --></div><!-- END HEADER TITLE -->
+                     <!-- HEADER NAVIGATION -->
+                     
+<nav class="uu-header__nav">
+	
+<ul class="uu-menu__level1">
+<ul class="uu-menu__level1">
+<li class="has-sub"><a href="#">About Us</a>
+<ul class="sub-menu">
+<li><a href="/about/index.php">About Us</a></li>
+<li><a href="https://www.chpc.utah.edu/about/vision.php">Vision</a></li>
+<li><a href="/about/staff.php">Staff</a></li>
+<li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Information</a></li>
+<li><a href="https://www.chpc.utah.edu/about/acknowledge.php">Acknowledging CHPC</a></li>
+<li><a href="https://www.chpc.utah.edu/highlights.php">Research Highlights</a></li>
+<li><a href="https://www.chpc.utah.edu/about/partners.php">Partners</a></li>
+<li><a href="/news/index.php">News</a></li>
+<li><a href="/about/governance.php">Governance</a></li>
+</ul>
+</li>
+<li class="has-sub"><a href="#">Resources</a>
+<ul class="sub-menu">
+<li><a href="https://www.chpc.utah.edu/resources/index.php">Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/HPC_Clusters.php">HPC Clusters</a></li>
+<li><a href="/resources/storage_services.php">Storage Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="/resources/virtualmachines.php">Virtual Machines</a></li>
+<li><a href="/resources/hosting.php">Hosting Services</a></li>
+<li><a href="/resources/Networking.php">Networking</a></li>
+<li><a href="/resources/ProtectedEnvironment.php">Protected Environment</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="/userservices/index.php">User Services</a></li>
+</ul>
+</li>
+<li class="has-sub sub-width-lg"><a href="#">Documentation</a>
+<ul class="sub-menu">
+<li><a href="https://www.chpc.utah.edu/documentation/index.php">Documentation</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/gettingstarted.php">Getting Started</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/access.php">Accessing Our Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/videos/index.php">Short Training Videos</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/index.php">Cluster Guides</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/beehive.php">Beehive User Guide (Windows Server)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/gpus-accelerators.php">GPU &amp; Accelerators</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/frisco-nodes.php">Frisco Nodes</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/narwhal.php">Narwhal User Guide (Protected Environment Statistics)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/software/index.php">Software</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php">Programming Guide</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/policies/index.php">Policy Manual</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/HelloWorldMPI.php">HPC Basics - Hello World MPI</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/faq.php">Frequently Asked Questions</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/white_papers/index.php">White Papers</a></li>
+</ul>
+</li>
+<li class="has-sub"><a href="#">User Services</a>
+<ul class="sub-menu">
+<li><a href="/userservices/index.php">User Services</a></li>
+<li><a href="https://www.chpc.utah.edu/userservices/accounts.php">Accounts</a></li>
+<li><a href="/userservices/allocations.php">Allocations</a></li>
+<li><a href="/userservices/gettinghelp.php">Getting Help</a></li>
+<li><a href="https://www.chpc.utah.edu/presentations/index.php">Training</a></li>
+</ul>
+</li>
+<li class="has-sub sub-width-lg"><a href="#">Usage</a>
+<ul class="sub-menu">
+<li><a href="/usage/cluster/index.php">Cluster Usage</a>
+<ul>
+<li><a href="/usage/cluster/current-project-general.php">General Allocation Pool</a></li>
+<li><a href="/usage/cluster/current-project-lonepeak.php">Lonepeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-kingspeak.php">Kingspeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-ash.php">Ash Cluster</a></li>
+<li><a href="/usage/cluster/current-project-redwood.php">Redwood Cluster</a></li>
+</ul>
+</li>
+<li><a href="/usage/graphs.php?g=cluster%20utilization&amp;host=combined&amp;type=daily_utilization">Cluster Utilization Graphs</a></li>
+<li><a href="/usage/graphs.php?g=hpc%20cluster%20scratch&amp;host=chpc_gen&amp;type=cpu">HPC Cluster Scratch</a></li>
+<li><a href="/usage/graphs.php?g=network&amp;host=Campus+Gateway&amp;type=daily_traffic">Network</a>
+<ul>
+<li><a href="/resources/maddash-dashboards.php">Maddash Dashboards</a></li>
+</ul>
+</li>
+<li><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">UEN Weathermap (Only Available on UEN Networks)</a></li>
+<li><a href="http://snapp2.bldc.grnoc.iu.edu/i2al2s/#&amp;p=3%2C42&amp;ccid=3&amp;tab=1&amp;search=undefined&amp;pwidth=undefined&amp;ccat=undefined&amp;url=show-graph.cgi%3Fcollection_ids%3D145%26end%3D1461772131%26start%3D1461771831%26cf%3DAVERAGE%26ds%3Doutput%2Cinput%26collection_ids%3D145" target="_blank" rel="noopener">UEN Aggregate Utilization</a></li>
+<li><a href="http://uofu.status.io">UofU IT Services Status</a></li>
+<li><a href="https://status.it.utah.edu">University Application Heath Summary - NOC</a></li>
+</ul>
+</li>
+<li><a href="/role/">My Account</a></li>
+</ul>
+</ul>	
+</nav>
+
+<!-- END HEADER NAVIGATION -->
+                     </div>
+                  <div class="uu-search-toggle"><button class="uu-search__trigger"><span class="far fa-search" aria-hidden="true"></span><span class="sr-only">Search</span></button></div><button id="jsNavTrigger" class="uu-nav__trigger" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Reveal Menu</span><span></span></button></div>
+            </div>
+         </header>
+         <!-- END HEADER -->
+         <!-- PUSH NAVIGATION -->
+         
+         <section class="uu-nav">
+            <div class="uu-nav__container"><button id="jsMobileNavTrigger" class="uu-nav__trigger" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Reveal Menu</span><span></span></button><header class="uu-nav__header">
+                  <h2 class="sr-only">Main Navigation</h2>
+                  <!-- Navigation Logo -->
+<a href="https://utah.edu/" class="uu-nav__logo">
+	<img src="https://templates.utah.edu/_main-v3-1/images/template/university-of-utah-logo.svg" alt="The University of Utah"/>
+</a></header>
+               <nav class="uu-menu" aria-label="main"><p><h2 class="uu-menu__title">Main Menu</h2>
+<hr />
+<ul class="uu-menu__level1">
+<li><a href="/">Home</a></li>
+<li class="has-sublist"><a href="#">About Us</a>
+<ul class="uu-menu__level2">
+<li><a href="/about/index.php">About Us</a></li>
+<li><a href="https://www.chpc.utah.edu/about/vision.php">Vision</a></li>
+<li><a href="/about/staff.php">Staff</a></li>
+<li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Information</a></li>
+<li><a href="https://www.chpc.utah.edu/about/acknowledge.php">Acknowledging CHPC</a></li>
+<!--<li><a href="/about/bibliography/CHPC%20BIB.pdf" target="_blank" rel="noopener">CHPC Bibliography</a></li>-->
+<li><a href="https://www.chpc.utah.edu/about/SupportedResearch.php">Supported Research</a></li>
+<li><a href="https://www.chpc.utah.edu/highlights.php">Research Highlights</a></li>
+<li><a href="https://www.chpc.utah.edu/about/partners.php">Partners</a></li>
+<li><a href="/news/index.php">News</a></li>
+<li><a title="University Information Technology" href="https://it.utah.edu/" target="_blank" rel="noopener">UIT</a></li>
+<li><a href="/about/governance.php">Governance</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Resources</a>
+<ul class="uu-menu__level2">
+<li><a href="https://www.chpc.utah.edu/resources/index.php">Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/HPC_Clusters.php">HPC Clusters</a></li>
+<li><a href="/resources/storage_services.php">Storage Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="/resources/virtualmachines.php">Virtual Machines</a></li>
+<li><a href="/resources/hosting.php">Hosting Services</a></li>
+<li><a href="/resources/Networking.php">Networking</a></li>
+<li><a href="/resources/ProtectedEnvironment.php">Protected Environment</a></li>
+<li><a href="/documentation/software/ai.php">AI/ML Resources</a></li>
+<li><a href="/userservices/index.php">User Services</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Documentation</a>
+<ul class="uu-menu__level2">
+<li><a href="https://www.chpc.utah.edu/documentation/index.php">Documentation</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/gettingstarted.php">Getting Started</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/access.php">Accessing Our Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/videos/index.php">Short Training Videos</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/index.php">Cluster Guides</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/beehive.php">Beehive User Guide (Windows Server)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/gpus-accelerators.php">GPU &amp; Accelerators</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/frisco-nodes.php">Frisco Nodes</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/narwhal.php">Narwhal User Guide (Protected Environment Statistics)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/software/index.php">Software</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php">Programming Guide</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/policies/index.php">Policy Manual</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/HelloWorldMPI.php">HPC Basics - Hello World MPI</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/faq.php">Frequently Asked Questions</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/white_papers/index.php">White Papers</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">User Services</a>
+<ul class="uu-menu__level2">
+<li><a href="/userservices/index.php">User Services</a></li>
+<li><a href="https://www.chpc.utah.edu/userservices/accounts.php">Accounts</a></li>
+<li><a href="/userservices/allocations.php">Allocations</a></li>
+<li><a href="/userservices/gettinghelp.php">Getting Help</a></li>
+<li><a href="https://www.chpc.utah.edu/presentations/index.php">Training</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Usage</a>
+<ul class="uu-menu__level2">
+<li class="has-sublist"><a href="/usage/cluster/index.php">Cluster Usage</a>
+<ul class="uu-menu__level3">
+<li><a href="/usage/cluster/current-project-general.php">General Allocation Pool</a></li>
+<li><a href="/usage/cluster/current-project-lonepeak.php">Lonepeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-kingspeak.php">Kingspeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-ash.php">Ash Cluster</a></li>
+<li><a href="/usage/cluster/current-project-redwood.php">Redwood Cluster</a></li>
+</ul>
+</li>
+<li><a href="/usage/graphs.php?g=cluster%20utilization&amp;host=combined&amp;type=daily_utilization">Cluster Utilization Graphs</a></li>
+<li><a href="/usage/graphs.php?g=hpc%20cluster%20scratch&amp;host=chpc_gen&amp;type=cpu">HPC Cluster Scratch</a></li>
+<li class="has-sublist"><a href="/usage/graphs.php?g=network&amp;host=Campus+Gateway&amp;type=daily_traffic">Network</a>
+<ul class="uu-menu__level3">
+<li><a href="/resources/maddash-dashboards.php">Maddash Dashboards</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">UEN Weathermap</a>
+<ul class="uu-menu__level3">
+<li><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">(Only Available on UEN Networks)</a></li>
+</ul>
+</li>
+<li><a href="http://snapp2.bldc.grnoc.iu.edu/i2al2s/#&amp;p=3%2C42&amp;ccid=3&amp;tab=1&amp;search=undefined&amp;pwidth=undefined&amp;ccat=undefined&amp;url=show-graph.cgi%3Fcollection_ids%3D145%26end%3D1461772131%26start%3D1461771831%26cf%3DAVERAGE%26ds%3Doutput%2Cinput%26collection_ids%3D145" target="_blank" rel="noopener">UEN Aggregate Utilization</a></li>
+<li><a href="http://uofu.status.io">UofU IT Services Status</a></li>
+<li><a href="https://status.it.utah.edu">University Application Heath Summary - NOC</a></li>
+</ul>
+</li>
+<li><a href="/role/">My Account</a></li>
+</ul></p></nav>
+            </div>
+         </section>
+         <!-- END PUSH NAVIGATION -->
+         
+         <!-- MAIN CONTENT -->
+         <main class="uu-main" id="skip-link-target">
+            <nav aria-label="Breadcrumb" class="uu-breadcrumb">
+               <ol>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/documentation/">documentation</a></li>
+                  <li><a href="/documentation/software/">software</a></li>
+                  <li><span class="sr-only">current page: </span>Generative AI</li>
+               </ol>
+            </nav>
+            <!-- SECTION 1 -->
+            
+            <section class="uu-section bg-white text-default uu-section--region-1" style="">
+               <div class="uu-section__container"><!-- SECTION HEADER -->
+                  
+                  <div class="uu-section__header  ">
+                     <h1>Generative AI</h1>
+                     <p>This page provides guidelines for generative AI software, tools and models that CHPC
+                        either provides or supports. As this is a very rapidly changing field, please contact
+                        us at <a href="mailto:helpdesk@chpc.utah.edu">helpdesk@chpc.utah.edu </a>with any suggestions for other packages or models that you would like to use.</p>
+                     <ul>
+                        <li><a href="#hfmod">Huggingface Large Language Models</a><ul>
+                              <li><a href="#hfcont">Generative AI container/module</a></li>
+                              <li><a href="#hfmodpy">Using the genai module with Python</a></li>
+                              <li><a href="#hfmodjup">Using the genai module with Jupyter</a></li>
+                              <li><a href="#hfmodown">Building a container based on the CHPC genai container</a></li>
+                           </ul>
+                        </li>
+                        <li><a href="#ollama">Ollama</a><ul>
+                              <li><a href="#ollamachpc">CHPC installation</a></li>
+                              <li><a href="#ollamamodels">Ollama models</a></li>
+                              <li><a href="#ollamauser">User installation</a></li>
+                           </ul>
+                        </li>
+                        <li><a href="#openwebui">OpenWebUI</a></li>
+                     </ul>
+                  </div>
+                  <!-- END SECTION HEADER -->
+                  <!-- REGION 1 -->
+                  
+                  <div class="uu-section__region bg-white text-default no-border">
+                     <h2 class="h2"><a id="hfmod"></a>Huggingface Generative AI Models</h2>
+                     <p>Huggingface is one of the most used repositories for generative AI models, and also
+                        provides software for their use. CHPC is providing clones of select models in a repository
+                        located at <code>/scratch/general/vast/app-repo/huggingface</code>. There are several subdirectories corresponding to organizations that provide these
+                        models, namely:</p>
+                     <ul>
+                        <li><a href="https://huggingface.co/allenai" target="_blank" rel="noopener">allenai </a>- tulu-2-dpo-7b, tulu-2-dpo-13b</li>
+                        <li><a href="https://huggingface.co/CohereForAI" target="_blank" rel="noopener">CohereForAI </a>- c4ai-command-r-plus, c4ai-command-r-v01-4bit</li>
+                        <li><a href="https://huggingface.co/meta-llama" target="_blank" rel="noopener">meta-llama</a> - Llama-2-7b-chat-hf, Llama-2-13b-chat-hf, Llama-2-70b-chat-hf, Meta-Llama-3-8B,
+                           Meta-Llama-3-70B, Meta-Llama-3-8B-Instruct</li>
+                        <li><a href="https://huggingface.co/mistralai" target="_blank" rel="noopener">mistralai </a>- Mistral-7B-Instruct-v0.1, Mistral-7B-Instruct-v0.2, Mistral-7B-v0.1, Mixtral-8x7B-Instruct-v0.1</li>
+                        <li><a href="https://huggingface.co/tiiuae" target="_blank" rel="noopener">tiiuae </a>- falcon-7b and falcon-40b</li>
+                     </ul>
+                     <p>Users are welcome to use their own software environments to access these models.</p>
+                     <p>For a quick start, we have created a Generative AI software environment packaged as
+                        a <a href="https://github.com/CHPC-UofU/genai_repo/blob/master/Singularity.gpu" target="_blank" rel="noopener">Singularity</a>&nbsp;container called <code>genai</code>, with PyTorch (VERSION) and Huggingface (VERSION) libraries, which can be used alongside
+                        the <a href="https://github.com/CHPC-UofU/genai_repo/blob/master/model_examples.ipynb" target="_blank" rel="noopener">example Jupyter notebook</a> to illustrate how to access and use these models. This environment can be loaded
+                        as a module for running Python codes, or via Open OnDemand Jupyter when running as
+                        a Jupyter notebook.</p>
+                     <h3><a id="hfcont"></a>Generative AI container/module</h3>
+                     <p>The above mentioned container is available as module called <code>genai</code>. We plan to periodically update this module with recent versions of the libraries.
+                        Below are listed the versions of libraries in this module:</p>
+                     <table>
+                        <tbody>
+                           <tr>
+                              <td>Module/version</td>
+                              <td>Build date</td>
+                              <td>Python</td>
+                              <td>PyTorch</td>
+                              <td>HF Transformers</td>
+                              <td>CUDA</td>
+                           </tr>
+                           <tr>
+                              <td>genai/2024.5</td>
+                              <td>06/07/2024</td>
+                              <td>3.12.3</td>
+                              <td>2.3.0</td>
+                              <td>4.41.2</td>
+                              <td>11.8</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <p>&nbsp;</p>
+                     <h4><a id="hfcontpy"></a>Using the genai module with Python</h4>
+                     <p>Start an interactive SLURM job with a GPU, load the module, and then run the Python
+                        code that loads and uses the selected language model. The module defines environment
+                        variable <code>LLM_CACHE_PATH</code>, which points to the centralized language model repository at&nbsp; <code>/scratch/general/vast/app-repo/huggingface</code>. User also needs to specify where local cache is located, which needs to be user
+                        writable and is used for storing runtime parameters. Since these parameters are usually
+                        fairly small, we store it in <code>$HOME/llm/cache</code>&nbsp;as defined in the environment variable <code>HUGGINGFACE_HUB_CACHE</code>&nbsp;in the code below.</p>
+                     <pre>$ salloc -N 1 -n 4 -A notchpeak-shared-short -p notchpeak-shared-short -t 2:00:00 --gres=gpu:t4:1<br>$ module load genai<br>$ cat load_llama2.py<br>import os<br>os.environ['HUGGINGFACE_HUB_CACHE'] = &nbsp;f"{os.environ['HOME']}/llm/cache"<br>import torch<br>from transformers import LlamaTokenizer, LlamaForCausalLM, AutoConfig<br>model_id = f"{os.environ['LLM_CACHE_PATH']}/meta-llama/Llama-2-7b-chat-hf/"<br>config = AutoConfig.from_pretrained(model_id, trust_remote_code=True, use_auth_token=True)<br>tokenizer = LlamaTokenizer.from_pretrained(model_id)<br>model = LlamaForCausalLM.from_pretrained(model_id, torch_dtype=torch.bfloat16, load_in_8bit=True, device_map="auto")<br>...<br>$ python load_llama3.py</pre>
+                     <p>Note that in this example we are loading the smallest Llama2-7b model, as we have
+                        requested the Nvidia T4 GPU on the interactive notchpeak-shared-short partition which
+                        has 16 GB GPU RAM. For larger models use GPUs with more memory, listed at the <a href="/documentation/guides/gpus-accelerators.php#gpu_types" target="_blank" rel="noopener">GPUs and Accelerators page</a>.</p>
+                     <h4><a id="hfcontjup"></a>Using the genai module with Jupyter</h4>
+                     <p>Jupyter is best run in the <a href="/documentation/software/ondemand.php#oodjupyter" target="_blank" rel="noopener">Open OnDemand</a> web interface. Choose the <code>CHPC Generative AI</code>, in the&nbsp;<em>Jupyter Python version</em> pull down. Also choose the appropriate account and partition and in the&nbsp;<em>Advanced options</em> pick a GPU (for a job that should start right away use&nbsp;<em>notchpeak-shared-short</em> account and partition and the&nbsp;<em>T4</em> GPU. Click the blue <em>Launch </em>button to submit the job and once it starts, the blue <em>Connect to Jupyter</em> button to start Jupyter in a new browser tab.</p>
+                     <p>To use our <a href="https://github.com/CHPC-UofU/genai_repo/blob/master/model_examples.ipynb" target="_blank" rel="noopener">sample Jupyter notebook</a>, download it to your home directory (e.g. with the <a href="https://raw.githubusercontent.com/CHPC-UofU/genai_repo/master/model_examples.ipynb" target="_blank" rel="noopener">wget</a> command or cloning the <a href="https://github.com/CHPC-UofU/genai_repo" target="_blank" rel="noopener">whole repository</a>). Then open it in the Jupyter browser window, using the genai kernel (not the default
+                        Python3 kernel) and run.</p>
+                     <h4><a id="hfcontown"></a>Building a container based on the CHPC genai container</h4>
+                     <p>The CHPC genai container is based on a <a href="/documentation/software/python-anaconda.php#microm" target="_blank" rel="noopener">Micromamba container</a>. We recommend this approach as compared to doing plain conda or mamba environment
+                        installations, as the container is immutable. That is, it can not be modified once
+                        it's built, which prevents occasional breaking of the installed environment during
+                        conda updates or installation of additional packages.</p>
+                     <p>To build your own container with modified software stack, modify the <a href="https://github.com/CHPC-UofU/genai_repo/blob/master/Singularity.gpu" target="_blank" rel="noopener">Singularity.gpu</a> file and use Apptainer to build a new container:</p>
+                     <pre>module load apptainer<br>apptainer build --nv mygenai.sif Singularity.gpu</pre>
+                     <p>Note that we are using the <code>--nv</code> flag to initialize the GPU environment during the container build. Omission of this
+                        flag will result in installation of CPU only PyTorch. The container can be run directly
+                        as shown in <a href="/documentation/software/python-anaconda.php#mamba_gpu" target="_blank" rel="noopener">our documentation</a>, or one can create an Lmod module for it based on <a href="https://github.com/CHPC-UofU/genai_repo/blob/master/module/2024.5.lua" target="_blank" rel="noopener">our genai module</a>.</p>
+                     <h4>Feedback or additions to the module</h4>
+                     <p>We welcome feedback from you about the genai container and module. If you have any
+                        comments or would like additional libraries to be installed in future versions, please
+                        write to us at <a href="mailto:helpdesk@chpc.utah.edu?subject=Deeplearning%20module">helpdesk@chpc.utah.edu</a> .</p>
+                     <h2><a id="ollama"></a>Ollama</h2>
+                     <p><a href="https://github.com/ollama/ollama" target="_blank" rel="noopener">Ollama</a> is a command line tool to run large language models.</p>
+                     <h3><a id="ollamachpc"></a>CHPC installation</h3>
+                     <p>CHPC provides Ollama as a module named <code>ollama</code>. To use it, start an interactive job, followed by starting the Ollama server. Ollama
+                        client commands can then be run in another terminal on the same machine to list/pull/run
+                        models. Notice that in this example we are not asking for a GPU, Ollama runs on CPU
+                        only as well, but slower.</p>
+                     <pre><span style="font-size: 1em; color: var(--cms-region--primary-black);">salloc -N 1 -n 4 -A notchpeak-shared-short -p notchpeak-shared-short -t 2:00:00<br>module load ollama<br>export OLPORT=`ruby -e 'require "socket"; puts Addrinfo.tcp("", 0).bind {|s| s.local_address.ip_port }'`<br>echo $OLPORT<br>export OLLAMA_HOST=127.0.0.1:$OLPORT<br>export OLLAMA_BASE_URL="http://localhost:$OLPORT"<br></span><span style="font-size: 1em; color: var(--cms-region--primary-black);">./ollama serve &gt;&amp; ollama.log</span></pre>
+                     <p>The OLPORT environment variable is a unique port on which the Ollama server will run
+                        - this needs to be different every time for the case when another user may be running
+                        Ollama on the same compute node at the same time. We print (echo) the OLPORT value
+                        so that we can use it in the next step.</p>
+                     <p>Give a few seconds for the Ollama server to start, and verify that it started by viewing
+                        the ollama.log, which end should look like:</p>
+                     <pre>time=2024-06-10T10:14:58.011-06:00 level=INFO source=routes.go:1074 msg="Listening on 127.0.0.1:43233 (version 0.1.39)"<br>time=2024-06-10T10:14:58.011-06:00 level=INFO source=payload.go:30 msg="extracting embedded files" dir=/tmp/ollama2373407420/runners<br>time=2024-06-10T10:14:59.907-06:00 level=INFO source=payload.go:44 msg="Dynamic LLM libraries [rocm_v60002 cpu cpu_avx cpu_avx2 cuda_v11]"<br>time=2024-06-10T10:14:59.975-06:00 level=INFO source=types.go:71 msg="inference compute" id=GPU-b5df93bc-b3cb-66db-9191-815ff9357626 library=cuda compute=6.1 driver=12.1 name="Quadro P620" total="2.0 GiB" available="1.5 GiB"</pre>
+                     <p>Once the server is started, you can run the Ollama client commands, for example</p>
+                     <pre><span style="font-size: 1em; color: var(--cms-region--primary-black);">ollama list<br>NAME &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ID &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; SIZE &nbsp; MODIFIED &nbsp;&nbsp;<br>llama2:latest 78e26419b446 3.8 GB 7 days ago&nbsp;<br>llama3:latest 365c0bd3c000 4.7 GB 7 days ago&nbsp;<br>llama3:8b &nbsp; &nbsp; 365c0bd3c000 4.7 GB 7 days ago<br></span></pre>
+                     <p><span style="font-size: 1em; color: var(--cms-region--primary-black);">Alternatively, one can start Open OnDemand Interactive Desktop session instead of
+                           the salloc command, and then open two terminals, running the <code>ollama serve</code>&nbsp;in one and the ollama commands in the other.</span></p>
+                     <h3><a id="ollamamodels"></a>Ollama models</h3>
+                     <p>Note that by default the Ollama models get pulled to user's home directory at <code>~/.ollama</code>, which can fill up the home directory 50 GB quota quickly. For that reason, we are
+                        setting the OLLAMA_MODELS environment variable that controls where the models are
+                        located to CHPC maintained repository at <code>/scratch/general/vast/app-repo/ollama</code>. If you want to use your own models, either <code>unset OLLAMA_MODELS</code> to use the default models location in home directory, or set it to a different path,
+                        e.g. in the scratch or group space.</p>
+                     <p>If you think that the CHPC repository should include a different model, contact us
+                        at <a href="mailto:helpdesk@chpc.utah.edu">helpdesk@chpc.utah.edu</a>.</p>
+                     <h3><a id="ollamauser"></a>User installation</h3>
+                     <p>Ollama gets updated frequently and as such it may be better for users to install their
+                        own latest version. While the installation instructions recommend to set it up as
+                        a service, this requires an administrator, so, to install it, it's better to proceed
+                        with <a href="https://github.com/ollama/ollama/blob/main/docs/linux.md" target="_blank" rel="noopener">manual installation</a> by downloading the Ollama binary:</p>
+                     <pre>curl -L https://ollama.com/download/ollama-linux-amd64 -o ollama
+chmod u+x ollama</pre>
+                     <p>Once the binary is available, start an interactive job and then start the ollama service
+                        manually in the terminal:</p>
+                     <pre><span style="font-size: 1em; color: var(--cms-region--primary-black);">salloc -N 1 -n 4 -A notchpeak-shared-short -p notchpeak-shared-short -t 2:00:00 --gres=gpu:t4:1<br>export OLPORT=`ruby -e 'require "socket"; puts Addrinfo.tcp("", 0).bind {|s| s.local_address.ip_port }'`<br>echo $OLPORT<br>export OLLAMA_HOST=127.0.0.1:$OLPORT<br>export OLLAMA_BASE_URL="http://localhost:$OLPORT"<br>./ollama serve &gt;&amp; ollama.log</span></pre>
+                     <p>Once the server has started, call the Ollama server, pull models, run models, etc.</p>
+                     <p>Alternatively, one can start Open OnDemand Interactive Desktop session instead of
+                        the salloc command, starting the Ollama server and running the client commands in
+                        the terminal of the Interactive Desktop session.</p>
+                     <h2><a id="openwebui"></a>OpenWebUI&nbsp;</h2>
+                     <p><a href="https://docs.openwebui.com/" target="_blank" rel="noopener">OpenWebUI </a>is a self-hosted web frontend to Large Language Models. It is fairly straightforward
+                        to set up, although due to how the entry web page of the UI is structured, it does
+                        not work with the Open OnDemand. Our hope was to create an OOD web app like Jupyter
+                        or RStudio Server, however, at this point users have to start the server themselves
+                        in an interactive job session, ideally via the <a href="/documentation/software/ondemand.php#desktop" target="_blank" rel="noopener">Open OnDemand Interactive Desktop</a>.</p>
+                     <p>We can utilize the OpenWebUI Docker container to run the server. Since OpenWebUI updates
+                        quite often, it may be the best to pull your container, or you can use CHPC's container,
+                        though this one may not be the latest. Also note that the OpenWebUI container has
+                        hard coded the Ollama server port and the webserver port, so, if someone else runs
+                        the same thing on the compute node you run, this will not work. In that case, <a href="mailto:helpdesk@chpc.utah.edu?subject=">talk to us</a> on how to modify the container to run the Ollama and the OpenWebUI on a different
+                        port.</p>
+                     <p>First start an <a href="https://ondemand.chpc.utah.edu/pun/sys/dashboard/batch_connect/sys/desktop_expert/session_contexts/new" target="_blank" rel="noopener">Open OnDemand Interactive Desktop</a> job, preferably with a GPU.&nbsp;</p>
+                     <p>To run your own container, build an Apptainer container from the Dockerhub image (needs
+                        to be done only once):</p>
+                     <pre>module load apptainer<br>apptainer build openwebui-ollama.sif docker://ghcr.io/open-webui/open-webui:ollama</pre>
+                     <p>Also only once, create a few directories that need to be bind mounted into the container
+                        as writeable, and a file with a secret key:</p>
+                     <pre>mkdir ~/openwebui<br>cd ~/openwebui<br>mkdir ollama open-webui static<br>echo `head -c 12 /dev/random | base64` &gt; .webui_secret_key</pre>
+                     <p><span>Then start Google Chrome (we have noticed that Firefox does not work well with the
+                           UI)&nbsp;via '<code>google-chrome &amp;</code>' in the terminal to start Chrome with the browser in the terminal background so we
+                           can keep using the terminal.</span></p>
+                     <p>Now we can start the Ollama server and the OpenWebUI webserver by running:</p>
+                     <pre>apptainer exec --nv -B ollama:/root/.ollama -B open-webui:/app/backend/data -B static:/app/backend/static&nbsp;<br>path-to/open-webui_ollama.sif /app/backend/start.sh</pre>
+                     <p>The <code>path-to</code> is the path to where the container is, to run the CHPC provided container, use, <code>/uufs/chpc.utah.edu/sys/installdir/r8/openwebui/0.3.1/openwebui-ollama.sif</code>&nbsp;.</p>
+                     <p>Once the servers start, open the URL pointed in the startup log, e.g. http://notch308:8080,
+                        in&nbsp; the Google Chrome web browser.</p>
+                     <p>The OpenWebUI by default uses Ollama for the LLM backend, which means that by default
+                        it will be pulling the models to <code>~/.ollama</code>, which can fill up the home directory 50 GB quota quickly. For that reason, set the
+                        OLLAMA_MODELS environment variable that controls where the models are located. One
+                        can either use the CHPC maintained repository at <code>/scratch/general/vast/app-repo/ollama</code>, or if you want to use your own models, set it to a different path, e.g. in the scratch
+                        or group space.</p>
+                     <p>If you think that the CHPC repository should include a different model, contact us
+                        at <a href="mailto:helpdesk@chpc.utah.edu">helpdesk@chpc.utah.edu</a>.</p>
+                  </div>
+                  <!-- END REGION 1 -->
+                  <!-- SECTION FOOTER -->
+                  
+                  <div class="uu-section__footer  ">
+                     <p></p>
+                  </div>
+                  <!-- END SECTION FOOTER -->
+                  </div>
+            </section>
+            <!-- END SECTION 1 -->
+            <!-- SECTION 2 -->
+            <!-- END SECTION 2 -->
+            <!-- SECTION 3 -->
+            <!-- END SECTION 3 -->
+            <!-- SECTION 4 -->
+            <!-- END SECTION 4 -->
+            <!-- SECTION 5 -->
+            <!-- END SECTION 5 -->
+            </main>
+         <!-- END MAIN CONTENT -->
+         <!-- FOOTER -->
+         
+         <footer class="uu-footer"><div class="uu-footer__top">
+   <div class="uu-footer__top-container">
+      <div class="uu-footer__top-col1"><a href="https://www.utah.edu"><img src="https://templates.utah.edu/_main-v3-1/images/template/blocku.svg" alt="The University of Utah" class="uu-block-logo"></a><div class="department-name">
+            <h2>The Center For High Performance Computing</h2>
+         </div>
+         <div class="department-address">
+            <p>155 S 1452 E, RM. 405<br>SLC, UT 84112-0190<br>801.585.3791&nbsp;</p>
+         </div>
+      </div>
+      <div class="uu-footer__top-col2">
+         <h2 class="footer-heading">Stay in Touch</h2>
+         <hr>
+         <ul>
+            <li><a href="https://map.utah.edu/index.html?code=inscc">Find Us</a></li>
+            <li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Us</a></li>
+            <li><a href="mailto:helpdesk@chpc.utah.edu">Webmaster</a></li>
+         </ul>
+      </div>
+      <div class="uu-footer__top-col5">
+         <h2 class="footer-heading">Quick Links</h2>
+         <hr>
+         <ul>
+            <li><a href="https://www.utah.edu/a-z/">A-Z Index</a></li>
+            <li><a href="https://people.utah.edu/uWho/basic.hml">Campus Directory</a></li>
+            <li><a href="https://www.map.utah.edu">Campus Map</a></li>
+            <li><a href="https://map.utah.edu/?allshuttle=on">Shuttle Tracker </a></li>
+            <li><a href="https://cis.utah.edu/">CIS</a></li>
+            <li><a href="https://www.umail.utah.edu/">UMail</a></li>
+            <li><a href="https://attheu.utah.edu/">@ The U</a></li>
+         </ul>
+      </div>
+   </div>
+</div><div class="uu-footer__bottom">
+   <div class="uu-footer__bottom-container">
+      <div class="uu-footer__bottom-col1"><a href="https://www.utah.edu/"><img src="https://templates.utah.edu/_main-v3-1/images/template/university-of-utah-logo.svg" alt="The University of Utah" class="uu-site-logo"></a></div>
+      <div class="uu-footer__bottom-col2">
+         <div class="legal">
+            <p>© 2024 The University of Utah</p>
+            <ul>
+               <li><a href="https://www.utah.edu/indigenous-land-acknowledgment/index.php">Indigenous Land Acknowledgment</a></li>
+               <li><a href="https://www.utah.edu/nondiscrimination/">Nondiscrimination &amp; Accessibility</a></li>
+               <li><a href="https://www.utah.edu/disclaimer/">Disclaimer</a></li>
+               <li><a href="https://www.utah.edu/privacy/">Privacy</a></li>
+               <li><a href="https://www.utah.edu/credits-v3.php">Credits &amp; Attributions</a></li>
+               <li><a href="https://attheu.utah.edu/media-contacts/">Media Contacts</a></li>
+               <li><span id="directedit"></span></li>
+            </ul>
+         </div>
+      </div>
+      <div class="uu-footer__bottom-col3">
+         <ul class="uu-social-list">
+            <li><a href="https://twitter.com/uutah"><span class="fa-brands fa-x-twitter" aria-hidden="true"></span><span class="sr-only">X</span></a></li>
+            <li><a href="https://www.facebook.com/universityofutah"><span class="fab fa-facebook" aria-hidden="true"></span><span class="sr-only">Facebook</span></a></li>
+            <li><a href="https://www.instagram.com/universityofutah/"><span class="fab fa-instagram" aria-hidden="true"></span><span class="sr-only">Instagram</span></a></li>
+            <li><a href="https://www.youtube.com/user/theuniversityofutah"><span class="fab fa-youtube" aria-hidden="true"></span><span class="sr-only">Youtube</span></a></li>
+         </ul>
+      </div>
+   </div>
+</div></footer>
+         <!-- END FOOTER -->
+         </div>
+      <!-- FOOT CODE -->
+      <script src="//templates.utah.edu/_main-v3-1/js/main.min.js"></script>
+      
+      
+      
+      
+      
+      
+      
+      <script src="//templates.utah.edu/_main-v3-1/js/directedit.js"></script><script><!--
+window.onload = function(){ directedit(); }
+//
+			--></script>
+      <script src="/_resources/js/custom.js"></script>
+            
+      <!-- END FOOT CODE -->
+      
+      <div id="hidden"><a id="de" href="https://a.cms.omniupdate.com/11/?skin=utah&amp;account=utah_home&amp;site=chpc2&amp;action=de&amp;path=/documentation/software/genai.pcf">Last Updated: 7/31/24</a></div>
+      <!-- END PAGE BODY -->
+      </body>
+</html>

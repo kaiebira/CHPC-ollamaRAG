@@ -1,0 +1,566 @@
+<!DOCTYPE HTML><html lang="en-US" class="no-js">
+   <head><!-- PAGE HEAD -->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+      <title>job-preemption - Center for High Performance Computing - The University of Utah</title>
+      <meta name="keywords" content="slurm job scheduler preemption preempt cancelled">
+      <meta name="description" content="This page gives information on what Slurm job preemption is, when it applies to you, and how it relates to the owner-guest partitions.">
+      <meta name="robots" content="index,follow">
+      <link rel="icon" href="//templates.utah.edu/_main-v3-1/images/template/favicon.ico">
+      <link rel="apple-touch-icon-precomposed" href="//templates.utah.edu/_main-v3-1/images/template/apple-touch-icon.png">
+      <link rel="stylesheet" href="//templates.utah.edu/_main-v3-1/css/main.min.css" type="text/css"><noscript>
+         <link rel="stylesheet" href="//templates.utah.edu/_main-v3-1/css/assets/fontawesome/css/all.min.css" type="text/css"></noscript><link href="/_resources/css/custom.css" rel="stylesheet" type="text/css">
+      <script src="//templates.utah.edu/_main-v3-1/js/head-code.min.js"></script>
+      <!-- HEAD CODE -->
+      
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y160DVJ0DZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y160DVJ0DZ');
+</script>
+
+      
+      <!-- END HEAD CODE -->
+      <!-- END PAGE HEAD -->
+      </head>
+   <body class="has-headernav"><!-- PAGE BODY -->
+      <a class="uu-skip-link" href="#skip-link-target">Skip to content</a>
+      <!-- BODY TOP CODE -->
+            <!-- END BODY TOP CODE -->
+      
+      <div id="uu-top-target" class="uu-site"><!-- SEARCH -->
+         <div class="uu-search" role="search">
+    <div class="uu-search__container">
+        <!-- SITE SEARCH -->
+        <form method="get" id="search-site" class="uu-search__form" action="/search/index.php">
+
+            <label for="inputSearchSite" class="sr-only">Search Site:</label>
+            <input type="text" id="inputSearchSite" name="q" value="" placeholder="Search Site" />
+            <input type="hidden" name="gcse_action" value="site" />
+
+            <div class="form-powered-by">
+                <span>Powered by</span> 
+                <img src="https://templates.utah.edu/_main-v3-1/images/template/google-logo.png" alt="Google Search">
+            </div>
+
+        </form>
+        <!-- END SITE SEARCH -->
+        <!-- CAMPUS SEARCH -->
+        <form method="get" id="search-campus" class="uu-search__form" action="/search/index.php">
+
+            <label for="inputSearchCampus" class="sr-only">Search Campus:</label>
+            <input type="text" id="inputSearchCampus" name="q" value="" placeholder="Search Campus" />
+            <input type="hidden" name="gcse_action" value="campus" />
+
+            <div class="form-powered-by">
+                <span>Powered by</span> 
+                <img src="https://templates.utah.edu/_main-v3-1/images/template/google-logo.png" alt="Google Search">
+            </div>
+        </form>
+        <!-- END CAMPUS SEARCH -->
+
+        <!-- SEARCH TYPE TOGGLE -->
+        <div class="search-type-toggle">
+            <label class="uu-switch" for="search_campus_checkbox">
+                <input type="checkbox" name="search_campus_checkbox" value="" id="search_campus_checkbox">
+                <span class="uu-switch-slider"></span>
+                <span class="uu-switch-label">Search Campus</span>
+            </label>
+        </div>
+        <!-- END SEARCH TYPE TOGGLE -->
+
+    </div>
+</div><!-- END SEARCH -->
+         <!-- HEADER -->
+         
+         <header class="uu-header">
+            <div class="uu-header__container">
+               <!-- ALERT AREA -->
+               <div id="alert_bar" class="uu-alert-bar"> 
+	<a href="https://coronavirus.utah.edu/">University of Utah COVID-19 Updates</a>
+</div><!-- END ALERT AREA -->
+               
+               <div class="uu-header__top"> <a href="https://www.utah.edu/" class="uu-header__logo"><span class="sr-only">The University of Utah</span></a>                  <div class="uu-header__middle">
+                     <!-- HEADER TITLE -->
+                     <div class="uu-header__title">
+<h2><a href="/">CHPC - Research Computing and Data Support for the University</a></h2>
+<!-- <h3><a href="http://it.utah.edu">University Information Technology</a></h3> --></div><!-- END HEADER TITLE -->
+                     <!-- HEADER NAVIGATION -->
+                     
+<nav class="uu-header__nav">
+	
+<ul class="uu-menu__level1">
+<ul class="uu-menu__level1">
+<li class="has-sub"><a href="#">About Us</a>
+<ul class="sub-menu">
+<li><a href="/about/index.php">About Us</a></li>
+<li><a href="https://www.chpc.utah.edu/about/vision.php">Vision</a></li>
+<li><a href="/about/staff.php">Staff</a></li>
+<li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Information</a></li>
+<li><a href="https://www.chpc.utah.edu/about/acknowledge.php">Acknowledging CHPC</a></li>
+<li><a href="https://www.chpc.utah.edu/highlights.php">Research Highlights</a></li>
+<li><a href="https://www.chpc.utah.edu/about/partners.php">Partners</a></li>
+<li><a href="/news/index.php">News</a></li>
+<li><a href="/about/governance.php">Governance</a></li>
+</ul>
+</li>
+<li class="has-sub"><a href="#">Resources</a>
+<ul class="sub-menu">
+<li><a href="https://www.chpc.utah.edu/resources/index.php">Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/HPC_Clusters.php">HPC Clusters</a></li>
+<li><a href="/resources/storage_services.php">Storage Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="/resources/virtualmachines.php">Virtual Machines</a></li>
+<li><a href="/resources/hosting.php">Hosting Services</a></li>
+<li><a href="/resources/Networking.php">Networking</a></li>
+<li><a href="/resources/ProtectedEnvironment.php">Protected Environment</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="/userservices/index.php">User Services</a></li>
+</ul>
+</li>
+<li class="has-sub sub-width-lg"><a href="#">Documentation</a>
+<ul class="sub-menu">
+<li><a href="https://www.chpc.utah.edu/documentation/index.php">Documentation</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/gettingstarted.php">Getting Started</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/access.php">Accessing Our Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/videos/index.php">Short Training Videos</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/index.php">Cluster Guides</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/beehive.php">Beehive User Guide (Windows Server)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/gpus-accelerators.php">GPU &amp; Accelerators</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/frisco-nodes.php">Frisco Nodes</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/narwhal.php">Narwhal User Guide (Protected Environment Statistics)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/software/index.php">Software</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php">Programming Guide</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/policies/index.php">Policy Manual</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/HelloWorldMPI.php">HPC Basics - Hello World MPI</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/faq.php">Frequently Asked Questions</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/white_papers/index.php">White Papers</a></li>
+</ul>
+</li>
+<li class="has-sub"><a href="#">User Services</a>
+<ul class="sub-menu">
+<li><a href="/userservices/index.php">User Services</a></li>
+<li><a href="https://www.chpc.utah.edu/userservices/accounts.php">Accounts</a></li>
+<li><a href="/userservices/allocations.php">Allocations</a></li>
+<li><a href="/userservices/gettinghelp.php">Getting Help</a></li>
+<li><a href="https://www.chpc.utah.edu/presentations/index.php">Training</a></li>
+</ul>
+</li>
+<li class="has-sub sub-width-lg"><a href="#">Usage</a>
+<ul class="sub-menu">
+<li><a href="/usage/cluster/index.php">Cluster Usage</a>
+<ul>
+<li><a href="/usage/cluster/current-project-general.php">General Allocation Pool</a></li>
+<li><a href="/usage/cluster/current-project-lonepeak.php">Lonepeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-kingspeak.php">Kingspeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-ash.php">Ash Cluster</a></li>
+<li><a href="/usage/cluster/current-project-redwood.php">Redwood Cluster</a></li>
+</ul>
+</li>
+<li><a href="/usage/graphs.php?g=cluster%20utilization&amp;host=combined&amp;type=daily_utilization">Cluster Utilization Graphs</a></li>
+<li><a href="/usage/graphs.php?g=hpc%20cluster%20scratch&amp;host=chpc_gen&amp;type=cpu">HPC Cluster Scratch</a></li>
+<li><a href="/usage/graphs.php?g=network&amp;host=Campus+Gateway&amp;type=daily_traffic">Network</a>
+<ul>
+<li><a href="/resources/maddash-dashboards.php">Maddash Dashboards</a></li>
+</ul>
+</li>
+<li><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">UEN Weathermap (Only Available on UEN Networks)</a></li>
+<li><a href="http://snapp2.bldc.grnoc.iu.edu/i2al2s/#&amp;p=3%2C42&amp;ccid=3&amp;tab=1&amp;search=undefined&amp;pwidth=undefined&amp;ccat=undefined&amp;url=show-graph.cgi%3Fcollection_ids%3D145%26end%3D1461772131%26start%3D1461771831%26cf%3DAVERAGE%26ds%3Doutput%2Cinput%26collection_ids%3D145" target="_blank" rel="noopener">UEN Aggregate Utilization</a></li>
+<li><a href="http://uofu.status.io">UofU IT Services Status</a></li>
+<li><a href="https://status.it.utah.edu">University Application Heath Summary - NOC</a></li>
+</ul>
+</li>
+<li><a href="/role/">My Account</a></li>
+</ul>
+</ul>	
+</nav>
+
+<!-- END HEADER NAVIGATION -->
+                     </div>
+                  <div class="uu-search-toggle"><button class="uu-search__trigger"><span class="far fa-search" aria-hidden="true"></span><span class="sr-only">Search</span></button></div><button id="jsNavTrigger" class="uu-nav__trigger" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Reveal Menu</span><span></span></button></div>
+            </div>
+         </header>
+         <!-- END HEADER -->
+         <!-- PUSH NAVIGATION -->
+         
+         <section class="uu-nav">
+            <div class="uu-nav__container"><button id="jsMobileNavTrigger" class="uu-nav__trigger" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Reveal Menu</span><span></span></button><header class="uu-nav__header">
+                  <h2 class="sr-only">Main Navigation</h2>
+                  <!-- Navigation Logo -->
+<a href="https://utah.edu/" class="uu-nav__logo">
+	<img src="https://templates.utah.edu/_main-v3-1/images/template/university-of-utah-logo.svg" alt="The University of Utah"/>
+</a></header>
+               <nav class="uu-menu" aria-label="main"><p><h2 class="uu-menu__title">Main Menu</h2>
+<hr />
+<ul class="uu-menu__level1">
+<li><a href="/">Home</a></li>
+<li class="has-sublist"><a href="#">About Us</a>
+<ul class="uu-menu__level2">
+<li><a href="/about/index.php">About Us</a></li>
+<li><a href="https://www.chpc.utah.edu/about/vision.php">Vision</a></li>
+<li><a href="/about/staff.php">Staff</a></li>
+<li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Information</a></li>
+<li><a href="https://www.chpc.utah.edu/about/acknowledge.php">Acknowledging CHPC</a></li>
+<!--<li><a href="/about/bibliography/CHPC%20BIB.pdf" target="_blank" rel="noopener">CHPC Bibliography</a></li>-->
+<li><a href="https://www.chpc.utah.edu/about/SupportedResearch.php">Supported Research</a></li>
+<li><a href="https://www.chpc.utah.edu/highlights.php">Research Highlights</a></li>
+<li><a href="https://www.chpc.utah.edu/about/partners.php">Partners</a></li>
+<li><a href="/news/index.php">News</a></li>
+<li><a title="University Information Technology" href="https://it.utah.edu/" target="_blank" rel="noopener">UIT</a></li>
+<li><a href="/about/governance.php">Governance</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Resources</a>
+<ul class="uu-menu__level2">
+<li><a href="https://www.chpc.utah.edu/resources/index.php">Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/HPC_Clusters.php">HPC Clusters</a></li>
+<li><a href="/resources/storage_services.php">Storage Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="/resources/virtualmachines.php">Virtual Machines</a></li>
+<li><a href="/resources/hosting.php">Hosting Services</a></li>
+<li><a href="/resources/Networking.php">Networking</a></li>
+<li><a href="/resources/ProtectedEnvironment.php">Protected Environment</a></li>
+<li><a href="/documentation/software/ai.php">AI/ML Resources</a></li>
+<li><a href="/userservices/index.php">User Services</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Documentation</a>
+<ul class="uu-menu__level2">
+<li><a href="https://www.chpc.utah.edu/documentation/index.php">Documentation</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/gettingstarted.php">Getting Started</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/access.php">Accessing Our Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/videos/index.php">Short Training Videos</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/index.php">Cluster Guides</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/beehive.php">Beehive User Guide (Windows Server)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/gpus-accelerators.php">GPU &amp; Accelerators</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/frisco-nodes.php">Frisco Nodes</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/narwhal.php">Narwhal User Guide (Protected Environment Statistics)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/software/index.php">Software</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php">Programming Guide</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/policies/index.php">Policy Manual</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/HelloWorldMPI.php">HPC Basics - Hello World MPI</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/faq.php">Frequently Asked Questions</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/white_papers/index.php">White Papers</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">User Services</a>
+<ul class="uu-menu__level2">
+<li><a href="/userservices/index.php">User Services</a></li>
+<li><a href="https://www.chpc.utah.edu/userservices/accounts.php">Accounts</a></li>
+<li><a href="/userservices/allocations.php">Allocations</a></li>
+<li><a href="/userservices/gettinghelp.php">Getting Help</a></li>
+<li><a href="https://www.chpc.utah.edu/presentations/index.php">Training</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Usage</a>
+<ul class="uu-menu__level2">
+<li class="has-sublist"><a href="/usage/cluster/index.php">Cluster Usage</a>
+<ul class="uu-menu__level3">
+<li><a href="/usage/cluster/current-project-general.php">General Allocation Pool</a></li>
+<li><a href="/usage/cluster/current-project-lonepeak.php">Lonepeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-kingspeak.php">Kingspeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-ash.php">Ash Cluster</a></li>
+<li><a href="/usage/cluster/current-project-redwood.php">Redwood Cluster</a></li>
+</ul>
+</li>
+<li><a href="/usage/graphs.php?g=cluster%20utilization&amp;host=combined&amp;type=daily_utilization">Cluster Utilization Graphs</a></li>
+<li><a href="/usage/graphs.php?g=hpc%20cluster%20scratch&amp;host=chpc_gen&amp;type=cpu">HPC Cluster Scratch</a></li>
+<li class="has-sublist"><a href="/usage/graphs.php?g=network&amp;host=Campus+Gateway&amp;type=daily_traffic">Network</a>
+<ul class="uu-menu__level3">
+<li><a href="/resources/maddash-dashboards.php">Maddash Dashboards</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">UEN Weathermap</a>
+<ul class="uu-menu__level3">
+<li><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">(Only Available on UEN Networks)</a></li>
+</ul>
+</li>
+<li><a href="http://snapp2.bldc.grnoc.iu.edu/i2al2s/#&amp;p=3%2C42&amp;ccid=3&amp;tab=1&amp;search=undefined&amp;pwidth=undefined&amp;ccat=undefined&amp;url=show-graph.cgi%3Fcollection_ids%3D145%26end%3D1461772131%26start%3D1461771831%26cf%3DAVERAGE%26ds%3Doutput%2Cinput%26collection_ids%3D145" target="_blank" rel="noopener">UEN Aggregate Utilization</a></li>
+<li><a href="http://uofu.status.io">UofU IT Services Status</a></li>
+<li><a href="https://status.it.utah.edu">University Application Heath Summary - NOC</a></li>
+</ul>
+</li>
+<li><a href="/role/">My Account</a></li>
+</ul></p></nav>
+            </div>
+         </section>
+         <!-- END PUSH NAVIGATION -->
+         
+         <!-- MAIN CONTENT -->
+         <main class="uu-main" id="skip-link-target">
+            <nav aria-label="Breadcrumb" class="uu-breadcrumb">
+               <ol>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/documentation/">documentation</a></li>
+                  <li><a href="/documentation/software/">Software</a></li>
+                  <li><span class="sr-only">current page: </span>job-preemption</li>
+               </ol>
+            </nav>
+            <!-- SECTION 1 -->
+            
+            <section class="uu-section bg-white text-default uu-section--region-1" style="">
+               <div class="uu-section__container"><!-- SECTION HEADER -->
+                  
+                  <div class="uu-section__header  ">
+                     <h1>Slurm Job Preemption</h1>
+                     <ul>
+                        <li><a href="#preemption">Preemption</a><ul>
+                              <li><a href="#risk">Is my job at risk of preemption?</a></li>
+                              <li><a href="#partitions">What partitions are at risk of preemption?</a></li>
+                              <li><a href="#factors">What factors increase my chances of preemption?</a></li>
+                              <li><a href="#higherpriority">What determines a higher priority job?</a></li>
+                              <li><a href="#resume">Will my job resume automatically?</a></li>
+                           </ul>
+                        </li>
+                        <li><a href="#ownernodes">Owner Nodes</a></li>
+                        <li><a href="#constraints">Constraints</a></li>
+                        <li><a href="#automaticrestart">Automatic Restarting of Preempted Jobs</a></li>
+                        <li><a href="#moreinfo">More Information on Slurm</a></li>
+                     </ul>
+                  </div>
+                  <!-- END SECTION HEADER -->
+                  <!-- REGION 1 -->
+                  
+                  <div class="uu-section__region bg-white text-default ">
+                     <h2><a id="preemption"></a>Preemption</h2>
+                     <p><span style="text-decoration: underline;">Preemption</span>, or more specifically <em>job preemption</em>, refers to a currenlty running job being cancelled by Slurm because a higher-priority
+                        job has taken its place. Not all jobs are at risk of preemption, as preemption only
+                        applies to certain partitions. There may be a few questions you have regarding preemption,
+                        detailed below:</p>
+                     <p><span style="text-decoration: underline;"><a id="risk"></a>Q: Is my job at risk of preemption?</span></p>
+                     <p>A: Only jobs on particular partitions, such as the owner-guest partition or college-owned
+                        nodes, can be at risk of preemption. Even if your job is at risk of preemption, that
+                        <em>does not guarantee</em> that your job will be preempted by another job. For instance, we have many users
+                        successfully complete jobs on owner nodes using the owner-guest partitions.</p>
+                     <p>&nbsp;</p>
+                     <p><span style="text-decoration: underline;"><a id="partitions"></a>Q: What partitions are at risk of preemption?</span></p>
+                     <p>A: The most common partition across each cluster at risk of preemption are the&nbsp;<strong>owner-guest</strong> partitions, as the users that own the nodes have priority of their nodes. The CHPC
+                        works in a 'condominium-style' mode. This means that the CHPC aims to have all nodes
+                        available to run jobs, including owner nodes, in order to limit long queue times.
+                        The owners of the node have priority access to it. If the owners of the node(s) are
+                        not using said node(s) for jobs currently, all CHPC users can run jobs on the owner
+                        nodes as a guest. However, these guest jobs run at a lower priority than the owner
+                        jobs. If the owner submits a job, it preempts any currently running jobs. The CHPC
+                        provides <a href="/usage/constraints/#ownernodes">usage summaries for owner nodes</a> over the previous two weeks. This information can be used to make informed decisions
+                        about submitting to the owner-guest partitions, as well as allowing users to pair
+                        this information with <a href="#constraints">Slurm constraints</a>.</p>
+                     <p>The other most common partitions that users could run a risk of preemption are partitions
+                        of nodes owned by colleges, such as the University of Utah's School of Computing's
+                        purchased nodes hosted by the CHPC. If you are a part of a partition of nodes owned
+                        by a group and have a question about the preemption logic set in place by Slurm, please
+                        contact us at <a href="mailto:helpdesk@chpc.utah.edu">helpdesk@chpc.utah.edu</a>. We would be happy to help answer your questions.</p>
+                     <p>&nbsp;</p>
+                     <p><span style="text-decoration: underline;"><a id="factors"></a>Q: What factors increase my chances of preemption?</span></p>
+                     <p>A: The biggest factor that increases your chance of preemption is length of job, as
+                        a user with a higher priority job could submit a job at any time. However, we have
+                        had many users successfully complete jobs on owner nodes using the owner-guest partitions.
+                        If submitting jobs to the owner-guest partitions, please take a look at the <a href="/usage/constraints/#ownernodes">usage sumaries for owner nodes</a>.</p>
+                     <p>&nbsp;</p>
+                     <p><a id="higherpriority"></a><span style="text-decoration: underline;">Q: What determines a higher priority job?</span></p>
+                     <p>A: In relation to preemption, the biggest factor on the&nbsp;<em>owner-guest</em> partitions are members of the group who owns the node(s). Those members have higher
+                        priority than guest jobs.</p>
+                     <p>As it relates to the college-owned nodes (i.e., the University of Utah School of Computing),
+                        priority is determined based on the QOS associated with the partition. QOS does not
+                        apply to everybody and more information on Slurm QOSs can be found <a href="/documentation/software/slurm.php#reservations">here</a> or by contacting the CHPC at <a href="mailto:helpdesk@chpc.utah.edu">helpdesk@chpc.utah.edu</a>.</p>
+                     <p>&nbsp;</p>
+                     <p><a id="resume"></a><span style="text-decoration: underline;">Q: Will my job resume automatically?</span></p>
+                     <p>A: Not all software allows for jobs to resume mid-run. If the software you are using
+                        does allow for this, you can find information on setting up your Slurm script to automatically
+                        re-queue your job at its stopping point <a href="#automaticrestart">here</a>.&nbsp;</p>
+                     <p>&nbsp;</p>
+                     <h2><a id="ownernodes"></a>Owner Nodes</h2>
+                     <p>One service that the CHPC provides to our users is node management. Often, a PI will
+                        contact the CHPC and ask if they could purchase a node or set of nodes through the
+                        CHPC that the CHPC hosts. These nodes become part of our clusters and are set into
+                        specific partitions: <em>&lt;pi-name&gt;-&lt;cluster-abbreviation&gt;,</em>&nbsp;<em>&lt;cluster&gt;-guest</em>, and <em>&lt;cluster&gt;-gpu-guest</em>. The members of the group that purchased the nodes have access to the <em>&lt;pi-name&gt;-&lt;cluster-abbreviation&gt;</em> partition. All other users of the CHPC can have access to those same nodes through
+                        the <em>&lt;cluster&gt;-guest</em> and&nbsp;<em>&lt;cluster&gt;-gpu-guest</em> partitions.</p>
+                     <p>Users whose group do not own nodes can access nodes owned by other groups through
+                        the <em>&lt;cluster&gt;-guest</em> and&nbsp;<em>&lt;cluster&gt;-gpu-guest</em> partitions. Jobs submitted to the aforementioned partitions will run on the first
+                        available nodes that match the resource requirements of your jobs.</p>
+                     <p>The CHPC keeps <a href="/usage/constraints/index.php#ownernodes">metrics for the utilization of owner nodes</a> by the owners over the past two weeks. It should be noted that these graphs do not
+                        report owner node utilization by guest jobs. However, owner node utilization can be
+                        useful when trying to determine how long your job may wait in the queue. Additionally,
+                        users can take this information further by pairing it with Slurm constraints to request
+                        specific owner nodes. Information on using constraints to target specific owner nodes
+                        can be found <a href="#constraints">below</a>.</p>
+                     <p>&nbsp;</p>
+                     <h2><a id="constraints"></a>Constraints</h2>
+                     <p>Users can use Slurm constraints to target specific group nodes that have low owner
+                        use as a guest in order to reduce chances of being preempted. For example, to target
+                        nodes used by owner group "ucgd", we can do <code style="background-color: lightgray;">#SBATCH -C "ucgd"</code>. Historical usage (the past 2 weeks) of different owner node groups can be found
+                        at CHPC's <a title="constraint suggestion page" href="/usage/constraints/index.php" target="_blank" rel="noopener">constraint suggestion page</a>.</p>
+                     <p>Multiple constraints can be specified at once with logical operators in Slurm directives.
+                        This can allow for submission to nodes owned by one of several owner groups at a time
+                        (which might help reduce queue times and increase the number of nodes available) as
+                        well as the specification of exact core counts and available memory.</p>
+                     <p>To select from multiple owner groups' nodes, use the "or" operator; a directive like
+                        <code style="background-color: lightgray;">#SBATCH -C "group1|group2|group3"</code> will select from nodes in <i>any</i> of the constraints listed. By contrast, the "and" operator can be used to achieve
+                        further specificity in requests. To request nodes owned by a group and with only some
+                        amount of memory, for example, a directive like <code style="background-color: lightgray;">#SBATCH -C "group1&amp;m256"</code> could be used. This will only work where the combination is valid and multiple node
+                        features are associated with the nodes. To view the available node features, the <code style="background-color: lightgray;">sinfo</code> aliases <code style="background-color: lightgray;">si</code> and <code style="background-color: lightgray;">si2</code><a href="https://www.chpc.utah.edu/documentation/software/slurm.php#aliases">documented on the Slurm page</a> are helpful.</p>
+                     <p>When using the Slurm job manager in Open OnDemand, enter only the constraint string
+                        into the Constraints text entry, e.g. <code style="background-color: lightgray;">"group1|group2|group3"</code> .</p>
+                     <p>&nbsp;</p>
+                     <h2><a id="automaticrestart"></a>Automatic Restarting of Preemptable Jobs</h2>
+                     <p>The <code style="background-color: lightgray;">owner-guest</code> or&nbsp;<span></span><code style="background-color: lightgray;">freecycle</code><span>&nbsp;</span>&nbsp;queues tend to have quicker turnaround than <code style="background-color: lightgray;">general</code><span> queues. All users can submit to owner nodes. However, the guest jobs may get <em>preempted</em>, meaning that if the lab that owns the node begins a job on that node, your job will
+                           automatically be cancelled.</span></p>
+                     <p><span> The preempted jobs can be re-queued by adding the <code style="background-color: lightgray;">--requeue</code> SLURM option in the job script. However, bear in mind that the job will start from
+                           the beginning, unless the calculation is capable of checkpointing and restarting from
+                           the checkpoint.</span></p>
+                     <p><span>If the job is checkpointed, a user can automatically restart a preempted job following
+                           thi</span>s strategy:</p>
+                     <ol>
+                        <li>Include the <span><code style="background-color: lightgray;">--requeue</code></span> SLURM option in the SLURM parameters at the top of the job script:
+                           
+                           <!-- PANEL -->
+                           <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                              <pre>#SBATCH --requeue</pre>
+                           </div>
+                           <!-- END PANEL -->
+                           </li>
+                        <li>In the simulation output, include a file that lists the last checkpointed iteration,
+                           time step, or other measure of the simulation progress. In our example below, we are
+                           having a file called <code style="background-color: lightgray;">inv.append</code><span>&nbsp;which, among other things, contains lines on simulation iterations, one per line.</span></li>
+                        <li>In the job script, extract the iteration number&nbsp;from this file and put it into the
+                           simulation input file (here called&nbsp;<code style="background-color: lightgray;">inpt.m</code>). This input file will be used when the simulation is restarted. Since the simulation
+                           file does not exist at the very start of the simulation, the first job will not append
+                           the input file - and thus begin from the start.&nbsp;&nbsp;
+                           
+                           <!-- PANEL -->
+                           <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                              <pre>set ITER=`cat $SCRDIR/$RUNNAME/work_inv/inv.append | grep Iter |tail -n 1 | cut -f 2 -d " " | cut -f 1 -d /`<br>if ($ITER != "") then<br> echo "restart=$ITER;" &gt;&gt; inpt.m<br>endif</pre>
+                           </div>
+                           <!-- END PANEL -->
+                           </li>
+                        <li>Run the simulation, if the job gets preempted, a new job gets queued and will start
+                           from the last ITER iteration that was checkpointed.</li>
+                     </ol>
+                     <p>In summary, the whole SLURM script (called&nbsp;<code style="background-color: lightgray;">run_ash.slr</code><span>)</span> would look like this:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>#SBATCH all necessary job settings (partition, walltime, nodes, tasks)<br>#SBATCH -A owner-guest<br>#SBATCH --requeue<br><br># figure out from where to restart<br>set ITER=`cat $SCRDIR/$RUNNAME/work_inv/inv.append | grep Iter |tail -n 1 | cut -f 2 -d " " | cut -f 1 -d /`<br>if ($ITER != "") then<br> echo "restart=$ITER;" &gt;&gt; inpt.m<br>endif<br><br># copy input files to scratch<br># run simulation<br># copy results out of the scratch</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>&nbsp;</p>
+                     <h2><a id="moreinfo"></a>More Information on Slurm</h2>
+                     <p>Looking for more information on running Slurm at the CHPC? Check out these pages.
+                        If you have a specific question, please don't hesitate to contact us at <a href="mailto:helpdesk@chpc.utah.edu">helpdesk@chpc.utah.edu</a>.</p>
+                     <p><a href="/documentation/software/slurm.php">Setting up a Slurm Batch Script or Interactive Job Session</a></p>
+                     <p><a href="/documentation/software/slurm-priority-scores.php">Slurm Priority Scoring for Jobs</a></p>
+                     <p><a href="/documentation/software/slurm-mpi-jobarrays.php">MPI with Slurm</a></p>
+                     <p><a href="/documentation/software/slurm-gpus.php">GPUs with Slurm</a></p>
+                     <p><a href="/documentation/software/slurm-datatransfernode.php">Accessing CHPC's Data Transfer Nodes (DTNs) through Slurm</a></p>
+                     <p><a href="/usage/constraints/">Other Slurm Constraint Suggestions and Owner Node Utilization</a></p>
+                     <p><a href="/documentation/software/node-sharing.php">Sharing Nodes Among Jobs with Slurm</a></p>
+                     <p><a href="/documentation/software/personalslurmqueries.php">Personalized Slurm Queries</a></p>
+                     <p><a href="/documentation/software/moab-pbs-to-slurm.php">Moab/PBS to Slurm</a></p>
+                  </div>
+                  <!-- END REGION 1 -->
+                  <!-- SECTION FOOTER -->
+                  <!-- END SECTION FOOTER -->
+                  </div>
+            </section>
+            <!-- END SECTION 1 -->
+            <!-- SECTION 2 -->
+            <!-- END SECTION 2 -->
+            <!-- SECTION 3 -->
+            <!-- END SECTION 3 -->
+            <!-- SECTION 4 -->
+            <!-- END SECTION 4 -->
+            <!-- SECTION 5 -->
+            <!-- END SECTION 5 -->
+            </main>
+         <!-- END MAIN CONTENT -->
+         <!-- FOOTER -->
+         
+         <footer class="uu-footer"><div class="uu-footer__top">
+   <div class="uu-footer__top-container">
+      <div class="uu-footer__top-col1"><a href="https://www.utah.edu"><img src="https://templates.utah.edu/_main-v3-1/images/template/blocku.svg" alt="The University of Utah" class="uu-block-logo"></a><div class="department-name">
+            <h2>The Center For High Performance Computing</h2>
+         </div>
+         <div class="department-address">
+            <p>155 S 1452 E, RM. 405<br>SLC, UT 84112-0190<br>801.585.3791&nbsp;</p>
+         </div>
+      </div>
+      <div class="uu-footer__top-col2">
+         <h2 class="footer-heading">Stay in Touch</h2>
+         <hr>
+         <ul>
+            <li><a href="https://map.utah.edu/index.html?code=inscc">Find Us</a></li>
+            <li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Us</a></li>
+            <li><a href="mailto:helpdesk@chpc.utah.edu">Webmaster</a></li>
+         </ul>
+      </div>
+      <div class="uu-footer__top-col5">
+         <h2 class="footer-heading">Quick Links</h2>
+         <hr>
+         <ul>
+            <li><a href="https://www.utah.edu/a-z/">A-Z Index</a></li>
+            <li><a href="https://people.utah.edu/uWho/basic.hml">Campus Directory</a></li>
+            <li><a href="https://www.map.utah.edu">Campus Map</a></li>
+            <li><a href="https://map.utah.edu/?allshuttle=on">Shuttle Tracker </a></li>
+            <li><a href="https://cis.utah.edu/">CIS</a></li>
+            <li><a href="https://www.umail.utah.edu/">UMail</a></li>
+            <li><a href="https://attheu.utah.edu/">@ The U</a></li>
+         </ul>
+      </div>
+   </div>
+</div><div class="uu-footer__bottom">
+   <div class="uu-footer__bottom-container">
+      <div class="uu-footer__bottom-col1"><a href="https://www.utah.edu/"><img src="https://templates.utah.edu/_main-v3-1/images/template/university-of-utah-logo.svg" alt="The University of Utah" class="uu-site-logo"></a></div>
+      <div class="uu-footer__bottom-col2">
+         <div class="legal">
+            <p>© 2024 The University of Utah</p>
+            <ul>
+               <li><a href="https://www.utah.edu/indigenous-land-acknowledgment/index.php">Indigenous Land Acknowledgment</a></li>
+               <li><a href="https://www.utah.edu/nondiscrimination/">Nondiscrimination &amp; Accessibility</a></li>
+               <li><a href="https://www.utah.edu/disclaimer/">Disclaimer</a></li>
+               <li><a href="https://www.utah.edu/privacy/">Privacy</a></li>
+               <li><a href="https://www.utah.edu/credits-v3.php">Credits &amp; Attributions</a></li>
+               <li><a href="https://attheu.utah.edu/media-contacts/">Media Contacts</a></li>
+               <li><span id="directedit"></span></li>
+            </ul>
+         </div>
+      </div>
+      <div class="uu-footer__bottom-col3">
+         <ul class="uu-social-list">
+            <li><a href="https://twitter.com/uutah"><span class="fa-brands fa-x-twitter" aria-hidden="true"></span><span class="sr-only">X</span></a></li>
+            <li><a href="https://www.facebook.com/universityofutah"><span class="fab fa-facebook" aria-hidden="true"></span><span class="sr-only">Facebook</span></a></li>
+            <li><a href="https://www.instagram.com/universityofutah/"><span class="fab fa-instagram" aria-hidden="true"></span><span class="sr-only">Instagram</span></a></li>
+            <li><a href="https://www.youtube.com/user/theuniversityofutah"><span class="fab fa-youtube" aria-hidden="true"></span><span class="sr-only">Youtube</span></a></li>
+         </ul>
+      </div>
+   </div>
+</div></footer>
+         <!-- END FOOTER -->
+         </div>
+      <!-- FOOT CODE -->
+      <script src="//templates.utah.edu/_main-v3-1/js/main.min.js"></script>
+      
+      
+      
+      
+      
+      
+      
+      <script src="//templates.utah.edu/_main-v3-1/js/directedit.js"></script><script><!--
+window.onload = function(){ directedit(); }
+//
+			--></script>
+      <script src="/_resources/js/custom.js"></script>
+            
+      <!-- END FOOT CODE -->
+      
+      <div id="hidden"><a id="de" href="https://a.cms.omniupdate.com/11/?skin=utah&amp;account=utah_home&amp;site=chpc2&amp;action=de&amp;path=/documentation/software/slurm-job-preemption.pcf">Last Updated: 9/4/24</a></div>
+      <!-- END PAGE BODY -->
+      </body>
+</html>

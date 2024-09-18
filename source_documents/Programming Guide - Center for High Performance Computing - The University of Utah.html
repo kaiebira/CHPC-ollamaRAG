@@ -1,0 +1,638 @@
+<!DOCTYPE HTML><html lang="en-US" class="no-js">
+   <head><!-- PAGE HEAD -->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+      <title>Programming Guide - Center for High Performance Computing - The University of Utah</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="robots" content="index,follow">
+      <link rel="icon" href="//templates.utah.edu/_main-v3-1/images/template/favicon.ico">
+      <link rel="apple-touch-icon-precomposed" href="//templates.utah.edu/_main-v3-1/images/template/apple-touch-icon.png">
+      <link rel="stylesheet" href="//templates.utah.edu/_main-v3-1/css/main.min.css" type="text/css"><noscript>
+         <link rel="stylesheet" href="//templates.utah.edu/_main-v3-1/css/assets/fontawesome/css/all.min.css" type="text/css"></noscript><link href="/_resources/css/custom.css" rel="stylesheet" type="text/css">
+      <script src="//templates.utah.edu/_main-v3-1/js/head-code.min.js"></script>
+      <!-- HEAD CODE -->
+      
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y160DVJ0DZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y160DVJ0DZ');
+</script>
+
+      
+      <!-- END HEAD CODE -->
+      <!-- END PAGE HEAD -->
+      </head>
+   <body class="has-headernav"><!-- PAGE BODY -->
+      <a class="uu-skip-link" href="#skip-link-target">Skip to content</a>
+      <!-- BODY TOP CODE -->
+            <!-- END BODY TOP CODE -->
+      
+      <div id="uu-top-target" class="uu-site"><!-- SEARCH -->
+         <div class="uu-search" role="search">
+    <div class="uu-search__container">
+        <!-- SITE SEARCH -->
+        <form method="get" id="search-site" class="uu-search__form" action="/search/index.php">
+
+            <label for="inputSearchSite" class="sr-only">Search Site:</label>
+            <input type="text" id="inputSearchSite" name="q" value="" placeholder="Search Site" />
+            <input type="hidden" name="gcse_action" value="site" />
+
+            <div class="form-powered-by">
+                <span>Powered by</span> 
+                <img src="https://templates.utah.edu/_main-v3-1/images/template/google-logo.png" alt="Google Search">
+            </div>
+
+        </form>
+        <!-- END SITE SEARCH -->
+        <!-- CAMPUS SEARCH -->
+        <form method="get" id="search-campus" class="uu-search__form" action="/search/index.php">
+
+            <label for="inputSearchCampus" class="sr-only">Search Campus:</label>
+            <input type="text" id="inputSearchCampus" name="q" value="" placeholder="Search Campus" />
+            <input type="hidden" name="gcse_action" value="campus" />
+
+            <div class="form-powered-by">
+                <span>Powered by</span> 
+                <img src="https://templates.utah.edu/_main-v3-1/images/template/google-logo.png" alt="Google Search">
+            </div>
+        </form>
+        <!-- END CAMPUS SEARCH -->
+
+        <!-- SEARCH TYPE TOGGLE -->
+        <div class="search-type-toggle">
+            <label class="uu-switch" for="search_campus_checkbox">
+                <input type="checkbox" name="search_campus_checkbox" value="" id="search_campus_checkbox">
+                <span class="uu-switch-slider"></span>
+                <span class="uu-switch-label">Search Campus</span>
+            </label>
+        </div>
+        <!-- END SEARCH TYPE TOGGLE -->
+
+    </div>
+</div><!-- END SEARCH -->
+         <!-- HEADER -->
+         
+         <header class="uu-header">
+            <div class="uu-header__container">
+               <!-- ALERT AREA -->
+               <div id="alert_bar" class="uu-alert-bar"> 
+	<a href="https://coronavirus.utah.edu/">University of Utah COVID-19 Updates</a>
+</div><!-- END ALERT AREA -->
+               
+               <div class="uu-header__top"> <a href="https://www.utah.edu/" class="uu-header__logo"><span class="sr-only">The University of Utah</span></a>                  <div class="uu-header__middle">
+                     <!-- HEADER TITLE -->
+                     <div class="uu-header__title">
+<h2><a href="/">CHPC - Research Computing and Data Support for the University</a></h2>
+<!-- <h3><a href="http://it.utah.edu">University Information Technology</a></h3> --></div><!-- END HEADER TITLE -->
+                     <!-- HEADER NAVIGATION -->
+                     
+<nav class="uu-header__nav">
+	
+<ul class="uu-menu__level1">
+<ul class="uu-menu__level1">
+<li class="has-sub"><a href="#">About Us</a>
+<ul class="sub-menu">
+<li><a href="/about/index.php">About Us</a></li>
+<li><a href="https://www.chpc.utah.edu/about/vision.php">Vision</a></li>
+<li><a href="/about/staff.php">Staff</a></li>
+<li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Information</a></li>
+<li><a href="https://www.chpc.utah.edu/about/acknowledge.php">Acknowledging CHPC</a></li>
+<li><a href="https://www.chpc.utah.edu/highlights.php">Research Highlights</a></li>
+<li><a href="https://www.chpc.utah.edu/about/partners.php">Partners</a></li>
+<li><a href="/news/index.php">News</a></li>
+<li><a href="/about/governance.php">Governance</a></li>
+</ul>
+</li>
+<li class="has-sub"><a href="#">Resources</a>
+<ul class="sub-menu">
+<li><a href="https://www.chpc.utah.edu/resources/index.php">Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/HPC_Clusters.php">HPC Clusters</a></li>
+<li><a href="/resources/storage_services.php">Storage Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="/resources/virtualmachines.php">Virtual Machines</a></li>
+<li><a href="/resources/hosting.php">Hosting Services</a></li>
+<li><a href="/resources/Networking.php">Networking</a></li>
+<li><a href="/resources/ProtectedEnvironment.php">Protected Environment</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="/userservices/index.php">User Services</a></li>
+</ul>
+</li>
+<li class="has-sub sub-width-lg"><a href="#">Documentation</a>
+<ul class="sub-menu">
+<li><a href="https://www.chpc.utah.edu/documentation/index.php">Documentation</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/gettingstarted.php">Getting Started</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/access.php">Accessing Our Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/videos/index.php">Short Training Videos</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/index.php">Cluster Guides</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/beehive.php">Beehive User Guide (Windows Server)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/gpus-accelerators.php">GPU &amp; Accelerators</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/frisco-nodes.php">Frisco Nodes</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/narwhal.php">Narwhal User Guide (Protected Environment Statistics)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/software/index.php">Software</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php">Programming Guide</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/policies/index.php">Policy Manual</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/HelloWorldMPI.php">HPC Basics - Hello World MPI</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/faq.php">Frequently Asked Questions</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/white_papers/index.php">White Papers</a></li>
+</ul>
+</li>
+<li class="has-sub"><a href="#">User Services</a>
+<ul class="sub-menu">
+<li><a href="/userservices/index.php">User Services</a></li>
+<li><a href="https://www.chpc.utah.edu/userservices/accounts.php">Accounts</a></li>
+<li><a href="/userservices/allocations.php">Allocations</a></li>
+<li><a href="/userservices/gettinghelp.php">Getting Help</a></li>
+<li><a href="https://www.chpc.utah.edu/presentations/index.php">Training</a></li>
+</ul>
+</li>
+<li class="has-sub sub-width-lg"><a href="#">Usage</a>
+<ul class="sub-menu">
+<li><a href="/usage/cluster/index.php">Cluster Usage</a>
+<ul>
+<li><a href="/usage/cluster/current-project-general.php">General Allocation Pool</a></li>
+<li><a href="/usage/cluster/current-project-lonepeak.php">Lonepeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-kingspeak.php">Kingspeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-ash.php">Ash Cluster</a></li>
+<li><a href="/usage/cluster/current-project-redwood.php">Redwood Cluster</a></li>
+</ul>
+</li>
+<li><a href="/usage/graphs.php?g=cluster%20utilization&amp;host=combined&amp;type=daily_utilization">Cluster Utilization Graphs</a></li>
+<li><a href="/usage/graphs.php?g=hpc%20cluster%20scratch&amp;host=chpc_gen&amp;type=cpu">HPC Cluster Scratch</a></li>
+<li><a href="/usage/graphs.php?g=network&amp;host=Campus+Gateway&amp;type=daily_traffic">Network</a>
+<ul>
+<li><a href="/resources/maddash-dashboards.php">Maddash Dashboards</a></li>
+</ul>
+</li>
+<li><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">UEN Weathermap (Only Available on UEN Networks)</a></li>
+<li><a href="http://snapp2.bldc.grnoc.iu.edu/i2al2s/#&amp;p=3%2C42&amp;ccid=3&amp;tab=1&amp;search=undefined&amp;pwidth=undefined&amp;ccat=undefined&amp;url=show-graph.cgi%3Fcollection_ids%3D145%26end%3D1461772131%26start%3D1461771831%26cf%3DAVERAGE%26ds%3Doutput%2Cinput%26collection_ids%3D145" target="_blank" rel="noopener">UEN Aggregate Utilization</a></li>
+<li><a href="http://uofu.status.io">UofU IT Services Status</a></li>
+<li><a href="https://status.it.utah.edu">University Application Heath Summary - NOC</a></li>
+</ul>
+</li>
+<li><a href="/role/">My Account</a></li>
+</ul>
+</ul>	
+</nav>
+
+<!-- END HEADER NAVIGATION -->
+                     </div>
+                  <div class="uu-search-toggle"><button class="uu-search__trigger"><span class="far fa-search" aria-hidden="true"></span><span class="sr-only">Search</span></button></div><button id="jsNavTrigger" class="uu-nav__trigger" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Reveal Menu</span><span></span></button></div>
+            </div>
+         </header>
+         <!-- END HEADER -->
+         <!-- PUSH NAVIGATION -->
+         
+         <section class="uu-nav">
+            <div class="uu-nav__container"><button id="jsMobileNavTrigger" class="uu-nav__trigger" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Reveal Menu</span><span></span></button><header class="uu-nav__header">
+                  <h2 class="sr-only">Main Navigation</h2>
+                  <!-- Navigation Logo -->
+<a href="https://utah.edu/" class="uu-nav__logo">
+	<img src="https://templates.utah.edu/_main-v3-1/images/template/university-of-utah-logo.svg" alt="The University of Utah"/>
+</a></header>
+               <nav class="uu-menu"><p><h2 class="uu-menu__title">Main Menu</h2>
+<hr />
+<ul class="uu-menu__level1">
+<li><a href="/">Home</a></li>
+<li class="has-sublist"><a href="#">About Us</a>
+<ul class="uu-menu__level2">
+<li><a href="/about/index.php">About Us</a></li>
+<li><a href="https://www.chpc.utah.edu/about/vision.php">Vision</a></li>
+<li><a href="/about/staff.php">Staff</a></li>
+<li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Information</a></li>
+<li><a href="https://www.chpc.utah.edu/about/acknowledge.php">Acknowledging CHPC</a></li>
+<!--<li><a href="/about/bibliography/CHPC%20BIB.pdf" target="_blank" rel="noopener">CHPC Bibliography</a></li>-->
+<li><a href="https://www.chpc.utah.edu/about/SupportedResearch.php">Supported Research</a></li>
+<li><a href="https://www.chpc.utah.edu/highlights.php">Research Highlights</a></li>
+<li><a href="https://www.chpc.utah.edu/about/partners.php">Partners</a></li>
+<li><a href="/news/index.php">News</a></li>
+<li><a title="University Information Technology" href="https://it.utah.edu/" target="_blank" rel="noopener">UIT</a></li>
+<li><a href="/about/governance.php">Governance</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Resources</a>
+<ul class="uu-menu__level2">
+<li><a href="https://www.chpc.utah.edu/resources/index.php">Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/HPC_Clusters.php">HPC Clusters</a></li>
+<li><a href="/resources/storage_services.php">Storage Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="/resources/virtualmachines.php">Virtual Machines</a></li>
+<li><a href="/resources/hosting.php">Hosting Services</a></li>
+<li><a href="/resources/Networking.php">Networking</a></li>
+<li><a href="/resources/ProtectedEnvironment.php">Protected Environment</a></li>
+<li><a href="/documentation/software/ai.php">AI/ML Resources</a></li>
+<li><a href="/userservices/index.php">User Services</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Documentation</a>
+<ul class="uu-menu__level2">
+<li><a href="https://www.chpc.utah.edu/documentation/index.php">Documentation</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/gettingstarted.php">Getting Started</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/access.php">Accessing Our Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/videos/index.php">Short Training Videos</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/index.php">Cluster Guides</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/beehive.php">Beehive User Guide (Windows Server)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/gpus-accelerators.php">GPU &amp; Accelerators</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/frisco-nodes.php">Frisco Nodes</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/narwhal.php">Narwhal User Guide (Protected Environment Statistics)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/software/index.php">Software</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php">Programming Guide</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/policies/index.php">Policy Manual</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/HelloWorldMPI.php">HPC Basics - Hello World MPI</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/faq.php">Frequently Asked Questions</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/white_papers/index.php">White Papers</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">User Services</a>
+<ul class="uu-menu__level2">
+<li><a href="/userservices/index.php">User Services</a></li>
+<li><a href="https://www.chpc.utah.edu/userservices/accounts.php">Accounts</a></li>
+<li><a href="/userservices/allocations.php">Allocations</a></li>
+<li><a href="/userservices/gettinghelp.php">Getting Help</a></li>
+<li><a href="https://www.chpc.utah.edu/presentations/index.php">Training</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Usage</a>
+<ul class="uu-menu__level2">
+<li class="has-sublist"><a href="/usage/cluster/index.php">Cluster Usage</a>
+<ul class="uu-menu__level3">
+<li><a href="/usage/cluster/current-project-general.php">General Allocation Pool</a></li>
+<li><a href="/usage/cluster/current-project-lonepeak.php">Lonepeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-kingspeak.php">Kingspeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-ash.php">Ash Cluster</a></li>
+<li><a href="/usage/cluster/current-project-redwood.php">Redwood Cluster</a></li>
+</ul>
+</li>
+<li><a href="/usage/graphs.php?g=cluster%20utilization&amp;host=combined&amp;type=daily_utilization">Cluster Utilization Graphs</a></li>
+<li><a href="/usage/graphs.php?g=hpc%20cluster%20scratch&amp;host=chpc_gen&amp;type=cpu">HPC Cluster Scratch</a></li>
+<li class="has-sublist"><a href="/usage/graphs.php?g=network&amp;host=Campus+Gateway&amp;type=daily_traffic">Network</a>
+<ul class="uu-menu__level3">
+<li><a href="/resources/maddash-dashboards.php">Maddash Dashboards</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">UEN Weathermap</a>
+<ul class="uu-menu__level3">
+<li><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">(Only Available on UEN Networks)</a></li>
+</ul>
+</li>
+<li><a href="http://snapp2.bldc.grnoc.iu.edu/i2al2s/#&amp;p=3%2C42&amp;ccid=3&amp;tab=1&amp;search=undefined&amp;pwidth=undefined&amp;ccat=undefined&amp;url=show-graph.cgi%3Fcollection_ids%3D145%26end%3D1461772131%26start%3D1461771831%26cf%3DAVERAGE%26ds%3Doutput%2Cinput%26collection_ids%3D145" target="_blank" rel="noopener">UEN Aggregate Utilization</a></li>
+<li><a href="http://uofu.status.io">UofU IT Services Status</a></li>
+<li><a href="https://status.it.utah.edu">University Application Heath Summary - NOC</a></li>
+</ul>
+</li>
+<li><a href="/role/">My Account</a></li>
+</ul></p></nav>
+            </div>
+         </section>
+         <!-- END PUSH NAVIGATION -->
+         
+         <!-- MAIN CONTENT -->
+         <main class="uu-main" id="skip-link-target">
+            <nav aria-label="Breadcrumb" class="uu-breadcrumb">
+               <ol>
+                  <li><a href="/"></a></li>
+                  <li><a href="/documentation/">documentation</a></li>
+                  <li><span class="sr-only">Current Page: </span>Programming Guide</li>
+               </ol>
+            </nav>
+            <!-- SECTION 1 -->
+            
+            <section class="uu-section bg-white text-default uu-section--region-1" style="">
+               <div class="uu-section__container"><!-- SECTION HEADER -->
+                  
+                  <div class="uu-section__header  ">
+                     <h1>Programming Guide</h1>
+                     <p>The clusters at CHPC all mount the /uufs/chpc.utah.edu/sys application tree, so we
+                        have combined the documentation for applications and libraries into this one guide.
+                        Unique attributes of the various clusters will be pointed out throughout this programming
+                        guide.</p>
+                     <h2>Contents</h2>
+                     <ul>
+                        <li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php#ProgComp">Available Compilers</a><ul>
+                              <li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php#ProgC">C/C++</a><ul>
+                                    <li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php#GnuC">GNU&nbsp;C/C++&nbsp;</a></li>
+                                    <li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php#IC">IntelC/C++</a></li>
+                                    <li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php#PGIC">PGI&nbsp;C/C++&nbsp;</a></li>
+                                 </ul>
+                              </li>
+                              <li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php#Fortran">Fortran</a><ul>
+                                    <li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php#GNUFortran">GNU&nbsp;Fortran</a></li>
+                                    <li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php#IntelFortran">Intel&nbsp;Fortran</a></li>
+                                    <li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php#PGIFortran">PGI&nbsp;Fortran</a></li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                        <li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php#Par">Parallel Application Development</a></li>
+                        <li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php#Debug">Debugging and Profiling</a></li>
+                        <li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php#Lib">Libraries</a></li>
+                     </ul>
+                  </div>
+                  <!-- END SECTION HEADER -->
+                  <!-- REGION 1 -->
+                  
+                  <div class="uu-section__region bg-white text-default no-border">
+                     <h2 id="TangentUserGuide-Applicationdevelopment"><span style="color: inherit; font-family: inherit; line-height: 1.2;"><a id="ProgComp"></a> Available Compilers</span></h2>
+                     <h3><a id="ProgC"></a> C/C++</h3>
+                     <p>CHPC offers several compilers for use on the clusters. The GNU Compiler Suite includes
+                        the ANSI C, C++ compilers. Its installed version on the RedHat EL 6 OS is 4.4.7. Newer
+                        versions of the GNU compilers are also maintained (currently we have /uufs/chpc.utah.edu/sys/pkg/gcc/4.7.2_rh6).</p>
+                     <p>In addition to the GNU compilers, we offer two commercial compiler suites from Intel
+                        and the Portland Group (PGI).</p>
+                     <p>The Intel compilers generally provide superior performance. They include C, C++ and
+                        Fortran.</p>
+                     <p>The Portland Group Compiler Suite is another good compiler distribution which has
+                        compilers for the aforementioned languages.</p>
+                     <h4><a id="GnuC"></a> GNU compilers</h4>
+                     <p>The GNU compilers are located in the system default area, i.e. compilers in /usr/bin,
+                        libraries in /usr/lib or /usr/lib64, header files in /usr/include, etc. The C compiler
+                        is called gcc; the C++ compiler g++. &nbsp; &nbsp;Below is a very basic example of how to generate
+                        an executable (exe) from a C source file (source.c) or a C++ source file (source.cc)
+                        :</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre class="well">gcc -o exe source.c<br>g++ -o exe source.cc</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>In order to use the version of the GNU compilers (presuming that you have the tcsh
+                        shell as your default shell) in /uufs/chpc.utah.edu/sys/pkg/gcc (currently 4.7.2):</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre class="well">setenv PATH "/uufs/chpc.utah.edu/sys/pkg/gcc/4.7.2_rh6/bin:$PATH"<br>gcc -o exe source.c<br>g++ -o exe source.cc</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <h4><a id="IC"></a> Intel compilers</h4>
+                     <p>The whole suite of the Intel compilers, debugger,etc are located in the directory:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre class="well">/uufs/chpc.utah.edu/sys/pkg/intel/ics/bin</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>Before users can invoke any of these Intel compilers/debugger they have to source
+                        the file compilervars.sh (bash) or compilervars.csh (tcsh) to set the necessary environmental
+                        variables (note - this is done in the chpc provided .tchsrc and .bashrc files):</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre class="well">source /uufs/chpc.utah.edu/sys/pkg/intel/ics/bin/compilervars.chs intel64</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>The C compiler is invoked by the icc command; the C++ compiler by the icpc command.
+                        If you would like to see the list of available flags, please use the man pages by
+                        typing man icc (C), man icpc (C++).</p>
+                     <p>To find the compiler's version, use the flag -v, i.e. type icc -v (C), icpc -v (C++).</p>
+                     <p>Generally the flag <strong>-fast</strong> gives superior performance, though be careful since the optimization flags are fairly
+                        aggressive. If the code has numerical problems, try to compile with <strong>-O3</strong> instead. Also, CPU architecture can be targeted with -xSSE4.2 for Ember and -xAVX
+                        for Kingspeak, by default it the target is the platform on which is the build done.</p>
+                     <p>Consult the icc/icpc man page for more details.</p>
+                     <p>For more information on the C/C++ compilers, visit <a href="https://software.intel.com/en-us/intel-parallel-studio-xe" target="_blank">Intel Parallel Studio XE 2015 page</a>.</p>
+                     <h4><a id="PGIC"></a> PGI compilers</h4>
+                     <p>The latest version of the Portland Group compilers for use on kingspeak are located
+                        in the directory:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre class="well">/uufs/chpc.utah.edu/sys/installdir/pgi/std</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>In order to use the compiler, users have to source shell the script pgi.sh (bash)/pgi.csh
+                        (tcsh) that sets paths and some other environmental variables:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre class="well">source /uufs/chpc.utah.edu/sys/installdir/pgi/std/etc/pgi.csh</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>The C compiler is invoked as pgcc; the C++ compiler as pgCC.</p>
+                     <p>To find the compiler's version, use the flag -V, i.e. pgcc -V. For a list of all the
+                        available flags, use the man pages (e.g. man pgcc).</p>
+                     <p>In order to obtain good performance we generally recommend the flag -fastsse.</p>
+                     <p>For more information on the PGI C and C++ compilers and PGI Tools (Debugger and Profiler),
+                        please have a look at:</p>
+                     <ul>
+                        <li><a href="http://www.pgroup.com/doc/pgiug.pdf" target="_blank">PGI Users's Guide</a></li>
+                        <li><a href="http://www.pgroup.com/doc/pgitools.pdf" target="_blank">PGI Tools (PGDBG,PGPROF)</a></li>
+                     </ul>
+                     <p>The Portland Group advises on its <a href="http://www.pgroup.com/resources/tips.htm" target="_blank">website</a> the compiler options for a few well-known codes (ATLAS, FFTW, GotoBLAS,..)</p>
+                     <h3><a id="Fortran"></a> Fortran</h3>
+                     <p>CHPC provides several Fortran compilers. The GNU Compiler Suite includes the Fortran
+                        compiler. The installed version on the RedHat EL 6 OS is 4.4.7 and newer versions
+                        can be found with the gcc install mentioned above.</p>
+                     <p>In addition to the GNU Fortran compilers, we offer two commercial compiler suites
+                        which contain Fortran compilers: the Intel and the Portland Group Compiler (PGI) suites.</p>
+                     <p>The Intel Fortran compiler generally provides superior performance.</p>
+                     <p>The Portland Group Compiler Suite is another good compiler distribution.</p>
+                     <h4><a id="GNUFortran"></a> GNU compilers</h4>
+                     <p>The GNU compiler gfortran is located in the default area, i.e. the compiler binary
+                        in /usr/bin, libraries in /usr/lib or /usr/lib64. The gfortran compiler supports all
+                        the options supported by the gcc compiler. In the next line we give a very basic example
+                        of how to compile an F90 source file (source.f90).</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre class="well">gfortran -o exe_f90 source.f90</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>In order to use the version of the GNU compilers in /uufs/chpc.utah.edu/sys/pkg/gcc:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre class="&#34;well">setenv PATH "/uufs/chpc.utah.edu/sys/pkg/gcc/4.7.2_rh6/bin:$PATH"<br>setenv LD_LIBRARY_PATH "/uufs/chpc.utah.edu/sys/pkg/gcc/4.7.2_rh6/lib64:$LD_LIBRARY_PATH"<br>gfortran source.f90 -o exe f90</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <h4><a id="IntelFortran"></a> Intel compilers</h4>
+                     <p>The whole suite of the Intel compilers and debuggers are located in the directory:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre class="well">/uufs/chpc.utah.edu/sys/pkg/intel/ics/bin</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>Before users can invoke any of these Intel compilers/debugger they have to source
+                        the file compilervars.sh (bash) or compilervars.csh (tcsh):</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre class="well">source /uufs/chpc.utah.edu/sys/pkg/intel/ics/bin/compilervars.csh intel64
+					</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>The Fortran compiler is invoked by the ifort command. For a list of the available
+                        flags, please use the man pages by typing man ifort.</p>
+                     <p>To find the compiler's version, use the flag -v, i.e. ifort -v.</p>
+                     <p>We generally recommend the flag ' -xSSE4.2 -O3 ' for superior performance. Very aggressive
+                        optimization can be achieved using '-xSSE4.2 -fast'. Beware that the latter option
+                        should be handled with caution.</p>
+                     <p>Consult the ifort man page for more details.</p>
+                     <p>For more information on the Fortran compiler, visit the <a href="https://software.intel.com/en-us/fortran-compilers">Intel Fortran Compilers page.</a></p>
+                     <h4><a id="PGIFortran"></a> PGI compilers</h4>
+                     <p>The latest version of Portland Group compilers are located in the directory:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre class="well">/uufs/chpc.utah.edu/sys/installdir/pgi/std</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>In order to use the compiler, users have to source shell script pgi.sh (bash)/pgi.csh
+                        (tcsh) found in the etc directory under the path given above, to defines paths and
+                        some other environment variables:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre class="well">source /uufs/chpc.utah.edu/sys/installdir/pgi/std/etc/pgi.sh
+					</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>The Fortran compilers are invoked as pgf77 (F77), pgf90 (F90), and pgf95 (F95).</p>
+                     <p>To find the compiler version, use flag -V, e.g. pgf90 -V. For list of available flags,
+                        use the man pages (e.g. man pgf90).</p>
+                     <p>In order to obtain good performance we generally recommend the flag -fastsse.</p>
+                     <p>For more information on the Fortran compiler(s), PGI Fortran Reference and other PGI
+                        tools, please have a look at:</p>
+                     <ul>
+                        <li><a href="http://www.pgroup.com/doc/pgiug.pdf" target="_blank">PGI Users's Guide</a></li>
+                        <li><a href="http://www.pgroup.com/doc/pgifortref.pdf" target="_blank">PGI Fortran Reference</a></li>
+                        <li><a href="http://www.pgroup.com/doc/pgitools.pdf" target="_blank">PGI Tools (PGDBG,PGPROF)</a></li>
+                     </ul>
+                     <p>The Portland Group advises&nbsp;<a href="http://www.pgroup.com/resources/tips.htm">on its website</a>&nbsp;the compiler options for a few well-known codes (ATLAS, FFTW, GotoBLAS,..)</p>
+                     <h2><a id="Par"></a> Parallel application development</h2>
+                     <h3>MPI - Message Passing Interface</h3>
+                     <p>As the CHPC clusters are distributed memory parallel systems, message passing is the
+                        most common way to communicate between the processes in the parallel program. The
+                        Message Passing Interface (<a href="http://www.mcs.anl.gov/mpi/" target="_blank">MPI</a>) is the prevalent communication system. There are many different MPI distributions
+                        and networks they run on. We support a number of MPI distributions which use is described
+                        in the <a href="https://www.chpc.utah.edu/documentation/software/mpilibraries.php">MPI libraries page</a>.</p><br><h2><a id="Debug"></a> Debugging and Profiling</h2>
+                     <p>There are numerous debuggers available either as open source or commercial, and use
+                        of them is often a matter of personal preference.</p>
+                     <p>The <a href="http://www.gnu.org/software/gdb/" target="_blank">GNU debugger</a>, gdb, is a text based debugger that is present on most Linux machines and allows
+                        for quick checking of the program or loading a core file of a crashed program to get
+                        an idea where the program crashed.</p>
+                     <p>Then there are numerous graphical front ends to gdb, such as <a href="http://www.gnu.org/software/ddd/" target="_blank">Data Display Debugger</a> (ddd), or <a href="https://eclipse.org/cdt/" target="_blank">Eclipse CDT</a>, which provide more user friendly interface to the text only gdb. We don't provide
+                        these tools mainly because of their limited support of parallel debugging.</p>
+                     <p>The Portland Group Compiler Suite includes a graphical debugger called <a href="http://www.pgroup.com/doc/pgitools.pdf" target="_blank">pgdbg</a> which we have as a part of the Compiler Suite license. Provided the PGI environment
+                        is set up, it can be launched by calling <code style="background-color: LightGray;">pgdbg.</code></p>
+                     <p><a href="http://www.roguewave.com/products-services/totalview" target="_blank">Totalview</a> is one of two commercial debuggers that support both serial and parallel debugging,
+                        including GPUs and Intel Xeon Phi. For details on how to use Totalview, please refer
+                        to the <a href="https://www.chpc.utah.edu/documentation/software/debugging.php">CHPC Totalview documentation</a> and have a look at the&nbsp;<a href="http://www.chpc.utah.edu/docs/presentations/totalview/index.php">CHPC Totalview presentation</a>.</p>
+                     <p>For serial profiling, there is GNU&nbsp;<a href="http://en.wikipedia.org/wiki/Gprof" target="_blank">gprof</a>&nbsp;and the Portland Group&nbsp;<a href="http://www.pgroup.com/products/pgprof.htm" target="_blank">pgprof</a>. Intel provides the&nbsp;<a href="https://software.intel.com/en-us/intel-vtune-amplifier-xe" target="_blank">VTune Amplifier XE</a>&nbsp;to test the code performance for users developing serial and multi-threaded applications.
+                        Intel also provides the&nbsp;<a href="https://software.intel.com/en-us/intel-inspector-xe" target="_blank">Intel Inspector</a>&nbsp;which has been developed to find and fix memory errors and thread errors in serial
+                        or parallel code. For more information on the Intel performance tools, visit our <a href="https://www.chpc.utah.edu/documentation/software/intel-parallelXE.php">Intel Parallel Studio XE page</a>.</p>
+                     <h2><a id="Lib"></a> Libraries</h2>
+                     <h3>Math libraries</h3>
+                     <p>There are numerous math libraries available, the most commonly used ones are described
+                        on the <a href="https://www.chpc.utah.edu/documentation/software/mathlibraries.php">Math Libraries page</a>.</p>
+                  </div>
+                  <!-- END REGION 1 -->
+                  <!-- SECTION FOOTER -->
+                  
+                  <div class="uu-section__footer  ">
+                     <p></p>
+                  </div>
+                  <!-- END SECTION FOOTER -->
+                  </div>
+            </section>
+            <!-- END SECTION 1 -->
+            <!-- SECTION 2 -->
+            <!-- END SECTION 2 -->
+            <!-- SECTION 3 -->
+            <!-- END SECTION 3 -->
+            <!-- SECTION 4 -->
+            <!-- END SECTION 4 -->
+            <!-- SECTION 5 -->
+            <!-- END SECTION 5 -->
+            </main>
+         <!-- END MAIN CONTENT -->
+         <!-- FOOTER -->
+         
+         <footer class="uu-footer"><div class="uu-footer__top">
+   <div class="uu-footer__top-container">
+      <div class="uu-footer__top-col1"><a href="https://www.utah.edu"><img src="https://templates.utah.edu/_main-v3-1/images/template/blocku.svg" alt="The University of Utah" class="uu-block-logo"></a><div class="department-name">
+            <h2>The Center For High Performance Computing</h2>
+         </div>
+         <div class="department-address">
+            <p>155 S 1452 E, RM. 405<br>SLC, UT 84112-0190<br>801.585.3791&nbsp;</p>
+         </div>
+      </div>
+      <div class="uu-footer__top-col2">
+         <h2 class="footer-heading">Stay in Touch</h2>
+         <hr>
+         <ul>
+            <li><a href="https://map.utah.edu/index.html?code=inscc">Find Us</a></li>
+            <li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Us</a></li>
+            <li><a href="mailto:helpdesk@chpc.utah.edu">Webmaster</a></li>
+         </ul>
+      </div>
+      <div class="uu-footer__top-col5">
+         <h2 class="footer-heading">Quick Links</h2>
+         <hr>
+         <ul>
+            <li><a href="https://www.utah.edu/a-z/">A-Z Index</a></li>
+            <li><a href="https://people.utah.edu/uWho/basic.hml">Campus Directory</a></li>
+            <li><a href="https://www.map.utah.edu">Campus Map</a></li>
+            <li><a href="https://map.utah.edu/?allshuttle=on">Shuttle Tracker </a></li>
+            <li><a href="https://cis.utah.edu/">CIS</a></li>
+            <li><a href="https://www.umail.utah.edu/">UMail</a></li>
+            <li><a href="https://attheu.utah.edu/">@ The U</a></li>
+         </ul>
+      </div>
+   </div>
+</div><div class="uu-footer__bottom">
+   <div class="uu-footer__bottom-container">
+      <div class="uu-footer__bottom-col1"><a href="https://www.utah.edu/"><img src="https://templates.utah.edu/_main-v3-1/images/template/university-of-utah-logo.svg" alt="The University of Utah" class="uu-site-logo"></a></div>
+      <div class="uu-footer__bottom-col2">
+         <div class="legal">
+            <p>© 2024 The University of Utah</p>
+            <ul>
+               <li><a href="https://www.utah.edu/indigenous-land-acknowledgment/index.php">Indigenous Land Acknowledgment</a></li>
+               <li><a href="https://www.utah.edu/nondiscrimination/">Nondiscrimination &amp; Accessibility</a></li>
+               <li><a href="https://www.utah.edu/disclaimer/">Disclaimer</a></li>
+               <li><a href="https://www.utah.edu/privacy/">Privacy</a></li>
+               <li><a href="https://www.utah.edu/credits-v3.php">Credits &amp; Attributions</a></li>
+               <li><a href="https://attheu.utah.edu/media-contacts/">Media Contacts</a></li>
+               <li><span id="directedit"></span></li>
+            </ul>
+         </div>
+      </div>
+      <div class="uu-footer__bottom-col3">
+         <ul class="uu-social-list">
+            <li><a href="https://twitter.com/uutah"><span class="fa-brands fa-x-twitter" aria-hidden="true"></span><span class="sr-only">X</span></a></li>
+            <li><a href="https://www.facebook.com/universityofutah"><span class="fab fa-facebook" aria-hidden="true"></span><span class="sr-only">Facebook</span></a></li>
+            <li><a href="https://www.instagram.com/universityofutah/"><span class="fab fa-instagram" aria-hidden="true"></span><span class="sr-only">Instagram</span></a></li>
+            <li><a href="https://www.youtube.com/user/theuniversityofutah"><span class="fab fa-youtube" aria-hidden="true"></span><span class="sr-only">Youtube</span></a></li>
+         </ul>
+      </div>
+   </div>
+</div></footer>
+         <!-- END FOOTER -->
+         </div>
+      <!-- FOOT CODE -->
+      <script src="//templates.utah.edu/_main-v3-1/js/main.min.js"></script>
+      
+      
+      
+      
+      
+      
+      <script src="//templates.utah.edu/_main-v3-1/js/directedit.js"></script><script><!--
+window.onload = function(){ directedit(); }
+//
+			--></script>
+      <script src="/_resources/js/custom.js"></script>
+            
+      <!-- END FOOT CODE -->
+      
+      <div id="hidden"><a id="de" href="https://a.cms.omniupdate.com/11/?skin=utah&amp;account=utah_home&amp;site=chpc2&amp;action=de&amp;path=/documentation/ProgrammingGuide.pcf">Last Updated: 7/5/23</a></div>
+      <!-- END PAGE BODY -->
+      </body>
+</html>

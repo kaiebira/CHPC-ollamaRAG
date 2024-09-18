@@ -1,0 +1,798 @@
+<!DOCTYPE HTML><html lang="en-US" class="no-js">
+   <head><!-- PAGE HEAD -->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+      <title>Matlab - Center for High Performance Computing - The University of Utah</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="robots" content="index,follow">
+      <link rel="icon" href="//templates.utah.edu/_main-v3-1/images/template/favicon.ico">
+      <link rel="apple-touch-icon-precomposed" href="//templates.utah.edu/_main-v3-1/images/template/apple-touch-icon.png">
+      <link rel="stylesheet" href="//templates.utah.edu/_main-v3-1/css/main.min.css" type="text/css"><noscript>
+         <link rel="stylesheet" href="//templates.utah.edu/_main-v3-1/css/assets/fontawesome/css/all.min.css" type="text/css"></noscript><link href="/_resources/css/custom.css" rel="stylesheet" type="text/css">
+      <script src="//templates.utah.edu/_main-v3-1/js/head-code.min.js"></script>
+      <!-- HEAD CODE -->
+      
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y160DVJ0DZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y160DVJ0DZ');
+</script>
+
+      
+      <!-- END HEAD CODE -->
+      <!-- END PAGE HEAD -->
+      </head>
+   <body class="has-headernav"><!-- PAGE BODY -->
+      <a class="uu-skip-link" href="#skip-link-target">Skip to content</a>
+      <!-- BODY TOP CODE -->
+            <!-- END BODY TOP CODE -->
+      
+      <div id="uu-top-target" class="uu-site"><!-- SEARCH -->
+         <div class="uu-search" role="search">
+    <div class="uu-search__container">
+        <!-- SITE SEARCH -->
+        <form method="get" id="search-site" class="uu-search__form" action="/search/index.php">
+
+            <label for="inputSearchSite" class="sr-only">Search Site:</label>
+            <input type="text" id="inputSearchSite" name="q" value="" placeholder="Search Site" />
+            <input type="hidden" name="gcse_action" value="site" />
+
+            <div class="form-powered-by">
+                <span>Powered by</span> 
+                <img src="https://templates.utah.edu/_main-v3-1/images/template/google-logo.png" alt="Google Search">
+            </div>
+
+        </form>
+        <!-- END SITE SEARCH -->
+        <!-- CAMPUS SEARCH -->
+        <form method="get" id="search-campus" class="uu-search__form" action="/search/index.php">
+
+            <label for="inputSearchCampus" class="sr-only">Search Campus:</label>
+            <input type="text" id="inputSearchCampus" name="q" value="" placeholder="Search Campus" />
+            <input type="hidden" name="gcse_action" value="campus" />
+
+            <div class="form-powered-by">
+                <span>Powered by</span> 
+                <img src="https://templates.utah.edu/_main-v3-1/images/template/google-logo.png" alt="Google Search">
+            </div>
+        </form>
+        <!-- END CAMPUS SEARCH -->
+
+        <!-- SEARCH TYPE TOGGLE -->
+        <div class="search-type-toggle">
+            <label class="uu-switch" for="search_campus_checkbox">
+                <input type="checkbox" name="search_campus_checkbox" value="" id="search_campus_checkbox">
+                <span class="uu-switch-slider"></span>
+                <span class="uu-switch-label">Search Campus</span>
+            </label>
+        </div>
+        <!-- END SEARCH TYPE TOGGLE -->
+
+    </div>
+</div><!-- END SEARCH -->
+         <!-- HEADER -->
+         
+         <header class="uu-header">
+            <div class="uu-header__container">
+               <!-- ALERT AREA -->
+               <div id="alert_bar" class="uu-alert-bar"> 
+	<a href="https://coronavirus.utah.edu/">University of Utah COVID-19 Updates</a>
+</div><!-- END ALERT AREA -->
+               
+               <div class="uu-header__top"> <a href="https://www.utah.edu/" class="uu-header__logo"><span class="sr-only">The University of Utah</span></a>                  <div class="uu-header__middle">
+                     <!-- HEADER TITLE -->
+                     <div class="uu-header__title">
+<h2><a href="/">CHPC - Research Computing and Data Support for the University</a></h2>
+<!-- <h3><a href="http://it.utah.edu">University Information Technology</a></h3> --></div><!-- END HEADER TITLE -->
+                     <!-- HEADER NAVIGATION -->
+                     
+<nav class="uu-header__nav">
+	
+<ul class="uu-menu__level1">
+<ul class="uu-menu__level1">
+<li class="has-sub"><a href="#">About Us</a>
+<ul class="sub-menu">
+<li><a href="/about/index.php">About Us</a></li>
+<li><a href="https://www.chpc.utah.edu/about/vision.php">Vision</a></li>
+<li><a href="/about/staff.php">Staff</a></li>
+<li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Information</a></li>
+<li><a href="https://www.chpc.utah.edu/about/acknowledge.php">Acknowledging CHPC</a></li>
+<li><a href="https://www.chpc.utah.edu/highlights.php">Research Highlights</a></li>
+<li><a href="https://www.chpc.utah.edu/about/partners.php">Partners</a></li>
+<li><a href="/news/index.php">News</a></li>
+<li><a href="/about/governance.php">Governance</a></li>
+</ul>
+</li>
+<li class="has-sub"><a href="#">Resources</a>
+<ul class="sub-menu">
+<li><a href="https://www.chpc.utah.edu/resources/index.php">Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/HPC_Clusters.php">HPC Clusters</a></li>
+<li><a href="/resources/storage_services.php">Storage Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="/resources/virtualmachines.php">Virtual Machines</a></li>
+<li><a href="/resources/hosting.php">Hosting Services</a></li>
+<li><a href="/resources/Networking.php">Networking</a></li>
+<li><a href="/resources/ProtectedEnvironment.php">Protected Environment</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="/userservices/index.php">User Services</a></li>
+</ul>
+</li>
+<li class="has-sub sub-width-lg"><a href="#">Documentation</a>
+<ul class="sub-menu">
+<li><a href="https://www.chpc.utah.edu/documentation/index.php">Documentation</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/gettingstarted.php">Getting Started</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/access.php">Accessing Our Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/videos/index.php">Short Training Videos</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/index.php">Cluster Guides</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/beehive.php">Beehive User Guide (Windows Server)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/gpus-accelerators.php">GPU &amp; Accelerators</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/frisco-nodes.php">Frisco Nodes</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/narwhal.php">Narwhal User Guide (Protected Environment Statistics)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/software/index.php">Software</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php">Programming Guide</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/policies/index.php">Policy Manual</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/HelloWorldMPI.php">HPC Basics - Hello World MPI</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/faq.php">Frequently Asked Questions</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/white_papers/index.php">White Papers</a></li>
+</ul>
+</li>
+<li class="has-sub"><a href="#">User Services</a>
+<ul class="sub-menu">
+<li><a href="/userservices/index.php">User Services</a></li>
+<li><a href="https://www.chpc.utah.edu/userservices/accounts.php">Accounts</a></li>
+<li><a href="/userservices/allocations.php">Allocations</a></li>
+<li><a href="/userservices/gettinghelp.php">Getting Help</a></li>
+<li><a href="https://www.chpc.utah.edu/presentations/index.php">Training</a></li>
+</ul>
+</li>
+<li class="has-sub sub-width-lg"><a href="#">Usage</a>
+<ul class="sub-menu">
+<li><a href="/usage/cluster/index.php">Cluster Usage</a>
+<ul>
+<li><a href="/usage/cluster/current-project-general.php">General Allocation Pool</a></li>
+<li><a href="/usage/cluster/current-project-lonepeak.php">Lonepeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-kingspeak.php">Kingspeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-ash.php">Ash Cluster</a></li>
+<li><a href="/usage/cluster/current-project-redwood.php">Redwood Cluster</a></li>
+</ul>
+</li>
+<li><a href="/usage/graphs.php?g=cluster%20utilization&amp;host=combined&amp;type=daily_utilization">Cluster Utilization Graphs</a></li>
+<li><a href="/usage/graphs.php?g=hpc%20cluster%20scratch&amp;host=chpc_gen&amp;type=cpu">HPC Cluster Scratch</a></li>
+<li><a href="/usage/graphs.php?g=network&amp;host=Campus+Gateway&amp;type=daily_traffic">Network</a>
+<ul>
+<li><a href="/resources/maddash-dashboards.php">Maddash Dashboards</a></li>
+</ul>
+</li>
+<li><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">UEN Weathermap (Only Available on UEN Networks)</a></li>
+<li><a href="http://snapp2.bldc.grnoc.iu.edu/i2al2s/#&amp;p=3%2C42&amp;ccid=3&amp;tab=1&amp;search=undefined&amp;pwidth=undefined&amp;ccat=undefined&amp;url=show-graph.cgi%3Fcollection_ids%3D145%26end%3D1461772131%26start%3D1461771831%26cf%3DAVERAGE%26ds%3Doutput%2Cinput%26collection_ids%3D145" target="_blank" rel="noopener">UEN Aggregate Utilization</a></li>
+<li><a href="http://uofu.status.io">UofU IT Services Status</a></li>
+<li><a href="https://status.it.utah.edu">University Application Heath Summary - NOC</a></li>
+</ul>
+</li>
+<li><a href="/role/">My Account</a></li>
+</ul>
+</ul>	
+</nav>
+
+<!-- END HEADER NAVIGATION -->
+                     </div>
+                  <div class="uu-search-toggle"><button class="uu-search__trigger"><span class="far fa-search" aria-hidden="true"></span><span class="sr-only">Search</span></button></div><button id="jsNavTrigger" class="uu-nav__trigger" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Reveal Menu</span><span></span></button></div>
+            </div>
+         </header>
+         <!-- END HEADER -->
+         <!-- PUSH NAVIGATION -->
+         
+         <section class="uu-nav">
+            <div class="uu-nav__container"><button id="jsMobileNavTrigger" class="uu-nav__trigger" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Reveal Menu</span><span></span></button><header class="uu-nav__header">
+                  <h2 class="sr-only">Main Navigation</h2>
+                  <!-- Navigation Logo -->
+<a href="https://utah.edu/" class="uu-nav__logo">
+	<img src="https://templates.utah.edu/_main-v3-1/images/template/university-of-utah-logo.svg" alt="The University of Utah"/>
+</a></header>
+               <nav class="uu-menu" aria-label="main"><p><h2 class="uu-menu__title">Main Menu</h2>
+<hr />
+<ul class="uu-menu__level1">
+<li><a href="/">Home</a></li>
+<li class="has-sublist"><a href="#">About Us</a>
+<ul class="uu-menu__level2">
+<li><a href="/about/index.php">About Us</a></li>
+<li><a href="https://www.chpc.utah.edu/about/vision.php">Vision</a></li>
+<li><a href="/about/staff.php">Staff</a></li>
+<li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Information</a></li>
+<li><a href="https://www.chpc.utah.edu/about/acknowledge.php">Acknowledging CHPC</a></li>
+<!--<li><a href="/about/bibliography/CHPC%20BIB.pdf" target="_blank" rel="noopener">CHPC Bibliography</a></li>-->
+<li><a href="https://www.chpc.utah.edu/about/SupportedResearch.php">Supported Research</a></li>
+<li><a href="https://www.chpc.utah.edu/highlights.php">Research Highlights</a></li>
+<li><a href="https://www.chpc.utah.edu/about/partners.php">Partners</a></li>
+<li><a href="/news/index.php">News</a></li>
+<li><a title="University Information Technology" href="https://it.utah.edu/" target="_blank" rel="noopener">UIT</a></li>
+<li><a href="/about/governance.php">Governance</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Resources</a>
+<ul class="uu-menu__level2">
+<li><a href="https://www.chpc.utah.edu/resources/index.php">Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/HPC_Clusters.php">HPC Clusters</a></li>
+<li><a href="/resources/storage_services.php">Storage Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="/resources/virtualmachines.php">Virtual Machines</a></li>
+<li><a href="/resources/hosting.php">Hosting Services</a></li>
+<li><a href="/resources/Networking.php">Networking</a></li>
+<li><a href="/resources/ProtectedEnvironment.php">Protected Environment</a></li>
+<li><a href="/documentation/software/ai.php">AI/ML Resources</a></li>
+<li><a href="/userservices/index.php">User Services</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Documentation</a>
+<ul class="uu-menu__level2">
+<li><a href="https://www.chpc.utah.edu/documentation/index.php">Documentation</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/gettingstarted.php">Getting Started</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/access.php">Accessing Our Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/videos/index.php">Short Training Videos</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/index.php">Cluster Guides</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/beehive.php">Beehive User Guide (Windows Server)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/gpus-accelerators.php">GPU &amp; Accelerators</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/frisco-nodes.php">Frisco Nodes</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/narwhal.php">Narwhal User Guide (Protected Environment Statistics)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/software/index.php">Software</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php">Programming Guide</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/policies/index.php">Policy Manual</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/HelloWorldMPI.php">HPC Basics - Hello World MPI</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/faq.php">Frequently Asked Questions</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/white_papers/index.php">White Papers</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">User Services</a>
+<ul class="uu-menu__level2">
+<li><a href="/userservices/index.php">User Services</a></li>
+<li><a href="https://www.chpc.utah.edu/userservices/accounts.php">Accounts</a></li>
+<li><a href="/userservices/allocations.php">Allocations</a></li>
+<li><a href="/userservices/gettinghelp.php">Getting Help</a></li>
+<li><a href="https://www.chpc.utah.edu/presentations/index.php">Training</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Usage</a>
+<ul class="uu-menu__level2">
+<li class="has-sublist"><a href="/usage/cluster/index.php">Cluster Usage</a>
+<ul class="uu-menu__level3">
+<li><a href="/usage/cluster/current-project-general.php">General Allocation Pool</a></li>
+<li><a href="/usage/cluster/current-project-lonepeak.php">Lonepeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-kingspeak.php">Kingspeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-ash.php">Ash Cluster</a></li>
+<li><a href="/usage/cluster/current-project-redwood.php">Redwood Cluster</a></li>
+</ul>
+</li>
+<li><a href="/usage/graphs.php?g=cluster%20utilization&amp;host=combined&amp;type=daily_utilization">Cluster Utilization Graphs</a></li>
+<li><a href="/usage/graphs.php?g=hpc%20cluster%20scratch&amp;host=chpc_gen&amp;type=cpu">HPC Cluster Scratch</a></li>
+<li class="has-sublist"><a href="/usage/graphs.php?g=network&amp;host=Campus+Gateway&amp;type=daily_traffic">Network</a>
+<ul class="uu-menu__level3">
+<li><a href="/resources/maddash-dashboards.php">Maddash Dashboards</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">UEN Weathermap</a>
+<ul class="uu-menu__level3">
+<li><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">(Only Available on UEN Networks)</a></li>
+</ul>
+</li>
+<li><a href="http://snapp2.bldc.grnoc.iu.edu/i2al2s/#&amp;p=3%2C42&amp;ccid=3&amp;tab=1&amp;search=undefined&amp;pwidth=undefined&amp;ccat=undefined&amp;url=show-graph.cgi%3Fcollection_ids%3D145%26end%3D1461772131%26start%3D1461771831%26cf%3DAVERAGE%26ds%3Doutput%2Cinput%26collection_ids%3D145" target="_blank" rel="noopener">UEN Aggregate Utilization</a></li>
+<li><a href="http://uofu.status.io">UofU IT Services Status</a></li>
+<li><a href="https://status.it.utah.edu">University Application Heath Summary - NOC</a></li>
+</ul>
+</li>
+<li><a href="/role/">My Account</a></li>
+</ul></p></nav>
+            </div>
+         </section>
+         <!-- END PUSH NAVIGATION -->
+         
+         <!-- MAIN CONTENT -->
+         <main class="uu-main" id="skip-link-target">
+            <nav aria-label="Breadcrumb" class="uu-breadcrumb">
+               <ol>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/documentation/">documentation</a></li>
+                  <li><a href="/documentation/software/">software</a></li>
+                  <li><span class="sr-only">current page: </span>Matlab</li>
+               </ol>
+            </nav>
+            <!-- SECTION 1 -->
+            
+            <section class="uu-section bg-white text-default uu-section--region-1" style="">
+               <div class="uu-section__container"><!-- SECTION HEADER -->
+                  
+                  <div class="uu-section__header  ">
+                     <h1>Matlab</h1>
+                  </div>
+                  <!-- END SECTION HEADER -->
+                  <!-- REGION 1 -->
+                  
+                  <div class="uu-section__region bg-white text-default no-border">
+                     <p>CHPC administers a joint license with College of Mines and Earth Sciences (CMES) which
+                        includes 56 MATLAB seats and toolboxes listed <a href="http://software.utah.edu/faq/license/mwc/index.php" target="_blank" rel="noopener">in FAQ 5 here</a>, which are purchased under the campus <a href="https://software.utah.edu/news/mathworks.php" target="_blank" rel="noopener">Total Academic Headcount (TAH) license</a>.&nbsp; From R2019a, as a part of the campus TAH license, we also have an unlimited license
+                        of the <a href="https://www.mathworks.com/products/matlab-parallel-server.html" target="_blank" rel="noopener">MATLAB Parallel Server</a> which allows one to run in parallel on multiple nodes. The Linux version of MATLAB
+                        for CHPC and CMES Linux desktops and clusters is installed in&nbsp;<code style="background-color: lightgray;">/uufs/chpc.utah.edu/sys/installdir/matlab/std</code>. We also install MATLAB on CHPC and CMES Windows and Mac machines on demand.</p>
+                     <p>Researchers with desktop admin rights affiliated with CHPC or CMES can contact&nbsp;<a href="mailto:helpdesk@chpc.utah.edu">helpdesk@chpc.utah.edu</a>&nbsp;for information how to install MATLAB. Other CHPC users who need MATLAB on their
+                        desktops or laptops should <a href="http://software.utah.edu/news/mathworks.php" target="_blank" rel="noopener">purchase MATLAB license from OSL</a>.</p>
+                     <ul id="in_text_nav" class="crawl_skip">
+                        <li class="crawl_skip" style="margin-left: 0px;"><a href="#omc">Optimizing MATLAB code</a></li>
+                        <li class="crawl_skip" style="margin-left: 0px;"><a href="#molm">MATLAB on Linux machines</a><ul id="in_text_nav" class="crawl_skip">
+                              <li class="crawl_skip" style="margin-left: 0px;"><a href="#simipctoon">Single instance MATLAB on a desktop, interactive node or a single compute node</a></li>
+                              <li class="crawl_skip" style="margin-left: 0px;"><a href="#mint">Running MATLAB in an interactive cluster job</a></li>
+                              <li class="crawl_skip" style="margin-left: 0px;"><a href="#mslurm">Running MATLAB in a SLURM script</a></li>
+                              <li class="crawl_skip" style="margin-left: 0px;"><a href="#standex">Creating a standalone executable from MATLAB programs</a></li>
+                              <li class="crawl_skip" style="margin-left: 0px;"><a href="#perfcon">Performance considerations</a></li>
+                           </ul>
+                        </li>
+                        <li class="crawl_skip" style="margin-left: 0px;"><a href="#lpmoadoacn">Parallel MATLAB on a desktop or a single compute node</a></li>
+                        <li class="crawl_skip" style="margin-left: 0px;"><a href="#mdcs">MATLAB Parallel Server (MPS)</a></li>
+                        <li class="crawl_skip" style="margin-left: 30px;"><a href="#cmaj">Configuring MPS and jobs</a></li>
+                        <li class="crawl_skip" style="margin-left: 30px;"><a href="#rij">Running independent jobs</a></li>
+                        <li class="crawl_skip" style="margin-left: 30px;"><a href="#rpj">Running parallel jobs</a></li>
+                        <li class="crawl_skip" style="margin-left: 30px;"><a href="#cmin">CHPC MPS installation notes</a></li>
+                        <li class="crawl_skip" style="margin-left: 45px;"><a href="#ml">MPS licensing</a></li>
+                        <li class="crawl_skip" style="margin-left: 30px;"><a href="#miopm">More information on parallel MATLAB</a></li>
+                     </ul>
+                     <!--crawl_skip-->
+                     <h2><a id="omc"></a>Optimizing MATLAB code before moving to CHPC</h2>
+                     <p>Before moving one's MATLAB code to CHPC machines, we highly recommend to examine the
+                        code and optimize it for performance, following these steps:</p>
+                     <ul>
+                        <li>Go over and implement Mathworks' recommended <a href="https://www.mathworks.com/help/matlab/matlab_prog/techniques-for-improving-performance.html" target="_blank" rel="noopener">techniques to improve performance</a>. In particular, <a href="https://www.mathworks.com/help/matlab/matlab_prog/preallocating-arrays.html" target="_blank" rel="noopener">preallocation</a> and <a href="https://www.mathworks.com/help/matlab/matlab_prog/vectorization.html" target="_blank" rel="noopener">vectorization</a> can have a large impact on performance.</li>
+                        <li>Use the <a href="https://www.mathworks.com/help/matlab/matlab_prog/profiling-for-improving-performance.html" target="_blank" rel="noopener">Profiler</a> to measure where the program spends most of the time and think if that portion of
+                           the code can be modified to be faster.</li>
+                     </ul>
+                     <p>Once you do that, chances are that you may not even need to use CHPC!</p>
+                     <h2 id="molm">MATLAB on Linux machines</h2>
+                     <p>MATLAB, including many toolboxes and DCS is installed on all clusters and Linux desktops
+                        in /uufs/chpc.utah.edu/sys/installdir/matlab. There are different versions of MATLAB
+                        available, which can be accessed by loading the appropriate version module. If the
+                        module version is not specified, the default version will be loaded. MATLAB follows
+                        a biannual release schedule, and we tend to install the latest version shortly after
+                        it has been released.</p>
+                     <p>To run MATLAB, first open a terminal window and load the MATLAB module to set up it
+                        in your environment:<br><code style="background-color: lightgray;">module load matlab</code></p>
+                     <div>Strategies for starting MATLAB differ depending on which way one wants to run it,
+                        and are described below.</div>
+                     <div>&nbsp;</div>
+                     <h3 id="simipctoon">Single instance MATLAB on a desktop, interactive node or a single compute node</h3>
+                     <p>Although MATLAB will run on the interactive nodes, please, take note that we don't
+                        allow running executables longer than ca. 15 minutes on the interactive nodes due
+                        to the load they put on them and inconvenience to other users. For that reason, we
+                        recommend to run MATLAB through interactive Slurm session, or on the <a href="https://www.chpc.utah.edu/documentation/guides/frisco-nodes.php">Frisco interactive nodes</a>. To start MATLAB on an interactive node call the&nbsp;<code style="background-color: lightgray;">matlab</code> command from the terminal after loading the MATLAB module. In order to use the GUI,
+                        make sure you have accessed the machine through <a href="https://www.chpc.utah.edu/documentation/software/fastx.php">FastX</a>.</p>
+                     <p>Note that running a single MATLAB in a job, even if just on one node, may not efficiently
+                        utilize the multi-core node. MATLAB uses internal multi-threading by default, running
+                        as many threads as there are available cores on the node, but, not all internal MATLAB
+                        functions are multi-threaded. From our experience some MATLAB routines thread quite
+                        well, while some not much and some are not threaded at all.</p>
+                     <p><a href="https://www.mathworks.com/discovery/matlab-multicore.html" target="_blank" rel="noopener">This Mathworks document</a> has some information on multi-threading. To evaluate speedup from internal multi-threading,
+                        use the <code style="background-color: lightgray;">maxNumCompThreads</code> function <a href="https://www.mathworks.com/help/matlab/ref/maxnumcompthreads.html" target="_blank" rel="noopener">as described here</a>. One can also run the&nbsp;<code style="background-color: lightgray;">top</code>&nbsp;command to monitor how much CPU usage MATLAB uses, we want to see the MATLAB process
+                        CPU utilization to be up to 100% times number of CPU cores on the node (e.g. on an
+                        8 core node, 800%).</p>
+                     <h4><a id="mint"></a>Running MATLAB in an interactive cluster job</h4>
+                     <p>The best way to run MATLAB interactively is through the<a href="https://www.chpc.utah.edu/documentation/software/ondemand.php"> Open OnDemand web portal</a>. Follow the <a href="https://www.chpc.utah.edu/documentation/software/ondemand.php#oodmatlab">instructions </a>of the MATLAB interactive application to start the MATLAB GUI in a SLURM interactive
+                        job.</p>
+                     <p>Alternatively, to run one MATLAB instance in a cluster job that starts from a terminal
+                        command line, follow these steps:</p>
+                     <ul>
+                        <li>Start interactive Slurm session, with X forwarding e.g.:</li>
+                     </ul>
+                     <p>&nbsp;</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre style="padding-left: 30px;">salloc -t 2:00:00 -n 1 -N 1 -p cluster -A account </pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p style="padding-left: 30px;">In order to start the interactive job quickly, we recommend using the <code style="background-color: lightgray;">notchpeak-shared-short</code> partition and account, which is optimized for faster job startup.</p>
+                     <ul>
+                        <li>Load MATLAB environment and run MATLAB
+                           
+                           <pre>module load matlab<br>matlab</pre>
+                        </li>
+                     </ul>
+                     <h4><a id="mslurm"></a>Running MATLAB in a SLURM script</h4>
+                     <p>Once the MATLAB program is tested in the interactive job session, we recommend to
+                        set it up to run non-interactively through Slurm scripts. The advantage of this approach
+                        is that it can run on any CHPC cluster in a non-attended fashion, so, one can submit
+                        many different calculations which will be processed as the systems resources allow.</p>
+                     <p>Our preferred way is to create a wrapper MATLAB script to run the program of choice
+                        and run this wrapper right after MATLAB launch via the -r MATLAB start option. The
+                        best way to implement this is to create a launch script that has the following three
+                        lines:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>addpath path_to_my_matlab_script<br>my_matlab_script<br>exit</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>This script adds to MATLAB path the path to the program we want to run, run the program
+                        and then exit MATLAB. The exit is important since if we don't exit, the MATLAB will
+                        hang till the job runs out of walltime. See file&nbsp;<code style="background-color: lightgray;"><a class="confluence-link" href="/documentation/software/scripts/run_matlab.m" data-linked-resource-container-id="133791859" data-linked-resource-id="147783695" data-linked-resource-type="attachment" data-linked-resource-default-alias="run_matlab.m" data-base-url="https://wiki.chpc.utah.edu">run_matlab.m</a></code>&nbsp;for an example of the wrapper MATLAB script.<br>Once the script is in place, in your Slurm script file, cd to the directory with your
+                        data files, and run MATLAB as:<br><code style="background-color: lightgray;">matlab -nodisplay -r my_launch_script -logfile my_log.out</code></p>
+                     <p>Here we are telling MATLAB to start without the GUI (as we don't need it in the batch
+                        session), start the launch script&nbsp;<code style="background-color: lightgray;">my_launch_script.m</code>&nbsp;and log the MATLAB output to my_log.out. See file&nbsp;<a class="confluence-link" href="/documentation/software/scripts/run_matlab.slr" data-linked-resource-container-id="133791859" data-linked-resource-id="147783696" data-linked-resource-type="attachment" data-linked-resource-default-alias="run_matlab.pbs" data-base-url="https://wiki.chpc.utah.edu">run_MATLAB.slr</a>&nbsp;for an example of a Slurm script that launches MATLAB with the&nbsp;<code style="background-color: lightgray;">run_matlab.m</code>&nbsp;script.</p>
+                     <h4><a id="standex"></a>Creating a standalone executable from MATLAB programs</h4>
+                     <p>Alternatively, consider compiling the MATLAB programs using the MATLAB Compiler and
+                        run them as a standalone executable. In this case, you don't call MATLAB in the Slurm
+                        script; call the compiled executable itself (that is, just replace the&nbsp;<code style="background-color: lightgray;">matlab -r</code>&nbsp;.... line with the name of the compiled executable). The advantage of this approach
+                        is calling a single executable instead of the whole MATLAB environment. The disadvantage
+                        is less flexibility in editing the MATLAB source between the run since that requires
+                        recompilation of the executable. The compilation itself is an extra step which can
+                        be complicated if the MATLAB program is large.</p>
+                     <p>Compiling MATLAB program is usually fairly simple. First make sure that all your MATLAB
+                        programs are functions, not scripts. Function is a code that starts with function
+                        statement. Suppose we have functions&nbsp;<code style="background-color: lightgray;">main.m</code>,&nbsp;<code style="background-color: lightgray;">f1.m</code>&nbsp;and<code style="background-color: lightgray;">&nbsp;f2.m</code>.&nbsp;<code style="background-color: lightgray;">main.m</code>&nbsp;is the main function. To compile these three into an executable, do:<br><code style="background-color: lightgray;">mcc -m main f1 f2</code>. This will produce executable named main. There are some limitations in the compilation.
+                        For this and other details, consult the&nbsp;<a href="http://www.mathworks.com/access/helpdesk/help/toolbox/compiler/" target="_blank" rel="noopener">MATLAB Compiler help page</a>.</p>
+                     <p>Note that if you are running simulatneously more than one MATLAB compiled executables,
+                        set the MCR_CACHE_ROOT environment variable to a unique location for each run. This
+                        variable specifies the MATLAB Runtime cache location. By default it is <code style="background-color: lightgray;">~/.mcrCache</code>, which is shared by all the runs, and may lead to the cache corruption. When running
+                        multiple SLURM jobs, set <code style="background-color: lightgray;">MCR_CACHE_ROOT=/scratch/local/$USER/$SLURM_JOB_ID</code>.</p>
+                     <h4><a id="perfcon"></a>Performance considerations</h4>
+                     <p>When running a single instance of MATLAB, the parallelization is limited only to the
+                        threads internal to MATLAB. From our experience some MATLAB routines thread quite
+                        well, while some not much and some are not threaded at all. It is a good idea to run
+                        the <code style="background-color: lightgray;">top</code> command to monitor how much CPU usage MATLAB uses, we want to see the MATLAB process
+                        to use up to 100% times number of CPU cores on the node.</p>
+                     <p>To run multiple parallel MATLAB workers, use the Parallel Computing Toolbox as described
+                        in the Parallel MATLAB on a desktop section below, or, if you need more workers that
+                        can be accommodated by a single node, use the MATLAB Distributed Computing Server.</p>
+                     <h2 id="lpmoadoacn">Parallel MATLAB on a desktop or a single compute node</h2>
+                     <p>Aside from automatic thread based parallelization, MATLAB offers explicit (user implemented)
+                        parallelization with the <a href="https://www.mathworks.com/help/distcomp/index.html" target="_blank" rel="noopener">Parallel Computing Toolbox (PCT)</a>. Most common parallelization strategy is replacement of the <code style="background-color: lightgray;">for</code> loops with <a href="https://www.mathworks.com/help/distcomp/parallel-for-loops-parfor.html" target="_blank" rel="noopener">parfor</a>. While this requires some changes to the code, often they are not large. Refer to
+                        the topics under the <a href="https://www.mathworks.com/help/distcomp/parallel-for-loops-parfor.html" target="_blank" rel="noopener">parfor</a> documentation for implementation strategies.</p>
+                     <p>The easiest way to run PCT is directly on a single node. To start PCT use command
+                        <code style="background-color: lightgray;">parpool</code> with the arguments being the 'local' parallel profile and the number of processors
+                        (called labs by MATLAB), e.g. <code style="background-color: lightgray;">poolobj=parpool('local',8)</code>. Using the 'local' profile will ensure that the parallel pool will run on the local
+                        machine. When you are done, please, exit the parallel pool with <code style="background-color: lightgray;">delete(poolobj)</code> command, this frees the PCT license for other users. We recommend to have these two
+                        commands embedded in your MATLAB code. Just open the parallel pool at the start of
+                        your program and close it at the end.</p>
+                     <p>This process can be done either interactively on a desktop, interactive node (friscos)
+                        or an interactive job, or, it can be wrapped in a launch script and submitted in an
+                        unattended SLURM job script, as described above.</p>
+                     <p>Please, note that if you are running more than one parallel MATLAB session on a shared
+                        file system (e.g. running multiple jobs on our clusters), there is a chance for a
+                        race condition on the file system I/O that results in errors when starting the parallel
+                        pool. To work around this, define unique <em>Job Storage Location</em>, as described on <a href="https://rc.fas.harvard.edu/resources/documentation/software/matlab-pct-simultaneous-job-problem/" target="_blank" rel="noopener">this Harvard FASRC help page</a>.</p>
+                     <p>As of MATLAB R2014a, the Parallel Computing Toolbox maximum worker limit has been
+                        removed, so, we recommend using as many workers as there are physical CPU cores on
+                        the system.</p>
+                     <h2 id="mdcs">MATLAB Parallel Server (MPS)</h2>
+                     <p>MATLAB Parallel Server, formerly known as MATLAB Distributed Computing Server (MDCS),
+                        allows to run parallel MATLAB workers on more than one node. The job launch requires
+                        MATLAB running on the interactive node, and launching the parallel job from within
+                        the MATLAB. MATLAB then submits a job to the cluster scheduler and keeps track of
+                        the progress of the job.</p>
+                     <h4 id="cmaj">Configuring MPS and jobs</h4>
+                     <h5>Version R2023a and newer</h5>
+                     <p>We recommend to set a new cluster profile for each account:partition and a cluster,
+                        and name it after that account:partition. To do so, open the <em><strong>Cluster Profile Manager</strong>,</em> and choose the <strong><em>Add Cluster Profile - Clusters Using Third Party Schedulers - Slurm</em></strong>. Once the profile is created, rename it to reflect the account:profile chosen (e.g.
+                        <em>notchpeak-shared-short</em>), and modify its <code style="background-color: lightgray;">SubmitArguments</code> (also called <strong><em>Additional Command Line Arguments for Job Submission</em></strong>) to add the SLURM's -A and -p options, e.g. <code style="background-color: lightgray;">-A notchpeak-shared-short -p notchpeak-shared-short</code>. For other than default wall time, add also the -w walltime option, e.g. <code style="background-color: lightgray;">-t 8:00:00</code>. Similarly, other SLURM arguments may be used, such as the GPU request, constraints,
+                        etc.</p>
+                     <p>This cluster profile can then be used in the <code style="background-color: lightgray;">parcluster</code><code style="background-color: lightgray;"></code>&nbsp; command to start the parallel cluster, e.g. <code style="background-color: lightgray;">c=parcluster("notchpeak-shared-short")</code><code style="background-color: lightgray;"></code> .</p>
+                     <h5>Version R2022b and older</h5>
+                     <p>First time users of the MPS, or when setting up a new MATLAB version on each new CHPC
+                        cluster, one has to configure MATLAB to run parallel jobs on that cluster with the
+                        <code style="background-color: lightgray;">configCluster</code><code style="background-color: lightgray;"></code> command. Note that the <code style="background-color: lightgray;">configCluster</code> command needs to be run only once per cluster, not before every job.</p>
+                     <p>Then prior to submitting a job, other specific parameters need to be defined, some
+                        of which may be unique for the job (such as walltime), and some of which stay the
+                        same so they need to be defined only once (such as user's e-mail that the SLURM scheduler
+                        uses to send e-mails about the job status). All this information is done with the
+                        cluster object's <code style="background-color: lightgray;">AdditionalProperties</code> parameters after the cluster object <code style="background-color: lightgray;">c</code> has been created by calling <code style="background-color: lightgray;">c=parcluster</code>. Some basic understanding of SLURM scheduling is needed to enter the job parameteres.
+                        Please, see our <a href="https://www.chpc.utah.edu/documentation/software/slurm.php">SLURM help page</a> for more information. Below are several important <code style="background-color: lightgray;">AdditionalProperties</code>, which also support tab completion :</p>
+                     <table style="height: 299px;">
+                        <tbody>
+                           <tr>
+                              <td><span style="font-family: Courier New,serif;" face="Courier New, serif">c.AdditionalProperties</span></td>
+                              <td>display current configuration</td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p style="margin-bottom: 0in; line-height: 108%;"><span style="font-family: Courier New,serif;" face="Courier New, serif">c.AdditionalProperties.EmailAddress = 'test@foo.com';</span></p>
+                              </td>
+                              <td>specify e-mail address for job notifications</td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p style="margin-bottom: 0in; line-height: 108%;"><span style="font-family: Courier New,serif;" face="Courier New, serif">c.AdditionalProperties.ClusterName = 'cluster';</span></p>
+                              </td>
+                              <td>set name of the cluster (notchpeak, kingspeak, ember, lonepeak, ash)</td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p style="margin-bottom: 0in; line-height: 108%;"><span style="font-family: Courier New,serif;" face="Courier New, serif">c.AdditionalProperties.QueueName = 'partition'</span>;</p>
+                              </td>
+                              <td>set partition used for the jobs</td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p style="margin-bottom: 0.11in; line-height: 108%;"><span style="font-family: Courier New,serif;" face="Courier New, serif">c.AdditionalProperties.Account = 'account_name'</span></p>
+                              </td>
+                              <td>set account used for the job</td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p style="margin-bottom: 0in; line-height: 108%;"><span style="font-family: Courier New,serif;" face="Courier New, serif">c.AdditionalProperties.WallTime = '00:10:00'</span></p>
+                              </td>
+                              <td>set job walltime</td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p style="margin-bottom: 0.11in; line-height: 108%;"><span style="font-family: Courier New,serif;" face="Courier New, serif">c.AdditionalProperties.UseGpu = true</span>;</p>
+                              </td>
+                              <td>request use of GPUs</td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p style="margin-bottom: 0.11in; line-height: 108%;"><span style="font-family: Courier New,serif;" face="Courier New, serif">c.AdditionalProperties.GpusPerNode = 2;</span></p>
+                              </td>
+                              <td>specify how many GPUs per node to use</td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p style="margin-bottom: 0.11in; line-height: 108%;"><span style="font-family: Courier New,serif;" face="Courier New, serif">c.AdditionalProperties.GpuType = 'k80'</span>;</p>
+                              </td>
+                              <td>request particular GPU</td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p style="margin-bottom: 0.11in; line-height: 108%;"><span style="font-family: Courier New,serif;" face="Courier New, serif">c.AdditionalProperties.RequireExclusiveNode = true</span>;</p>
+                              </td>
+                              <td>require exclusive node (for nodes that allow job sharing, e.g. the GPU nodes)</td>
+                           </tr>
+                           <tr>
+                              <td><span style="font-family: Courier New,serif;" face="Courier New, serif">c.AdditionalProperties.AdditionalSubmitArgs = '-C c20'</span>;</td>
+                              <td>set additional sbatch options, in this case constraint to use only 20 core nodes ('-C
+                                 c20')</td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p style="margin-bottom: 0.11in; line-height: 108%;"><span style="font-family: Courier New,serif;" face="Courier New, serif">c.AdditionalProperties.MemUsage = '4GB'</span></p>
+                              </td>
+                              <td>&nbsp;set memory requirements for the job (per worker)</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <p>&nbsp;</p>
+                     <p>In the very least, define the <code style="background-color: lightgray;">ClusterName</code>,<code style="background-color: lightgray;">QueueName</code>, and <code style="background-color: lightgray;">Account</code>,.</p>
+                     <p>To save changes after modifying <code style="background-color: lightgray;">AdditionalProperties</code>, run , <code style="background-color: lightgray;">c.saveProfile</code>.</p>
+                     <p>To clear a value, assign the property an empty value, e.g. <code style="background-color: lightgray;">c.AdditionalProperties.EmailAddress = ''</code>.</p>
+                     <h4 id="rij">Running independent jobs</h4>
+                     <p>&nbsp;Independent serial MATLAB jobs can be submitted throught the MPS interface. However,
+                        please keep in mind that if node-sharing is not enabled (currently it is not, but
+                        plans are to do so in the future), only one SLURM task, and thus one MATLAB instance
+                        will run on each node, likely not utilizing efficiently all CPU cores on that node.
+                        Still, running independent MATLAB jobs is a good way to test the functionality of
+                        MPS. Additionally, since MPS license comes with all MATLAB toolboxes, functions from
+                        toolboxes that we don't license can be accessed this way.</p>
+                     <p>&nbsp;To submit an independent job to the cluster, use the <a href="https://www.mathworks.com/help/distcomp/batch.html" target="_blank" rel="noopener">batch</a> command. This command returns a handle to the job which can be then used to query
+                        the job and fetch the results.</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>c = parcluster; % get a handle to the cluster<br>j = c.batch(@pwd, 1, {}); % submit a job, pwd queries where MATLAB is running on a cluster, j is a handle to the job<br>j.State % query the state of the job (e.g. idle, running, finished)<br>j.fetchOutputs{:} % will display the results if the job is finished.<br>j.delete % deletes the job<br>jobs = c.Jobs % displays all the jobs that have been finished and not deleted (queued, running or finished)<br>c.getDebugLog(j.Tasks(1)) % if the job gives an error, view the error log file</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>Note that&nbsp;<a href="https://www.mathworks.com/help/distcomp/fetchoutputs.html" target="_blank" rel="noopener">fetchOutputs</a> is used to retrieve function output arguments. If using batch within a script, use
+                        <a href="https://www.mathworks.com/help/matlab/ref/load.html" target="_blank" rel="noopener"><code style="background-color: lightgray;">load</code></a>instead. Data that has been written to files need to be retrieved directly from the
+                        file system.</p>
+                     <h4 id="rpj">Running parallel jobs</h4>
+                     <p>Parallel MATLAB jobs use the Parallel Computing Toolbox to provide concurrent execution.
+                        The most common way to achieve this is through the&nbsp;<a href="https://www.mathworks.com/help/distcomp/parallel-for-loops-parfor.html" target="_blank" rel="noopener">parfor</a> loop statement.</p>
+                     <p>For example, if we have a program parallel_example.m, as:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>function t = parallel_example<br>t0 = tic;<br>parfor idx = 1:16<br>  A(idx) = idx;<br>  pause(2);<br>end<br>t = toc;</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>We can submit a parallel job on the cluster as:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>c = parcluster;  % Get a handle to a cluster<br>j = c.batch(@parallel_example, 1, {}, 'Pool', 4); % Submit a batch pool job using 4 workers<br>j.State % View the job status<br>j.fetchOutputs{:} % Fetch the job results, after finished state is retrieved<br>id = j.ID % retrieve the MATLAB job ID (MPS has its own job tracking)<br>clear j; % clear the handle to the job (handle also gets cleared when quitting MATLAB)</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>Notice that MPS requests # of workers+1 number of SLURM tasks. This is because one
+                        worker is required to manage the batch job and the pool of workers. Note also that
+                        the communication overhead may slow down the parallel program runtime if too many
+                        communicating workers are used. We therefore recommend to time the runtime of your
+                        application with varying worker count to find their optimal number.</p>
+                     <p>As MATLAB logs information on the jobs ran through MPS, past job information can be
+                        retrieved:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>c = parcluster; % Get a handle to a cluster<br>j = c.findJob('ID',4); % Find old job #4<br>j.State % Retrieve the state of this job<br>c.getDebugLog(j) % Retrieve output/error log file</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>A general approach of developing and running MATLAB parallel program would be to develop
+                        the parallel program in the MATLAB GUI with the <a href="https://www.mathworks.com/help/distcomp/index.html" target="_blank" rel="noopener">Parallel Computing Toolbox</a>, and then scale it up to multiple cluster nodes using the MPS by calling the batch
+                        command with the parallel program as the function that the batch command calls.</p>
+                     <p>Note that if you run a program with <a href="https://www.mathworks.com/help/matlab/ref/parfor.html" target="_blank" rel="noopener"><code style="background-color: lightgray;">parfor</code></a> or other parallelization command without explicit submission with the <code style="background-color: lightgray;">batch</code> command, MATLAB will create a cluster job automatically with the default job parameters
+                        (1 worker and 3 days wall time). This cluster job will continue running when the program
+                        finishes until the 30 minutes MATLAB idle timeout is reached. To get a handle to the
+                        parallel pool created by this program and to delete the pool, which deletes the cluster
+                        job, do:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>poolobj = gcp('nocreate');<br>delete(poolobj)</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <p><strong>Difference between parpool() and batch()</strong></p>
+                        <p>Parallel worker pool can be initiated either with the parpool() or the batch() command.<br>In a program with parpool(), serial sections of the code are executed in the MATLAB
+                           instance that runs the code (e.g. if MATLAB runs on the interactive node, the serial
+                           sections of the code will be run there). Parallel sections are offloaded to the cluster
+                           batch job (if the parallel profile defaults to the cluster profile, or is specified
+                           explicitly).<br>The batch() command starts a cluster batch job from the start of the function that
+                           is specified in the batch command, thus executing both the serial and parallel sections
+                           of the code inside of the cluster batch job, i.e. on the cluster interactive nodes.</p>
+                        <p>Therefore, in order to minimize performance impact on the interactive nodes, users
+                           need to submit their parallel MATLAB jobs using the batch() command.</p>
+                        <p>The only exception to this rule is if one would run a MATLAB job inside of a single
+                           compute node as described in section "<a href="#lpmoadoacn">Local parallel MATLAB on a desktop or a compute node</a>".</p>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <h4 id="cmin">CHPC MPS installation notes</h4>
+                     <p>MPS uses MPI for worker communication. Our setup uses Intel MPI in order to use the
+                        InfiniBand network on the clusters that have it, as compared to stock supplied MPICH.
+                        Intel MPI is picked up automatically.</p>
+                     <p>The MPS integration scripts provided by Mathworks are located in <code style="background-color: lightgray;">/uufs/chpc.utah.edu/sys/installdir/matlab/VERSION/toolbox/local/mdcs_slurm</code>&nbsp;and added to user path by default.</p>
+                     <h5 id="ml">MPS licensing</h5>
+                     <p>CHPC now has unlimited workers MPS license through the campus TAH license, therefore
+                        the information below is not that important, but, we leave it below for reference
+                        on how to query the license usage.</p>
+                     <p>Before moving to the campus TAH license, CHPC had a 160 worker license of the MDCS,
+                        which means that up 160 workers could run concurrently. However, this license was
+                        shared among all the users and clusters. SLURM scheduler can keep track of license
+                        usage per cluster, but, not across the clusters. We are running MDCS with SLURM license
+                        support, so, SLURM should manage the jobs in such a way that the maximum license count
+                        of the running jobs does not exceed 160, but, this is the case only for a single cluster.
+                        If some MDCS jobs run on one cluster and other on another, there is a chance that
+                        the MDCS license count will get exceeded resulting in an out of licenses message.
+                        Therefore, we recommend to check current MDCS license usage on other cluster to get
+                        an idea of current license usage.</p>
+                     <p>The slurm command to check the license usage is <code style="background-color: lightgray;">scontrol show lic</code>, e.g.</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>[user@ember2 ~/]$ scontrol show lic<br>LicenseName=MATLAB_distrib_comp_engine@slurmdb<br>&nbsp;&nbsp;&nbsp; Total=160 Used=5 Free=155 Remote=yes</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>One can also query the license server for the current license use, which will list
+                        the total license usage on all CHPC clusters.</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>[user@ember2 ~/]$ $MATLAB_ROOT/etc/glnxa64/lmutil lmstat -S MLM -a |grep MATLAB_Distrib_Comp_Engine<br>Users of MATLAB_Distrib_Comp_Engine: (Total of 160 licenses issued; Total of 5 licenses in use)</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>For more information on MPS, see the&nbsp;<a href="https://www.mathworks.com/products/matlab-parallel-server.html" target="_blank" rel="noopener">Mathworks MPS page</a>.</p>
+                     <div>&nbsp;</div>
+                     <div>
+                        <h4 id="miopm">More information on parallel MATLAB</h4>
+                        <p style="margin-bottom: 0.14in; line-height: 115%;"><a href="http://www.mathworks.com/products/parallel-computing/code-examples.html" target="_blank" rel="noopener">Parallel Computing Coding Examples</a></p>
+                        <p style="margin-bottom: 0.14in; line-height: 115%;"><a href="http://www.mathworks.com/help/distcomp/index.html" target="_blank" rel="noopener">Parallel Computing Documentation</a></p>
+                        <p style="margin-bottom: 0.14in; line-height: 115%;"><a href="http://www.mathworks.com/products/parallel-computing/index.html" target="_blank" rel="noopener">Parallel Computing Overview</a></p>
+                        <p style="margin-bottom: 0.14in; line-height: 115%;"><a href="http://www.mathworks.com/products/parallel-computing/tutorials.html" target="_blank" rel="noopener">Parallel Computing Tutorials</a></p>
+                        <p style="margin-bottom: 0.14in; line-height: 115%;"><a href="http://www.mathworks.com/products/parallel-computing/videos.html">Parallel Computing Videos</a></p>
+                        <p style="margin-bottom: 0.14in; line-height: 115%;"><a href="http://www.mathworks.com/products/parallel-computing/webinars.html" target="_blank" rel="noopener">Parallel Computing Webinars</a></p>
+                     </div>
+                  </div>
+                  <!-- END REGION 1 -->
+                  <!-- SECTION FOOTER -->
+                  
+                  <div class="uu-section__footer  ">
+                     <p></p>
+                  </div>
+                  <!-- END SECTION FOOTER -->
+                  </div>
+            </section>
+            <!-- END SECTION 1 -->
+            <!-- SECTION 2 -->
+            <!-- END SECTION 2 -->
+            <!-- SECTION 3 -->
+            <!-- END SECTION 3 -->
+            <!-- SECTION 4 -->
+            <!-- END SECTION 4 -->
+            <!-- SECTION 5 -->
+            <!-- END SECTION 5 -->
+            </main>
+         <!-- END MAIN CONTENT -->
+         <!-- FOOTER -->
+         
+         <footer class="uu-footer"><div class="uu-footer__top">
+   <div class="uu-footer__top-container">
+      <div class="uu-footer__top-col1"><a href="https://www.utah.edu"><img src="https://templates.utah.edu/_main-v3-1/images/template/blocku.svg" alt="The University of Utah" class="uu-block-logo"></a><div class="department-name">
+            <h2>The Center For High Performance Computing</h2>
+         </div>
+         <div class="department-address">
+            <p>155 S 1452 E, RM. 405<br>SLC, UT 84112-0190<br>801.585.3791&nbsp;</p>
+         </div>
+      </div>
+      <div class="uu-footer__top-col2">
+         <h2 class="footer-heading">Stay in Touch</h2>
+         <hr>
+         <ul>
+            <li><a href="https://map.utah.edu/index.html?code=inscc">Find Us</a></li>
+            <li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Us</a></li>
+            <li><a href="mailto:helpdesk@chpc.utah.edu">Webmaster</a></li>
+         </ul>
+      </div>
+      <div class="uu-footer__top-col5">
+         <h2 class="footer-heading">Quick Links</h2>
+         <hr>
+         <ul>
+            <li><a href="https://www.utah.edu/a-z/">A-Z Index</a></li>
+            <li><a href="https://people.utah.edu/uWho/basic.hml">Campus Directory</a></li>
+            <li><a href="https://www.map.utah.edu">Campus Map</a></li>
+            <li><a href="https://map.utah.edu/?allshuttle=on">Shuttle Tracker </a></li>
+            <li><a href="https://cis.utah.edu/">CIS</a></li>
+            <li><a href="https://www.umail.utah.edu/">UMail</a></li>
+            <li><a href="https://attheu.utah.edu/">@ The U</a></li>
+         </ul>
+      </div>
+   </div>
+</div><div class="uu-footer__bottom">
+   <div class="uu-footer__bottom-container">
+      <div class="uu-footer__bottom-col1"><a href="https://www.utah.edu/"><img src="https://templates.utah.edu/_main-v3-1/images/template/university-of-utah-logo.svg" alt="The University of Utah" class="uu-site-logo"></a></div>
+      <div class="uu-footer__bottom-col2">
+         <div class="legal">
+            <p>© 2024 The University of Utah</p>
+            <ul>
+               <li><a href="https://www.utah.edu/indigenous-land-acknowledgment/index.php">Indigenous Land Acknowledgment</a></li>
+               <li><a href="https://www.utah.edu/nondiscrimination/">Nondiscrimination &amp; Accessibility</a></li>
+               <li><a href="https://www.utah.edu/disclaimer/">Disclaimer</a></li>
+               <li><a href="https://www.utah.edu/privacy/">Privacy</a></li>
+               <li><a href="https://www.utah.edu/credits-v3.php">Credits &amp; Attributions</a></li>
+               <li><a href="https://attheu.utah.edu/media-contacts/">Media Contacts</a></li>
+               <li><span id="directedit"></span></li>
+            </ul>
+         </div>
+      </div>
+      <div class="uu-footer__bottom-col3">
+         <ul class="uu-social-list">
+            <li><a href="https://twitter.com/uutah"><span class="fa-brands fa-x-twitter" aria-hidden="true"></span><span class="sr-only">X</span></a></li>
+            <li><a href="https://www.facebook.com/universityofutah"><span class="fab fa-facebook" aria-hidden="true"></span><span class="sr-only">Facebook</span></a></li>
+            <li><a href="https://www.instagram.com/universityofutah/"><span class="fab fa-instagram" aria-hidden="true"></span><span class="sr-only">Instagram</span></a></li>
+            <li><a href="https://www.youtube.com/user/theuniversityofutah"><span class="fab fa-youtube" aria-hidden="true"></span><span class="sr-only">Youtube</span></a></li>
+         </ul>
+      </div>
+   </div>
+</div></footer>
+         <!-- END FOOTER -->
+         </div>
+      <!-- FOOT CODE -->
+      <script src="//templates.utah.edu/_main-v3-1/js/main.min.js"></script>
+      
+      
+      
+      
+      
+      
+      
+      <script src="//templates.utah.edu/_main-v3-1/js/directedit.js"></script><script><!--
+window.onload = function(){ directedit(); }
+//
+			--></script>
+      <script src="/_resources/js/custom.js"></script>
+            
+      <!-- END FOOT CODE -->
+      
+      <div id="hidden"><a id="de" href="https://a.cms.omniupdate.com/11/?skin=utah&amp;account=utah_home&amp;site=chpc2&amp;action=de&amp;path=/documentation/software/matlab.pcf">Last Updated: 3/28/24</a></div>
+      <!-- END PAGE BODY -->
+      </body>
+</html>

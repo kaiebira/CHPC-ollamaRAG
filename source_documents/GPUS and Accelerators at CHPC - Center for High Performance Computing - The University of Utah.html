@@ -1,0 +1,648 @@
+<!DOCTYPE HTML><html lang="en-US" class="no-js">
+   <head><!-- PAGE HEAD -->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+      <title>GPUS and Accelerators at CHPC - Center for High Performance Computing - The University of Utah</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="robots" content="index,follow">
+      <link rel="icon" href="//templates.utah.edu/_main-v3-1/images/template/favicon.ico">
+      <link rel="apple-touch-icon-precomposed" href="//templates.utah.edu/_main-v3-1/images/template/apple-touch-icon.png">
+      <link rel="stylesheet" href="//templates.utah.edu/_main-v3-1/css/main.min.css" type="text/css"><noscript>
+         <link rel="stylesheet" href="//templates.utah.edu/_main-v3-1/css/assets/fontawesome/css/all.min.css" type="text/css"></noscript><link href="/_resources/css/custom.css" rel="stylesheet" type="text/css">
+      <script src="//templates.utah.edu/_main-v3-1/js/head-code.min.js"></script>
+      <!-- HEAD CODE -->
+      
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y160DVJ0DZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y160DVJ0DZ');
+</script>
+
+      
+      <!-- END HEAD CODE -->
+      <!-- END PAGE HEAD -->
+      </head>
+   <body class="has-headernav"><!-- PAGE BODY -->
+      <a class="uu-skip-link" href="#skip-link-target">Skip to content</a>
+      <!-- BODY TOP CODE -->
+            <!-- END BODY TOP CODE -->
+      
+      <div id="uu-top-target" class="uu-site"><!-- SEARCH -->
+         <div class="uu-search" role="search">
+    <div class="uu-search__container">
+        <!-- SITE SEARCH -->
+        <form method="get" id="search-site" class="uu-search__form" action="/search/index.php">
+
+            <label for="inputSearchSite" class="sr-only">Search Site:</label>
+            <input type="text" id="inputSearchSite" name="q" value="" placeholder="Search Site" />
+            <input type="hidden" name="gcse_action" value="site" />
+
+            <div class="form-powered-by">
+                <span>Powered by</span> 
+                <img src="https://templates.utah.edu/_main-v3-1/images/template/google-logo.png" alt="Google Search">
+            </div>
+
+        </form>
+        <!-- END SITE SEARCH -->
+        <!-- CAMPUS SEARCH -->
+        <form method="get" id="search-campus" class="uu-search__form" action="/search/index.php">
+
+            <label for="inputSearchCampus" class="sr-only">Search Campus:</label>
+            <input type="text" id="inputSearchCampus" name="q" value="" placeholder="Search Campus" />
+            <input type="hidden" name="gcse_action" value="campus" />
+
+            <div class="form-powered-by">
+                <span>Powered by</span> 
+                <img src="https://templates.utah.edu/_main-v3-1/images/template/google-logo.png" alt="Google Search">
+            </div>
+        </form>
+        <!-- END CAMPUS SEARCH -->
+
+        <!-- SEARCH TYPE TOGGLE -->
+        <div class="search-type-toggle">
+            <label class="uu-switch" for="search_campus_checkbox">
+                <input type="checkbox" name="search_campus_checkbox" value="" id="search_campus_checkbox">
+                <span class="uu-switch-slider"></span>
+                <span class="uu-switch-label">Search Campus</span>
+            </label>
+        </div>
+        <!-- END SEARCH TYPE TOGGLE -->
+
+    </div>
+</div><!-- END SEARCH -->
+         <!-- HEADER -->
+         
+         <header class="uu-header">
+            <div class="uu-header__container">
+               <!-- ALERT AREA -->
+               <div id="alert_bar" class="uu-alert-bar"> 
+	<a href="https://coronavirus.utah.edu/">University of Utah COVID-19 Updates</a>
+</div><!-- END ALERT AREA -->
+               
+               <div class="uu-header__top"> <a href="https://www.utah.edu/" class="uu-header__logo"><span class="sr-only">The University of Utah</span></a>                  <div class="uu-header__middle">
+                     <!-- HEADER TITLE -->
+                     <div class="uu-header__title">
+<h2><a href="/">CHPC - Research Computing and Data Support for the University</a></h2>
+<!-- <h3><a href="http://it.utah.edu">University Information Technology</a></h3> --></div><!-- END HEADER TITLE -->
+                     <!-- HEADER NAVIGATION -->
+                     
+<nav class="uu-header__nav">
+	
+<ul class="uu-menu__level1">
+<ul class="uu-menu__level1">
+<li class="has-sub"><a href="#">About Us</a>
+<ul class="sub-menu">
+<li><a href="/about/index.php">About Us</a></li>
+<li><a href="https://www.chpc.utah.edu/about/vision.php">Vision</a></li>
+<li><a href="/about/staff.php">Staff</a></li>
+<li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Information</a></li>
+<li><a href="https://www.chpc.utah.edu/about/acknowledge.php">Acknowledging CHPC</a></li>
+<li><a href="https://www.chpc.utah.edu/highlights.php">Research Highlights</a></li>
+<li><a href="https://www.chpc.utah.edu/about/partners.php">Partners</a></li>
+<li><a href="/news/index.php">News</a></li>
+<li><a href="/about/governance.php">Governance</a></li>
+</ul>
+</li>
+<li class="has-sub"><a href="#">Resources</a>
+<ul class="sub-menu">
+<li><a href="https://www.chpc.utah.edu/resources/index.php">Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/HPC_Clusters.php">HPC Clusters</a></li>
+<li><a href="/resources/storage_services.php">Storage Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="/resources/virtualmachines.php">Virtual Machines</a></li>
+<li><a href="/resources/hosting.php">Hosting Services</a></li>
+<li><a href="/resources/Networking.php">Networking</a></li>
+<li><a href="/resources/ProtectedEnvironment.php">Protected Environment</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="/userservices/index.php">User Services</a></li>
+</ul>
+</li>
+<li class="has-sub sub-width-lg"><a href="#">Documentation</a>
+<ul class="sub-menu">
+<li><a href="https://www.chpc.utah.edu/documentation/index.php">Documentation</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/gettingstarted.php">Getting Started</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/access.php">Accessing Our Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/videos/index.php">Short Training Videos</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/index.php">Cluster Guides</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/beehive.php">Beehive User Guide (Windows Server)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/gpus-accelerators.php">GPU &amp; Accelerators</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/frisco-nodes.php">Frisco Nodes</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/narwhal.php">Narwhal User Guide (Protected Environment Statistics)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/software/index.php">Software</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php">Programming Guide</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/policies/index.php">Policy Manual</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/HelloWorldMPI.php">HPC Basics - Hello World MPI</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/faq.php">Frequently Asked Questions</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/white_papers/index.php">White Papers</a></li>
+</ul>
+</li>
+<li class="has-sub"><a href="#">User Services</a>
+<ul class="sub-menu">
+<li><a href="/userservices/index.php">User Services</a></li>
+<li><a href="https://www.chpc.utah.edu/userservices/accounts.php">Accounts</a></li>
+<li><a href="/userservices/allocations.php">Allocations</a></li>
+<li><a href="/userservices/gettinghelp.php">Getting Help</a></li>
+<li><a href="https://www.chpc.utah.edu/presentations/index.php">Training</a></li>
+</ul>
+</li>
+<li class="has-sub sub-width-lg"><a href="#">Usage</a>
+<ul class="sub-menu">
+<li><a href="/usage/cluster/index.php">Cluster Usage</a>
+<ul>
+<li><a href="/usage/cluster/current-project-general.php">General Allocation Pool</a></li>
+<li><a href="/usage/cluster/current-project-lonepeak.php">Lonepeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-kingspeak.php">Kingspeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-ash.php">Ash Cluster</a></li>
+<li><a href="/usage/cluster/current-project-redwood.php">Redwood Cluster</a></li>
+</ul>
+</li>
+<li><a href="/usage/graphs.php?g=cluster%20utilization&amp;host=combined&amp;type=daily_utilization">Cluster Utilization Graphs</a></li>
+<li><a href="/usage/graphs.php?g=hpc%20cluster%20scratch&amp;host=chpc_gen&amp;type=cpu">HPC Cluster Scratch</a></li>
+<li><a href="/usage/graphs.php?g=network&amp;host=Campus+Gateway&amp;type=daily_traffic">Network</a>
+<ul>
+<li><a href="/resources/maddash-dashboards.php">Maddash Dashboards</a></li>
+</ul>
+</li>
+<li><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">UEN Weathermap (Only Available on UEN Networks)</a></li>
+<li><a href="http://snapp2.bldc.grnoc.iu.edu/i2al2s/#&amp;p=3%2C42&amp;ccid=3&amp;tab=1&amp;search=undefined&amp;pwidth=undefined&amp;ccat=undefined&amp;url=show-graph.cgi%3Fcollection_ids%3D145%26end%3D1461772131%26start%3D1461771831%26cf%3DAVERAGE%26ds%3Doutput%2Cinput%26collection_ids%3D145" target="_blank" rel="noopener">UEN Aggregate Utilization</a></li>
+<li><a href="http://uofu.status.io">UofU IT Services Status</a></li>
+<li><a href="https://status.it.utah.edu">University Application Heath Summary - NOC</a></li>
+</ul>
+</li>
+<li><a href="/role/">My Account</a></li>
+</ul>
+</ul>	
+</nav>
+
+<!-- END HEADER NAVIGATION -->
+                     </div>
+                  <div class="uu-search-toggle"><button class="uu-search__trigger"><span class="far fa-search" aria-hidden="true"></span><span class="sr-only">Search</span></button></div><button id="jsNavTrigger" class="uu-nav__trigger" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Reveal Menu</span><span></span></button></div>
+            </div>
+         </header>
+         <!-- END HEADER -->
+         <!-- PUSH NAVIGATION -->
+         
+         <section class="uu-nav">
+            <div class="uu-nav__container"><button id="jsMobileNavTrigger" class="uu-nav__trigger" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Reveal Menu</span><span></span></button><header class="uu-nav__header">
+                  <h2 class="sr-only">Main Navigation</h2>
+                  <!-- Navigation Logo -->
+<a href="https://utah.edu/" class="uu-nav__logo">
+	<img src="https://templates.utah.edu/_main-v3-1/images/template/university-of-utah-logo.svg" alt="The University of Utah"/>
+</a></header>
+               <nav class="uu-menu" aria-label="main"><p><h2 class="uu-menu__title">Main Menu</h2>
+<hr />
+<ul class="uu-menu__level1">
+<li><a href="/">Home</a></li>
+<li class="has-sublist"><a href="#">About Us</a>
+<ul class="uu-menu__level2">
+<li><a href="/about/index.php">About Us</a></li>
+<li><a href="https://www.chpc.utah.edu/about/vision.php">Vision</a></li>
+<li><a href="/about/staff.php">Staff</a></li>
+<li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Information</a></li>
+<li><a href="https://www.chpc.utah.edu/about/acknowledge.php">Acknowledging CHPC</a></li>
+<!--<li><a href="/about/bibliography/CHPC%20BIB.pdf" target="_blank" rel="noopener">CHPC Bibliography</a></li>-->
+<li><a href="https://www.chpc.utah.edu/about/SupportedResearch.php">Supported Research</a></li>
+<li><a href="https://www.chpc.utah.edu/highlights.php">Research Highlights</a></li>
+<li><a href="https://www.chpc.utah.edu/about/partners.php">Partners</a></li>
+<li><a href="/news/index.php">News</a></li>
+<li><a title="University Information Technology" href="https://it.utah.edu/" target="_blank" rel="noopener">UIT</a></li>
+<li><a href="/about/governance.php">Governance</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Resources</a>
+<ul class="uu-menu__level2">
+<li><a href="https://www.chpc.utah.edu/resources/index.php">Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/HPC_Clusters.php">HPC Clusters</a></li>
+<li><a href="/resources/storage_services.php">Storage Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="/resources/virtualmachines.php">Virtual Machines</a></li>
+<li><a href="/resources/hosting.php">Hosting Services</a></li>
+<li><a href="/resources/Networking.php">Networking</a></li>
+<li><a href="/resources/ProtectedEnvironment.php">Protected Environment</a></li>
+<li><a href="/documentation/software/ai.php">AI/ML Resources</a></li>
+<li><a href="/userservices/index.php">User Services</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Documentation</a>
+<ul class="uu-menu__level2">
+<li><a href="https://www.chpc.utah.edu/documentation/index.php">Documentation</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/gettingstarted.php">Getting Started</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/access.php">Accessing Our Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/videos/index.php">Short Training Videos</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/index.php">Cluster Guides</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/beehive.php">Beehive User Guide (Windows Server)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/gpus-accelerators.php">GPU &amp; Accelerators</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/frisco-nodes.php">Frisco Nodes</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/narwhal.php">Narwhal User Guide (Protected Environment Statistics)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/software/index.php">Software</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php">Programming Guide</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/policies/index.php">Policy Manual</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/HelloWorldMPI.php">HPC Basics - Hello World MPI</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/faq.php">Frequently Asked Questions</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/white_papers/index.php">White Papers</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">User Services</a>
+<ul class="uu-menu__level2">
+<li><a href="/userservices/index.php">User Services</a></li>
+<li><a href="https://www.chpc.utah.edu/userservices/accounts.php">Accounts</a></li>
+<li><a href="/userservices/allocations.php">Allocations</a></li>
+<li><a href="/userservices/gettinghelp.php">Getting Help</a></li>
+<li><a href="https://www.chpc.utah.edu/presentations/index.php">Training</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Usage</a>
+<ul class="uu-menu__level2">
+<li class="has-sublist"><a href="/usage/cluster/index.php">Cluster Usage</a>
+<ul class="uu-menu__level3">
+<li><a href="/usage/cluster/current-project-general.php">General Allocation Pool</a></li>
+<li><a href="/usage/cluster/current-project-lonepeak.php">Lonepeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-kingspeak.php">Kingspeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-ash.php">Ash Cluster</a></li>
+<li><a href="/usage/cluster/current-project-redwood.php">Redwood Cluster</a></li>
+</ul>
+</li>
+<li><a href="/usage/graphs.php?g=cluster%20utilization&amp;host=combined&amp;type=daily_utilization">Cluster Utilization Graphs</a></li>
+<li><a href="/usage/graphs.php?g=hpc%20cluster%20scratch&amp;host=chpc_gen&amp;type=cpu">HPC Cluster Scratch</a></li>
+<li class="has-sublist"><a href="/usage/graphs.php?g=network&amp;host=Campus+Gateway&amp;type=daily_traffic">Network</a>
+<ul class="uu-menu__level3">
+<li><a href="/resources/maddash-dashboards.php">Maddash Dashboards</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">UEN Weathermap</a>
+<ul class="uu-menu__level3">
+<li><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">(Only Available on UEN Networks)</a></li>
+</ul>
+</li>
+<li><a href="http://snapp2.bldc.grnoc.iu.edu/i2al2s/#&amp;p=3%2C42&amp;ccid=3&amp;tab=1&amp;search=undefined&amp;pwidth=undefined&amp;ccat=undefined&amp;url=show-graph.cgi%3Fcollection_ids%3D145%26end%3D1461772131%26start%3D1461771831%26cf%3DAVERAGE%26ds%3Doutput%2Cinput%26collection_ids%3D145" target="_blank" rel="noopener">UEN Aggregate Utilization</a></li>
+<li><a href="http://uofu.status.io">UofU IT Services Status</a></li>
+<li><a href="https://status.it.utah.edu">University Application Heath Summary - NOC</a></li>
+</ul>
+</li>
+<li><a href="/role/">My Account</a></li>
+</ul></p></nav>
+            </div>
+         </section>
+         <!-- END PUSH NAVIGATION -->
+         
+         <!-- MAIN CONTENT -->
+         <main class="uu-main" id="skip-link-target">
+            <nav aria-label="Breadcrumb" class="uu-breadcrumb">
+               <ol>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/documentation/">documentation</a></li>
+                  <li><a href="/documentation/guides/">HPC Cluster User Guides</a></li>
+                  <li><span class="sr-only">current page: </span>GPUS and Accelerators at CHPC</li>
+               </ol>
+            </nav>
+            <!-- SECTION 1 -->
+            
+            <section class="uu-section bg-white text-default uu-section--region-1" style="">
+               <div class="uu-section__container"><!-- SECTION HEADER -->
+                  
+                  <div class="uu-section__header  ">
+                     <h1>GPUs and Accelerators at the CHPC</h1>
+                     <p>The CHPC has a limited number of compute nodes with GPUs. The GPU devices are to be
+                        found on the Kingspeak, Notchpeak, Lonepeak, and Redwood (i.e. the Protected Environment)
+                        clusters. This document describes the hardware, access, and usage of these resources.</p>
+                     <ul>
+                        <li><a href="#gpu_hw">GPU Hardware Overview</a></li>
+                        <li><a href="#gpu_types">GPU Types on CHPC Nodes</a></li>
+                        <li><a href="#gpu_environ">GPU Programming Environment and Performance</a><ul>
+                              <li><a href="#libraries">Libraries</a></li>
+                              <li><a href="#debugging">Debugging</a></li>
+                              <li><a href="#profiling">Profiling</a></li>
+                           </ul>
+                        </li>
+                        <li><a href="#installed_codes">Installed GPU codes</a></li>
+                        <li><a href="#info">More Information - Slurm</a></li>
+                     </ul>
+                  </div>
+                  <!-- END SECTION HEADER -->
+                  <!-- REGION 1 -->
+                  
+                  <div class="uu-section__region bg-white text-default no-border">
+                     <h2><a id="gpu_hw"></a>GPU Hardware Overview</h2>
+                     <p>The CHPC has a limited number of GPU nodes on notchpeak, kingspeak, lonepeak, and
+                        redwood (PE).&nbsp;</p>
+                     <p>The use of the GPU nodes on notchpeak and redwood <strong>does not affect</strong> your allocation&nbsp;&nbsp;(i.e., their usage does not count against any allocation your group
+                        may have). &nbsp;However, we have <strong>restricted the access</strong> to the GPU nodes to users who require access to the GPU nodes as a part of their
+                        research. Please e-mail <a href="mailto:helpdesk@chpc.utah.edu">helpdesk@chpc.utah.edu</a> if you need access.<em><strong> Note that the GPU nodes are a limited resources, and therefore they should only be
+                              used for jobs that make use of the GPUs.&nbsp; If CHPC staff notice any jobs on these nodes
+                              (outside of the shared-short ones, described below) not using the GPUs we will kill
+                              the jobs.</strong></em></p>
+                     <p>There are three categories of GPU nodes:</p>
+                     <section>
+                        <ul>
+                           <li class="text-default-case"><strong>General nodes</strong><span> are nodes purchased by the CHPC and can be used by anyone with a CHPC account</span>. The partition name for these is <code>$(clustername)-gpu </code>where <code style="color: var(--cms-region--primary-black); font-size: 17px;">$(clustername)</code><span style="color: var(--cms-region--primary-black);"> stands for either </span><code style="color: var(--cms-region--primary-black); font-size: 17px;">notchpeak</code><span style="color: var(--cms-region--primary-black);">, </span><code style="color: var(--cms-region--primary-black); font-size: 17px;">kingspeak</code><span style="color: var(--cms-region--primary-black);">, or </span><code style="color: var(--cms-region--primary-black); font-size: 17px;">lonepeak </code><span style="color: var(--cms-region--primary-black);">in the general environment, or </span><code style="color: var(--cms-region--primary-black); font-size: 17px;">redwood</code><span style="color: var(--cms-region--primary-black);"></span><span style="color: var(--cms-region--primary-black);">in the protected environment.</span></li>
+                        </ul>
+                     </section>
+                     <section>
+                        <ul>
+                           <li><strong>Owner nodes </strong>(<strong>non-general nodes) </strong>are nodes purchased by a research group and they can be identified as such by their
+                              partition name, which is&nbsp;<code>$(owner)-gpu-$(cluster) </code>where&nbsp; <code style="color: var(--cms-region--primary-black); font-size: 17px;">$(owner)</code><span style="color: var(--cms-region--primary-black);"> is the owner name and </span>&nbsp;<code style="color: var(--cms-region--primary-black); font-size: 17px;">$(cluster)</code><span style="color: var(--cms-region--primary-black);"> refers to the cluster the node is on (np for notchpeak, kp for kingspeak, and rw
+                                 for redwood). Note that there are no owner gpu nodes on lonepeak.</span><span style="color: var(--cms-region--primary-black);"></span></li>
+                           <li><span style="color: var(--cms-region--primary-black);"><strong><a href="/documentation/guides/notchpeak.php#nss">notchpeak-shared-short nodes</a></strong> are a special partition of nodes on notchpeak, used mostly for classes and for usage
+                                 that does not require a long wall time and can be completed with a low core count
+                                 and minimal memory.&nbsp; These nodes can be used by anyone with a CHPC account, without
+                                 an additional request (see note at the end of this section). There is also a <strong>redwood-shared-short</strong> set of nodes on redwood for users inside of the protected environment (PE).</span></li>
+                        </ul>
+                     </section>
+                     <p>&nbsp;To see the GPU specifications on the nodes you can use the <a href="/documentation/software/slurm.php#aliases">si version of the sinfo command</a> along with the partition name.&nbsp; As an example,</p>
+                     <p><code style="background-color: lightgray;">si -p notchpeak-gpu</code></p>
+                     <p>&nbsp;gives</p>
+                     <p><img src="/_resources/images/gpu.png" alt="gpu" width="1353" height="200"></p>
+                     <p>In the above image, the AVAIL_FEATURES includes information about the GPU types (v100,
+                        3090, 2080ti, etc.) and the usage of this feature along with the information on the
+                        use of constraints found on the <a href="/documentation/software/slurm.php">CHPC Slurm page</a>. For additional information on the specifications and performance for each of the
+                        different GPUs, the best resource is to do a search on the GPU.</p>
+                     <p>The AVAIL_FEATURES also provide information on the rest of the node, such as the cpu
+                        generation (skl, mil, etc;&nbsp; see the chpc list of these provided <a href="/usage/constraints/index.php">here</a>), the physical core ccount of the cpu (with the feature cxx, where xx is the core
+                        count) , and the amount of cpu memory (feature mxxx, where xxx is the amount of memory
+                        in GB).</p>
+                     <p>You also need to know how many GPUs are available per node. You can find this information
+                        by invoking the command below with the nodename. As an example, for node notch293:</p>
+                     <p><code style="background-color: lightgray;"><a id="num-gpu-devices"></a>scontrol show node notch293</code></p>
+                     <p><img src="/_resources/images/gpu2.png" alt="gpuscontrol" width="1353" height="414"></p>
+                     <p>In the above, in the 5th line of the command output, there is a gres listing - this
+                        give the type (3090 in this case) and the number of GPUs available (4) for this node.</p>
+                     <p>&nbsp;</p>
+                     <h3><a id="gpu_types"></a>GPU Types on CHPC Nodes</h3>
+                     <p>The following describes the different types of GPU nodes that were purcahsed by the
+                        CHPC and made available to our researchers. See the <a href="https://en.wikipedia.org/wiki/List_of_Nvidia_graphics_processing_units">Nvidia GPUs&nbsp; wiki page</a>&nbsp;for more details on each GPU type.</p>
+                     <ul>
+                        <li><a title="Tesla P40" href="https://images.nvidia.com/content/pdf/grid/data-sheet/nvidia-p40-datasheet.pdf">P40</a><span>&nbsp;</span>devices (<strong>Pascal</strong><span>&nbsp;</span>generation). It contains 24 GB of global memory (GDDR5X) with a memory bandwidth of
+                           346 GB/s. It has a single-precision performance of 12 TFlops; the double-precision
+                           performance is 0.35 TFlops.&nbsp;</li>
+                        <li><span>&nbsp;<a title="Titan V" href="https://www.nvidia.com/en-us/titan/titan-v/">Titan V</a>&nbsp;devices (<strong>Volta</strong> generation). Each device has 5120 CUDA cores and a global memory of 12 GB (HBM2).
+                              Its memory bandwidth is 652.8GB/s. Each&nbsp;device has the following performance specifics:
+                              6.9 TFlops (Double Precision), 13.8 TFlops (Single Precision), 27.6 (Half Precision),
+                              &amp; 110 TFlops (Tensor Performance - Deep Learning).</span></li>
+                        <li><span>&nbsp;<a title="GTX 1080 Ti" href="https://www.nvidia.com/en-us/geforce/products/10series/geforce-gtx-1080-ti/">GTX 1080 Ti&nbsp;</a>devices (<strong>Pascal</strong>&nbsp;generation). Each device contains 11 GB of global memory (GDDR5X) with a memory bandwidth
+                              of 484 GB/s. It also contains 3584 CUDA cores. Each GPU Card has a single-precision
+                              performance of 10.6 TFlops. The double-precision performance is only 0.33 TFlops.</span></li>
+                        <li>&nbsp;<a title="RTX 2080 Ti" href="https://www.nvidia.com/en-us/geforce/graphics-cards/rtx-2080-ti/">RTX 2080 Ti</a><span>&nbsp;</span>devices (<strong>Turing</strong><span>&nbsp;</span>generation). Each GPU device has 11 GB (GDDR6) global memory with a memory bandwidth
+                           of 616 GB/s. It also contains 4352 CUDA cores. The single-precision performance of
+                           each GPU device is 11.75 TFlops. Its double-precision performance is 0.37 TFlops.</li>
+                        <li><a href="http://www.geforce.com/hardware/desktop-gpus/geforce-gtx-titan-x">GeForce TitanX</a><span>&nbsp; devices (<strong>Maxwell</strong>&nbsp;generation). Each of these GPU devices has 12 GB of global memory. Each device has
+                              great single-precison performance (~7 TFlops) but does rather poor with&nbsp;double-precision
+                              (max ca. 200 GFlops).&nbsp; Therefore, the TitanX nodes should be used for either single-precision,
+                              or mixed single-double precision GPU codes.&nbsp;</span></li>
+                        <li><span><a title="Tesla P100" href="https://www.nvidia.com/en-us/data-center/tesla-p100/">Tesla P100</a>&nbsp;devices (<strong>Pascal</strong>&nbsp;generation). Each device has 16 GB global memory. Each GPU card contains 56 multiprocessors
+                              with each 64 cores (3584 CUDA cores in total). The ECE support is (currently) disabled.The
+                              system interface is a PCIe Gen3 Bus. The double-precision performance per card is
+                              4.7 TFlops. The single-precision is 9.3 TFlops anf the half-precision performance
+                              is 18.7 TFlops.&nbsp;</span></li>
+                        <li><span><a title="Tesla V100" href="https://www.nvidia.com/en-us/data-center/tesla-v100/">Tesla V100</a>&nbsp;(<strong>Volta</strong>&nbsp;generation).&nbsp;Each GPU has 16 GB of global memory.&nbsp; Peak double-precision performance
+                              of a Tesla V100&nbsp; is 7 TFlops; its peak single-precision performance is 14 TFlops.
+                              Its memory bandwidth is 900 GB/s. It also contains 5120 CUDA cores.</span></li>
+                        <li><span><a href="https://www.nvidia.com/en-us/data-center/a100/">Tesla A100</a>&nbsp;(<strong>Ampere</strong> generation). Each GPU has either 40 or 80 GB of global memory and a peak double-precision
+                              performance of 9.7 TFlops. The total memory bandwidth is 1555 Gb/s. There are 6912
+                              INT32/FP32 CUDA Cores.&nbsp;</span></li>
+                        <li><span><a href="https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3090/">RTX 3090</a>&nbsp;(<strong>Ampere</strong>&nbsp;generation). Each GPU has 24 GB global memory and INT32/FP32 10,496 CUDA cores and
+                              328 Tensor cores.&nbsp;The peak single precision performace is 35.7 TFlops. The memory
+                              bandwidth is&nbsp;936 Gb/s.</span></li>
+                        <li><span><a href="https://www.nvidia.com/en-us/data-center/tesla-t4/">Tesla T4</a>&nbsp;(<strong>Turing</strong>&nbsp;generation). Each GPU has 16 GB global memory, with 2,560 INT32/FP32 CUDA cores and
+                              320 Tensor cores. The peak single precision performace is 8.1 TFlops, with 65 TFlops
+                              peak mixed precision performance. The memory bandwidth is 320 Gb/s.</span></li>
+                        <li><span><a title="Tesla A40" href="https://www.nvidia.com/en-us/data-center/a40/">Tesla A40&nbsp;</a>(<strong>Ampere&nbsp;</strong>generation):&nbsp; Each GPU has 48 GB global memory. The memory bandwith is 696 GB/s. There
+                              are 10,752 INT32/FP32 CUDA cores, 84 2nd generation Ray Tracing cores, and 336&nbsp; 3rd
+                              genereration Tensor cores.</span></li>
+                        <li><span><a title="RTX 3090" href="https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3090/">RTX 3090</a>&nbsp; (<strong>Ampere</strong>&nbsp;generation): Each GPU has 24 GB memory, 10,496 INT32/FP32 CUDA cores.</span></li>
+                        <li><span><a href="https://www.nvidia.com/en-us/data-center/products/a30-gpu/">Tesla A30</a>&nbsp;(<strong>Ampere&nbsp;</strong>generation):&nbsp; Each GPU has 24 GB global memory and a peak double-precision performance
+                              of 5.2 TFlops. The memory bandwidth is 933 GB/s.</span></li>
+                        <li><span><a href="https://www.nvidia.com/en-us/design-visualization/rtx-a6000/">RTX A6000</a>&nbsp;(<strong>Ampere&nbsp;</strong>generation):&nbsp; Each GPU has&nbsp; 48 GB memory, 10,752 INT32/FP32 CUDA cores, memory bandwidth
+                              768 GB/s.</span></li>
+                        <li><span><a href="https://www.nvidia.com/en-us/data-center/h100/">H100</a> (<strong>Hopper<em>&nbsp;</em></strong>generation): Each GPU has either 80 or 96 GB memory, 16896 INT32/FP32 CUDA cores,
+                              peak double precision performance 34 or 30 TFlops, and memory bandwidth 3.35 or 3.9
+                              TB/s.</span></li>
+                     </ul>
+                     <p><span><strong>*</strong>Note that this list does not include those GPUs hosted by the CHPC but owned by particular
+                           research groups. You can find the GPUs available in the owner nodes through the command
+                           <code style="background-color: lightgray;">si -p $(clustername)-gpu-guest</code>, where $(clustername) is replaced by notchpeak, kingspeak, or redwood.</span></p>
+                     <p>&nbsp;</p>
+                     <h2><span><a id="gpu_environ"></a>GPU Programming Environment and Performance</span></h2>
+                     <p>As of early 2021, we offer Nvidia programming tools, including CUDA, PGI CUDA Fortran
+                        and the OpenACC compilers. The latest programming tools are all included in the <a href="https://developer.nvidia.com/hpc-sdk">Nvidia HPC SDK</a>, available by <code style="background-color: lightgray;">module load nvhpc</code>, and include both the former Nvidia CUDA compilers and PGI compilers, along with
+                        the Nvidia GPU libraries, debugger and profilers.</p>
+                     <p>Alternatively, one can explicitly load a CUDA version with <code style="background-color: lightgray;">module load cuda/version</code>. Different CUDA versions can be also used, run&nbsp; <code style="background-color: lightgray;">module spider cuda</code> to see what versions are available. Deprecated PGI compilers which come with their
+                        own CUDA can be set up by loading the PGI module, <code style="background-color: lightgray;">module load pgi</code>.</p>
+                     <p>To compile CUDA code so that it runs on all the four types of GPUs that we have, use
+                        the following compiler flags:&nbsp; <code style="background-color: lightgray;">-gencode arch=compute_20,code=sm_20&nbsp;-gencode arch=compute_37,code=sm_37 -gencode arch=compute_52,code=sm_52
+                           -gencode arch=compute_60,code=sm_60&nbsp;<span>-gencode arch=compute_70,code=sm_70</span></code>. For more info on the CUDA compilation and linking flags, please have a look at&nbsp;<span>&nbsp;</span><a href="http://docs.nvidia.com/cuda/pdf/CUDA_C_Programming_Guide.pdf">http://docs.nvidia.com/cuda/pdf/CUDA_C_Programming_Guide.pdf</a>.</p>
+                     <p><a href="/documentation/software/compilers.php">The Nvidia HPC compilers</a> (formerly PGI compilers) specify the GPU architecture with the<code style="background-color: lightgray;">-tp=tesla</code> flag. If no further option is specified, the flag will generate code for all available
+                        computing capabilities (at the time of writing cc20, cc30, cc35, cc50 and cc60). To
+                        be specific for each GPU, <code style="background-color: lightgray;">-tp=tesla:cc20</code><span> can be used for the M2090,</span><code style="background-color: lightgray;">-tp=tesla:cc50</code><span>&nbsp;for the TitanX and<code style="background-color: lightgray;">-tp=tesla:cc60</code>&nbsp;for the P100</span>. To invoke the OpenACC, use <code style="background-color: lightgray;">-acc</code>&nbsp;flag. More information on OpenACC can be obtained at <a href="http://www.openacc.org">http://www.openacc.org</a>.</p>
+                     <p>Good tutorials on GPU programming are available at the <a href="https://developer.nvidia.com/cuda-education-training">CUDA Education and Training site from Nvidia</a>.</p>
+                     <p>When running the GPU code, it is worth checking the resources that the program is
+                        using, to ensure that the GPU is well utilized. For that, one can run the <code style="background-color: lightgray;">nvidia-smi</code><span>&nbsp;</span>command, and watch for the memory and CPU utilization.&nbsp;<span></span><code style="background-color: lightgray;">nvidia-smi</code><span>&nbsp;is also useful to query and set various features of the GPU, see <code style="background-color: lightgray;">nvidia-smi --help</code>&nbsp;for all the options that the command takes. For example, <code style="background-color: lightgray;">nvidia-smi -L</code>&nbsp;&nbsp;lists the&nbsp;GPU card properties. On the TitanX nodes:</span></p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre><span> Titan Card: GPU 0: GeForce GTX TITAN X (UUID: GPU-cd731d6a-ee18-f902-17ff-1477cc59fc15)<br></span></pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>&nbsp;</p>
+                     <p>Note that you can also check on the utilization of&nbsp; the GPUs assigned to a batch job
+                        from an interactive node with the following command and the job number:<span></span></p>
+                     <p><span><code style="background-color: lightgray;">srun --pty --jobid XXXX nvidia-smi</code></span></p>
+                     <p><span>This will return the nvidia-smi results for the GPU(s) assigned to your job.</span></p>
+                     <h4><span><a id="libraries"></a>Libraries</span></h4>
+                     <p>Nvidia HPC SDK bundles <a href="https://docs.nvidia.com/hpc-sdk/index.html#math-libraries">Math libraries</a> which can be used to offload computation to the GPUs and <a href="https://docs.nvidia.com/hpc-sdk/index.html#communications-libraries">Communication libraries</a> which can be used for fast communication between multiple GPUs. The Math libraries
+                        are located at <code style="background-color: lightgray;">$NVROOT/math_libs</code><span></span> and the communication libraries are at <code style="background-color: lightgray;">$NVROOT/comm_libs</code>.<code style="background-color: lightgray;"></code><span></span></p>
+                     <p>To compile and link, e.g. with cuBLAS, include the following parameters in the compilation
+                        line: <code style="background-color: lightgray;">-I$NVROOT/math_libs/include</code><span></span> , and these parameters in the link line: <code style="background-color: lightgray;">-L$NVROOT/math_libs/lib64 -Wl,-rpath=$NVROOT/math_libs/lib64 -lcublas</code><span></span>.</p>
+                     <h4><a id="debugging"></a>Debugging</h4>
+                     <p>Nvidia HPC SDK and CUDA distributions include a terminal debugger named <code style="background-color: lightgray;">cuda-gdb</code><span></span>. Its operation is similar to the GNU <code style="background-color: lightgray;">gdb</code><span></span>debugger. For details, see the <a href="http://docs.nvidia.com/cuda/cuda-gdb">cuda-gdb documentation</a>.</p>
+                     <p>For out of bounds and misaligned memory access errors, there is the <code style="background-color: lightgray;">cuda-gdbmemcheck</code> tool. For details, see the <a href="http://docs.nvidia.com/cuda/cuda-memcheck/index.html">cuda-memcheck documentation</a>.</p>
+                     <p>The Totalview debugger that we license used to license and DDT debugger that we currently
+                        license also support CUDA and OpenACC debugging. Due to its user friendly graphical
+                        interface we recommend them for GPU debugging. For information on how to use DDT or
+                        Totalview, see our <a href="/documentation/software/debugging.php">debugging page</a>.</p>
+                     <h4><a id="profiling"></a>Profiling</h4>
+                     <p>Profiling can be very useful in finding GPU code performance problems, for example
+                        inefficient GPU utilization, use of shared memory, etc. Nvidia CUDA provides a visual
+                        profiler called&nbsp;<a href="https://developer.nvidia.com/nsight-systems">Nsight Systems</a><span>(</span><code style="background-color: lightgray;">nsight-sys</code><span>). There are also older, deprecated,&nbsp;</span>command line profiler (<code style="background-color: lightgray;">nprof</code><span></span>) and visual profiler (<code style="background-color: lightgray;">nvvp</code><span></span>). More information is in the <a href="http://docs.nvidia.com/cuda/profiler-users-guide">CUDA profilers documentation</a>.</p>
+                     <p>NOTE that the usage of GPU hardware counters is restricted due to a security problem
+                        in the Nvidia driver, as detailed in <a href="https://developer.nvidia.com/nvidia-development-tools-solutions-ERR_NVGPUCTRPERM-permission-issue-performance-counters">this Nvidia post</a>. This error will be demonstrated by the following:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>$ nvprof -m all ./my-gpu-program<br>==4983== Warning: ERR_NVGPUCTRPERM - The user does not have permission to profile on the target device. See the following link<br>for instructions to enable permissions and get more information: https://developer.nvidia.com/ERR_NVGPUCTRPERM</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>&nbsp;</p>
+                     <p>In this case, please <a href="mailto:helpdesk@chpc.utah.edu?subject=Create%20a%20GPU%20reservation%20for%20GPU%20hardware%20counters%20profiling">open a support ticket</a>, asking for a reservation on a GPU node. Our admins will enable the hardware counters
+                        profiling for all users inside of this reservation and instruct how to use it.</p>
+                     <h2><a id="installed_codes"></a>Installed GPU codes</h2>
+                     <p>We have the following GPU codes installed:</p>
+                     <table border="1">
+                        <tbody>
+                           <tr>
+                              <td><strong>Code name</strong></td>
+                              <td><strong>Module name&nbsp;</strong></td>
+                              <td><strong>Prerequisite&nbsp; modules</strong></td>
+                              <td><strong>Sample batch script(s) location</strong></td>
+                              <td><strong>Other notes</strong></td>
+                           </tr>
+                           <tr>
+                              <td>HOOMD</td>
+                              <td>hoomd</td>
+                              <td>
+                                 <p>gcc/4.8.5</p>
+                                 <p>mpich2/3.2.g</p>
+                              </td>
+                              <td>/uufs/chpc.utah.edu/sys/installdir/hoomd/2.0.0g-[sp,dp]/examples/</td>
+                              <td>&nbsp;</td>
+                           </tr>
+                           <tr>
+                              <td>VASP</td>
+                              <td>vasp</td>
+                              <td>
+                                 <p>intel</p>
+                                 <p>impi</p>
+                                 <p>cuda/7.5</p>
+                              </td>
+                              <td>/uufs/chpc.utah.edu/sys/installdir/vasp/examples</td>
+                              <td>Per group license,<a href="mailto:helpdesk@chpc.utah.edu?subject=VASP%20access"> let us know</a> if you need access</td>
+                           </tr>
+                           <tr>
+                              <td>AMBER</td>
+                              <td>amber-cuda</td>
+                              <td>
+                                 <p>gcc/4.4.7</p>
+                                 <p>mvapich2/2.1.g</p>
+                              </td>
+                              <td>&nbsp;adapt <a href="/documentation/software/amber.php" target="_blank" rel="noopener">CPU script</a></td>
+                              <td>&nbsp;</td>
+                           </tr>
+                           <tr>
+                              <td>LAMMPS</td>
+                              <td>lammps/10Aug15 &nbsp; &nbsp; &nbsp;&nbsp;</td>
+                              <td>intel/2016.0.109 &nbsp;impi/5.1.1.109</td>
+                              <td>adapt <a href="/documentation/software/lammps.php" target="_blank" rel="noopener">CPU script</a></td>
+                              <td>&nbsp;</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <p>&nbsp;</p>
+                     <p>If there is any other GPU code that you would like us installed, please&nbsp;<a href="mailto:helpdesk@chpc.utah.edu?subject=GPU%20program%20installation">let us know</a>.</p>
+                     <p>Some commercial programs that we have installed, such as Matlab, also have GPU support.
+                        Either try them or <a href="mailto:helpdesk@chpc.utah.edu?subject=GPU%20support">contact us</a>.</p>
+                     <p>&nbsp;</p>
+                     <h2><a id="info"></a>More Information - Slurm</h2>
+                     <p>Information on requesting a job to run with access to GPUs can be found in our <a href="/documentation/software/slurm-gpus.php">Slurm documentation</a>.</p>
+                  </div>
+                  <!-- END REGION 1 -->
+                  <!-- SECTION FOOTER -->
+                  
+                  <div class="uu-section__footer  ">
+                     <p></p>
+                  </div>
+                  <!-- END SECTION FOOTER -->
+                  </div>
+            </section>
+            <!-- END SECTION 1 -->
+            <!-- SECTION 2 -->
+            <!-- END SECTION 2 -->
+            <!-- SECTION 3 -->
+            <!-- END SECTION 3 -->
+            <!-- SECTION 4 -->
+            <!-- END SECTION 4 -->
+            <!-- SECTION 5 -->
+            <!-- END SECTION 5 -->
+            </main>
+         <!-- END MAIN CONTENT -->
+         <!-- FOOTER -->
+         
+         <footer class="uu-footer"><div class="uu-footer__top">
+   <div class="uu-footer__top-container">
+      <div class="uu-footer__top-col1"><a href="https://www.utah.edu"><img src="https://templates.utah.edu/_main-v3-1/images/template/blocku.svg" alt="The University of Utah" class="uu-block-logo"></a><div class="department-name">
+            <h2>The Center For High Performance Computing</h2>
+         </div>
+         <div class="department-address">
+            <p>155 S 1452 E, RM. 405<br>SLC, UT 84112-0190<br>801.585.3791&nbsp;</p>
+         </div>
+      </div>
+      <div class="uu-footer__top-col2">
+         <h2 class="footer-heading">Stay in Touch</h2>
+         <hr>
+         <ul>
+            <li><a href="https://map.utah.edu/index.html?code=inscc">Find Us</a></li>
+            <li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Us</a></li>
+            <li><a href="mailto:helpdesk@chpc.utah.edu">Webmaster</a></li>
+         </ul>
+      </div>
+      <div class="uu-footer__top-col5">
+         <h2 class="footer-heading">Quick Links</h2>
+         <hr>
+         <ul>
+            <li><a href="https://www.utah.edu/a-z/">A-Z Index</a></li>
+            <li><a href="https://people.utah.edu/uWho/basic.hml">Campus Directory</a></li>
+            <li><a href="https://www.map.utah.edu">Campus Map</a></li>
+            <li><a href="https://map.utah.edu/?allshuttle=on">Shuttle Tracker </a></li>
+            <li><a href="https://cis.utah.edu/">CIS</a></li>
+            <li><a href="https://www.umail.utah.edu/">UMail</a></li>
+            <li><a href="https://attheu.utah.edu/">@ The U</a></li>
+         </ul>
+      </div>
+   </div>
+</div><div class="uu-footer__bottom">
+   <div class="uu-footer__bottom-container">
+      <div class="uu-footer__bottom-col1"><a href="https://www.utah.edu/"><img src="https://templates.utah.edu/_main-v3-1/images/template/university-of-utah-logo.svg" alt="The University of Utah" class="uu-site-logo"></a></div>
+      <div class="uu-footer__bottom-col2">
+         <div class="legal">
+            <p>© 2024 The University of Utah</p>
+            <ul>
+               <li><a href="https://www.utah.edu/indigenous-land-acknowledgment/index.php">Indigenous Land Acknowledgment</a></li>
+               <li><a href="https://www.utah.edu/nondiscrimination/">Nondiscrimination &amp; Accessibility</a></li>
+               <li><a href="https://www.utah.edu/disclaimer/">Disclaimer</a></li>
+               <li><a href="https://www.utah.edu/privacy/">Privacy</a></li>
+               <li><a href="https://www.utah.edu/credits-v3.php">Credits &amp; Attributions</a></li>
+               <li><a href="https://attheu.utah.edu/media-contacts/">Media Contacts</a></li>
+               <li><span id="directedit"></span></li>
+            </ul>
+         </div>
+      </div>
+      <div class="uu-footer__bottom-col3">
+         <ul class="uu-social-list">
+            <li><a href="https://twitter.com/uutah"><span class="fa-brands fa-x-twitter" aria-hidden="true"></span><span class="sr-only">X</span></a></li>
+            <li><a href="https://www.facebook.com/universityofutah"><span class="fab fa-facebook" aria-hidden="true"></span><span class="sr-only">Facebook</span></a></li>
+            <li><a href="https://www.instagram.com/universityofutah/"><span class="fab fa-instagram" aria-hidden="true"></span><span class="sr-only">Instagram</span></a></li>
+            <li><a href="https://www.youtube.com/user/theuniversityofutah"><span class="fab fa-youtube" aria-hidden="true"></span><span class="sr-only">Youtube</span></a></li>
+         </ul>
+      </div>
+   </div>
+</div></footer>
+         <!-- END FOOTER -->
+         </div>
+      <!-- FOOT CODE -->
+      <script src="//templates.utah.edu/_main-v3-1/js/main.min.js"></script>
+      
+      
+      
+      
+      
+      
+      
+      <script src="//templates.utah.edu/_main-v3-1/js/directedit.js"></script><script><!--
+window.onload = function(){ directedit(); }
+//
+			--></script>
+      <script src="/_resources/js/custom.js"></script>
+            
+      <!-- END FOOT CODE -->
+      
+      <div id="hidden"><a id="de" href="https://a.cms.omniupdate.com/11/?skin=utah&amp;account=utah_home&amp;site=chpc2&amp;action=de&amp;path=/documentation/guides/gpus-accelerators.pcf">Last Updated: 8/28/24</a></div>
+      <!-- END PAGE BODY -->
+      </body>
+</html>

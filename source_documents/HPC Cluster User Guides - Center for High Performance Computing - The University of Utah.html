@@ -1,0 +1,644 @@
+<!DOCTYPE HTML><html lang="en-US" class="no-js">
+   <head><!-- PAGE HEAD -->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+      <title>HPC Cluster User Guides - Center for High Performance Computing - The University of Utah</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="robots" content="index,follow">
+      <link rel="icon" href="//templates.utah.edu/_main-v3-1/images/template/favicon.ico">
+      <link rel="apple-touch-icon-precomposed" href="//templates.utah.edu/_main-v3-1/images/template/apple-touch-icon.png">
+      <link rel="stylesheet" href="//templates.utah.edu/_main-v3-1/css/main.min.css" type="text/css"><noscript>
+         <link rel="stylesheet" href="//templates.utah.edu/_main-v3-1/css/assets/fontawesome/css/all.min.css" type="text/css"></noscript><link href="/_resources/css/custom.css" rel="stylesheet" type="text/css">
+      <script src="//templates.utah.edu/_main-v3-1/js/head-code.min.js"></script>
+      <!-- HEAD CODE -->
+      
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y160DVJ0DZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y160DVJ0DZ');
+</script>
+
+      
+      <!-- END HEAD CODE -->
+      <!-- END PAGE HEAD -->
+      </head>
+   <body class="has-headernav"><!-- PAGE BODY -->
+      <a class="uu-skip-link" href="#skip-link-target">Skip to content</a>
+      <!-- BODY TOP CODE -->
+            <!-- END BODY TOP CODE -->
+      
+      <div id="uu-top-target" class="uu-site"><!-- SEARCH -->
+         <div class="uu-search" role="search">
+    <div class="uu-search__container">
+        <!-- SITE SEARCH -->
+        <form method="get" id="search-site" class="uu-search__form" action="/search/index.php">
+
+            <label for="inputSearchSite" class="sr-only">Search Site:</label>
+            <input type="text" id="inputSearchSite" name="q" value="" placeholder="Search Site" />
+            <input type="hidden" name="gcse_action" value="site" />
+
+            <div class="form-powered-by">
+                <span>Powered by</span> 
+                <img src="https://templates.utah.edu/_main-v3-1/images/template/google-logo.png" alt="Google Search">
+            </div>
+
+        </form>
+        <!-- END SITE SEARCH -->
+        <!-- CAMPUS SEARCH -->
+        <form method="get" id="search-campus" class="uu-search__form" action="/search/index.php">
+
+            <label for="inputSearchCampus" class="sr-only">Search Campus:</label>
+            <input type="text" id="inputSearchCampus" name="q" value="" placeholder="Search Campus" />
+            <input type="hidden" name="gcse_action" value="campus" />
+
+            <div class="form-powered-by">
+                <span>Powered by</span> 
+                <img src="https://templates.utah.edu/_main-v3-1/images/template/google-logo.png" alt="Google Search">
+            </div>
+        </form>
+        <!-- END CAMPUS SEARCH -->
+
+        <!-- SEARCH TYPE TOGGLE -->
+        <div class="search-type-toggle">
+            <label class="uu-switch" for="search_campus_checkbox">
+                <input type="checkbox" name="search_campus_checkbox" value="" id="search_campus_checkbox">
+                <span class="uu-switch-slider"></span>
+                <span class="uu-switch-label">Search Campus</span>
+            </label>
+        </div>
+        <!-- END SEARCH TYPE TOGGLE -->
+
+    </div>
+</div><!-- END SEARCH -->
+         <!-- HEADER -->
+         
+         <header class="uu-header">
+            <div class="uu-header__container">
+               <!-- ALERT AREA -->
+               <div id="alert_bar" class="uu-alert-bar"> 
+	<a href="https://coronavirus.utah.edu/">University of Utah COVID-19 Updates</a>
+</div><!-- END ALERT AREA -->
+               
+               <div class="uu-header__top"> <a href="https://www.utah.edu/" class="uu-header__logo"><span class="sr-only">The University of Utah</span></a>                  <div class="uu-header__middle">
+                     <!-- HEADER TITLE -->
+                     <div class="uu-header__title">
+<h2><a href="/">CHPC - Research Computing and Data Support for the University</a></h2>
+<!-- <h3><a href="http://it.utah.edu">University Information Technology</a></h3> --></div><!-- END HEADER TITLE -->
+                     <!-- HEADER NAVIGATION -->
+                     
+<nav class="uu-header__nav">
+	
+<ul class="uu-menu__level1">
+<ul class="uu-menu__level1">
+<li class="has-sub"><a href="#">About Us</a>
+<ul class="sub-menu">
+<li><a href="/about/index.php">About Us</a></li>
+<li><a href="https://www.chpc.utah.edu/about/vision.php">Vision</a></li>
+<li><a href="/about/staff.php">Staff</a></li>
+<li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Information</a></li>
+<li><a href="https://www.chpc.utah.edu/about/acknowledge.php">Acknowledging CHPC</a></li>
+<li><a href="https://www.chpc.utah.edu/highlights.php">Research Highlights</a></li>
+<li><a href="https://www.chpc.utah.edu/about/partners.php">Partners</a></li>
+<li><a href="/news/index.php">News</a></li>
+<li><a href="/about/governance.php">Governance</a></li>
+</ul>
+</li>
+<li class="has-sub"><a href="#">Resources</a>
+<ul class="sub-menu">
+<li><a href="https://www.chpc.utah.edu/resources/index.php">Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/HPC_Clusters.php">HPC Clusters</a></li>
+<li><a href="/resources/storage_services.php">Storage Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="/resources/virtualmachines.php">Virtual Machines</a></li>
+<li><a href="/resources/hosting.php">Hosting Services</a></li>
+<li><a href="/resources/Networking.php">Networking</a></li>
+<li><a href="/resources/ProtectedEnvironment.php">Protected Environment</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="/userservices/index.php">User Services</a></li>
+</ul>
+</li>
+<li class="has-sub sub-width-lg"><a href="#">Documentation</a>
+<ul class="sub-menu">
+<li><a href="https://www.chpc.utah.edu/documentation/index.php">Documentation</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/gettingstarted.php">Getting Started</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/access.php">Accessing Our Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/videos/index.php">Short Training Videos</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/index.php">Cluster Guides</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/beehive.php">Beehive User Guide (Windows Server)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/gpus-accelerators.php">GPU &amp; Accelerators</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/frisco-nodes.php">Frisco Nodes</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/narwhal.php">Narwhal User Guide (Protected Environment Statistics)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/software/index.php">Software</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php">Programming Guide</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/policies/index.php">Policy Manual</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/HelloWorldMPI.php">HPC Basics - Hello World MPI</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/faq.php">Frequently Asked Questions</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/white_papers/index.php">White Papers</a></li>
+</ul>
+</li>
+<li class="has-sub"><a href="#">User Services</a>
+<ul class="sub-menu">
+<li><a href="/userservices/index.php">User Services</a></li>
+<li><a href="https://www.chpc.utah.edu/userservices/accounts.php">Accounts</a></li>
+<li><a href="/userservices/allocations.php">Allocations</a></li>
+<li><a href="/userservices/gettinghelp.php">Getting Help</a></li>
+<li><a href="https://www.chpc.utah.edu/presentations/index.php">Training</a></li>
+</ul>
+</li>
+<li class="has-sub sub-width-lg"><a href="#">Usage</a>
+<ul class="sub-menu">
+<li><a href="/usage/cluster/index.php">Cluster Usage</a>
+<ul>
+<li><a href="/usage/cluster/current-project-general.php">General Allocation Pool</a></li>
+<li><a href="/usage/cluster/current-project-lonepeak.php">Lonepeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-kingspeak.php">Kingspeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-ash.php">Ash Cluster</a></li>
+<li><a href="/usage/cluster/current-project-redwood.php">Redwood Cluster</a></li>
+</ul>
+</li>
+<li><a href="/usage/graphs.php?g=cluster%20utilization&amp;host=combined&amp;type=daily_utilization">Cluster Utilization Graphs</a></li>
+<li><a href="/usage/graphs.php?g=hpc%20cluster%20scratch&amp;host=chpc_gen&amp;type=cpu">HPC Cluster Scratch</a></li>
+<li><a href="/usage/graphs.php?g=network&amp;host=Campus+Gateway&amp;type=daily_traffic">Network</a>
+<ul>
+<li><a href="/resources/maddash-dashboards.php">Maddash Dashboards</a></li>
+</ul>
+</li>
+<li><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">UEN Weathermap (Only Available on UEN Networks)</a></li>
+<li><a href="http://snapp2.bldc.grnoc.iu.edu/i2al2s/#&amp;p=3%2C42&amp;ccid=3&amp;tab=1&amp;search=undefined&amp;pwidth=undefined&amp;ccat=undefined&amp;url=show-graph.cgi%3Fcollection_ids%3D145%26end%3D1461772131%26start%3D1461771831%26cf%3DAVERAGE%26ds%3Doutput%2Cinput%26collection_ids%3D145" target="_blank" rel="noopener">UEN Aggregate Utilization</a></li>
+<li><a href="http://uofu.status.io">UofU IT Services Status</a></li>
+<li><a href="https://status.it.utah.edu">University Application Heath Summary - NOC</a></li>
+</ul>
+</li>
+<li><a href="/role/">My Account</a></li>
+</ul>
+</ul>	
+</nav>
+
+<!-- END HEADER NAVIGATION -->
+                     </div>
+                  <div class="uu-search-toggle"><button class="uu-search__trigger"><span class="far fa-search" aria-hidden="true"></span><span class="sr-only">Search</span></button></div><button id="jsNavTrigger" class="uu-nav__trigger" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Reveal Menu</span><span></span></button></div>
+            </div>
+         </header>
+         <!-- END HEADER -->
+         <!-- PUSH NAVIGATION -->
+         
+         <section class="uu-nav">
+            <div class="uu-nav__container"><button id="jsMobileNavTrigger" class="uu-nav__trigger" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Reveal Menu</span><span></span></button><header class="uu-nav__header">
+                  <h2 class="sr-only">Main Navigation</h2>
+                  <!-- Navigation Logo -->
+<a href="https://utah.edu/" class="uu-nav__logo">
+	<img src="https://templates.utah.edu/_main-v3-1/images/template/university-of-utah-logo.svg" alt="The University of Utah"/>
+</a></header>
+               <nav class="uu-menu"><p><h2 class="uu-menu__title">Main Menu</h2>
+<hr />
+<ul class="uu-menu__level1">
+<li><a href="/">Home</a></li>
+<li class="has-sublist"><a href="#">About Us</a>
+<ul class="uu-menu__level2">
+<li><a href="/about/index.php">About Us</a></li>
+<li><a href="https://www.chpc.utah.edu/about/vision.php">Vision</a></li>
+<li><a href="/about/staff.php">Staff</a></li>
+<li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Information</a></li>
+<li><a href="https://www.chpc.utah.edu/about/acknowledge.php">Acknowledging CHPC</a></li>
+<!--<li><a href="/about/bibliography/CHPC%20BIB.pdf" target="_blank" rel="noopener">CHPC Bibliography</a></li>-->
+<li><a href="https://www.chpc.utah.edu/about/SupportedResearch.php">Supported Research</a></li>
+<li><a href="https://www.chpc.utah.edu/highlights.php">Research Highlights</a></li>
+<li><a href="https://www.chpc.utah.edu/about/partners.php">Partners</a></li>
+<li><a href="/news/index.php">News</a></li>
+<li><a title="University Information Technology" href="https://it.utah.edu/" target="_blank" rel="noopener">UIT</a></li>
+<li><a href="/about/governance.php">Governance</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Resources</a>
+<ul class="uu-menu__level2">
+<li><a href="https://www.chpc.utah.edu/resources/index.php">Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/HPC_Clusters.php">HPC Clusters</a></li>
+<li><a href="/resources/storage_services.php">Storage Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="/resources/virtualmachines.php">Virtual Machines</a></li>
+<li><a href="/resources/hosting.php">Hosting Services</a></li>
+<li><a href="/resources/Networking.php">Networking</a></li>
+<li><a href="/resources/ProtectedEnvironment.php">Protected Environment</a></li>
+<li><a href="/documentation/software/ai.php">AI/ML Resources</a></li>
+<li><a href="/userservices/index.php">User Services</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Documentation</a>
+<ul class="uu-menu__level2">
+<li><a href="https://www.chpc.utah.edu/documentation/index.php">Documentation</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/gettingstarted.php">Getting Started</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/access.php">Accessing Our Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/videos/index.php">Short Training Videos</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/index.php">Cluster Guides</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/beehive.php">Beehive User Guide (Windows Server)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/gpus-accelerators.php">GPU &amp; Accelerators</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/frisco-nodes.php">Frisco Nodes</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/narwhal.php">Narwhal User Guide (Protected Environment Statistics)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/software/index.php">Software</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php">Programming Guide</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/policies/index.php">Policy Manual</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/HelloWorldMPI.php">HPC Basics - Hello World MPI</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/faq.php">Frequently Asked Questions</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/white_papers/index.php">White Papers</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">User Services</a>
+<ul class="uu-menu__level2">
+<li><a href="/userservices/index.php">User Services</a></li>
+<li><a href="https://www.chpc.utah.edu/userservices/accounts.php">Accounts</a></li>
+<li><a href="/userservices/allocations.php">Allocations</a></li>
+<li><a href="/userservices/gettinghelp.php">Getting Help</a></li>
+<li><a href="https://www.chpc.utah.edu/presentations/index.php">Training</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Usage</a>
+<ul class="uu-menu__level2">
+<li class="has-sublist"><a href="/usage/cluster/index.php">Cluster Usage</a>
+<ul class="uu-menu__level3">
+<li><a href="/usage/cluster/current-project-general.php">General Allocation Pool</a></li>
+<li><a href="/usage/cluster/current-project-lonepeak.php">Lonepeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-kingspeak.php">Kingspeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-ash.php">Ash Cluster</a></li>
+<li><a href="/usage/cluster/current-project-redwood.php">Redwood Cluster</a></li>
+</ul>
+</li>
+<li><a href="/usage/graphs.php?g=cluster%20utilization&amp;host=combined&amp;type=daily_utilization">Cluster Utilization Graphs</a></li>
+<li><a href="/usage/graphs.php?g=hpc%20cluster%20scratch&amp;host=chpc_gen&amp;type=cpu">HPC Cluster Scratch</a></li>
+<li class="has-sublist"><a href="/usage/graphs.php?g=network&amp;host=Campus+Gateway&amp;type=daily_traffic">Network</a>
+<ul class="uu-menu__level3">
+<li><a href="/resources/maddash-dashboards.php">Maddash Dashboards</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">UEN Weathermap</a>
+<ul class="uu-menu__level3">
+<li><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">(Only Available on UEN Networks)</a></li>
+</ul>
+</li>
+<li><a href="http://snapp2.bldc.grnoc.iu.edu/i2al2s/#&amp;p=3%2C42&amp;ccid=3&amp;tab=1&amp;search=undefined&amp;pwidth=undefined&amp;ccat=undefined&amp;url=show-graph.cgi%3Fcollection_ids%3D145%26end%3D1461772131%26start%3D1461771831%26cf%3DAVERAGE%26ds%3Doutput%2Cinput%26collection_ids%3D145" target="_blank" rel="noopener">UEN Aggregate Utilization</a></li>
+<li><a href="http://uofu.status.io">UofU IT Services Status</a></li>
+<li><a href="https://status.it.utah.edu">University Application Heath Summary - NOC</a></li>
+</ul>
+</li>
+<li><a href="/role/">My Account</a></li>
+</ul></p></nav>
+            </div>
+         </section>
+         <!-- END PUSH NAVIGATION -->
+         
+         <!-- MAIN CONTENT -->
+         <main class="uu-main" id="skip-link-target">
+            <nav aria-label="Breadcrumb" class="uu-breadcrumb">
+               <ol>
+                  <li><a href="/"></a></li>
+                  <li><a href="/documentation/">documentation</a></li>
+                  <li><span class="sr-only">Current Page: </span>HPC Cluster User Guides</li>
+               </ol>
+            </nav>
+            <!-- SECTION 1 -->
+            
+            <section class="uu-section bg-white text-default uu-section--region-1" style="">
+               <div class="uu-section__container"><!-- SECTION HEADER -->
+                  
+                  <div class="uu-section__header  ">
+                     <h1>General Cluster Information</h1>
+                     <ul>
+                        <li><a href="#GenFS">Filesystems</a></li>
+                        <li><a href="#GenUserEnv">User Environment</a></li>
+                        <li><a href="#GenApplications">Applications</a></li>
+                        <li><a href="#GenSlurm">Slurm batch system</a><ul>
+                              <li><a href="#wall">Walltime</a></li>
+                              <li><a href="#parts">Partitions and accounts</a></li>
+                           </ul>
+                        </li>
+                        <li><a href="#ClusterGuides">Individual Cluster Guides</a></li>
+                     </ul>
+                     <h2><a id="GenFS"></a> Filesystems</h2>
+                     <h4 id="KingspeakUserGuide-NFSHomeDirectory">NFS home directory</h4>
+                     <p>Your home directory, which is an NFS mounted file system, is one choice for I/O. This
+                        space carries the worst statistical performance in terms of I/O speed; in addition
+                        the use of home directory for job I/O has the potential to impact all users of CHPC
+                        general resources.&nbsp;This space is visible to all nodes on the general clusters through
+                        an auto-mounting system.&nbsp;</p>
+                     <h4 id="KingspeakUserGuide-NFSHomeDirectory">NFS<span>&nbsp;group</span>&nbsp;directory</h4>
+                     <p><span>A second&nbsp;</span><span>choice for I/O</span>&nbsp;is the CHPC group space&nbsp;IF your group owns a group space.&nbsp; Group spaces are shares
+                        of space on a&nbsp;larger group file system (CHPC purchases file systems as needed and
+                        sells shares in TB chunks). This is also&nbsp;an<span>&nbsp;</span>NFS<span>&nbsp;</span>mounted file system, and therefore also has performance limitations. The use of your
+                        group space has the potential to impact all users&nbsp;from the groups that own a share
+                        of&nbsp;a given file system. This space is visible to all nodes on the general environment&nbsp;
+                        clusters through an auto-mounting system.&nbsp;</p>
+                     <h4 id="KingspeakUserGuide-NFSScratch">Scratch&nbsp;</h4>
+                     <p>All general environment cluster nodes&nbsp;have access to several NFS mounted scratch file
+                        systems, including <code style="background-color: lightgray;">/scratch/general/lustre</code> with a 700 TB capacity, &nbsp;<code style="background-color: lightgray;">/scratch/general/nfs1</code>&nbsp; which has 595 TB, and <code style="background-color: lightgray;">/scratch/general/vast</code> with &nbsp;1 PB. &nbsp;</p>
+                     <h4 id="KingspeakUserGuide-LocalDisk(/scratch/local)">Local disk (<code style="background-color: lightgray;">/scratch/local</code>)</h4>
+                     <p>The local scratch space is a storage space unique to each individual node. The local
+                        scratch space is cleaned aggressively, with files older than 1 week being scrubbed.
+                        It can be accessed on each node through<code style="background-color: lightgray;">/scratch/local</code>. This space will be one of the fastest, but certainly not the largest with the amount
+                        available varying between the clusters.&nbsp;<span>Users must remove all their files from</span>&nbsp;<code style="background-color: lightgray;"><span>/scratch/local</span></code>&nbsp;<span>at the end of their calculation.</span></p>
+                     <p>It is a good idea to make flows from one storage system to another when you are running
+                        jobs. At the start of the batch, job data files should be copied from the home directory
+                        to the scratch&nbsp;space, followed by a copy of the output back to the user's home directory
+                        at the end of the run.&nbsp;</p>
+                     <p>It is important to keep in mind that ALL users must remove excess files on their own.
+                        Preferably this should be done within the user's batch job when he/she has finished
+                        the computation. Leaving files in any scratch space creates an impediment to other
+                        users who are trying to run their own jobs. Simply delete all extra files from any
+                        space, other than your home directory, when it is not being used immediately.</p>
+                     <h2><a id="GenUserEnv"></a> User Environment</h2>
+                     <p>CHPC currently supports two shells: bash and tcshrc. &nbsp;In addition, we use&nbsp;the Lmod
+                        module system to control the user environment.</p>
+                     <p>CHPC provides two login files for each shell choice,&nbsp;the first,&nbsp;<code style="background-color: lightgray;">.tcshrc</code><span>/</span><code style="background-color: lightgray;">.bashrc</code><span>&nbsp;</span>, which sets up a basic environment and the second,<code style="background-color: lightgray;">.custom.csh</code><span>/</span><code style="background-color: lightgray;">.custom.sh</code>, which a user can use to customize their environment. &nbsp;Details can be found on the
+                        <a href="https://www.chpc.utah.edu/documentation/software/modules.php">modules documentation page</a>. All new accounts are&nbsp; created using the modules framework, and all accounts, even
+                        those with the older style login files, have been enabled to make use of modules.</p>
+                     <h2><a id="GenApplications"></a> Applications</h2>
+                     <p>CHPC maintains a number of user applications as well as tools needed to install applications.
+                        For some of these we have <a href="https://www.chpc.utah.edu/documentation/software/index.php">software documentation pages</a> which can be found in the software documentation section. &nbsp;Also note that there are
+                        several packages which we have installed, e.g., abaqus, ansys, charmm, comsol, star-CCM+,
+                        that are licensed by individual groups and therefore are not accessible outside of
+                        that group.</p>
+                     <p>Historically, applications that are not cluster specific have been installed &nbsp;in&nbsp;<code style="background-color: lightgray;">/uufs/chpc.utah.edu/sys/pkg</code>, whereas cluster specific applications (most typically due to the use of a cluster
+                        specific installation of MPI or another support package) are located in <code style="background-color: lightgray;">/uufs/$UUFSCELL/sys/pkg</code>, where $UUFSCELL is kingspeak.peaks, ash.peaks, lonepeak.peaks, or notchpeak.peaks.</p>
+                     <p>Moving forward, we are working to consolidate applications in <code style="background-color: lightgray;">/uufs/chpc.utah.edu/sys/installdir</code>.&nbsp;</p>
+                     <h2><strong><a id="GenSlurm"></a> Batch System&nbsp;</strong></h2>
+                     <p>The batch implementation on the CHPC clusters is <a href="https://www.chpc.utah.edu/documentation/software/slurm.php">Slurm</a>.</p>
+                     <p>Any process which requires more than 15 minutes run time needs to be submitted through
+                        the batch system. The command to submit to the batch system is&nbsp;<code style="background-color: lightgray;">sbatch</code>&nbsp;, and there is also a way to submit an interactive job:</p>
+                     <ul>
+                        <li><code style="background-color: lightgray;">salloc -t 1:00:00 -n 4 -N 2</code></li>
+                     </ul>
+                     <p>Other options for running jobs&nbsp;are given in the <a href="https://www.chpc.utah.edu/documentation/software/slurm.php">Slurm documentation</a>.</p>
+                     <h5><a id="wall"></a>Walltime</h5>
+                     <p>Each cluster has a hard walltime limit on general resources as well as jobs run as
+                        guest on owner resources. On most clusters this is 72 hours, however please see the
+                        individual cluster guides for specifics on a given cluster. If you find you need longer
+                        than this, please <a href="mailto:helpdesk@chpc.utah.edu?subject=Longer%20walltime">contact CHPC</a>.</p>
+                     <p>With respect to how much wall time to ask for, we suggest that you start with some
+                        small runs to gauge how long the production runs will take. As a rule of thumb, consider
+                        a wall time which is 10-15% larger than the actual run time. If you specify a shorter
+                        wall time, you face the risk of your job running out of wall time and killed before
+                        finishing. If you set a wall time that is too large, you may face a longer waiting
+                        time in the queue.</p>
+                     <h5><a id="parts"></a>Partitions and accounts</h5>
+                     <p>Most clusters have general nodes, available to all University affiliates with an <a href="/userservices/allocations.php">allocation</a>, and owner nodes, owned by research groups and available only to the members of those
+                        research groups. Both the general and owner nodes are accessible to everyone, even
+                        those without or out of allocation, in a "freecycle" or "guest" modes, respectively.
+                        A "freecycle" job runs in the general (CHPC owned) partition, whereas "guest" jobs
+                        run on owner (research groups owned) partitions. Both "freecycle" and "guest" jobs
+                        are preemptable, i.e., they are subject to termination&nbsp;if&nbsp;a job with allocation needs
+                        the resources.</p>
+                     <p>The GPU resources are handled separately.&nbsp; The general GPU nodes are run without allocation,
+                        but you must <a href="mailto:helpdesk@chpc.utah.edu?subject=Please%20add%20me%20to%20the%20GPU%20accounts">request</a> to be added to the appropriate accounts. There are also owner GPU nodes which all
+                        users can use in guest mode, again with jobs subject to preemption. As there are not
+                        many GPU nodes, CHPC requests that only jobs that are making use of the GPUs be run
+                        on these resources.</p>
+                     <p>In the table below we list options for resources available to a user based on their
+                        allocation and access to owner nodes. Note that although <a href="#fc">freecycle</a>&nbsp;is listed as one of the options for groups without a general allocation,&nbsp;unless you
+                        can automatically restart your calculation, we don't recommend its use&nbsp;since the chances
+                        of preemption are very high. Also freecycle is not available if a group has an active
+                        allocation. To find out if, and how much general allocation a group has, see <a href="/usage/cluster/current-project-general.php" target="_blank" rel="noopener">CHPC's usage page</a>.</p>
+                     <p>When using guest mode on owner nodes, you can utilize the slurm features descriptors
+                        and constraint&nbsp;directive described on the <a href="https://www.chpc.utah.edu/documentation/software/slurm.php">CHPC Slurm page</a> along with <a href="/usage/constraints/">information on past usage of owner nodes</a> to target nodes that have been less heavily used in the recent past. If you do so,
+                        please remember that past utilization is not necessarily indicative of future usage
+                        patterns.</p>
+                     <p>&nbsp;</p>
+                     <table border="1">
+                        <tbody>
+                           <tr>
+                              <td>Allocations and node ownership status</td>
+                              <td>What&nbsp;resource(s) are available&nbsp;</td>
+                           </tr>
+                           <tr>
+                              <td>No general allocation, no owner nodes</td>
+                              <td><a href="#guc">Unallocated general nodes</a><br><a href="#guc">Allocated general nodes in freecycle mode</a>&nbsp;- not recommended<br><a href="#gn">Guest access on owner nodes</a></td>
+                           </tr>
+                           <tr>
+                              <td>General allocation, no owner nodes</td>
+                              <td><a href="#guc">Unallocated general nodes</a><br><a href="#gac">Allocated general nodes</a><br><a href="#gn">Guest access on owner nodes</a></td>
+                           </tr>
+                           <tr>
+                              <td>Group owner nodes, no general allocation</td>
+                              <td><a href="#guc">Unallocated general nodes</a><br><a href="#guc">Allocated general nodes in freecycle mode</a>&nbsp;<span>- not recommended</span><br><a href="#on">Group owned nodes</a><br><a href="#gn">Guest access on owner nodes of other groups</a></td>
+                           </tr>
+                           <tr>
+                              <td>Group&nbsp;owner node, general allocation</td>
+                              <td><a href="#guc">Unallocated general nodes</a><br><a href="#gac">Allocated general nodes</a><br><a href="#on">Group owned nodes</a><br><a href="#gn">Guest access on owner nodes of other groups</a></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <p>&nbsp;</p>
+                     <p>The table below lists possible ways to run on CHPC clusters. General account name
+                        is the group name, obtained with running <code style="background-color: lightgray;">groups $USER</code> command (typically PIs last name). The account and partition for owner nodes is typically
+                        the group name, although there are exceptions. Available accounts and partitions can
+                        be obtained by running&nbsp;<code style="background-color: lightgray;">sacctmgr -ps list user $USER</code> command. The partitions are not directly listed in the output of this command, but
+                        QOS's&nbsp;(Quality of Service) are listed and the name of the partition for a given QOS
+                        typically has the same name as the QOS. <em><strong>A new alternative to obtain your partition and account information in an easy to read
+                              form is to issue the&nbsp;</strong></em><code style="background-color: lightgray;">myallocation</code><em><strong>&nbsp;command.</strong></em></p>
+                     <p>For details on how to target the different partitions and accounts, see the <a href="https://www.chpc.utah.edu/documentation/software/slurm.php">SLURM user's guide</a>.</p>
+                     <table border="1">
+                        <tbody>
+                           <tr>
+                              <td>Execution mode&nbsp;</td>
+                              <td>Cluster&nbsp;</td>
+                              <td>Partition (-p)</td>
+                              <td>Account (-A)</td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p><a id="guc"></a>General nodes on unallocated clusters -<br>open to all users</p>
+                              </td>
+                              <td>
+                                 <p><a href="https://www.chpc.utah.edu/documentation/guides/lonepeak.php">lonepeak</a></p>
+                                 <p><a href="https://www.chpc.utah.edu/documentation/guides/kingspeak.php">kingspeak</a></p>
+                              </td>
+                              <td>
+                                 <p>lonepeak</p>
+                                 <p><span>kingspeak</span></p>
+                              </td>
+                              <td>group-name<br><br></td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p><a id="gac"></a>General nodes on allocated clusters -<br>if your group has <a href="/userservices/allocations.php">allocation</a></p>
+                              </td>
+                              <td><a href="https://www.chpc.utah.edu/documentation/guides/notchpeak.php">notchpeak</a></td>
+                              <td>notchpeak</td>
+                              <td>group-name</td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p>General <a href="https://www.chpc.utah.edu/documentation/guides/gpus-accelerators.php">GPU nodes</a></p>
+                              </td>
+                              <td><a href="https://www.chpc.utah.edu/documentation/guides/kingspeak.php">kingspeak</a><br><a href="https://www.chpc.utah.edu/documentation/guides/notchpeak.php">notchpeak</a></td>
+                              <td>kingspeak-gpu<br>notchpeak-gpu</td>
+                              <td>kingspeak-gpu<br>notchpeak-gpu</td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p><a id="fc"></a>Freecycle - can only be used if your<br>group does not have allocation</p>
+                              </td>
+                              <td><a href="https://www.chpc.utah.edu/documentation/guides/notchpeak.php">notchpeak</a></td>
+                              <td>notchpeak-freecycle</td>
+                              <td>group-name</td>
+                           </tr>
+                           <tr>
+                              <td><a id="on"></a>Owner nodes (non-GPU)</td>
+                              <td><a href="https://www.chpc.utah.edu/documentation/guides/kingspeak.php">kingspeak</a><br><a href="https://www.chpc.utah.edu/documentation/guides/notchpeak.php">notchpeak</a><br><a href="https://www.chpc.utah.edu/documentation/guides/lonepeak.php">lonepeak</a><br><a href="https://www.chpc.utah.edu/documentation/guides/ash.php">ash</a></td>
+                              <td><em>partition-name</em>-kp<br><em>partition-name</em>-np<br><em>partition-name</em>-lp<br>smithp-ash</td>
+                              <td><em>partition-name</em>-kp<br><em>partition-name</em>-np<br><em>partition-name</em>-lp<br>smithp-ash (note there are different ash owner accounts)</td>
+                           </tr>
+                           <tr>
+                              <td>&nbsp;Owner GPU nodes</td>
+                              <td><a href="https://www.chpc.utah.edu/documentation/guides/kingspeak.php">kingspeak</a></td>
+                              <td><em>partition-name</em>-gpu-kp</td>
+                              <td><em>partition-name-</em>gpu-kp</td>
+                           </tr>
+                           <tr>
+                              <td><a id="gn"></a>Guest access to owner nodes (non-GPU)</td>
+                              <td><a href="https://www.chpc.utah.edu/documentation/guides/kingspeak.php">kingspeak</a><br><a href="https://www.chpc.utah.edu/documentation/guides/notchpeak.php">notchpeak</a><br><a href="https://www.chpc.utah.edu/documentation/guides/lonepeak.php">lonepeak</a><br><a href="https://www.chpc.utah.edu/documentation/guides/ash.php">ash</a></td>
+                              <td>kingspeak-guest<br>notchpeak-guest<br>lonepeak-guest<br>ash-guest</td>
+                              <td>owner-guest<br>owner-guest<br>owner-guest<br>smithp-guest (on ash)</td>
+                           </tr>
+                           <tr>
+                              <td>Guest&nbsp; accesss to owner GPU nodes</td>
+                              <td>
+                                 <p><a href="https://www.chpc.utah.edu/documentation/guides/kingspeak.php">kingspeak</a></p>
+                                 <p><a href="https://www.chpc.utah.edu/documentation/guides/notchpeak.php">notchpeak</a></p>
+                              </td>
+                              <td>
+                                 <p>kingspeak-gpu-guest</p>
+                                 <p>notchpeak-gpu-guest</p>
+                              </td>
+                              <td>owner-gpu-guest</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <p>&nbsp;</p>
+                     <p>In the following individual cluster user guides, details of a typical batch script
+                        are given. &nbsp;</p>
+                     <p>Nodes with different core counts are present on most clusters. The number of cores
+                        a job is to use can be <a href="https://www.chpc.utah.edu/documentation/software/slurm.php#submit">specified with Slurm constraints</a>.</p>
+                     <h1><a id="ClusterGuides"></a> Individual Cluster User Guides</h1>
+                  </div>
+                  <!-- END SECTION HEADER -->
+                  <!-- REGION 1 -->
+                  
+                  <div class="uu-section__region bg-white text-default no-border">
+                     <ul>
+                        <li><a href="https://www.chpc.utah.edu/documentation/guides/notchpeak.php">Notchpeak User Guide</a></li>
+                        <li><a href="https://www.chpc.utah.edu/documentation/guides/kingspeak.php">Kingspeak User Guide</a>&nbsp;<span>&nbsp;(no allocation required)</span></li>
+                        <li><a href="https://www.chpc.utah.edu/documentation/guides/lonepeak.php">Lonepeak User Guide</a>&nbsp; (no allocation required)</li>
+                        <li><a href="https://www.chpc.utah.edu/documentation/guides/ash.php">Ash User Guide</a>&nbsp;(Restricted use: smithp-guest)</li>
+                        <li><a href="https://www.chpc.utah.edu/documentation/guides/redwood.php">Redwood User Guide</a> (Restricted use: See <a href="/resources/ProtectedEnvironment.php">New Protected Environment</a>)</li>
+                     </ul>
+                  </div>
+                  <!-- END REGION 1 -->
+                  <!-- SECTION FOOTER -->
+                  
+                  <div class="uu-section__footer  ">
+                     <p></p>
+                  </div>
+                  <!-- END SECTION FOOTER -->
+                  </div>
+            </section>
+            <!-- END SECTION 1 -->
+            <!-- SECTION 2 -->
+            <!-- END SECTION 2 -->
+            <!-- SECTION 3 -->
+            <!-- END SECTION 3 -->
+            <!-- SECTION 4 -->
+            <!-- END SECTION 4 -->
+            <!-- SECTION 5 -->
+            <!-- END SECTION 5 -->
+            </main>
+         <!-- END MAIN CONTENT -->
+         <!-- FOOTER -->
+         
+         <footer class="uu-footer"><div class="uu-footer__top">
+   <div class="uu-footer__top-container">
+      <div class="uu-footer__top-col1"><a href="https://www.utah.edu"><img src="https://templates.utah.edu/_main-v3-1/images/template/blocku.svg" alt="The University of Utah" class="uu-block-logo"></a><div class="department-name">
+            <h2>The Center For High Performance Computing</h2>
+         </div>
+         <div class="department-address">
+            <p>155 S 1452 E, RM. 405<br>SLC, UT 84112-0190<br>801.585.3791&nbsp;</p>
+         </div>
+      </div>
+      <div class="uu-footer__top-col2">
+         <h2 class="footer-heading">Stay in Touch</h2>
+         <hr>
+         <ul>
+            <li><a href="https://map.utah.edu/index.html?code=inscc">Find Us</a></li>
+            <li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Us</a></li>
+            <li><a href="mailto:helpdesk@chpc.utah.edu">Webmaster</a></li>
+         </ul>
+      </div>
+      <div class="uu-footer__top-col5">
+         <h2 class="footer-heading">Quick Links</h2>
+         <hr>
+         <ul>
+            <li><a href="https://www.utah.edu/a-z/">A-Z Index</a></li>
+            <li><a href="https://people.utah.edu/uWho/basic.hml">Campus Directory</a></li>
+            <li><a href="https://www.map.utah.edu">Campus Map</a></li>
+            <li><a href="https://map.utah.edu/?allshuttle=on">Shuttle Tracker </a></li>
+            <li><a href="https://cis.utah.edu/">CIS</a></li>
+            <li><a href="https://www.umail.utah.edu/">UMail</a></li>
+            <li><a href="https://attheu.utah.edu/">@ The U</a></li>
+         </ul>
+      </div>
+   </div>
+</div><div class="uu-footer__bottom">
+   <div class="uu-footer__bottom-container">
+      <div class="uu-footer__bottom-col1"><a href="https://www.utah.edu/"><img src="https://templates.utah.edu/_main-v3-1/images/template/university-of-utah-logo.svg" alt="The University of Utah" class="uu-site-logo"></a></div>
+      <div class="uu-footer__bottom-col2">
+         <div class="legal">
+            <p>© 2024 The University of Utah</p>
+            <ul>
+               <li><a href="https://www.utah.edu/indigenous-land-acknowledgment/index.php">Indigenous Land Acknowledgment</a></li>
+               <li><a href="https://www.utah.edu/nondiscrimination/">Nondiscrimination &amp; Accessibility</a></li>
+               <li><a href="https://www.utah.edu/disclaimer/">Disclaimer</a></li>
+               <li><a href="https://www.utah.edu/privacy/">Privacy</a></li>
+               <li><a href="https://www.utah.edu/credits-v3.php">Credits &amp; Attributions</a></li>
+               <li><a href="https://attheu.utah.edu/media-contacts/">Media Contacts</a></li>
+               <li><span id="directedit"></span></li>
+            </ul>
+         </div>
+      </div>
+      <div class="uu-footer__bottom-col3">
+         <ul class="uu-social-list">
+            <li><a href="https://twitter.com/uutah"><span class="fa-brands fa-x-twitter" aria-hidden="true"></span><span class="sr-only">X</span></a></li>
+            <li><a href="https://www.facebook.com/universityofutah"><span class="fab fa-facebook" aria-hidden="true"></span><span class="sr-only">Facebook</span></a></li>
+            <li><a href="https://www.instagram.com/universityofutah/"><span class="fab fa-instagram" aria-hidden="true"></span><span class="sr-only">Instagram</span></a></li>
+            <li><a href="https://www.youtube.com/user/theuniversityofutah"><span class="fab fa-youtube" aria-hidden="true"></span><span class="sr-only">Youtube</span></a></li>
+         </ul>
+      </div>
+   </div>
+</div></footer>
+         <!-- END FOOTER -->
+         </div>
+      <!-- FOOT CODE -->
+      <script src="//templates.utah.edu/_main-v3-1/js/main.min.js"></script>
+      
+      
+      
+      
+      
+      
+      <script src="//templates.utah.edu/_main-v3-1/js/directedit.js"></script><script><!--
+window.onload = function(){ directedit(); }
+//
+			--></script>
+      <script src="/_resources/js/custom.js"></script>
+            
+      <!-- END FOOT CODE -->
+      
+      <div id="hidden"><a id="de" href="https://a.cms.omniupdate.com/11/?skin=utah&amp;account=utah_home&amp;site=chpc2&amp;action=de&amp;path=/documentation/guides/index.pcf">Last Updated: 7/5/23</a></div>
+      <!-- END PAGE BODY -->
+      </body>
+</html>

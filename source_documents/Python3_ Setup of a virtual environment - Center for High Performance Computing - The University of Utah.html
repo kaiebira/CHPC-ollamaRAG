@@ -1,0 +1,913 @@
+<!DOCTYPE HTML><html lang="en-US" class="no-js">
+   <head><!-- PAGE HEAD -->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+      <title>Python3: Setup of a virtual environment - Center for High Performance Computing - The University of Utah</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="robots" content="index,follow">
+      <link rel="icon" href="//templates.utah.edu/_main-v3-1/images/template/favicon.ico">
+      <link rel="apple-touch-icon-precomposed" href="//templates.utah.edu/_main-v3-1/images/template/apple-touch-icon.png">
+      <link rel="stylesheet" href="//templates.utah.edu/_main-v3-1/css/main.min.css" type="text/css"><noscript>
+         <link rel="stylesheet" href="//templates.utah.edu/_main-v3-1/css/assets/fontawesome/css/all.min.css" type="text/css"></noscript><link href="/_resources/css/custom.css" rel="stylesheet" type="text/css">
+      <script src="//templates.utah.edu/_main-v3-1/js/head-code.min.js"></script>
+      <!-- HEAD CODE -->
+      
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y160DVJ0DZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y160DVJ0DZ');
+</script>
+
+      
+      <!-- END HEAD CODE -->
+      <!-- END PAGE HEAD -->
+      </head>
+   <body class="has-headernav"><!-- PAGE BODY -->
+      <a class="uu-skip-link" href="#skip-link-target">Skip to content</a>
+      <!-- BODY TOP CODE -->
+            <!-- END BODY TOP CODE -->
+      
+      <div id="uu-top-target" class="uu-site"><!-- SEARCH -->
+         <div class="uu-search" role="search">
+    <div class="uu-search__container">
+        <!-- SITE SEARCH -->
+        <form method="get" id="search-site" class="uu-search__form" action="/search/index.php">
+
+            <label for="inputSearchSite" class="sr-only">Search Site:</label>
+            <input type="text" id="inputSearchSite" name="q" value="" placeholder="Search Site" />
+            <input type="hidden" name="gcse_action" value="site" />
+
+            <div class="form-powered-by">
+                <span>Powered by</span> 
+                <img src="https://templates.utah.edu/_main-v3-1/images/template/google-logo.png" alt="Google Search">
+            </div>
+
+        </form>
+        <!-- END SITE SEARCH -->
+        <!-- CAMPUS SEARCH -->
+        <form method="get" id="search-campus" class="uu-search__form" action="/search/index.php">
+
+            <label for="inputSearchCampus" class="sr-only">Search Campus:</label>
+            <input type="text" id="inputSearchCampus" name="q" value="" placeholder="Search Campus" />
+            <input type="hidden" name="gcse_action" value="campus" />
+
+            <div class="form-powered-by">
+                <span>Powered by</span> 
+                <img src="https://templates.utah.edu/_main-v3-1/images/template/google-logo.png" alt="Google Search">
+            </div>
+        </form>
+        <!-- END CAMPUS SEARCH -->
+
+        <!-- SEARCH TYPE TOGGLE -->
+        <div class="search-type-toggle">
+            <label class="uu-switch" for="search_campus_checkbox">
+                <input type="checkbox" name="search_campus_checkbox" value="" id="search_campus_checkbox">
+                <span class="uu-switch-slider"></span>
+                <span class="uu-switch-label">Search Campus</span>
+            </label>
+        </div>
+        <!-- END SEARCH TYPE TOGGLE -->
+
+    </div>
+</div><!-- END SEARCH -->
+         <!-- HEADER -->
+         
+         <header class="uu-header">
+            <div class="uu-header__container">
+               <!-- ALERT AREA -->
+               <div id="alert_bar" class="uu-alert-bar"> 
+	<a href="https://coronavirus.utah.edu/">University of Utah COVID-19 Updates</a>
+</div><!-- END ALERT AREA -->
+               
+               <div class="uu-header__top"> <a href="https://www.utah.edu/" class="uu-header__logo"><span class="sr-only">The University of Utah</span></a>                  <div class="uu-header__middle">
+                     <!-- HEADER TITLE -->
+                     <div class="uu-header__title">
+<h2><a href="/">CHPC - Research Computing and Data Support for the University</a></h2>
+<!-- <h3><a href="http://it.utah.edu">University Information Technology</a></h3> --></div><!-- END HEADER TITLE -->
+                     <!-- HEADER NAVIGATION -->
+                     
+<nav class="uu-header__nav">
+	
+<ul class="uu-menu__level1">
+<ul class="uu-menu__level1">
+<li class="has-sub"><a href="#">About Us</a>
+<ul class="sub-menu">
+<li><a href="/about/index.php">About Us</a></li>
+<li><a href="https://www.chpc.utah.edu/about/vision.php">Vision</a></li>
+<li><a href="/about/staff.php">Staff</a></li>
+<li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Information</a></li>
+<li><a href="https://www.chpc.utah.edu/about/acknowledge.php">Acknowledging CHPC</a></li>
+<li><a href="https://www.chpc.utah.edu/highlights.php">Research Highlights</a></li>
+<li><a href="https://www.chpc.utah.edu/about/partners.php">Partners</a></li>
+<li><a href="/news/index.php">News</a></li>
+<li><a href="/about/governance.php">Governance</a></li>
+</ul>
+</li>
+<li class="has-sub"><a href="#">Resources</a>
+<ul class="sub-menu">
+<li><a href="https://www.chpc.utah.edu/resources/index.php">Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/HPC_Clusters.php">HPC Clusters</a></li>
+<li><a href="/resources/storage_services.php">Storage Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="/resources/virtualmachines.php">Virtual Machines</a></li>
+<li><a href="/resources/hosting.php">Hosting Services</a></li>
+<li><a href="/resources/Networking.php">Networking</a></li>
+<li><a href="/resources/ProtectedEnvironment.php">Protected Environment</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="/userservices/index.php">User Services</a></li>
+</ul>
+</li>
+<li class="has-sub sub-width-lg"><a href="#">Documentation</a>
+<ul class="sub-menu">
+<li><a href="https://www.chpc.utah.edu/documentation/index.php">Documentation</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/gettingstarted.php">Getting Started</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/access.php">Accessing Our Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/videos/index.php">Short Training Videos</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/index.php">Cluster Guides</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/beehive.php">Beehive User Guide (Windows Server)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/gpus-accelerators.php">GPU &amp; Accelerators</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/frisco-nodes.php">Frisco Nodes</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/narwhal.php">Narwhal User Guide (Protected Environment Statistics)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/software/index.php">Software</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php">Programming Guide</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/policies/index.php">Policy Manual</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/HelloWorldMPI.php">HPC Basics - Hello World MPI</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/faq.php">Frequently Asked Questions</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/white_papers/index.php">White Papers</a></li>
+</ul>
+</li>
+<li class="has-sub"><a href="#">User Services</a>
+<ul class="sub-menu">
+<li><a href="/userservices/index.php">User Services</a></li>
+<li><a href="https://www.chpc.utah.edu/userservices/accounts.php">Accounts</a></li>
+<li><a href="/userservices/allocations.php">Allocations</a></li>
+<li><a href="/userservices/gettinghelp.php">Getting Help</a></li>
+<li><a href="https://www.chpc.utah.edu/presentations/index.php">Training</a></li>
+</ul>
+</li>
+<li class="has-sub sub-width-lg"><a href="#">Usage</a>
+<ul class="sub-menu">
+<li><a href="/usage/cluster/index.php">Cluster Usage</a>
+<ul>
+<li><a href="/usage/cluster/current-project-general.php">General Allocation Pool</a></li>
+<li><a href="/usage/cluster/current-project-lonepeak.php">Lonepeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-kingspeak.php">Kingspeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-ash.php">Ash Cluster</a></li>
+<li><a href="/usage/cluster/current-project-redwood.php">Redwood Cluster</a></li>
+</ul>
+</li>
+<li><a href="/usage/graphs.php?g=cluster%20utilization&amp;host=combined&amp;type=daily_utilization">Cluster Utilization Graphs</a></li>
+<li><a href="/usage/graphs.php?g=hpc%20cluster%20scratch&amp;host=chpc_gen&amp;type=cpu">HPC Cluster Scratch</a></li>
+<li><a href="/usage/graphs.php?g=network&amp;host=Campus+Gateway&amp;type=daily_traffic">Network</a>
+<ul>
+<li><a href="/resources/maddash-dashboards.php">Maddash Dashboards</a></li>
+</ul>
+</li>
+<li><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">UEN Weathermap (Only Available on UEN Networks)</a></li>
+<li><a href="http://snapp2.bldc.grnoc.iu.edu/i2al2s/#&amp;p=3%2C42&amp;ccid=3&amp;tab=1&amp;search=undefined&amp;pwidth=undefined&amp;ccat=undefined&amp;url=show-graph.cgi%3Fcollection_ids%3D145%26end%3D1461772131%26start%3D1461771831%26cf%3DAVERAGE%26ds%3Doutput%2Cinput%26collection_ids%3D145" target="_blank" rel="noopener">UEN Aggregate Utilization</a></li>
+<li><a href="http://uofu.status.io">UofU IT Services Status</a></li>
+<li><a href="https://status.it.utah.edu">University Application Heath Summary - NOC</a></li>
+</ul>
+</li>
+<li><a href="/role/">My Account</a></li>
+</ul>
+</ul>	
+</nav>
+
+<!-- END HEADER NAVIGATION -->
+                     </div>
+                  <div class="uu-search-toggle"><button class="uu-search__trigger"><span class="far fa-search" aria-hidden="true"></span><span class="sr-only">Search</span></button></div><button id="jsNavTrigger" class="uu-nav__trigger" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Reveal Menu</span><span></span></button></div>
+            </div>
+         </header>
+         <!-- END HEADER -->
+         <!-- PUSH NAVIGATION -->
+         
+         <section class="uu-nav">
+            <div class="uu-nav__container"><button id="jsMobileNavTrigger" class="uu-nav__trigger" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Reveal Menu</span><span></span></button><header class="uu-nav__header">
+                  <h2 class="sr-only">Main Navigation</h2>
+                  <!-- Navigation Logo -->
+<a href="https://utah.edu/" class="uu-nav__logo">
+	<img src="https://templates.utah.edu/_main-v3-1/images/template/university-of-utah-logo.svg" alt="The University of Utah"/>
+</a></header>
+               <nav class="uu-menu" aria-label="main"><p><h2 class="uu-menu__title">Main Menu</h2>
+<hr />
+<ul class="uu-menu__level1">
+<li><a href="/">Home</a></li>
+<li class="has-sublist"><a href="#">About Us</a>
+<ul class="uu-menu__level2">
+<li><a href="/about/index.php">About Us</a></li>
+<li><a href="https://www.chpc.utah.edu/about/vision.php">Vision</a></li>
+<li><a href="/about/staff.php">Staff</a></li>
+<li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Information</a></li>
+<li><a href="https://www.chpc.utah.edu/about/acknowledge.php">Acknowledging CHPC</a></li>
+<!--<li><a href="/about/bibliography/CHPC%20BIB.pdf" target="_blank" rel="noopener">CHPC Bibliography</a></li>-->
+<li><a href="https://www.chpc.utah.edu/about/SupportedResearch.php">Supported Research</a></li>
+<li><a href="https://www.chpc.utah.edu/highlights.php">Research Highlights</a></li>
+<li><a href="https://www.chpc.utah.edu/about/partners.php">Partners</a></li>
+<li><a href="/news/index.php">News</a></li>
+<li><a title="University Information Technology" href="https://it.utah.edu/" target="_blank" rel="noopener">UIT</a></li>
+<li><a href="/about/governance.php">Governance</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Resources</a>
+<ul class="uu-menu__level2">
+<li><a href="https://www.chpc.utah.edu/resources/index.php">Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/HPC_Clusters.php">HPC Clusters</a></li>
+<li><a href="/resources/storage_services.php">Storage Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="/resources/virtualmachines.php">Virtual Machines</a></li>
+<li><a href="/resources/hosting.php">Hosting Services</a></li>
+<li><a href="/resources/Networking.php">Networking</a></li>
+<li><a href="/resources/ProtectedEnvironment.php">Protected Environment</a></li>
+<li><a href="/documentation/software/ai.php">AI/ML Resources</a></li>
+<li><a href="/userservices/index.php">User Services</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Documentation</a>
+<ul class="uu-menu__level2">
+<li><a href="https://www.chpc.utah.edu/documentation/index.php">Documentation</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/gettingstarted.php">Getting Started</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/access.php">Accessing Our Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/videos/index.php">Short Training Videos</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/index.php">Cluster Guides</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/beehive.php">Beehive User Guide (Windows Server)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/gpus-accelerators.php">GPU &amp; Accelerators</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/frisco-nodes.php">Frisco Nodes</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/narwhal.php">Narwhal User Guide (Protected Environment Statistics)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/software/index.php">Software</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php">Programming Guide</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/policies/index.php">Policy Manual</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/HelloWorldMPI.php">HPC Basics - Hello World MPI</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/faq.php">Frequently Asked Questions</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/white_papers/index.php">White Papers</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">User Services</a>
+<ul class="uu-menu__level2">
+<li><a href="/userservices/index.php">User Services</a></li>
+<li><a href="https://www.chpc.utah.edu/userservices/accounts.php">Accounts</a></li>
+<li><a href="/userservices/allocations.php">Allocations</a></li>
+<li><a href="/userservices/gettinghelp.php">Getting Help</a></li>
+<li><a href="https://www.chpc.utah.edu/presentations/index.php">Training</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Usage</a>
+<ul class="uu-menu__level2">
+<li class="has-sublist"><a href="/usage/cluster/index.php">Cluster Usage</a>
+<ul class="uu-menu__level3">
+<li><a href="/usage/cluster/current-project-general.php">General Allocation Pool</a></li>
+<li><a href="/usage/cluster/current-project-lonepeak.php">Lonepeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-kingspeak.php">Kingspeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-ash.php">Ash Cluster</a></li>
+<li><a href="/usage/cluster/current-project-redwood.php">Redwood Cluster</a></li>
+</ul>
+</li>
+<li><a href="/usage/graphs.php?g=cluster%20utilization&amp;host=combined&amp;type=daily_utilization">Cluster Utilization Graphs</a></li>
+<li><a href="/usage/graphs.php?g=hpc%20cluster%20scratch&amp;host=chpc_gen&amp;type=cpu">HPC Cluster Scratch</a></li>
+<li class="has-sublist"><a href="/usage/graphs.php?g=network&amp;host=Campus+Gateway&amp;type=daily_traffic">Network</a>
+<ul class="uu-menu__level3">
+<li><a href="/resources/maddash-dashboards.php">Maddash Dashboards</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">UEN Weathermap</a>
+<ul class="uu-menu__level3">
+<li><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">(Only Available on UEN Networks)</a></li>
+</ul>
+</li>
+<li><a href="http://snapp2.bldc.grnoc.iu.edu/i2al2s/#&amp;p=3%2C42&amp;ccid=3&amp;tab=1&amp;search=undefined&amp;pwidth=undefined&amp;ccat=undefined&amp;url=show-graph.cgi%3Fcollection_ids%3D145%26end%3D1461772131%26start%3D1461771831%26cf%3DAVERAGE%26ds%3Doutput%2Cinput%26collection_ids%3D145" target="_blank" rel="noopener">UEN Aggregate Utilization</a></li>
+<li><a href="http://uofu.status.io">UofU IT Services Status</a></li>
+<li><a href="https://status.it.utah.edu">University Application Heath Summary - NOC</a></li>
+</ul>
+</li>
+<li><a href="/role/">My Account</a></li>
+</ul></p></nav>
+            </div>
+         </section>
+         <!-- END PUSH NAVIGATION -->
+         
+         <!-- MAIN CONTENT -->
+         <main class="uu-main" id="skip-link-target">
+            <nav aria-label="Breadcrumb" class="uu-breadcrumb">
+               <ol>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/documentation/">documentation</a></li>
+                  <li><a href="/documentation/software/">Software</a></li>
+                  <li><span class="sr-only">current page: </span>Python3: Setup of a virtual environment</li>
+               </ol>
+            </nav>
+            <!-- SECTION 1 -->
+            
+            <section class="uu-section bg-white text-default uu-section--region-1" style="">
+               <div class="uu-section__container"><!-- SECTION HEADER -->
+                  
+                  <div class="uu-section__header  ">
+                     <h1>User installed Python</h1>
+                     <p>As Python libraries evolve rapidly and may have specific dependencies, it is becoming
+                        increasingly difficult to support the Python distribution centrally. Therefore we
+                        encourage users to maintain their own Python stack as described below.</p>
+                     <ul>
+                        <li><a href="#why">Why are we moving away from a central Python installation?</a><ul>
+                              <li><a href="#uspc">User space Python choices</a></li>
+                           </ul>
+                        </li>
+                        <li><a href="#ve3x">Miniforge installation and usage<br></a><ul>
+                              <li><a href="#mi">Miniforge installation</a></li>
+                              <li><a href="#mem">Miniforge environment module</a></li>
+                              <li><a href="#cpmb">Conda/mamba package manager basics</a></li>
+                              <li><a href="#iapp">Installing additional Python packages</a></li>
+                              <li><a href="#cpioc">Conda packages in other channels</a></li>
+                              <li><a href="#ipmwp">Installing Python modules with pip</a></li>
+                              <li><a href="#mpe">Miniforge Python environments</a></li>
+                           </ul>
+                        </li>
+                        <li><a href="#microm">Micromamba in a container installation and use</a><ul>
+                              <li><a href="#microm_cont">Creating a micromamba container</a></li>
+                              <li><a href="#mamba_gpu">Micromamba GPU container</a></li>
+                              <li><a href="#microm_ood">Using the micromamba container in Open OnDemand</a></li>
+                           </ul>
+                        </li>
+                        <li>Miniconda installation examples
+                           
+                           <ul>
+                              <li><a href="#iml">Interactive machine learning environment with Tensorflow, Keras and Jupyter Lab</a></li>
+                              <li><a href="#extf">Parallel machine learning environment with Tensorflow, Keras and Horovod</a></li>
+                              <li>
+                                 <p><a href="#mo">Setting up miniconda for others to use</a></p>
+                              </li>
+                           </ul>
+                        </li>
+                     </ul>
+                     <hr>
+                     <h2>&nbsp;Why are we moving away from a central Python installation?</h2>
+                     <p>The Python ecosystem is growing rapidly and it has become difficult to keep centrally
+                        maintained Python distributions up to date. Furthermore, some Python modules depend
+                        on specific versions of modules which may be incompatible with others. Finally, user
+                        space Python distributions, and specifically Anaconda/Miniconda, are actively incorporating
+                        peformance improvements and are comparable or better to hand tuned Python builds.</p>
+                     <p>For these reasons we are deprecating centrally maintained Python distributions and
+                        encourage users to maintain their own Python stack as described below.</p>
+                     <p>However, please, be aware that there are some corner cases when Anaconda/Miniconda/Miniforge/Mambaforge
+                        Python library stack is difficult to install, mostly when there are conflicts between
+                        dependent libraries. In those cases, we recommend to research if the particular stack
+                        is offered in a form of a Docker container, which can be <a href="https://www.chpc.utah.edu/documentation/software/singularity.php#docker">imported and loaded in our HPC environment using Singularity</a>.</p>
+                     <p>IMPORTANT NOTE: While Anaconda and Miniconda are license free, the "default" software
+                        channel that they use is subject to usage restrictions, in particular, it<span> is free to use for Personal, Educational, Open-Source or Small Business (under 200
+                           employees) use as set out in the Anaconda&nbsp;</span><a class="link-external" title="Anaconda License agreement" href="https://legal.anaconda.com/policies/en/?name=end-user-license-agreement" target="_blank" rel="noopener">license agreement</a><span>. However, it is NOT free for research in organizations with more than 200 employees.
+                           For that reason, we encourage users to use Miniforge/Mambaforge instead of Miniconda/Anaconda,
+                           or, in the worst case, use the "conda-forge" channel which is free.</span></p>
+                     <h3><a id="uspc"></a>User space Python choices</h3>
+                     <p><a href="https://conda-forge.org/download/">Miniforge/Mambaforge</a> is a minimalistic Python packaging distribution which includes conda and mamba package
+                        managers and their dependencies. It is using the "conda-forge" package repository
+                        by default which means that it's free for research and teaching. Additional packages
+                        need to be installed manually (described below). The base installation size is about
+                        0.8 GB.</p>
+                     <p><a href="https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html" target="_blank" rel="noopener">Micromamba</a><span>is a tiny version of the </span><code class="docutils literal notranslate"><span class="pre">mamba</span></code><span>&nbsp;package manager. It is a statically linked C++ executable with a separate command
+                           line interface. It does not need a&nbsp;</span><code class="docutils literal notranslate"><span class="pre">base</span></code><span> environment and does not come with a default version of Python. It is a good candidate
+                           for packaging the whole Python environment in a container, as described below.</span></p>
+                     <p><a href="https://conda.io/miniconda.html" target="_blank" rel="noopener">Miniconda</a> is a minimal Anaconda distribution, which ships with base Python and the <a href="https://conda.io/docs/" target="_blank" rel="noopener">conda</a> package manager. This makes the base installation rather small, at 0.3 GB. Because
+                        it defaults to the "defaults" channel that has license restrictions, we discourage
+                        users from using it.</p>
+                     <p><a href="https://www.anaconda.com/" target="_blank" rel="noopener">Anaconda</a> is the most popular Python distribution. It is well optimized and ships with the
+                        Intel MKL for fast and threaded numerical calculations. It also comes with a package
+                        manager system, <a href="https://conda.io/docs/" target="_blank" rel="noopener">conda</a>, and includes many commonly used Python modules. For this reason it occupies 3.2
+                        GB as installed, which is a sizeable amount given our default 50 GB home directory
+                        quota. For this reason it is not our top choice. Like Miniconda its license has restrictions
+                        which is why we recommend against using it.</p>
+                     <p><a href="https://software.intel.com/en-us/distribution-for-python" target="_blank" rel="noopener">Intel Distribution for Python</a> is provided by Intel with performance similar to Anaconda. Also similarly to Anaconda,
+                        it includes select numerical modules. It can be either installed as a standalone or
+                        using the conda package manager. Recently, Intel contributions have been incorporated
+                        into the main package repositories which makes it unnecessary to have this installed
+                        separately.</p>
+                     <h2><a id="ve3x"></a>Miniforge installation and usage</h2>
+                     <h3><a id="mi"></a>Miniforge installation</h3>
+                     <p>Download the Miniforge installer using the wget command and run the installer, pointing
+                        it to the directory where you want to install it. We recommend <code style="background-color: lightgray;">$HOME/software/pkg/miniforge3</code> for easy integration into user defined environment modules.</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh<br>bash ./Miniforge3-Linux-x86_64.sh -s -b -p $HOME/software/pkg/miniforge3</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>The flag '-b' forces unattended installation, the -s does not add Miniforge to your
+                        default environment - we will do it in the next step via environment modules. The
+                        '-p' marks the installation directory.&nbsp;</p>
+                     <h3><a id="mem"></a>Miniconda environment module</h3>
+                     <p>To easily set up the Miniforge environment, create an <a href="https://www.chpc.utah.edu/documentation/software/modules-advanced.php#custom">user environment module</a>. First create a directory where the user environment module hierarchy will reside,
+                        and then copy our miniconda module file to this directory.</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>mkdir -p $HOME/MyModules/miniforge3<br>cp <a href="https://github.com/CHPC-UofU/anaconda-modules/blob/master/miniconda3/latest.lua" target="_blank" rel="noopener">/uufs/chpc.utah.edu/sys/installdir/python/modules/miniforge3/latest.lua</a> $HOME/MyModules/miniforge3</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>The user module environment must be loaded into the default module environment with
+                        the <code style="background-color: lightgray;">module use</code> command. After that, we can load the user space miniconda module.</p>
+                     <p>Note that if the miniforge is installed in a different location than <code style="background-color: lightgray;">$HOME/software/pkg/miniforge3</code> , the module file ( <code style="background-color: lightgray;">latest.lua</code> ) should be named differently to indicate what kind of miniforge installation this
+                        is, and the module file should be edited to set the local <code style="background-color: lightgray;">myanapath</code> variable to the full path where this miniforge installation is.</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>module use $HOME/MyModules<br>module load miniforge3/latest</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>To make the user module environment available in all your future sessions, edit&nbsp;<code style="background-color: lightgray;">~/.custom.csh (for tcsh shell) or ~/.custom.sh (for bash shell)</code> and insert the <code style="background-color: lightgray;">module use</code> command just below the <code style="background-color: lightgray;">#!/bin/tcsh</code> or <code style="background-color: lightgray;">#!/bin/bash</code>. Do not put the <code style="background-color: lightgray;">module load miniforge3</code> &nbsp; command in these files since custom Python installations can break the remote connections
+                        using <a href="https://www.chpc.utah.edu/documentation/software/fastx.php">FastX</a>.</p>
+                     <p>NOTE: Loading the module sets up this Miniforge environment. Do NOT try to run the
+                        <code style="background-color: lightgray;">conda init</code> or <code style="background-color: lightgray;">mamba init</code>&nbsp; commands, even though this is suggested sometimes when the conda/mamba command errors
+                        out. These commands hardcode the Miniforge environment in your default environment,
+                        which is what we are trying to avoid with using the module. The Miniforge module should
+                        loaded instead of running these commands.</p>
+                     <h3><a id="cpmb"></a>Conda/mamba package manager basics</h3>
+                     <p>The mamba package manager is recommended for maintaining your user Miniforge Python
+                        distribution. Take look at and use the <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html" target="_blank" rel="noopener">Conda cheat sheet</a>,&nbsp; which lists the most commonly used commands. More detailed documentation is in
+                        the <a href="https://mamba.readthedocs.io/en/latest/user_guide/mamba.html" target="_blank" rel="noopener">Mamba User Guide</a> or <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/index.html" target="_blank" rel="noopener">Conda User Guide</a>. Mamba is a drop in replacement for Conda, so Conda and Mamba command syntax is the
+                        same.</p>
+                     <h3><a id="iapp"></a>Installing additional Python packages</h3>
+                     <p>Miniconda only comes with a basic Python distribution. Therefore one needs to install
+                        the needed Python modules. You can list the currently installed Python modules as
+                        follows:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre><a href="https://conda.io/docs/commands/conda-list.html" target="_blank" rel="noopener">mamba list</a></pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>To install a new package, run</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre><a href="https://conda.io/docs/commands/conda-install.html" target="_blank" rel="noopener">mamba install</a> [packagename]</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>NOTE: If you are using Miniconda or Anaconda, make sure to also include the "conda-forge"
+                        channel, <code style="background-color: lightgray;">-c conda-forge</code>. Or even better, set "conda-forge" as default channel by running <code style="background-color: lightgray;">conda config <span class="n"></span><span class="o">--</span><span class="n">add</span><span class="n">channels</span> conda-forge</code>.</p>
+                     <p>For example, to install the latest version of the SciPy module, run</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>mamba install scipy</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>The installer will think for a little while and then install SciPy and a number of
+                        other packages on which SciPy depends, such as NumPy and the accelerated OpenBLAS
+                        library.</p>
+                     <p><strong>NOTE:</strong> If you notice that the Intel Math Kernel Library (MKL) is installed instead, since
+                        the MKL library by defaults utilizes all the processor cores on the system, if you
+                        are planning to run many independent parallel Python calculations, set the environment
+                        variable OMP_NUM_THREADS=1 (<code style="background-color: lightgray;">setenv OMP_NUM_THREADS 1</code> for tcsh or <code style="background-color: lightgray;">export OMP_NUM_THREADS=1</code> for bash).</p>
+                     <p>Another common Python package is <a href="http://jupyter.org" target="_blank" rel="noopener">Jupyter</a>, which allows one to run Jupyter notebooks. This can be installed as:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>mamba install jupyter</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>To uninstall a package run</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>mamba uninstall [packagename]</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <h3><a id="cpioc"></a>Conda packages in other channels</h3>
+                     <p>If the <code style="background-color: lightgray;">mamba install</code> command can not find the requested package, chances are high it will be in a non-default
+                        conda repository (channel). Independent distributors can create their own package
+                        channels that house their products. The best approach to find a package which is not
+                        in an official conda channel is to do a websearch for it.</p>
+                     <p>For example, to look for a package named Fasta, which is used for biological sequence
+                        alignment, we web search for "anaconda fasta". <a href="https://anaconda.org/biobuilds/fasta" target="_blank" rel="noopener">Top search hit</a> suggests the following installation line:</p>
+                     <pre><code style="background-color: lightgray;"><a href="https://conda.io/docs/commands/conda-uninstall.html" target="_blank" rel="noopener">mamba install</a> -c biobuilds fasta</code></pre>
+                     <p>The "-c" option specifies the channel name, in our case <code style="background-color: lightgray;">biobuilds</code>.</p>
+                     <p>To add a channel to the default channel list, we can:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre><a href="https://conda.io/docs/commands/conda-config.html" target="_blank" rel="noopener">mamba config</a> add channels biobuilds</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>However this puts a channel at the top of the list, with the highest priority. We
+                        can add a new channel to the bottom of the list instead in the following way:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>mamba config --append channels biobuilds</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>NOTE: If you are using Anaconda or Miniconda, which is NOT free for research, you
+                        can add the free <code style="background-color: lightgray;">conda-forge</code> channel and remove the not free <code style="background-color: lightgray;">defaults</code> channel by the commands below. Be careful doing this on an installation that already
+                        has packages installed in the base environment as this may break the dependencies.
+                        If that happens, fresh miniforge3 installation is usually faster than troubleshooting
+                        the broken dependencies.</p>
+                     <pre><span>conda config --add channels conda-forge<br></span><span>conda config --set channel_priority strict<br>conda config --remove channels defaults<br></span></pre>
+                     <p><span>To verify that the <code style="background-color: lightgray;">defaults</code> channel is removed:</span></p>
+                     <pre><span class="">conda config --show channels</span><br><span class="">channels:<br></span>  - bioconda<br><span class="">&nbsp; - conda-forge<br>  - r</span></pre>
+                     <h3><a id="ipmwp"></a>Installing Python modules with pip</h3>
+                     <p>When a Python package does not exist as a conda package, one can use the Python <code style="background-color: lightgray;">pip</code> installer. We recommend using&nbsp;<code style="background-color: lightgray;">pip</code> only as a last resort since this way one loses the flexibility of the conda packaging
+                        environment (automatic conflict resolution and version upgrade/downgrade). To install
+                        a module using <code style="background-color: lightgray;">pip</code>, either run:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>python -m pip install bibtexparser</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>or, preferably:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>pip install bibtexparser</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>For other ways how to install Python packages, see our <a href="https://www.chpc.utah.edu/documentation/software/python3-venv3.php#ve3i">older document</a>.</p>
+                     <h3><a id="mpe"></a>Miniforge Python environments</h3>
+                     <p>Miniforge supports Python virtual environments (VEs). Therefore one can leverage multiple
+                        Python instances from a single Miniforge installation. Please, keep in mind that is
+                        not our preferred way to install multiple Python environments - as the VEs may interact
+                        in an inconsistent way with the base environment. Our preferred approach is to install
+                        independent base Miniforge installation for each Python environment and have a Lmod
+                        module for each of these. This guarantees complete separation of these Miniforge environments.</p>
+                     <p>We can list existing environments with</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>mamba env list</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>Assuming one uses bash shell, we can for example install the Intel distribution for
+                        Python into a separate environment:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre><a href="https://conda.io/docs/commands/conda-update.html" target="_blank" rel="noopener">mamba update</a> -y mamba<br><a href="https://conda.io/docs/commands/conda-create.html" target="_blank" rel="noopener">mamba create</a> -c intel -n idp3 intelpython3_core python</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>This updates conda ("-y" answers Yes to question what packages we want to update),
+                        appends the intel conda channel to our channel list, and creates an environment named
+                        "idp3" based on the&nbsp; <code style="background-color: lightgray;">intelpython3_core</code> package.</p>
+                     <p>We then activate the environment as:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>mamba activate idp3</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>All conda package commands can be used within the activated environment, e.g. newly
+                        installed conda packages will then be installed in this environment using the <code style="background-color: lightgray;">mamba install</code> command.</p>
+                     <p>To exit from the environment, run:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>mamba deactivate</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>While the virtual environments provide convenient way to install different Python
+                        modules, their versions and dependencies, we occasionally see conflicts that are hard
+                        to figure out and resolve. Furthermore, it is more complicated to wrap the VEs into
+                        the Lmod modules and Open Ondemand Jupyter notebooks. For that reason we recommend
+                        to use different miniconda installations instead of using virtual environments. For
+                        each independent miniconda installation, modify the miniconda module name (e.g. <code style="background-color: lightgray;">cp latest.lua mynewconda.lua</code>), and in the new module file, specify the path where this particular miniconda is
+                        installed in the&nbsp;<a href="https://github.com/CHPC-UofU/anaconda-modules/blob/a2f2d3621e3e084c196d9ddb6bd5248b8c825c69/miniconda3/latest.lua#L7" target="_blank" rel="noopener"><code style="background-color: lightgray;">myanapath</code></a> variable.</p>
+                     <h2><a id="microm"></a>Micromamba in a container installation and use</h2>
+                     <p>Installing the whole conda environment in a container has several benefits. It's packaged
+                        in a single file so it's easy to move it somewhere else. The whole environment is
+                        static (fixed during the build of the container), so, it won't get accidentally changed
+                        when trying to install or update a package - updates require building a new container.
+                        While it is equaly possible to create a container based on miniconda, the Micromamba
+                        installation is smaller, and is using the more performant <a href="https://mamba.readthedocs.io/en/latest/" target="_blank" rel="noopener">mamba </a>package manager instead of conda. Below we outline steps in building a Micromamba
+                        container with some bioinformatics tools and a Jupyter Notebook and using this environment
+                        on CHPC's <a href="/documentation/software/ondemand.php">Open OnDemand</a> Jupyter app.</p>
+                     <h3><a id="microm_cont"></a>Creating a micromamba container</h3>
+                     <p>We will use Apptainer to create the container, which has been recently made possible
+                        to be done as an user. First, we create a recipe file for building the container,
+                        and name it <code><a href="https://github.com/CHPC-UofU/Apptainer-container-recipes/blob/master/micromamba/Singularity" target="_blank" rel="noopener">Singularity</a></code>&nbsp;:</p>
+                     <pre>Bootstrap: docker<br>From: mambaorg/micromamba<br><br>%post<br>&nbsp; &nbsp; micromamba install --yes --name base -c bioconda -c conda-forge \<br>  &nbsp; &nbsp; python=3.9.1 notebook samtools bwa<br>&nbsp; &nbsp; micromamba clean -aqy<br><br>%runscript<br>  &nbsp; micromamba run -p /opt/conda "$@"</pre>
+                     <p>In this recipe, we are pulling the Micromamba container from DockerHub, installing
+                        the needed tools in the <code>post</code>&nbsp;section, and executing the <code>micromamba run ...</code> command whenever the container is executed. Now we build the container, as:</p>
+                     <pre>module load apptainer<br>unset APPTAINER_BINDPATH<br>apptainer build mymamba.sif <a href="https://github.com/CHPC-UofU/Apptainer-container-recipes/blob/master/micromamba/Singularity" target="_blank" rel="noopener">Singularity</a></pre>
+                     <p>Unsetting the APPTAINER_BINDPATH is necessary to avoid a build error that complains
+                        about missing mount points in the container. This environment variable ensures /scratch
+                        and /uufs get mounted automatically when the container is executed. Note that in this
+                        article we are using the bash shell syntax for setting and unsetting the environment
+                        variables.</p>
+                     <p>The container sif file has executable permissions, so we can run the container directly,
+                        following the command we want to run from the container:</p>
+                     <pre>$ ./mymamba_jup.sif bwa&nbsp;<br>Program: bwa (alignment via Burrows-Wheeler transformation)<br>Version: 0.7.17-r1188<br>...</pre>
+                     <p>Python environment packages can be also specified by file <code>environment.yml</code> , e.g.&nbsp;</p>
+                     <pre id="codecell0"><span class="nt">channels</span><span class="p">:<br></span><span class="p p-Indicator" style="font-size: 1em; color: var(--cms-region--primary-black);">  -</span><span class="w" style="font-size: 1em; color: var(--cms-region--primary-black);"></span><span class="l l-Scalar l-Scalar-Plain" style="font-size: 1em; color: var(--cms-region--primary-black);">defaults<br></span><span class="w"></span><span class="p p-Indicator">-</span><span class="w"></span><span class="l l-Scalar l-Scalar-Plain">conda-forge<br></span><span class="nt">dependencies</span><span class="p">:<br></span><span class="w"></span><span class="p p-Indicator">-</span><span class="w"></span><span class="l l-Scalar l-Scalar-Plain">matplotlib<br></span><span class="w"></span><span class="p p-Indicator">-</span><span class="w"></span><span class="l l-Scalar l-Scalar-Plain">python=3.9<br></span><span class="w"></span><span class="p p-Indicator">-</span><span class="w"></span><span class="l l-Scalar l-Scalar-Plain">pip</span></pre>
+                     <p>In that case, we can modify the <code>micromamba install</code>&nbsp;command as:</p>
+                     <pre id="codecell1"><span class="n">micromamba </span><span class="n">create</span> --yes --name base <span class="o">--file</span>&nbsp;<span class="n">environment</span><span class="o">.</span><span class="n">yml</span></pre>
+                     <h3><a id="mamba_gpu"></a>Micromamba GPU container</h3>
+                     <p>For the GPU container, which as an example installs PyTorch environment, one has to
+                        use the <code>--nv</code> flag, which imports the GPU stack from the host into the container, during the build
+                        to ensure that the mamba package manager picks up the GPU/CUDA dependencies and installs
+                        the GPU version of PyTorch.</p>
+                     <pre>&nbsp;module load apptainer<br>&nbsp;unset APPTAINER_BINDPATH<br>&nbsp;apptainer build --nv mymamba_gpu.sif <a href="https://github.com/CHPC-UofU/Apptainer-container-recipes/blob/master/micromamba/Singularity.gpu" target="_blank" rel="noopener">Singularity.gpu</a></pre>
+                     <p>To test that the GPU version if PyTorch is installed, we use the environment variable
+                        APPTAINER_NV as an alternative to <code>--nv</code> flag, so that we can run using directly the container file and include the GPU environment:</p>
+                     <pre>module load apptainer<br>export APPTAINER_NV=true<br>./mymamba_gpu.sif /opt/conda/bin/python -c "import torch; print(torch.cuda.is_available())"<br>True</pre>
+                     <h3>Using the micromamba container in Open OnDemand</h3>
+                     <p>Just as we have run the bwa command above, we can also run the jupyter notebook command
+                        to start the Jupyter. However, this will start the Jupyter on the machine where we
+                        run the terminal and we'd be required to create an SSH tunnel to this machine so we
+                        can open this Jupyter in our client's web browser. The <a href="https://ondemand.chpc.utah.edu/pun/sys/dashboard/batch_connect/sys/jupyter_app/" target="_blank" rel="noopener">Open OnDemand Jupyter app</a> launches Jupyter directly in the client's browser. To run our container, we choose
+                        the "Custom (Environment setup below)" option for the "Jupyter Python version", and
+                        in the "Environment Setup for Custom Python" text box, put:</p>
+                     <pre>shopt -s expand_aliases<br>module load apptainer<br>alias jupyter="$HOME/containers/mymamba.sif jupyter"</pre>
+                     <p>The first command is a bash option to enable aliases in shell script. Then we load
+                        the Apptainer module, followed by creating an alias for the <code>jupyter</code> command to call it from the container instead. This <code>jupyter</code> alias is then passed to the Open OnDemand Jupyter app and launches the Jupyter server.
+                        Notice that we use full path to the container, so the container is found, as the OpenOnDemand
+                        app starts at the root of user's home directory.</p>
+                     <p>As noted above, if we need to use GPUs, we need to add the environment variable <code>APPTAINER_NV=true</code> to initialize the GPUs in the container:</p>
+                     <pre>export APPTAINER_NV=true<br>alias jupyter="$HOME/containers/mymamba_gpu.sif jupyter"</pre>
+                     <h2>Miniconda installation examples</h2>
+                     <h3><a id="iml"></a>Interactive machine learning environment with Tensorflow, Keras and Jupyter Lab</h3>
+                     <p>NOTE: This is an older recipe which in principle shows the instalation steps but the
+                        package versions will be different. It is also using the "defaults" anaconda channel
+                        which is not free for research.</p>
+                     <p><a href="https://www.tensorflow.org/" target="_blank" rel="noopener">Tensorflow</a> is a widely used deep learning framework. <a href="https://keras.io/" target="_blank" rel="noopener">Keras</a> is an add-on to the framework that attempts to make it more user friendly. <a href="https://jupyter.org/" target="_blank" rel="noopener">Jupyter Lab</a> allows to run Jupyter notebooks, e.g. in our <a href="https://www.chpc.utah.edu/documentation/software/ondemand.php">Open Ondemand web portal</a>.</p>
+                     <p>Since Tensorflow performs the best on the GPUs, we will be installing the GPU version.
+                        Once the Miniconda3 and its module are installed, look at the <a href="https://www.tensorflow.org/install/gpu" target="_blank" rel="noopener">Tensorflow installation requirements </a>to note the CUDA and CUDNN versions that the latest Tensorflow requires. As of this
+                        writing (December 2021), Tensorflow 2.5 requires CUDA 11.2 and CUDNN 8.1.</p>
+                     <ul>
+                        <li>Load the CUDA and CUDNN modules, and the newly installed Miniconda module (named tf25.lua)<br><table>
+                              <tbody>
+                                 <tr>
+                                    <td>
+                                       <pre>ml cuda/11.2 cudnn/8.1.1<br>ml use $HOME/MyModules<br>ml miniconda3/tf25</pre>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </li>
+                        <li>Install the Jupyter Lab.<br><table>
+                              <tbody>
+                                 <tr>
+                                    <td>
+                                       <pre>conda install jupyterlab</pre>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </li>
+                        <li>Install Tensorflow. Note that we are using pip, not conda, since Google provides its
+                           tensorflow builds in pip repositories, and the conda repositories don't have all the
+                           versions. This pip installed Tensorflow also includes Keras. Test that Tensorflow
+                           can access the GPU(s).<br><table>
+                              <tbody>
+                                 <tr>
+                                    <td>
+                                       <pre>pip install tensorflow==2.5<br>python -c "from tensorflow.python.client import device_lib; print(device_lib.list_local_devices())"</pre>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </li>
+                        <li>In the OpenOnDemand Jupyter Lab app launch window, put the following in the Environment
+                           Setup:<br><table>
+                              <tbody>
+                                 <tr>
+                                    <td>
+                                       <pre>ml use $HOME/MyModules<br>ml cuda/11.2 cudnn/8.1.1<br>ml miniconda3/tf25</pre>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           Note that in order to use GPU with Tensorflow, you need to request a GPU.</li>
+                     </ul>
+                     <h3><a id="extf"></a>Parallel machine learning environment with Tensorflow, Keras and Horovod</h3>
+                     <p>NOTE: This is an older recipe which in principle shows the instalation steps but the
+                        package versions will be different. It is also using the "defaults" anaconda channel
+                        which is not free for research.</p>
+                     <p><a href="https://www.tensorflow.org/" target="_blank" rel="noopener">Tensorflow</a> is a widely used deep learning framework. <a href="https://keras.io/" target="_blank" rel="noopener">Keras</a> is an add-on to the framework that attempts to make it more user friendly. <a href="https://github.com/uber/horovod" target="_blank" rel="noopener">Horovod</a> allows for easy and flexible distributed parallelization of Keras/Tensorflow. Installing
+                        these packages and their dependencies form a nice but rather complicated example of
+                        using Miniconda environment.</p>
+                     <p>NOTE: These instructions are old so likely may not work exactly as described.</p>
+                     <p>There are a few constraints:</p>
+                     <ul>
+                        <li>We use the defaults conda channel explicitly to install Tensorflow. Other channels,
+                           e.g. intel, do not supply the GPU version.</li>
+                        <li><a href="https://github.com/uber/horovod" target="_blank" rel="noopener">horovod</a> requires to be built with MPI and does not appear to be on anaconda channels.</li>
+                     </ul>
+                     <p>The steps to set up and test this environment are as follows (valid as of November
+                        2018):</p>
+                     <ul>
+                        <li>Install base Miniconda as <a href="#mi">shown above</a></li>
+                        <li>Prepare the right environment, load the appropriate CUDA and CUDNN for Tensorflow
+                           
+                           <!-- PANEL -->
+                           <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                              <pre>ml cuda cudnn
+							</pre>
+                           </div>
+                           <!-- END PANEL -->
+                           </li>
+                     </ul>
+                     <ul>
+                        <li>Install the appropriate Python version (3.7 as of May 2020), conda based Numpy to
+                           get the accelerated MKL support and a few other packages Tensorflow needs. Make sure
+                           to use the "defaults" channel since that is the one that has the GPU binaries. Other
+                           channels, e.g. "intel", may have a preference if you have&nbsp;added them earlier. Check
+                           your ~/.conda.rc for the list of conda channels and their search order (from top down).<br>
+                           <!-- PANEL -->
+                           <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                              <pre>conda install -c defaults python=3.7 numpy six wheel</pre>
+                           </div>
+                           <!-- END PANEL -->
+                           </li>
+                     </ul>
+                     <ul>
+                        <li>Install tensorflow-gpu from the conda "defaults" channel and test if it can see the
+                           GPUs. If the "defaults" channel is not speficied, the "intel" channel tensorflow build
+                           is installed which does not support GPUs.<br>
+                           <!-- PANEL -->
+                           <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                              <pre>conda install -c defaults tensorflow-gpu<br>python -c "from tensorflow.python.client import device_lib; print(device_lib.list_local_devices())"</pre>
+                           </div>
+                           <!-- END PANEL -->
+                           </li>
+                        <li>(NOTE - currently we have issues with MPI based install, so use the default GLOO framework)
+                           Install Horovod with pip. Load gcc/6.4.0, Tensorflow requires gcc &gt;= 5.4.0 while the
+                           OS default is 4.8.5. (TODO - install NCCL for GPU communication, now it's using only
+                           GLOO)<br>
+                           <!-- PANEL -->
+                           <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                              <pre>ml gcc/6.4.0<br>pip install horovod</pre>
+                           </div>
+                           <!-- END PANEL -->
+                           </li>
+                        <li>Check what parameters was Horovod built with</li>
+                     </ul>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre style="padding-left: 30px;">horovodrun --check-build<br>...<br>Available Controllers:<br>&nbsp;&nbsp;&nbsp; [ ] MPI<br>&nbsp;&nbsp;&nbsp; [X] Gloo<br><br>Available Tensor Operations:<br>&nbsp;&nbsp;&nbsp; [ ] NCCL<br>&nbsp;&nbsp;&nbsp; [ ] DDL<br>&nbsp;&nbsp;&nbsp; [ ] CCL<br>&nbsp;&nbsp;&nbsp; [ ] MPI<br>&nbsp;&nbsp;&nbsp; [X] Gloo&nbsp;&nbsp; &nbsp;</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <ul>
+                        <li>To run a parallel calculation on multiple GPUs, make sure to use a SLURM shell script
+                           rather than interactive job - since interactive job on GPU nodes using gres does not
+                           work with mpirun<br>
+                           <!-- PANEL -->
+                           <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                              <pre>#!/bin/bash<br>#SBATCH -N 1<br>#SBATCH -n 4<br>#SBATCH -A owner-gpu-guest<br>#SBATCH -p notchpeak-gpu-guest<br>#SBATCH -t 2:00:00<br>#SBATCH --gres=gpu:titanv:4<br>#SBATCH --mem=0<br>ml use $HOME/MyModules<br>ml cuda cudnn<br>ml miniconda3/latest<br>ml gcc/6.4.0<br>horovodrun -np 4 python <a href="https://github.com/horovod/horovod/blob/master/examples/tensorflow2_mnist.py" target="_blank" rel="noopener">tensorflow2_mnist.py</a></pre>
+                           </div>
+                           <!-- END PANEL -->
+                           </li>
+                     </ul>
+                     <h3><a id="mo"></a>Setting up miniforge for others to use</h3>
+                     <p>Sometimes a researcher needs to install a Miniforge package, that they want their
+                        co-workers to use as well. This helps with reproducibility, as the same software stack
+                        is used by all the researchers. To achieve this, we follow the <a href="/documentation/software/python-anaconda.php#ve3x">Miniforge installation and usage</a> instructions, but with a few modifications outlined below.</p>
+                     <p>First, we install the Minifirge to a different location, which name corresponds to
+                        a package that we want to install. For example, if we are to install a Miniforge environment
+                        with the BLAST+ bioinformatics package, we name the directory&nbsp; <code style="background-color: lightgray;">miniconda3-blast</code>&nbsp;.</p>
+                     <pre>wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh<br>bash ./Miniforge3-Linux-x86_64.sh -b -p $HOME/software/pkg/<strong>miniforge3-blast</strong> -s</pre>
+                     <p>Next we create the module file. We should name it along the same lines as the package
+                        name, for example&nbsp; <code style="background-color: lightgray;">miniconda3/blast</code> . The <code style="background-color: lightgray;">blast</code>&nbsp; part of the module name is in place of the usual program version, which is fine,
+                        Lmod handles that. We get the module template from CHPC as follows:</p>
+                     <pre>mkdir -p $HOME/MyModules/miniforge3<br>cp <a href="https://github.com/CHPC-UofU/anaconda-modules/blob/master/miniconda3/latest.lua" target="_blank" rel="noopener">/uufs/chpc.utah.edu/sys/installdir/python/modules/miniforge3/latest.lua</a> $HOME/MyModules/<strong>miniforge3/blast.lua</strong></pre>
+                     <p>At this point, the module file is the same as CHPC's template so it points to the
+                        miniforge in the owner's&nbsp; <code style="background-color: lightgray;">HOME</code> . Other user's <code style="background-color: lightgray;">HOME</code>&nbsp; is different, therefore we need to modify the new module file to include the absolute
+                        path to the location of this new miniforge3-blast installation. Open the module file
+                        in a text editor, and look at lines 6-11:</p>
+                     <pre><span class="pl-c">--</span><span> change myanapath if the installation is in a different place in your home<br><span class="pl-c">--</span> note that this is a relative path from the base of your home directory<br></span><span></span><span><span class="pl-k">local</span> myanapath <span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>software/pkg/miniforge3<span class="pl-pds">"<br><span class="pl-c">--</span> if you want to share this miniconda installation with others, use the full path<br><span class="pl-c">--</span>local myanapath = "/uufs/chpc.utah.edu/common/home/u0123456/software/pkg/miniforge3"<br></span></span></span><span><span class="pl-s"><span class="pl-pds"></span></span></span></pre>
+                     <p><span><span class="pl-s"><span class="pl-pds">Notice that the&nbsp; <code style="background-color: lightgray;">myanapath</code>&nbsp; is a relative path, not an absolute one. The <code style="background-color: lightgray;">HOME</code> variable will be added to this relative path later in the module file. Since each
+                                 user has their own unique <code style="background-color: lightgray;">HOME</code>, this prevents other users from using this module file to set up our miniforge environment
+                                 - the miniforge is installed in or HOME, not theirs. To fix this, we have to put the
+                                 absolute path to our new minforge in the <code style="background-color: lightgray;">myanapath</code> variable, as follows:</span></span></span></p>
+                     <pre><span class="pl-c">--</span><span> change myanapath if the installation is in a different place in your home<br><span class="pl-c">--</span> note that this is a relative path from the base of your home directory<br></span><span></span><span><span class="pl-k">-- local</span> myanapath <span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>software/pkg/miniforge3<span class="pl-pds">"<br><span class="pl-c">--</span> if you want to share this miniconda installation with others, use the full path<br><strong>local myanapath = "/uufs/chpc.utah.edu/common/home/u0123456/software/pkg/miniforge3-blast"</strong></span></span></span><span><span class="pl-s"><span class="pl-pds"></span></span></span></pre>
+                     <p>Later in the module file the logic recognizes this and keeps this absolute path.</p>
+                     <p>Once we save the module file,we are ready to use it to initialize the miniconda environment:</p>
+                     <pre>module use $HOME/MyModules<br>module load miniforge3/blast</pre>
+                     <p>Other users can do the same, except that they have to use the full path to the HOME:</p>
+                     <pre>module use <span class="pl-s"><span class="pl-pds">/uufs/chpc.utah.edu/common/home/u0123456</span></span>/MyModules<br>module load miniforge3/latest</pre>
+                     <p>Once the <span><span class="pl-s"><span class="pl-pds"><code style="background-color: lightgray;">miniforge3/blast</code> module is loaded, we can run the <code style="background-color: lightgray;">conda</code>&nbsp; commands to install the needed packages, e.g. for BLAST:</span></span></span></p>
+                     <pre><span><span class="pl-s"><span class="pl-pds">mamba install -c bioconda blast</span></span></span></pre>
+                     <p><span><span class="pl-s"><span class="pl-pds">and then make it available to co-workers.</span></span></span></p>
+                     <p><span><span class="pl-s"><span class="pl-pds"><strong>Please, note</strong> that we recommend not to install Conda or Python Virtual Environments (VEs) into
+                                 the module based Miniforge installations. A more robust approach is to create multiple
+                                 Miniforge installations with corresponding modules, and into these Miniforges install
+                                 the packages that would otherwise be installed in the Virtual Environments. There
+                                 are several advantages to this approach. First, the packages installed into the separate
+                                 Miniforges are completely independent from each other, which alleviates possible dependency
+                                 and versioning problems between the base Conda environment and the Virtual Environment.
+                                 Second, the tcsh shell has been historically less supported with the VEs, creating
+                                 problems for tcsh users. Finally, the modules can be freely loaded and unloaded, allowing
+                                 to completely clear the environment, which is more problematic with the VEs, as there
+                                 is always the base environment that remains.</span></span></span></p>
+                  </div>
+                  <!-- END SECTION HEADER -->
+                  <!-- REGION 1 -->
+                  <!-- END REGION 1 -->
+                  <!-- SECTION FOOTER -->
+                  
+                  <div class="uu-section__footer  ">
+                     <p></p>
+                  </div>
+                  <!-- END SECTION FOOTER -->
+                  </div>
+            </section>
+            <!-- END SECTION 1 -->
+            <!-- SECTION 2 -->
+            <!-- END SECTION 2 -->
+            <!-- SECTION 3 -->
+            <!-- END SECTION 3 -->
+            <!-- SECTION 4 -->
+            <!-- END SECTION 4 -->
+            <!-- SECTION 5 -->
+            <!-- END SECTION 5 -->
+            </main>
+         <!-- END MAIN CONTENT -->
+         <!-- FOOTER -->
+         
+         <footer class="uu-footer"><div class="uu-footer__top">
+   <div class="uu-footer__top-container">
+      <div class="uu-footer__top-col1"><a href="https://www.utah.edu"><img src="https://templates.utah.edu/_main-v3-1/images/template/blocku.svg" alt="The University of Utah" class="uu-block-logo"></a><div class="department-name">
+            <h2>The Center For High Performance Computing</h2>
+         </div>
+         <div class="department-address">
+            <p>155 S 1452 E, RM. 405<br>SLC, UT 84112-0190<br>801.585.3791&nbsp;</p>
+         </div>
+      </div>
+      <div class="uu-footer__top-col2">
+         <h2 class="footer-heading">Stay in Touch</h2>
+         <hr>
+         <ul>
+            <li><a href="https://map.utah.edu/index.html?code=inscc">Find Us</a></li>
+            <li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Us</a></li>
+            <li><a href="mailto:helpdesk@chpc.utah.edu">Webmaster</a></li>
+         </ul>
+      </div>
+      <div class="uu-footer__top-col5">
+         <h2 class="footer-heading">Quick Links</h2>
+         <hr>
+         <ul>
+            <li><a href="https://www.utah.edu/a-z/">A-Z Index</a></li>
+            <li><a href="https://people.utah.edu/uWho/basic.hml">Campus Directory</a></li>
+            <li><a href="https://www.map.utah.edu">Campus Map</a></li>
+            <li><a href="https://map.utah.edu/?allshuttle=on">Shuttle Tracker </a></li>
+            <li><a href="https://cis.utah.edu/">CIS</a></li>
+            <li><a href="https://www.umail.utah.edu/">UMail</a></li>
+            <li><a href="https://attheu.utah.edu/">@ The U</a></li>
+         </ul>
+      </div>
+   </div>
+</div><div class="uu-footer__bottom">
+   <div class="uu-footer__bottom-container">
+      <div class="uu-footer__bottom-col1"><a href="https://www.utah.edu/"><img src="https://templates.utah.edu/_main-v3-1/images/template/university-of-utah-logo.svg" alt="The University of Utah" class="uu-site-logo"></a></div>
+      <div class="uu-footer__bottom-col2">
+         <div class="legal">
+            <p>© 2024 The University of Utah</p>
+            <ul>
+               <li><a href="https://www.utah.edu/indigenous-land-acknowledgment/index.php">Indigenous Land Acknowledgment</a></li>
+               <li><a href="https://www.utah.edu/nondiscrimination/">Nondiscrimination &amp; Accessibility</a></li>
+               <li><a href="https://www.utah.edu/disclaimer/">Disclaimer</a></li>
+               <li><a href="https://www.utah.edu/privacy/">Privacy</a></li>
+               <li><a href="https://www.utah.edu/credits-v3.php">Credits &amp; Attributions</a></li>
+               <li><a href="https://attheu.utah.edu/media-contacts/">Media Contacts</a></li>
+               <li><span id="directedit"></span></li>
+            </ul>
+         </div>
+      </div>
+      <div class="uu-footer__bottom-col3">
+         <ul class="uu-social-list">
+            <li><a href="https://twitter.com/uutah"><span class="fa-brands fa-x-twitter" aria-hidden="true"></span><span class="sr-only">X</span></a></li>
+            <li><a href="https://www.facebook.com/universityofutah"><span class="fab fa-facebook" aria-hidden="true"></span><span class="sr-only">Facebook</span></a></li>
+            <li><a href="https://www.instagram.com/universityofutah/"><span class="fab fa-instagram" aria-hidden="true"></span><span class="sr-only">Instagram</span></a></li>
+            <li><a href="https://www.youtube.com/user/theuniversityofutah"><span class="fab fa-youtube" aria-hidden="true"></span><span class="sr-only">Youtube</span></a></li>
+         </ul>
+      </div>
+   </div>
+</div></footer>
+         <!-- END FOOTER -->
+         </div>
+      <!-- FOOT CODE -->
+      <script src="//templates.utah.edu/_main-v3-1/js/main.min.js"></script>
+      
+      
+      
+      
+      
+      
+      
+      <script src="//templates.utah.edu/_main-v3-1/js/directedit.js"></script><script><!--
+window.onload = function(){ directedit(); }
+//
+			--></script>
+      <script src="/_resources/js/custom.js"></script>
+            
+      <!-- END FOOT CODE -->
+      
+      <div id="hidden"><a id="de" href="https://a.cms.omniupdate.com/11/?skin=utah&amp;account=utah_home&amp;site=chpc2&amp;action=de&amp;path=/documentation/software/python-anaconda.pcf">Last Updated: 9/6/24</a></div>
+      <!-- END PAGE BODY -->
+      </body>
+</html>

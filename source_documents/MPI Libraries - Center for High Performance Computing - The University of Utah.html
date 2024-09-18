@@ -1,0 +1,706 @@
+<!DOCTYPE HTML><html lang="en-US" class="no-js">
+   <head><!-- PAGE HEAD -->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+      <title>MPI Libraries - Center for High Performance Computing - The University of Utah</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="robots" content="index,follow">
+      <link rel="icon" href="//templates.utah.edu/_main-v3-1/images/template/favicon.ico">
+      <link rel="apple-touch-icon-precomposed" href="//templates.utah.edu/_main-v3-1/images/template/apple-touch-icon.png">
+      <link rel="stylesheet" href="//templates.utah.edu/_main-v3-1/css/main.min.css" type="text/css"><noscript>
+         <link rel="stylesheet" href="//templates.utah.edu/_main-v3-1/css/assets/fontawesome/css/all.min.css" type="text/css"></noscript><link href="/_resources/css/custom.css" rel="stylesheet" type="text/css">
+      <script src="//templates.utah.edu/_main-v3-1/js/head-code.min.js"></script>
+      <!-- HEAD CODE -->
+      
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y160DVJ0DZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y160DVJ0DZ');
+</script>
+
+      
+      <!-- END HEAD CODE -->
+      <!-- END PAGE HEAD -->
+      </head>
+   <body class="has-headernav"><!-- PAGE BODY -->
+      <a class="uu-skip-link" href="#skip-link-target">Skip to content</a>
+      <!-- BODY TOP CODE -->
+            <!-- END BODY TOP CODE -->
+      
+      <div id="uu-top-target" class="uu-site"><!-- SEARCH -->
+         <div class="uu-search" role="search">
+    <div class="uu-search__container">
+        <!-- SITE SEARCH -->
+        <form method="get" id="search-site" class="uu-search__form" action="/search/index.php">
+
+            <label for="inputSearchSite" class="sr-only">Search Site:</label>
+            <input type="text" id="inputSearchSite" name="q" value="" placeholder="Search Site" />
+            <input type="hidden" name="gcse_action" value="site" />
+
+            <div class="form-powered-by">
+                <span>Powered by</span> 
+                <img src="https://templates.utah.edu/_main-v3-1/images/template/google-logo.png" alt="Google Search">
+            </div>
+
+        </form>
+        <!-- END SITE SEARCH -->
+        <!-- CAMPUS SEARCH -->
+        <form method="get" id="search-campus" class="uu-search__form" action="/search/index.php">
+
+            <label for="inputSearchCampus" class="sr-only">Search Campus:</label>
+            <input type="text" id="inputSearchCampus" name="q" value="" placeholder="Search Campus" />
+            <input type="hidden" name="gcse_action" value="campus" />
+
+            <div class="form-powered-by">
+                <span>Powered by</span> 
+                <img src="https://templates.utah.edu/_main-v3-1/images/template/google-logo.png" alt="Google Search">
+            </div>
+        </form>
+        <!-- END CAMPUS SEARCH -->
+
+        <!-- SEARCH TYPE TOGGLE -->
+        <div class="search-type-toggle">
+            <label class="uu-switch" for="search_campus_checkbox">
+                <input type="checkbox" name="search_campus_checkbox" value="" id="search_campus_checkbox">
+                <span class="uu-switch-slider"></span>
+                <span class="uu-switch-label">Search Campus</span>
+            </label>
+        </div>
+        <!-- END SEARCH TYPE TOGGLE -->
+
+    </div>
+</div><!-- END SEARCH -->
+         <!-- HEADER -->
+         
+         <header class="uu-header">
+            <div class="uu-header__container">
+               <!-- ALERT AREA -->
+               <div id="alert_bar" class="uu-alert-bar"> 
+	<a href="https://coronavirus.utah.edu/">University of Utah COVID-19 Updates</a>
+</div><!-- END ALERT AREA -->
+               
+               <div class="uu-header__top"> <a href="https://www.utah.edu/" class="uu-header__logo"><span class="sr-only">The University of Utah</span></a>                  <div class="uu-header__middle">
+                     <!-- HEADER TITLE -->
+                     <div class="uu-header__title">
+<h2><a href="/">CHPC - Research Computing and Data Support for the University</a></h2>
+<!-- <h3><a href="http://it.utah.edu">University Information Technology</a></h3> --></div><!-- END HEADER TITLE -->
+                     <!-- HEADER NAVIGATION -->
+                     
+<nav class="uu-header__nav">
+	
+<ul class="uu-menu__level1">
+<ul class="uu-menu__level1">
+<li class="has-sub"><a href="#">About Us</a>
+<ul class="sub-menu">
+<li><a href="/about/index.php">About Us</a></li>
+<li><a href="https://www.chpc.utah.edu/about/vision.php">Vision</a></li>
+<li><a href="/about/staff.php">Staff</a></li>
+<li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Information</a></li>
+<li><a href="https://www.chpc.utah.edu/about/acknowledge.php">Acknowledging CHPC</a></li>
+<li><a href="https://www.chpc.utah.edu/highlights.php">Research Highlights</a></li>
+<li><a href="https://www.chpc.utah.edu/about/partners.php">Partners</a></li>
+<li><a href="/news/index.php">News</a></li>
+<li><a href="/about/governance.php">Governance</a></li>
+</ul>
+</li>
+<li class="has-sub"><a href="#">Resources</a>
+<ul class="sub-menu">
+<li><a href="https://www.chpc.utah.edu/resources/index.php">Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/HPC_Clusters.php">HPC Clusters</a></li>
+<li><a href="/resources/storage_services.php">Storage Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="/resources/virtualmachines.php">Virtual Machines</a></li>
+<li><a href="/resources/hosting.php">Hosting Services</a></li>
+<li><a href="/resources/Networking.php">Networking</a></li>
+<li><a href="/resources/ProtectedEnvironment.php">Protected Environment</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="/userservices/index.php">User Services</a></li>
+</ul>
+</li>
+<li class="has-sub sub-width-lg"><a href="#">Documentation</a>
+<ul class="sub-menu">
+<li><a href="https://www.chpc.utah.edu/documentation/index.php">Documentation</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/gettingstarted.php">Getting Started</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/access.php">Accessing Our Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/videos/index.php">Short Training Videos</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/index.php">Cluster Guides</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/beehive.php">Beehive User Guide (Windows Server)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/gpus-accelerators.php">GPU &amp; Accelerators</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/frisco-nodes.php">Frisco Nodes</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/narwhal.php">Narwhal User Guide (Protected Environment Statistics)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/software/index.php">Software</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php">Programming Guide</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/policies/index.php">Policy Manual</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/HelloWorldMPI.php">HPC Basics - Hello World MPI</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/faq.php">Frequently Asked Questions</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/white_papers/index.php">White Papers</a></li>
+</ul>
+</li>
+<li class="has-sub"><a href="#">User Services</a>
+<ul class="sub-menu">
+<li><a href="/userservices/index.php">User Services</a></li>
+<li><a href="https://www.chpc.utah.edu/userservices/accounts.php">Accounts</a></li>
+<li><a href="/userservices/allocations.php">Allocations</a></li>
+<li><a href="/userservices/gettinghelp.php">Getting Help</a></li>
+<li><a href="https://www.chpc.utah.edu/presentations/index.php">Training</a></li>
+</ul>
+</li>
+<li class="has-sub sub-width-lg"><a href="#">Usage</a>
+<ul class="sub-menu">
+<li><a href="/usage/cluster/index.php">Cluster Usage</a>
+<ul>
+<li><a href="/usage/cluster/current-project-general.php">General Allocation Pool</a></li>
+<li><a href="/usage/cluster/current-project-lonepeak.php">Lonepeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-kingspeak.php">Kingspeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-ash.php">Ash Cluster</a></li>
+<li><a href="/usage/cluster/current-project-redwood.php">Redwood Cluster</a></li>
+</ul>
+</li>
+<li><a href="/usage/graphs.php?g=cluster%20utilization&amp;host=combined&amp;type=daily_utilization">Cluster Utilization Graphs</a></li>
+<li><a href="/usage/graphs.php?g=hpc%20cluster%20scratch&amp;host=chpc_gen&amp;type=cpu">HPC Cluster Scratch</a></li>
+<li><a href="/usage/graphs.php?g=network&amp;host=Campus+Gateway&amp;type=daily_traffic">Network</a>
+<ul>
+<li><a href="/resources/maddash-dashboards.php">Maddash Dashboards</a></li>
+</ul>
+</li>
+<li><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">UEN Weathermap (Only Available on UEN Networks)</a></li>
+<li><a href="http://snapp2.bldc.grnoc.iu.edu/i2al2s/#&amp;p=3%2C42&amp;ccid=3&amp;tab=1&amp;search=undefined&amp;pwidth=undefined&amp;ccat=undefined&amp;url=show-graph.cgi%3Fcollection_ids%3D145%26end%3D1461772131%26start%3D1461771831%26cf%3DAVERAGE%26ds%3Doutput%2Cinput%26collection_ids%3D145" target="_blank" rel="noopener">UEN Aggregate Utilization</a></li>
+<li><a href="http://uofu.status.io">UofU IT Services Status</a></li>
+<li><a href="https://status.it.utah.edu">University Application Heath Summary - NOC</a></li>
+</ul>
+</li>
+<li><a href="/role/">My Account</a></li>
+</ul>
+</ul>	
+</nav>
+
+<!-- END HEADER NAVIGATION -->
+                     </div>
+                  <div class="uu-search-toggle"><button class="uu-search__trigger"><span class="far fa-search" aria-hidden="true"></span><span class="sr-only">Search</span></button></div><button id="jsNavTrigger" class="uu-nav__trigger" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Reveal Menu</span><span></span></button></div>
+            </div>
+         </header>
+         <!-- END HEADER -->
+         <!-- PUSH NAVIGATION -->
+         
+         <section class="uu-nav">
+            <div class="uu-nav__container"><button id="jsMobileNavTrigger" class="uu-nav__trigger" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Reveal Menu</span><span></span></button><header class="uu-nav__header">
+                  <h2 class="sr-only">Main Navigation</h2>
+                  <!-- Navigation Logo -->
+<a href="https://utah.edu/" class="uu-nav__logo">
+	<img src="https://templates.utah.edu/_main-v3-1/images/template/university-of-utah-logo.svg" alt="The University of Utah"/>
+</a></header>
+               <nav class="uu-menu" aria-label="main"><p><h2 class="uu-menu__title">Main Menu</h2>
+<hr />
+<ul class="uu-menu__level1">
+<li><a href="/">Home</a></li>
+<li class="has-sublist"><a href="#">About Us</a>
+<ul class="uu-menu__level2">
+<li><a href="/about/index.php">About Us</a></li>
+<li><a href="https://www.chpc.utah.edu/about/vision.php">Vision</a></li>
+<li><a href="/about/staff.php">Staff</a></li>
+<li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Information</a></li>
+<li><a href="https://www.chpc.utah.edu/about/acknowledge.php">Acknowledging CHPC</a></li>
+<!--<li><a href="/about/bibliography/CHPC%20BIB.pdf" target="_blank" rel="noopener">CHPC Bibliography</a></li>-->
+<li><a href="https://www.chpc.utah.edu/about/SupportedResearch.php">Supported Research</a></li>
+<li><a href="https://www.chpc.utah.edu/highlights.php">Research Highlights</a></li>
+<li><a href="https://www.chpc.utah.edu/about/partners.php">Partners</a></li>
+<li><a href="/news/index.php">News</a></li>
+<li><a title="University Information Technology" href="https://it.utah.edu/" target="_blank" rel="noopener">UIT</a></li>
+<li><a href="/about/governance.php">Governance</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Resources</a>
+<ul class="uu-menu__level2">
+<li><a href="https://www.chpc.utah.edu/resources/index.php">Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/HPC_Clusters.php">HPC Clusters</a></li>
+<li><a href="/resources/storage_services.php">Storage Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="/resources/virtualmachines.php">Virtual Machines</a></li>
+<li><a href="/resources/hosting.php">Hosting Services</a></li>
+<li><a href="/resources/Networking.php">Networking</a></li>
+<li><a href="/resources/ProtectedEnvironment.php">Protected Environment</a></li>
+<li><a href="/documentation/software/ai.php">AI/ML Resources</a></li>
+<li><a href="/userservices/index.php">User Services</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Documentation</a>
+<ul class="uu-menu__level2">
+<li><a href="https://www.chpc.utah.edu/documentation/index.php">Documentation</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/gettingstarted.php">Getting Started</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/access.php">Accessing Our Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/videos/index.php">Short Training Videos</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/index.php">Cluster Guides</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/beehive.php">Beehive User Guide (Windows Server)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/gpus-accelerators.php">GPU &amp; Accelerators</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/frisco-nodes.php">Frisco Nodes</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/narwhal.php">Narwhal User Guide (Protected Environment Statistics)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/software/index.php">Software</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php">Programming Guide</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/policies/index.php">Policy Manual</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/HelloWorldMPI.php">HPC Basics - Hello World MPI</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/faq.php">Frequently Asked Questions</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/white_papers/index.php">White Papers</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">User Services</a>
+<ul class="uu-menu__level2">
+<li><a href="/userservices/index.php">User Services</a></li>
+<li><a href="https://www.chpc.utah.edu/userservices/accounts.php">Accounts</a></li>
+<li><a href="/userservices/allocations.php">Allocations</a></li>
+<li><a href="/userservices/gettinghelp.php">Getting Help</a></li>
+<li><a href="https://www.chpc.utah.edu/presentations/index.php">Training</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Usage</a>
+<ul class="uu-menu__level2">
+<li class="has-sublist"><a href="/usage/cluster/index.php">Cluster Usage</a>
+<ul class="uu-menu__level3">
+<li><a href="/usage/cluster/current-project-general.php">General Allocation Pool</a></li>
+<li><a href="/usage/cluster/current-project-lonepeak.php">Lonepeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-kingspeak.php">Kingspeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-ash.php">Ash Cluster</a></li>
+<li><a href="/usage/cluster/current-project-redwood.php">Redwood Cluster</a></li>
+</ul>
+</li>
+<li><a href="/usage/graphs.php?g=cluster%20utilization&amp;host=combined&amp;type=daily_utilization">Cluster Utilization Graphs</a></li>
+<li><a href="/usage/graphs.php?g=hpc%20cluster%20scratch&amp;host=chpc_gen&amp;type=cpu">HPC Cluster Scratch</a></li>
+<li class="has-sublist"><a href="/usage/graphs.php?g=network&amp;host=Campus+Gateway&amp;type=daily_traffic">Network</a>
+<ul class="uu-menu__level3">
+<li><a href="/resources/maddash-dashboards.php">Maddash Dashboards</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">UEN Weathermap</a>
+<ul class="uu-menu__level3">
+<li><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">(Only Available on UEN Networks)</a></li>
+</ul>
+</li>
+<li><a href="http://snapp2.bldc.grnoc.iu.edu/i2al2s/#&amp;p=3%2C42&amp;ccid=3&amp;tab=1&amp;search=undefined&amp;pwidth=undefined&amp;ccat=undefined&amp;url=show-graph.cgi%3Fcollection_ids%3D145%26end%3D1461772131%26start%3D1461771831%26cf%3DAVERAGE%26ds%3Doutput%2Cinput%26collection_ids%3D145" target="_blank" rel="noopener">UEN Aggregate Utilization</a></li>
+<li><a href="http://uofu.status.io">UofU IT Services Status</a></li>
+<li><a href="https://status.it.utah.edu">University Application Heath Summary - NOC</a></li>
+</ul>
+</li>
+<li><a href="/role/">My Account</a></li>
+</ul></p></nav>
+            </div>
+         </section>
+         <!-- END PUSH NAVIGATION -->
+         
+         <!-- MAIN CONTENT -->
+         <main class="uu-main" id="skip-link-target">
+            <nav aria-label="Breadcrumb" class="uu-breadcrumb">
+               <ol>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/documentation/">documentation</a></li>
+                  <li><a href="/documentation/software/">software</a></li>
+                  <li><span class="sr-only">current page: </span>MPI Libraries</li>
+               </ol>
+            </nav>
+            <!-- SECTION 1 -->
+            
+            <section class="uu-section bg-white text-default uu-section--region-1" style="">
+               <div class="uu-section__container"><!-- SECTION HEADER -->
+                  
+                  <div class="uu-section__header  ">
+                     <h1>Message Passing Interface</h1>
+                     <p>Message Passing Interface (MPI) is the principal method of performing parallel computations
+                        on all CHPC clusters. Its main component is a standardized library that enables communication
+                        between processors in distributed processor environments.</p>
+                     <ul id="in_text_nav" class="crawl_skip">
+                        <li class="crawl_skip" style="margin-left: 0px;"><a href="#a">MPI Distributions</a></li>
+                        <li class="crawl_skip" style="margin-left: 0px;"><a href="#b">Setting MPI and Compiling</a><ul id="in_text_nav" class="crawl_skip">
+                              <li class="crawl_skip" style="margin-left: 0px;"><a href="#c">Compiling</a></li>
+                           </ul>
+                        </li>
+                        <li><a href="#d">Running with MPI</a><ul id="in_text_nav" class="crawl_skip">
+                              <li><a href="#e">Multi-threaded MPI</a></li>
+                              <li><a href="#f">Task/thread affinity</a></li>
+                              <li><a href="#g">Running MVAPICH2 programs</a></li>
+                              <li><a href="#h">Running OpenMPI programs</a></li>
+                              <li><a href="#i">Running MPICH programs</a></li>
+                              <li><a href="#j">Running Intel MPI programs</a></li>
+                              <li><a href="#k">Network selection with Intel MPI</a></li>
+                              <li><a href="#l">Single and multi-threaded process/thread affinity</a></li>
+                           </ul>
+                        </li>
+                        <li><a href="#m">Common MPI ABI</a></li>
+                     </ul>
+                  </div>
+                  <!-- END SECTION HEADER -->
+                  <!-- REGION 1 -->
+                  
+                  <div class="uu-section__region bg-white text-default no-border">
+                     <p><!--crawl_skip--></p>
+                     <h2><a id="a"></a>MPI Distributions</h2>
+                     <p>There are numerous MPI distributions available and thus CHPC supports only some of
+                        them, those we believe are best suited for the particular system.</p>
+                     <p>More information:<span>&nbsp;</span><a href="http://www.mpi-forum.org/docs/" target="_blank" rel="noopener">MPI standard page</a>.</p>
+                     <p>The CHPC clusters utilize two types of network interconnects, Ethernet and InfiniBand.
+                        Except for some nodes on Lonepeak, all clusters have InfiniBand and users should use
+                        it since it is much faster than Ethernet.</p>
+                     <p>We provide a number of MPI distributions with InfiniBand support: OpenMPI, MVAPICH2,
+                        MPICH and Intel MPI. All these MPI implementations also support multiple network interfaces
+                        in a single build, usage is described in a<span>&nbsp;</span><a href="/documentation/software/single-executable.php">this page</a>.&nbsp;</p>
+                     <p>More information from the developers of each MPI distribution can be found here:</p>
+                     <ul>
+                        <li>
+                           <p><a href="http://www.open-mpi.org/" target="_blank" rel="noopener">OpenMPI</a></p>
+                        </li>
+                        <li>
+                           <p><a href="http://mvapich.cse.ohio-state.edu/" target="_blank" rel="noopener">MVAPICH2</a></p>
+                        </li>
+                        <li>
+                           <p><a href="https://software.intel.com/en-us/intel-mpi-library" target="_blank" rel="noopener">Intel MPI</a></p>
+                        </li>
+                        <li>
+                           <p><a href="http://www.mpich.org/" target="_blank" rel="noopener">MPICH</a></p>
+                        </li>
+                     </ul>
+                     <h2><a id="b"></a>Setting MPI and Compiling</h2>
+                     <p>Before performing any work with MPI, users need to initialize the environment for
+                        the MPI distribution appropriate for their needs. Each of the distributions has its
+                        pros and cons. Intel MPI has good performance and very flexible usage, but, we have
+                        seen problems with some of its versions on the AMD CPUs. MVAPICH2 is optimized for
+                        InfiniBand, but, it does not provide flexible process/core affinity in multi-threaded
+                        environment. MPICH is more of a reference platform, for which we build InfiniBand
+                        support through the UCX library. Its feature set is the same as that of Intel MPI
+                        and&nbsp; MVAPICH2 (both of which are based on MPICH). Intel MPI, MVAPICH2 and MPICH can
+                        also be freely interchanged thanks to their common <a href="#cma">Application Binary Interface</a> (ABI), which main advantage is no need to build separate binaries for each distribution.</p>
+                     <p>Finally, OpenMPI is quite flexible, and on InfiniBand we see better performance than
+                        with Intel MPI and MVAPICH2. However, it is not ABI compatible with the other MPIs
+                        that we provide. Still, as of late 2023, it is the most versatile MPI distribution
+                        across the heterogeneous CHPC resources which is why it is our choice for building
+                        most applications.</p>
+                     <p>If you have any doubts on what MPI to use, <a href="mailto:helpdesk@chpc.utah.edu?subject=">contact us</a>.</p>
+                     <p>Note that in the past we have provided separate MPI builds for different clusters.
+                        Since these days most MPIs provide flexible interfaces for multiple networks, we provide
+                        single builds for all clusters and allow for <a href="https://www.chpc.utah.edu/documentation/software/single-executable.php#mpi">changing the default network interface</a> at runtime.</p>
+                     <p>To set up general MPI package, use the module command as:</p>
+                     <p><span style="font-family: monospace;"><strong>module load <span style="color: #ff0000;">&lt;compiler&gt;&nbsp;</span></strong><span style="color: #ff0000;"><strong>&lt;MPI distro&gt;</strong></span></span></p>
+                     <p>where</p>
+                     <p><code style="background-color: lightgray;"><strong><span style="color: #ff0000;">&lt;MPI distro&gt;</span></strong></code><code style="background-color: lightgray;">= <span style="color: #000080;">openmpi, </span><span style="color: #008080;">mvapich2</span>, <span style="color: #000080;">mpich, intel-oneapi-mpi</span></code><br><code style="background-color: lightgray;"><strong><span style="color: #ff0000;">&lt;compiler&gt;</span></strong> = <span style="color: #000000;">gcc</span> (GNU), <span style="color: #800000;">intel-oneapi-compilers</span> (Intel), <span style="color: #0000ff;">nvhpc</span> (Nvidia)</code><br><br>&nbsp;<strong>Example 1</strong>. If you were running a program that was compiled with the <span style="color: #800000;">GNU compilers</span> and uses <span style="color: #008080;">mvapich2</span>&nbsp; :</p>
+                     <p><code style="background-color: lightgray;">module load <span style="color: #800000;">gcc </span><span style="color: #ff0000;"><span style="color: #008080;">mvapich2</span></span></code></p>
+                     <p><strong>Example 2</strong>. If you were running a program that was compiled with the <span style="color: #0000ff;">NVHPC compiler</span>s and uses <span style="color: #333399;">OpenMPI</span>&nbsp;:</p>
+                     <p><code style="background-color: lightgray;">module load <span style="color: #0000ff;">nvhpc </span><span style="color: #333399;">openmpi</span></code></p>
+                     <p>&nbsp;<span style="color: #000000;">The CHPC keeps older versions of each MPI distribution, however, the backwards compatibility
+                           is sometimes compromised due to network driver and compiler upgrades. When in doubt,
+                           please, use the latest versions of compilers and MPI distributions as obtained with
+                           the <span class="faux-code">module load</span> command. These older versions can be found with the <code style="background-color: lightgray;">module spider &lt;MPI distro&gt;</code> command.</span></p>
+                     <h4><span style="color: #000000;"><a id="c"></a>Compiling</span></h4>
+                     <p><span style="color: #000000;">Compiling with MPI is quite straightforward. Below is a list of MPI compiler commands
+                           with their equivalent standard version:</span></p>
+                     <table>
+                        <tbody>
+                           <tr>
+                              <th>
+                                 <p>Language</p>
+                              </th>
+                              <th>
+                                 <p>MPI Command</p>
+                              </th>
+                              <th>
+                                 <p>Standard Commands</p>
+                              </th>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p>C</p>
+                              </td>
+                              <td>
+                                 <p><code style="background-color: lightgray;">mpicc</code></p>
+                              </td>
+                              <td>
+                                 <p><code style="background-color: lightgray;">gcc, icc, nvc</code></p>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p>C++</p>
+                              </td>
+                              <td>
+                                 <p><code style="background-color: lightgray;">mpicxx</code></p>
+                              </td>
+                              <td>
+                                 <p><code style="background-color: lightgray;">g++, icpc, nvc++</code></p>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p>Fortran 77/90</p>
+                              </td>
+                              <td>
+                                 <p><code style="background-color: lightgray;">mpif90,mpif77, mpifort</code></p>
+                              </td>
+                              <td>
+                                 <p><code style="background-color: lightgray;">gfortran, ifort, nvfortran</code></p>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <p>&nbsp;</p>
+                     <p>When you compile, make sure you record what version of MPI you used. The std builds
+                        are periodically updated, and programs will sometimes break if they depend on the
+                        std builds.</p>
+                     <p>Note that Intel MPI supplies separate compiler commands (wrappers) for the Intel compilers,
+                        in a form of <strong><span class="faux-code">mpiicc</span></strong>, <strong><span class="faux-code">mpiicpc</span></strong> and <strong><span class="faux-code">mpiifort</span></strong>. Using <span class="faux-code">mpicc</span>, <span class="faux-code">mpicxx</span> and <span class="faux-code">mpif90</span> will call the GNU compilers.</p>
+                     <h2><a id="d"></a>Running with MPI</h2>
+                     <p>mpirun command launches the parallel job. For help with <code style="background-color: lightgray;">mpirun</code>, please consult the manpages (<code style="background-color: lightgray;">man mpirun</code>) or run <code style="background-color: lightgray;">mpirun --help</code>. The important parameter is the number of MPI processes specification (-np)<strong>.</strong></p>
+                     <p>To run on a cluster, or on a CHPC supported Linux desktop desktop<span style="color: #008000;"><span style="color: #003366;"></span></span><span style="color: #ff6600;"></span>:</p>
+                     <p><code style="background-color: lightgray;">mpirun -np $SLURM_NTASKS ./program</code></p>
+                     <p>The <span class="faux-code">$SLURM_NTASKS</span> variable corresponds to SLURM task count requested with the <span class="faux-code">#SBATCH -n</span> option.</p>
+                     <h4><a id="e"></a>Multi-threaded MPI</h4>
+                     <p>For optimal performance, especially in the case of multi-threaded parallel programs,
+                        there are additional arguments that must be passed to the program. Specifically, the
+                        variable <span class="faux-code">OMP_NUM_THREADS</span> (number of threads to parallelize over) needs to be set. When running multi-threaded
+                        jobs, make sure to also link multi-threaded libraries (e.g. <a href="https://www.chpc.utah.edu/documentation/software/mathlibraries.php#mkl">MKL</a>, <a href="https://www.chpc.utah.edu/documentation/software/mathlibraries.php#fftw">FFTW</a>), and vice versa, link single threaded libraries to single threaded MPI programs.</p>
+                     <p>The <span class="faux-code">OMP_NUM_THREADS</span> count can be calculated automatically by utilizing SLURM provided variables, assuming
+                        that all nodes have the same CPU core count. This can prevent accidental over or under-subscription
+                        when node or task count in the SLURM script changes:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <p># find number of threads for OpenMP<br># find number of MPI tasks per node<br>set TPN=`echo $SLURM_TASKS_PER_NODE | cut -f 1 -d \(`<br># find number of CPU cores per node<br>set PPN=`echo $SLURM_JOB_CPUS_PER_NODE | cut -f 1 -d \(`<br>@ THREADS = ( $PPN / $TPN )<br>setenv OMP_NUM_THREADS $THREADS<br><br>mpirun -genv $OMP_NUM_THREADS -np $SLURM_NTASKS ./program</p>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>&nbsp;</p>
+                     <h4><a id="f"></a>Task/Thread affinity</h4>
+                     <p>In the NUMA (Non Uniform Memory Access) architecture, which is present on all CHPC
+                        clusters, it is often advantageous to pin MPI tasks and/or OpenMP threads to the CPU
+                        sockets and cores. We have seen up to 60% performance degradation in high memory bandwidth
+                        codes when process/thread affinity is not enforced. The pinning prevents the processes
+                        and threads to migrate to CPUs which have more distant path to the data in the memory.
+                        Most commonly we would set the MPI task to be pinned to a CPU socket, with OpenMP
+                        threads allowed to migrate over this socket's cores. All MPIs except for MPICH automatically
+                        bind MPI tasks to CPUs, but the behavior and adjustment options depend on the MPI
+                        distribution. We describe MPI task pinning in the relevant MPI section below, for
+                        more details on the problem see <a href="https://www.chpc.utah.edu/documentation/software/mathlibraries.php#mkl" target="_blank" rel="noopener">our blog post</a>, which provides a general solution using a <a href="http://home.chpc.utah.edu/~mcuma/code/pinthreads.sh">shell script</a> that pins both tasks and threads to cores.</p>
+                     <h4><a id="g"></a>Running MVAPICH2 programs</h4>
+                     <p>MVAPICH2 by default binds MPI tasks to cores, so, optimal binding of single threaded
+                        MPI program is one MPI task to one CPU core and is achieved with plainly running:</p>
+                     <p><code style="background-color: lightgray;">mpirun -np $SLURM_NTASKS ./program</code></p>
+                     <p>For multi-threaded parallel programs, we need to change the MPI process distribution
+                        and binding. In the most common distribution of one or few MPI tasks per CPU socket,
+                        we use MV2_CPU_BINDING_LEVEL=socket and MV2_CPU_BINDING_POLICY=scatter. We can also
+                        pin the OpenMP threads manually, which is can be done using Intel compilers with <span class="faux-code">KMP_AFFINITY=verbose,granularity=core,compact,1,0</span>. To run multi-threaded MVAPICH2 code compiled with Intel compilers:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <p class="text-left">module load intel mvapich2<br># find number of threads for OpenMP<br># find number of MPI tasks per node<br>set TPN=`echo $SLURM_TASKS_PER_NODE | cut -f 1 -d \(`<br># find number of CPU cores per node<br>set PPN=`echo $SLURM_JOB_CPUS_PER_NODE | cut -f 1 -d \(`<br>@ THREADS = ( $PPN / $TPN )<br>setenv OMP_NUM_THREADS $THREADS<br><br>mpirun -genv OMP_NUM_THREADS $OMP_NUM_THREADS -genv MV2_CPU_BINDING_LEVEL socket -genv
+                           MV2_CPU_BINDING_POLICY scatter -genv KMP_AFFINITY verbose,granularity=core,compact,1,0
+                           -np $SLURM_NTASKS ./program</p>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>&nbsp;</p>
+                     <p>See the <a href="https://mvapich.cse.ohio-state.edu/static/media/mvapich/mvapich2-userguide.pdf" target="_blank" rel="noopener">MVAPICH2 user's guide</a> for details on the MV2_CPU affinity options shown above. In general, without enforcing
+                        the OpenMP CPU affinity, we can use the mpirun command below with any compiler which
+                        will result in binding MPI tasks on all the CPU cores in one socket.</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <p>mpirun -genv OMP_NUM_THREADS 8 -genv MV2_CPU_BINDING_LEVEL socket -genv MV2_CPU_BINDING_POLICY
+                           scatter -np 2 ./myprogram<br>taskset -cp 8700<br>pid 8700's current affinity list: 0-7,16-23<br>taskset -cp 8701<br>pid 8701's current affinity list: 8-15,24-31</p>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>&nbsp;</p>
+                     <h4><a id="h"></a>Running OpenMPI programs</h4>
+                     <p>On the Rocky Linux 8, our tests show that for the InfiniBand, OpenMPI performance
+                        is better to that of MVAPICH2. Although OpenMPI is not binary compatible with the
+                        other MPI distributions that we offer, it has some appealing features and as of July
+                        2022 seems to be more stable than Intel MPI, especially on the AMD platforms. Again,
+                        see the manpages for OpenMPI for details.</p>
+                     <p>Running OpenMPI programs is straightforward, and the same on all clusters:</p>
+                     <p><code style="background-color: lightgray;">mpirun -np $SLURM_NTASKS $WORKDIR/program.exe </code></p>
+                     <p>mpirun flags for multi-threaded process distribution and binding to the CPU sockets
+                        are<code style="background-color: lightgray;">-map-by socket -bind-to socket</code>.</p>
+                     <p>To run an OpenMPI program multithreaded:</p>
+                     <p><code style="background-color: lightgray;"> mpirun -np $SLURM_NTASKS -map-by socket -bind-to socket $WORKDIR/program.exe<br></code></p>
+                     <p>OpenMPI will automatically select the optimal network interface. To force it to use
+                        Ethernet, use<span class="faux-code"> the "--mca btl tcp,self"</span> mpirun flag. Network configuration runtime flags are detailed <a href="https://www.open-mpi.org/faq/?category=tcp#tcp-selection" target="_blank" rel="noopener">here</a>.</p>
+                     <h4><a id="i"></a>Running MPICH programs</h4>
+                     <p><a href="http://www.mpich.org/">MPICH</a> (formerly referred to as MPICH2) is an open source implementation developed at Argonne
+                        National Laboratories. Its newer versions support both Ethernet and InfiniBand, although
+                        we do not provide cluster specific MPICH build, mainly since MVAPICH2 which is derived
+                        from MPICH provides additional performance tweaks. MPICH should only be used for debugging
+                        on interactive nodes, single node runs and and embarrassingly parallel problems, as
+                        its InfiniBand build does not ideally match our drivers.</p>
+                     <p><code style="background-color: lightgray;">mpirun -np $SLURM_NTASKS ./program.exe</code></p>
+                     <p>Since by default MPICH does not bind tasks to CPUs, use <span class="faux-code">-bind-to core</span> option to bind tasks to cores in case of single threaded program. For multi-threaded
+                        programs, one can use <code style="background-color: lightgray;">-bind-to numa map-by numa</code>, with details on the <span class="faux-code">-bind-to</span> option obtained by running <span class="faux-code">mpirun -bind-to -help</span>, or consulting the <a href="https://wiki.mpich.org/mpich/index.php/Using_the_Hydra_Process_Manager#Process-core_Binding" target="_blank" rel="noopener">Hydra process manager help page</a>. The multi-threaded process/thread affinity seems to be working quite well with MPICH,
+                        for example, on a 16 core Kingspeak node with core-memory mapping:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <p>numactl -H<br>available: 2 nodes (0-1)<br>node 0 cpus: 0 1 2 3 4 5 6 7 16 17 18 19 20 21 22 23<br>node 1 cpus: 8 9 10 11 12 13 14 15 24 25 26 27 28 29 30 31<br>mpirun -bind-to numa -map-by numa -genv OMP_NUM_THREADS 8 -np 2 ./myprogram<br>taskset -cp 8595<br>pid 8595's current affinity list: 8-15,24-31<br>mpirun -bind-to core:4 -map-by numa -genv OMP_NUM_THREADS 4 -np 4<br>taskset -cp 9549<br>pid 9549's current affinity list: 0-3,16-19</p>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>&nbsp;</p>
+                     <p>Notice that the binding is also correctly assigned to a subset of CPU socket cores
+                        when we use 4 tasks on 2 sockets. Intel MPI is also capable of this, MVAPICH2 (unless
+                        using MPICH's flags) and OpenMPI don't seem to have an easy way to do this.</p>
+                     <p>By default, MPICH that we build with the UCX library picks the InfiniBand, to force
+                        it to use Ethernet, set environment variable UCX_NET_DEVICES=eth0.</p>
+                     <p>Note that all the examples above only pin MPI tasks to cores, allowing the OpenMP
+                        threads to freely float across the task's cores. Sometime it is advantageous to also
+                        pin threads, which is decribed&nbsp;<a href="https://aciref.org/how-to-gain-hybrid-mpi-openmp-code-performance-without-changing-a-line-of-code-a-k-a-dealing-with-task-affinity/" target="_blank" rel="noopener">here</a>.</p>
+                     <h4><a id="j"></a>Running Intel MPI programs</h4>
+                     <p>Intel MPI is a high performance MPI library which runs on many different network interfaces.
+                        Apart from its runtime flexibility, it also integrates with other Intel tools (compilers,
+                        performance tools). For a quick introduction to Intel MPI, see the Getting Started
+                        guide, <a href="https://software.intel.com/en-us/get-started-with-mpi-for-linux" target="_blank" rel="noopener">https://software.intel.com/en-us/get-started-with-mpi-for-linux</a>.</p>
+                     <p>Intel MPI by default works with whatever interface it finds on the machine at runtime.
+                        To use it&nbsp;<code style="background-color: lightgray;">module load intel-oneapi-mpi</code>&nbsp;.</p>
+                     <p>For best performance we recommend using Intel compilers along with the IMPI, so, to
+                        build, use the Intel compiler wrapper calls <span class="faux-code">mpiicc</span>, <span class="faux-code">mpiicpc</span>, <span class="faux-code">mpiifort</span>.</p>
+                     <p>For example</p>
+                     <p><code style="background-color: lightgray;">mpiicc code.c -o executable</code></p>
+                     <h4><a id="k"></a>Network selection with Intel MPI</h4>
+                     <p>Intel MPI network interface selection is controlled by the underlying LibFabrics'
+                        <a href="https://www.intel.com/content/www/us/en/docs/mpi-library/developer-guide-linux/2021-6/ofi-providers-support.html" target="_blank" rel="noopener">FI_PROVIDER</a> environment variable. We set the appropriate FI_PROVIDER for the InfiniBand and Ethernet
+                        clusters in the intel-oneapi-mpi module file. We can verify the network selection
+                        by running the Intel MPI benchmark and look at the time it takes to send a message
+                        from one node to another:</p>
+                     <p><code style="background-color: lightgray;">salloc -n 2 -N 2 -A mygroup -p kingspeak--pty /bin/tcsh -l</code></p>
+                     <p><code style="background-color: lightgray;">mpirun -np 2 $INTEL_ONEAPI_MPI_ROOT/bin/IMB-MPI1</code></p>
+                     <p><code style="background-color: lightgray;">#---------------------------------------------------</code><br><code style="background-color: lightgray;"># Benchmarking PingPong</code><br><code style="background-color: lightgray;"># #processes = 2</code><br><code style="background-color: lightgray;">#---------------------------------------------------</code><br><code style="background-color: lightgray;"> #bytes #repetitions t[usec] Mbytes/sec</code><br><code style="background-color: lightgray;"> 0 1000 1.74 0.00</code></p>
+                     <p>It takes 1.75 microseconds to send a message there and back which is typical for InfiniBand
+                        network.</p>
+                     <p><span style="line-height: 1.75;">If we'd like to use the Ethernet network instead (except for Lonepeak, not recommended
+                           for production due to slower communication speed), we choose </span><code style="background-color: lightgray;">FI_PROVIDER tcp</code><span style="line-height: 1.75;"> and get:</span></p>
+                     <p><code style="background-color: lightgray;">mpirun -genv FI_PROVIDER tcp -np 2 $INTEL_ONEAPI_MPI_ROOT/bin/IMB-MPI1 </code></p>
+                     <p><code style="background-color: lightgray;">#---------------------------------------------------</code><br><code style="background-color: lightgray;"># Benchmarking PingPong</code><br><code style="background-color: lightgray;"># #processes = 2</code><br><code style="background-color: lightgray;">#---------------------------------------------------</code><br><code style="background-color: lightgray;"> #bytes #repetitions t[usec] Mbytes/sec</code><br><code style="background-color: lightgray;"> 0 1000 18.56 0.00</code></p>
+                     <p>Notice that the latency on the Ethernet is about 10x larger than on the InfiniBand.</p>
+                     <h4><a id="l"></a>Single and multi-threaded process/thread affinity</h4>
+                     <p>Intel MPI pins processes and threads to sockets by default, so, no additional runtime
+                        options should be needed unless the process/thread mapping needs to be different.
+                        If that is the case, consult the <a href="https://software.intel.com/sites/products/documentation/hpc/ics/impi/41/lin/Reference_Manual/Interoperability_with_OpenMP.htm" target="_blank" rel="noopener">OpenMP interoperability guide</a>. For the common default pinning.:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>mpirun -genv OMP_NUM_THREADS 8 -np 2 ./myprog<br>taskset -cp 10085<br>pid 10085's current affinity list: 0-7,16-23<br>mpirun -genv OMP_NUM_THREADS 4 -np 4 ./myprog<br>taskset -cp 9119<br>pid 9119's current affinity list: 0-3,16-19</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>&nbsp;</p>
+                     <p>Based on our investigation detailed in <a href="https://aciref.org/how-to-gain-hybrid-mpi-openmp-code-performance-without-changing-a-line-of-code-a-k-a-dealing-with-task-affinity/" target="_blank" rel="noopener">here</a>, Intel MPI does the best job in pinning MPI tasks and OpenMP threads, but, in case
+                        of more exotic MPI tasks/OpenMP threads combinations, use our task/thread <a href="http://home.chpc.utah.edu/~mcuma/code/pinthreads.sh">pinning script</a>.</p>
+                     <h2><a id="m"></a>Common MPI ABI</h2>
+                     <p>From Intel MPI 5.0 and MPICH 3.1 (and MVAPICH2 1.9 and higher which is based on MPICH
+                        3.1), the libraries are interchangeable at the binary level, using common Application
+                        Binary Interface (ABI). This in practice means that one can build the application
+                        with MPICH, but, run it using the Intel MPI libraries, and thus taking advantage of
+                        the Intel MPI functionality. See details about this and suggestions for future directions
+                        at <a href="https://dl.acm.org/doi/fullHtml/10.1145/3615318.3615319" target="_blank" rel="noopener">this article</a>.</p>
+                     <p><code style="background-color: lightgray;"></code></p>
+                     <p id="cma"></p>
+                  </div>
+                  <!-- END REGION 1 -->
+                  <!-- SECTION FOOTER -->
+                  
+                  <div class="uu-section__footer  ">
+                     <p></p>
+                  </div>
+                  <!-- END SECTION FOOTER -->
+                  </div>
+            </section>
+            <!-- END SECTION 1 -->
+            <!-- SECTION 2 -->
+            <!-- END SECTION 2 -->
+            <!-- SECTION 3 -->
+            <!-- END SECTION 3 -->
+            <!-- SECTION 4 -->
+            <!-- END SECTION 4 -->
+            <!-- SECTION 5 -->
+            <!-- END SECTION 5 -->
+            </main>
+         <!-- END MAIN CONTENT -->
+         <!-- FOOTER -->
+         
+         <footer class="uu-footer"><div class="uu-footer__top">
+   <div class="uu-footer__top-container">
+      <div class="uu-footer__top-col1"><a href="https://www.utah.edu"><img src="https://templates.utah.edu/_main-v3-1/images/template/blocku.svg" alt="The University of Utah" class="uu-block-logo"></a><div class="department-name">
+            <h2>The Center For High Performance Computing</h2>
+         </div>
+         <div class="department-address">
+            <p>155 S 1452 E, RM. 405<br>SLC, UT 84112-0190<br>801.585.3791&nbsp;</p>
+         </div>
+      </div>
+      <div class="uu-footer__top-col2">
+         <h2 class="footer-heading">Stay in Touch</h2>
+         <hr>
+         <ul>
+            <li><a href="https://map.utah.edu/index.html?code=inscc">Find Us</a></li>
+            <li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Us</a></li>
+            <li><a href="mailto:helpdesk@chpc.utah.edu">Webmaster</a></li>
+         </ul>
+      </div>
+      <div class="uu-footer__top-col5">
+         <h2 class="footer-heading">Quick Links</h2>
+         <hr>
+         <ul>
+            <li><a href="https://www.utah.edu/a-z/">A-Z Index</a></li>
+            <li><a href="https://people.utah.edu/uWho/basic.hml">Campus Directory</a></li>
+            <li><a href="https://www.map.utah.edu">Campus Map</a></li>
+            <li><a href="https://map.utah.edu/?allshuttle=on">Shuttle Tracker </a></li>
+            <li><a href="https://cis.utah.edu/">CIS</a></li>
+            <li><a href="https://www.umail.utah.edu/">UMail</a></li>
+            <li><a href="https://attheu.utah.edu/">@ The U</a></li>
+         </ul>
+      </div>
+   </div>
+</div><div class="uu-footer__bottom">
+   <div class="uu-footer__bottom-container">
+      <div class="uu-footer__bottom-col1"><a href="https://www.utah.edu/"><img src="https://templates.utah.edu/_main-v3-1/images/template/university-of-utah-logo.svg" alt="The University of Utah" class="uu-site-logo"></a></div>
+      <div class="uu-footer__bottom-col2">
+         <div class="legal">
+            <p>© 2024 The University of Utah</p>
+            <ul>
+               <li><a href="https://www.utah.edu/indigenous-land-acknowledgment/index.php">Indigenous Land Acknowledgment</a></li>
+               <li><a href="https://www.utah.edu/nondiscrimination/">Nondiscrimination &amp; Accessibility</a></li>
+               <li><a href="https://www.utah.edu/disclaimer/">Disclaimer</a></li>
+               <li><a href="https://www.utah.edu/privacy/">Privacy</a></li>
+               <li><a href="https://www.utah.edu/credits-v3.php">Credits &amp; Attributions</a></li>
+               <li><a href="https://attheu.utah.edu/media-contacts/">Media Contacts</a></li>
+               <li><span id="directedit"></span></li>
+            </ul>
+         </div>
+      </div>
+      <div class="uu-footer__bottom-col3">
+         <ul class="uu-social-list">
+            <li><a href="https://twitter.com/uutah"><span class="fa-brands fa-x-twitter" aria-hidden="true"></span><span class="sr-only">X</span></a></li>
+            <li><a href="https://www.facebook.com/universityofutah"><span class="fab fa-facebook" aria-hidden="true"></span><span class="sr-only">Facebook</span></a></li>
+            <li><a href="https://www.instagram.com/universityofutah/"><span class="fab fa-instagram" aria-hidden="true"></span><span class="sr-only">Instagram</span></a></li>
+            <li><a href="https://www.youtube.com/user/theuniversityofutah"><span class="fab fa-youtube" aria-hidden="true"></span><span class="sr-only">Youtube</span></a></li>
+         </ul>
+      </div>
+   </div>
+</div></footer>
+         <!-- END FOOTER -->
+         </div>
+      <!-- FOOT CODE -->
+      <script src="//templates.utah.edu/_main-v3-1/js/main.min.js"></script>
+      
+      
+      
+      
+      
+      
+      
+      <script src="//templates.utah.edu/_main-v3-1/js/directedit.js"></script><script><!--
+window.onload = function(){ directedit(); }
+//
+			--></script>
+      <script src="/_resources/js/custom.js"></script>
+            
+      <!-- END FOOT CODE -->
+      
+      <div id="hidden"><a id="de" href="https://a.cms.omniupdate.com/11/?skin=utah&amp;account=utah_home&amp;site=chpc2&amp;action=de&amp;path=/documentation/software/mpilibraries.pcf">Last Updated: 6/4/24</a></div>
+      <!-- END PAGE BODY -->
+      </body>
+</html>

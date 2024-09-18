@@ -1,0 +1,997 @@
+<!DOCTYPE HTML><html lang="en-US" class="no-js">
+   <head><!-- PAGE HEAD -->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+      <title>Docs - Center for High Performance Computing - The University of Utah</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="robots" content="index,follow">
+      <link rel="icon" href="//templates.utah.edu/_main-v3-1/images/template/favicon.ico">
+      <link rel="apple-touch-icon-precomposed" href="//templates.utah.edu/_main-v3-1/images/template/apple-touch-icon.png">
+      <link rel="stylesheet" href="//templates.utah.edu/_main-v3-1/css/main.min.css" type="text/css"><noscript>
+         <link rel="stylesheet" href="//templates.utah.edu/_main-v3-1/css/assets/fontawesome/css/all.min.css" type="text/css"></noscript><link href="/_resources/css/custom.css" rel="stylesheet" type="text/css">
+      <script src="//templates.utah.edu/_main-v3-1/js/head-code.min.js"></script>
+      <!-- HEAD CODE -->
+      
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y160DVJ0DZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y160DVJ0DZ');
+</script>
+
+      
+      <!-- END HEAD CODE -->
+      <!-- END PAGE HEAD -->
+      </head>
+   <body class="has-headernav"><!-- PAGE BODY -->
+      <a class="uu-skip-link" href="#skip-link-target">Skip to content</a>
+      <!-- BODY TOP CODE -->
+            <!-- END BODY TOP CODE -->
+      
+      <div id="uu-top-target" class="uu-site"><!-- SEARCH -->
+         <div class="uu-search" role="search">
+    <div class="uu-search__container">
+        <!-- SITE SEARCH -->
+        <form method="get" id="search-site" class="uu-search__form" action="/search/index.php">
+
+            <label for="inputSearchSite" class="sr-only">Search Site:</label>
+            <input type="text" id="inputSearchSite" name="q" value="" placeholder="Search Site" />
+            <input type="hidden" name="gcse_action" value="site" />
+
+            <div class="form-powered-by">
+                <span>Powered by</span> 
+                <img src="https://templates.utah.edu/_main-v3-1/images/template/google-logo.png" alt="Google Search">
+            </div>
+
+        </form>
+        <!-- END SITE SEARCH -->
+        <!-- CAMPUS SEARCH -->
+        <form method="get" id="search-campus" class="uu-search__form" action="/search/index.php">
+
+            <label for="inputSearchCampus" class="sr-only">Search Campus:</label>
+            <input type="text" id="inputSearchCampus" name="q" value="" placeholder="Search Campus" />
+            <input type="hidden" name="gcse_action" value="campus" />
+
+            <div class="form-powered-by">
+                <span>Powered by</span> 
+                <img src="https://templates.utah.edu/_main-v3-1/images/template/google-logo.png" alt="Google Search">
+            </div>
+        </form>
+        <!-- END CAMPUS SEARCH -->
+
+        <!-- SEARCH TYPE TOGGLE -->
+        <div class="search-type-toggle">
+            <label class="uu-switch" for="search_campus_checkbox">
+                <input type="checkbox" name="search_campus_checkbox" value="" id="search_campus_checkbox">
+                <span class="uu-switch-slider"></span>
+                <span class="uu-switch-label">Search Campus</span>
+            </label>
+        </div>
+        <!-- END SEARCH TYPE TOGGLE -->
+
+    </div>
+</div><!-- END SEARCH -->
+         <!-- HEADER -->
+         
+         <header class="uu-header">
+            <div class="uu-header__container">
+               <!-- ALERT AREA -->
+               <div id="alert_bar" class="uu-alert-bar"> 
+	<a href="https://coronavirus.utah.edu/">University of Utah COVID-19 Updates</a>
+</div><!-- END ALERT AREA -->
+               
+               <div class="uu-header__top"> <a href="https://www.utah.edu/" class="uu-header__logo"><span class="sr-only">The University of Utah</span></a>                  <div class="uu-header__middle">
+                     <!-- HEADER TITLE -->
+                     <div class="uu-header__title">
+<h2><a href="/">CHPC - Research Computing and Data Support for the University</a></h2>
+<!-- <h3><a href="http://it.utah.edu">University Information Technology</a></h3> --></div><!-- END HEADER TITLE -->
+                     <!-- HEADER NAVIGATION -->
+                     
+<nav class="uu-header__nav">
+	
+<ul class="uu-menu__level1">
+<ul class="uu-menu__level1">
+<li class="has-sub"><a href="#">About Us</a>
+<ul class="sub-menu">
+<li><a href="/about/index.php">About Us</a></li>
+<li><a href="https://www.chpc.utah.edu/about/vision.php">Vision</a></li>
+<li><a href="/about/staff.php">Staff</a></li>
+<li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Information</a></li>
+<li><a href="https://www.chpc.utah.edu/about/acknowledge.php">Acknowledging CHPC</a></li>
+<li><a href="https://www.chpc.utah.edu/highlights.php">Research Highlights</a></li>
+<li><a href="https://www.chpc.utah.edu/about/partners.php">Partners</a></li>
+<li><a href="/news/index.php">News</a></li>
+<li><a href="/about/governance.php">Governance</a></li>
+</ul>
+</li>
+<li class="has-sub"><a href="#">Resources</a>
+<ul class="sub-menu">
+<li><a href="https://www.chpc.utah.edu/resources/index.php">Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/HPC_Clusters.php">HPC Clusters</a></li>
+<li><a href="/resources/storage_services.php">Storage Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="/resources/virtualmachines.php">Virtual Machines</a></li>
+<li><a href="/resources/hosting.php">Hosting Services</a></li>
+<li><a href="/resources/Networking.php">Networking</a></li>
+<li><a href="/resources/ProtectedEnvironment.php">Protected Environment</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="/userservices/index.php">User Services</a></li>
+</ul>
+</li>
+<li class="has-sub sub-width-lg"><a href="#">Documentation</a>
+<ul class="sub-menu">
+<li><a href="https://www.chpc.utah.edu/documentation/index.php">Documentation</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/gettingstarted.php">Getting Started</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/access.php">Accessing Our Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/videos/index.php">Short Training Videos</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/index.php">Cluster Guides</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/beehive.php">Beehive User Guide (Windows Server)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/gpus-accelerators.php">GPU &amp; Accelerators</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/frisco-nodes.php">Frisco Nodes</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/narwhal.php">Narwhal User Guide (Protected Environment Statistics)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/software/index.php">Software</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php">Programming Guide</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/policies/index.php">Policy Manual</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/HelloWorldMPI.php">HPC Basics - Hello World MPI</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/faq.php">Frequently Asked Questions</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/white_papers/index.php">White Papers</a></li>
+</ul>
+</li>
+<li class="has-sub"><a href="#">User Services</a>
+<ul class="sub-menu">
+<li><a href="/userservices/index.php">User Services</a></li>
+<li><a href="https://www.chpc.utah.edu/userservices/accounts.php">Accounts</a></li>
+<li><a href="/userservices/allocations.php">Allocations</a></li>
+<li><a href="/userservices/gettinghelp.php">Getting Help</a></li>
+<li><a href="https://www.chpc.utah.edu/presentations/index.php">Training</a></li>
+</ul>
+</li>
+<li class="has-sub sub-width-lg"><a href="#">Usage</a>
+<ul class="sub-menu">
+<li><a href="/usage/cluster/index.php">Cluster Usage</a>
+<ul>
+<li><a href="/usage/cluster/current-project-general.php">General Allocation Pool</a></li>
+<li><a href="/usage/cluster/current-project-lonepeak.php">Lonepeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-kingspeak.php">Kingspeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-ash.php">Ash Cluster</a></li>
+<li><a href="/usage/cluster/current-project-redwood.php">Redwood Cluster</a></li>
+</ul>
+</li>
+<li><a href="/usage/graphs.php?g=cluster%20utilization&amp;host=combined&amp;type=daily_utilization">Cluster Utilization Graphs</a></li>
+<li><a href="/usage/graphs.php?g=hpc%20cluster%20scratch&amp;host=chpc_gen&amp;type=cpu">HPC Cluster Scratch</a></li>
+<li><a href="/usage/graphs.php?g=network&amp;host=Campus+Gateway&amp;type=daily_traffic">Network</a>
+<ul>
+<li><a href="/resources/maddash-dashboards.php">Maddash Dashboards</a></li>
+</ul>
+</li>
+<li><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">UEN Weathermap (Only Available on UEN Networks)</a></li>
+<li><a href="http://snapp2.bldc.grnoc.iu.edu/i2al2s/#&amp;p=3%2C42&amp;ccid=3&amp;tab=1&amp;search=undefined&amp;pwidth=undefined&amp;ccat=undefined&amp;url=show-graph.cgi%3Fcollection_ids%3D145%26end%3D1461772131%26start%3D1461771831%26cf%3DAVERAGE%26ds%3Doutput%2Cinput%26collection_ids%3D145" target="_blank" rel="noopener">UEN Aggregate Utilization</a></li>
+<li><a href="http://uofu.status.io">UofU IT Services Status</a></li>
+<li><a href="https://status.it.utah.edu">University Application Heath Summary - NOC</a></li>
+</ul>
+</li>
+<li><a href="/role/">My Account</a></li>
+</ul>
+</ul>	
+</nav>
+
+<!-- END HEADER NAVIGATION -->
+                     </div>
+                  <div class="uu-search-toggle"><button class="uu-search__trigger"><span class="far fa-search" aria-hidden="true"></span><span class="sr-only">Search</span></button></div><button id="jsNavTrigger" class="uu-nav__trigger" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Reveal Menu</span><span></span></button></div>
+            </div>
+         </header>
+         <!-- END HEADER -->
+         <!-- PUSH NAVIGATION -->
+         
+         <section class="uu-nav">
+            <div class="uu-nav__container"><button id="jsMobileNavTrigger" class="uu-nav__trigger" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Reveal Menu</span><span></span></button><header class="uu-nav__header">
+                  <h2 class="sr-only">Main Navigation</h2>
+                  <!-- Navigation Logo -->
+<a href="https://utah.edu/" class="uu-nav__logo">
+	<img src="https://templates.utah.edu/_main-v3-1/images/template/university-of-utah-logo.svg" alt="The University of Utah"/>
+</a></header>
+               <nav class="uu-menu" aria-label="main"><p><h2 class="uu-menu__title">Main Menu</h2>
+<hr />
+<ul class="uu-menu__level1">
+<li><a href="/">Home</a></li>
+<li class="has-sublist"><a href="#">About Us</a>
+<ul class="uu-menu__level2">
+<li><a href="/about/index.php">About Us</a></li>
+<li><a href="https://www.chpc.utah.edu/about/vision.php">Vision</a></li>
+<li><a href="/about/staff.php">Staff</a></li>
+<li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Information</a></li>
+<li><a href="https://www.chpc.utah.edu/about/acknowledge.php">Acknowledging CHPC</a></li>
+<!--<li><a href="/about/bibliography/CHPC%20BIB.pdf" target="_blank" rel="noopener">CHPC Bibliography</a></li>-->
+<li><a href="https://www.chpc.utah.edu/about/SupportedResearch.php">Supported Research</a></li>
+<li><a href="https://www.chpc.utah.edu/highlights.php">Research Highlights</a></li>
+<li><a href="https://www.chpc.utah.edu/about/partners.php">Partners</a></li>
+<li><a href="/news/index.php">News</a></li>
+<li><a title="University Information Technology" href="https://it.utah.edu/" target="_blank" rel="noopener">UIT</a></li>
+<li><a href="/about/governance.php">Governance</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Resources</a>
+<ul class="uu-menu__level2">
+<li><a href="https://www.chpc.utah.edu/resources/index.php">Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/HPC_Clusters.php">HPC Clusters</a></li>
+<li><a href="/resources/storage_services.php">Storage Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="/resources/virtualmachines.php">Virtual Machines</a></li>
+<li><a href="/resources/hosting.php">Hosting Services</a></li>
+<li><a href="/resources/Networking.php">Networking</a></li>
+<li><a href="/resources/ProtectedEnvironment.php">Protected Environment</a></li>
+<li><a href="/documentation/software/ai.php">AI/ML Resources</a></li>
+<li><a href="/userservices/index.php">User Services</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Documentation</a>
+<ul class="uu-menu__level2">
+<li><a href="https://www.chpc.utah.edu/documentation/index.php">Documentation</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/gettingstarted.php">Getting Started</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/access.php">Accessing Our Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/videos/index.php">Short Training Videos</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/index.php">Cluster Guides</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/beehive.php">Beehive User Guide (Windows Server)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/gpus-accelerators.php">GPU &amp; Accelerators</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/frisco-nodes.php">Frisco Nodes</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/narwhal.php">Narwhal User Guide (Protected Environment Statistics)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/software/index.php">Software</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php">Programming Guide</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/policies/index.php">Policy Manual</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/HelloWorldMPI.php">HPC Basics - Hello World MPI</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/faq.php">Frequently Asked Questions</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/white_papers/index.php">White Papers</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">User Services</a>
+<ul class="uu-menu__level2">
+<li><a href="/userservices/index.php">User Services</a></li>
+<li><a href="https://www.chpc.utah.edu/userservices/accounts.php">Accounts</a></li>
+<li><a href="/userservices/allocations.php">Allocations</a></li>
+<li><a href="/userservices/gettinghelp.php">Getting Help</a></li>
+<li><a href="https://www.chpc.utah.edu/presentations/index.php">Training</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Usage</a>
+<ul class="uu-menu__level2">
+<li class="has-sublist"><a href="/usage/cluster/index.php">Cluster Usage</a>
+<ul class="uu-menu__level3">
+<li><a href="/usage/cluster/current-project-general.php">General Allocation Pool</a></li>
+<li><a href="/usage/cluster/current-project-lonepeak.php">Lonepeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-kingspeak.php">Kingspeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-ash.php">Ash Cluster</a></li>
+<li><a href="/usage/cluster/current-project-redwood.php">Redwood Cluster</a></li>
+</ul>
+</li>
+<li><a href="/usage/graphs.php?g=cluster%20utilization&amp;host=combined&amp;type=daily_utilization">Cluster Utilization Graphs</a></li>
+<li><a href="/usage/graphs.php?g=hpc%20cluster%20scratch&amp;host=chpc_gen&amp;type=cpu">HPC Cluster Scratch</a></li>
+<li class="has-sublist"><a href="/usage/graphs.php?g=network&amp;host=Campus+Gateway&amp;type=daily_traffic">Network</a>
+<ul class="uu-menu__level3">
+<li><a href="/resources/maddash-dashboards.php">Maddash Dashboards</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">UEN Weathermap</a>
+<ul class="uu-menu__level3">
+<li><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">(Only Available on UEN Networks)</a></li>
+</ul>
+</li>
+<li><a href="http://snapp2.bldc.grnoc.iu.edu/i2al2s/#&amp;p=3%2C42&amp;ccid=3&amp;tab=1&amp;search=undefined&amp;pwidth=undefined&amp;ccat=undefined&amp;url=show-graph.cgi%3Fcollection_ids%3D145%26end%3D1461772131%26start%3D1461771831%26cf%3DAVERAGE%26ds%3Doutput%2Cinput%26collection_ids%3D145" target="_blank" rel="noopener">UEN Aggregate Utilization</a></li>
+<li><a href="http://uofu.status.io">UofU IT Services Status</a></li>
+<li><a href="https://status.it.utah.edu">University Application Heath Summary - NOC</a></li>
+</ul>
+</li>
+<li><a href="/role/">My Account</a></li>
+</ul></p></nav>
+            </div>
+         </section>
+         <!-- END PUSH NAVIGATION -->
+         
+         <!-- MAIN CONTENT -->
+         <main class="uu-main" id="skip-link-target">
+            <nav aria-label="Breadcrumb" class="uu-breadcrumb">
+               <ol>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/documentation/">documentation</a></li>
+                  <li><span class="sr-only">current page: </span>Docs</li>
+               </ol>
+            </nav>
+            <!-- SECTION 1 -->
+            
+            <section class="uu-section bg-white text-default uu-section--region-1" style="">
+               <div class="uu-section__container"><!-- SECTION HEADER -->
+                  
+                  <div class="uu-section__header  ">
+                     <h1>Frequently Asked Questions</h1>
+                     <ol>
+                        <li style="list-style-type: none;">
+                           <ol>
+                              <li><a href="#account">How do I get a CHPC account?</a></li>
+                              <li><a href="#allocation">How do I get an allocation?</a></li>
+                              <li><a href="#affiliate">How do I get a University of Utah affiliate ID?</a></li>
+                              <li><a href="#connect">How do I connect to the CHPC clusters?</a></li>
+                              <li><a href="#lockout">I cannot log into a CHPC cluster.&nbsp;</a></li>
+                              <li><a href="#ssh-key">I can't ssh to a CHPC machine anymore and received a serious looking error that starts
+                                    with</a><br>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>@ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! @<br>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</li>
+                              <li><a href="#quota">I am getting the message "Disk quota exceeded".</a></li>
+                              <li><a href="#vpn">I am running a campus VPN on my home computer and can't connect to some websites.</a></li>
+                              <li><a href="#shell">I would like to change my shell (to bash or tcsh).</a></li>
+                              <li><a href="#email">I would like to change the email address CHPC uses to contact me.</a></li>
+                              <li><a href="#unsub">I would like to unsubscribe from CHPC e-mail messages.</a></li>
+                              <li><a href="#arbiter">I am getting a violation of usage policy warning from Arbiter that is confusing.</a></li>
+                              <li><a href="#clustersubmit">How do I know what cluster to submit my jobs to?</a></li>
+                              <li><a href="#partitions">I don't understand what the different SLURM partitions mean.</a></li>
+                              <li><a href="#slurmtroubleshooting">My SLURM job won't start.</a><ol style="list-style-type: lower-alpha;">
+                                    <li><a href="#invalidaccount">Batch job submission failed: Invalid account or account/partition combination specified.</a></li>
+                                    <li><a href="#nodecount">Batch job submission failed: Node count specification invalid.</a></li>
+                                    <li><a href="#nodedown">Required node not available (down, drained, or reserved).</a></li>
+                                 </ol>
+                              </li>
+                              <li><a href="#io">My calculations or other file operations complain that the file can't be accessed,
+                                    or it does not exist, even though I have just created or modified it.</a></li>
+                              <li><a href="#jupgroup">I can't access files from my group space or scratch in Jupyter or RStudio Server.</a></li>
+                              <li><a href="#rss">My RStudio Server session does not start, or crashes on start.</a></li>
+                              <li><a href="#emacs">Starting Emacs editor is very slow.</a></li>
+                              <li><a href="#emacsfile">Opening Emacs file is very slow.</a></li>
+                              <li><a href="#tmp">My program crashed because /tmp has filled up.</a></li>
+                              <li><a href="#eff">How do I check that my job is running efficiently?</a></li>
+                              <li><a href="#slow">My calculations are running slower than expected.</a></li>
+                              <li><a href="#mem">I'm receiving a 'Killed' or 'OOM' error from Slurm.</a></li>
+                              <li><a href="#multinode">How can I use all processors in a multi-node job with different CPU core counts per
+                                    node?</a></li>
+                              <li><a href="#gpus">My job needs access to GPU resources. How do I request GPU node(s) for my job?</a></li>
+                              <li><a href="#rpath">My program crashes with error "error while loading shared libraries:...: No such file
+                                    or directory".</a></li>
+                              <li><a href="#glibc">I am getting an error like "<span tabindex="-1">libc.so.6:&nbsp;</span>version GLIBC_2.33 not found" when trying to run a program</a></li>
+                              <li>
+                                 <p tabindex="-1"><a href="#contactchpc">Is your question not on this list?</a></p>
+                              </li>
+                           </ol>
+                        </li>
+                     </ol>
+                  </div>
+                  <!-- END SECTION HEADER -->
+                  <!-- REGION 1 -->
+                  
+                  <div class="uu-section__region bg-white text-default no-border">
+                     <h4><a id="account"></a>1. How do I get a CHPC account?</h4>
+                     <p>You can request to have a CHPC account <a href="/userservices/accounts.php">here</a>. Please note that, to have a CHPC account, you need an active University of Utah
+                        uNID and need to either be a PI or work with a PI. If you work with a PI that does
+                        not have a CHPC account, your PI will need to apply for a CHPC account with the link
+                        above and mark in the application that they are a new PI.</p>
+                     <p>Do you not have an active University of Utah uNID because you work for another institution?
+                        You can find information for obtaining a University of Utah affiliate ID <a href="/userservices/accounts.php#activeunid">here</a>.&nbsp;</p>
+                     <p>_____________________________________________________________________________________________________________________________</p>
+                     <h4><a id="allocation"></a>2. How do I get an allocation?</h4>
+                     <p><span style="text-decoration: underline;">General Environment Allocations:</span></p>
+                     <p>An allocation is needed at the CHPC to work on our notchpeak cluster. The CHPC awards
+                        allocations on our systems based on proposals submitted to a review committee. <em>Research groups must submit requests for allocations.</em> Please refer to our <a href="/userservices/allocations.php">Allocation Documentation</a>&nbsp;and our&nbsp;<a href="/documentation/policies/1.4AllocationPolicies.php">Allocations Policy</a>&nbsp;for detailed information.</p>
+                     <p>Please note that allocation requests must be completed by&nbsp;<span>the&nbsp;</span><span>CHPC PI or a designated delegate. To specify a delegate,&nbsp;the CHPC PI must email&nbsp;</span><a href="mailto:helpdesk@chpc.utah.edu?subject=">helpdesk@chpc.utah.edu</a><span>&nbsp;and provide the name and uNID of the user you wish to have allocation delegate rights.&nbsp;</span></p>
+                     <p><span style="text-decoration: underline;">Protected Environment Allocations:</span></p>
+                     <p><span>The protected environment has a separate allocation process; see the&nbsp;<a title="protected environment allocation information" href="/resources/ProtectedEnvironment.php#alloc">protected environment allocation information</a>&nbsp;page for details.</span></p>
+                     <p><span>_____________________________________________________________________________________________________________________________</span></p>
+                     <h4><a id="affiliate"></a>3. How do I get an affiliate ID?</h4>
+                     <p>If you work at a higher-ed Utah institution or collaborate with a researcher who works
+                        at one, you can request to obtain a University of Utah affiliate ID. To do so, either
+                        contact your collaborator to request an affiliate ID for you or contact the CHPC HelpDesk
+                        at <a href="mailto:helpdesk@chpc.utah.edu">helpdesk@chpc.utah.edu</a>. When you contact us, please provide your first and last name, email address, and
+                        birthday.</p>
+                     <p>If you previously had an active uNID at the University of Utah, you may request to
+                        have that uNID reinstated. If that is the case, then please provide your previous
+                        uNID when contacting us.</p>
+                     <p>It will take about a week for HR to process your affiliate ID after submitting the
+                        application. Once processed, your PI/collaborator will receive an email to approve
+                        the affiliate ID. <strong>Your affiliate ID will not become active until your PI/collaborator approves the application.</strong></p>
+                     <p>_____________________________________________________________________________________________________________________________</p>
+                     <h4><a id="connect"></a>4. How do I connect to the CHPC clusters?</h4>
+                     <p>You can connect to our systems either through an ssh connection or through our <a href="/documentation/software/ondemand.php">Open OnDemand web portal</a>:</p>
+                     <p><span style="text-decoration: underline;">Via SSH connection:</span></p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="" style=" ">
+                        <pre>ssh UNID@&lt;cluster&gt;.chpc.utah.edu</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>where &lt;cluster&gt; is replaced by:</p>
+                     <ul>
+                        <li><a href="/documentation/guides/notchpeak.php" target="_blank" rel="noopener">notchpeak</a></li>
+                        <li><a href="/documentation/guides/lonepeak.php" target="_blank" rel="noopener">lonepeak</a></li>
+                        <li><a href="/documentation/guides/kingspeak.php" target="_blank" rel="noopener">kingspeak</a></li>
+                        <li><a href="/documentation/guides/redwood.php" target="_blank" rel="noopener">redwood</a></li>
+                     </ul>
+                     <p>Please note that notchpeak, lonepeak, and kingspeak our in our general environment,
+                        whereas redwood is in our protected environment (PE) for use with Protected Health
+                        Information. If connecting to redwood, be prepared to confirm your identity with Duo.</p>
+                     <p><span style="text-decoration: underline;">Via OpenOnDemand:</span></p>
+                     <p>For our general environment (notchpeak, lonepeak, and kingspeak) clusters, visit <a href="https://ondemand.chpc.utah.edu/">https://ondemand.chpc.utah.edu/</a> and login to validate your credentials.</p>
+                     <p>For our protected environment (redwood) cluster, visit <a href="https://pe-ondemand.chpc.utah.edu/">https://pe-ondemand.chpc.utah.edu/</a> and login to validate your credentials.</p>
+                     <p><span style="text-decoration: underline;">Alternative Connection Methods:</span></p>
+                     <p>In addition to the two methods mentioned above, we have a variety of other ways in
+                        which you can access our systems:</p>
+                     <ul>
+                        <li><a href="/documentation/software/fastx.php#inst3">Via the FastX desktop application</a></li>
+                        <li><a href="/documentation/software/fastx.php#fx3wc">Via the FastX web client</a></li>
+                        <li><span>Via two windows systems that are focused statistics systems, accessible via remote
+                              desktop. They are&nbsp;</span><a href="/documentation/guides/beehive.php">beehive</a><span> in the general environment, and&nbsp;</span><a href="/documentation/guides/narwhal.php">narwhal</a><span>&nbsp;in the protected environment for work with protected data.</span></li>
+                     </ul>
+                     <p>_____________________________________________________________________________________________________________________________</p>
+                     <h4><a id="lockout"></a>5. I cannot log into a CHPC cluster.&nbsp;</h4>
+                     <p><span style="text-decoration: underline;"><em>It could be possible that the server for the cluster you are attempting to connect
+                              to is down</em></span>, either due to planned or unplanned downtime or a localized failure of the login
+                        server.</p>
+                     <p>If there is planned downtime, you would have received an email from the CHPC. If you
+                        did not receive an email, then make sure you have an up to date e-mail contact in
+                        your <a href="/role/user/edit_profile.php">CHPC Profile</a>&nbsp;in order to get our announcements, or, check our <a href="/news/latest_news/index.php">latest news</a>.&nbsp;</p>
+                     <p>In the case of a localized failure of the login server, please attempt to connect
+                        to another CHPC machine (e.g. <em>kingspeak2</em> instead of <em>kingspeak1</em>, or a different cluster). If the error persists, please make us aware by contacting
+                        us at <a href="mailto:helpdesk@chpc.utah.edu">helpdesk@chpc.utah.edu.</a></p>
+                     <p><span style="text-decoration: underline;"><em>Another common possibility is a lockout after multiple failed login attempts due to
+                              incorrect passwords</em></span>.</p>
+                     <p>Both CHPC and the UofU campus implement various measures to prevent "brute force"
+                        login attacks. After a certain number of failed logins within a certain time period,
+                        login will be disabled for a small period of time. These time parameters are not made
+                        public for security reasons and vary between the general environment, <a href="/documentation/pefaq.php#q22">protected environment</a>, and the campus authentication, but, in general, <em>the period of disablement is an hour or less from the last failed login attempt</em>.</p>
+                     <p>The best approach to deal with this is to try to log into a different machine (e.g.
+                        <em>kingspeak2</em> instead of <em>kingspeak1</em>, or a different cluster) or wait until login is enabled again. It is counter-productive
+                        to try to login again, even with the correct password, as the disablement timer will
+                        reset.</p>
+                     <p>If SSH login to no CHPC Linux cluster works, the problem may be with the campus authentication
+                        lockout for SSH. CHPC uses the campus authentication to verify user identity. To check
+                        if campus authentication works, try any of the <a href="https://portal.app.utah.edu/">CIS logins</a>. If you can successfully connect, you may still be able to access CHPC resources
+                        via the <a href="https://ondemand.chpc.utah.edu">ondemand.chpc.utah.edu</a> web portal. Regardless, contact the <a href="https://it.utah.edu/help/">campus help desk</a> and inform them on the AD SSH lockout and ask them to unlock you.</p>
+                     <p>_____________________________________________________________________________________________________________________________</p>
+                     <h4><a id="ssh-key"></a>6. I can't ssh to a CHPC machine anymore and received a serious-looking error:</h4>
+                     <p><img class="" src="/_resources/images/SSHerror.png" alt="SSH_Error" width="1337" height="544"></p>
+                     <p><em>While looking scary, this error is usually benign</em>. It occurs when the SSH keys on the machine you are trying to connect to change,
+                        most commonly with an operation system upgrade. There are two ways to get rid of this
+                        message and log in:</p>
+                     <ol>
+                        <li>open the file ~/.ssh/known_hosts in a text editor and delete the lines that contain
+                           the host name you are connecting to &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                        <li>use the <strong><code style="background-color: lightgray;">ssh-keygen</code></strong> command with a -R flag to remove the ssh keys for the given host<br>e.g. ssh-keygen -R kingspeak1.chpc.utah.edu</li>
+                     </ol>
+                     <p>On the subsequent ssh connection to the machine should say something like the message
+                        below and let you login:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>Warning: Permanently added 'astro02.astro.utah.edu,155.101.26.110 (ECDSA) to the list of known hosts </pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>&nbsp;</p>
+                     <p>_____________________________________________________________________________________________________________________________</p>
+                     <h4><a id="quota"></a>7. I am getting the message "Disk quota exceeded" when logging in.</h4>
+                     <p>By default, CHPC home directories provide <a href="/resources/storage_services.php#ghd">50GB of free storage.</a> When the 50GB limit is exceeded, we prevent users from writing any more files to
+                        their home directory. As some access tools like FastX and Open OnDemand rely on storing
+                        small files in user's home directory upon logging in, access to these tools will fail.</p>
+                     <p>To display quota information either run the<strong><code style="background-color: lightgray;">mydiskquota</code></strong>command inside a terminal session or log on to <a href="/role/user/index.php">CHPC user personal details</a> and scroll down to Filesystem Quotas.</p>
+                     <p>For the<strong><code style="background-color: lightgray;">mydiskquota</code></strong> output, focus on the <em>/home/hpc</em> or the <em>/home/chpc</em> line; here, the first figure is the important one and references the storage usage
+                        in GB. The <em>Overall capacity</em> covers the whole CHPC file system, not just one user's home directory. If your storage
+                        is over 50GB, <a href="http://www.linfo.org/rm.html">delete</a> or move unnecessary files. To do that, log in using a terminal tool, such as <a href="https://www.putty.org/">putty</a> or<a href="https://gitforwindows.org/"> Git bash </a>on Windows or <a href="https://support.apple.com/guide/terminal/welcome/mac">terminal</a> on a Mac or Linux machine.</p>
+                     <p>Please note that <span style="text-decoration: underline;">quota information refreshes once per hour</span>, so, when deleting files, <strong><code style="background-color: lightgray;">mydiskquota</code></strong> may not reflect the change immediately. However, if one removes enough data to get
+                        under quota, one will be able to write again, even if the report still shows being
+                        over the quota.</p>
+                     <p>To keep large files, explore other <a href="/resources/storage_services.php">storage solutions at CHPC</a>. As a temporary solution, you may <em>temporarily</em> move large files to one of our <a href="/resources/storage_services.php#sfs">scratch servers</a>, e.g.:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>mkdir -p /scratch/general/vast/$USER<br>mv big_file /scratch/general/vast/$USER</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>To find large files, in the text terminal, run the <span><a href="https://www.networkworld.com/article/972132/using-the-linux-ncdu-command-to-view-your-disk-usage.html#:~:text=The%20ncdu%20command%20provides%20a,a%20little%20strange%20at%20first.&amp;text=The%20name%20%E2%80%9Cncdu%E2%80%9D%20stands%20for,provide%20the%20disk%20usage%20information."><code style="background-color: lightgray;"><strong>ncdu</strong></code></a> command in your home directory to show disk space used per directory (the largest
+                           directory will be at the top). Then <a href="http://www.linfo.org/cd.html">cd</a> to the directory with the largest usage and continue till you find the largest files.
+                           Remove them or move them to CHPC scratch as shown above. </span></p>
+                     <p><span>If you clean a few files and are able to open FastX session again, a graphical tool
+                           <strong><code style="background-color: lightgray;">baobab</code></strong>is similar to <code style="background-color: lightgray;">ncdu</code> but shows the usage in an easier to comprehend graphic.</span></p>
+                     <p>_____________________________________________________________________________________________________________________________</p>
+                     <h4><a id="vpn"></a>8. I am running a campus VPN on my home computer and can't connect to certain websites.</h4>
+                     <p><a href="/documentation/software/vpn.php">Virtual Private Network (VPN)</a> makes your computer to look like it currently resides on the University of Utah campus,
+                        even if you are off-site. However, depending on how the campus VPN is set up, you
+                        may not be able to access certain off-campus internet resources.</p>
+                     <p>We recommend to only use VPN if one needs to:</p>
+                     <ul>
+                        <li>map network drives to CHPC file servers</li>
+                        <li>use remote desktop to connect to CHPC machines that allow remote desktop (e.g. Windows
+                           servers)</li>
+                        <li>connect to the Protected Environment resources</li>
+                     </ul>
+                     <p><em>All other resources do not need VPN</em>. These include:</p>
+                     <ul>
+                        <li>ssh or FastX to connect to CHPC general environment Linux clusters</li>
+                        <li>access to the general environment Open OnDemand</li>
+                        <li>accessing secure websites that require University authenticated login, such as CHPC's
+                           webpage, various other campus webpages (Canvas, HR,...) Box, Google Drive, etc.</li>
+                     </ul>
+                     <p>_____________________________________________________________________________________________________________________________</p>
+                     <h4><a id="shell"></a>9. I would like to change my shell (to bash or tcsh).</h4>
+                     <p>You can change your shell in the <a href="/role/user/edit_profile.php">Edit Profile page</a> by selecting the shell you'd like and clicking "Change." This change should take
+                        effect within fifteen minutes and you will need to re-login on any resources you were
+                        using at the time. That includes terminating all FastX sessions you may have running.</p>
+                     <p>If you only need to use a different shell (but don't want to change your own), you
+                        can initiate a new shell by invoking it (e.g. with the <code style="background-color: lightgray;">tcsh</code> or <code style="background-color: lightgray;">bash</code> command) or pass commands as arguments (e.g.&nbsp;<code style="background-color: lightgray;">tcsh -c "echo hello"</code>).</p>
+                     <p>_____________________________________________________________________________________________________________________________</p>
+                     <h4><a id="email"></a>10. I would like to change my email address.</h4>
+                     <p>You can change&nbsp;the email address CHPC uses to contact you&nbsp;in the<span>&nbsp;</span><a href="/role/user/edit_profile.php">Edit Profile page</a><span>&nbsp;.</span></p>
+                     <p>_____________________________________________________________________________________________________________________________</p>
+                     <h4><a id="unsub"></a>11. I would like to unsubscribe from CHPC e-mail messages.</h4>
+                     <p>If you no longer work on any CHPC resources, you can unsubscribe by going to our <a href="/role/user/unsubscribe.php">unsubscribe page</a>.</p>
+                     <p>However, if you currently work on CHPC resources, please note that e-mail announcements
+                        are essential in updating our user base to changes in our systems and services and
+                        we strongly recommend to stay subscribed. <em>We try to keep e-mails to a minimum</em>, at most a couple a week, unless there is a computer downtime or other critical issue.</p>
+                     <p><em>For ease of e-mail navigation and deletion</em>, we have adopted four standard headlines for all of our messages:</p>
+                     <ul>
+                        <li>CHPC DOWNTIME - for announcements related to planned or unplanned computer downtimes</li>
+                        <li>CHPC PRESENTATION - for CHPC lectures and presentations</li>
+                        <li>CHPC ALLOCATIONS - for announcements regarding the CHPC resources allocation</li>
+                        <li>CHPC INFORMATION - for announcements different than the three above</li>
+                     </ul>
+                     <p>_____________________________________________________________________________________________________________________________</p>
+                     <h4><a id="arbiter"></a>12. I am getting a violation of usage policy warning from Arbiter that is confusing.</h4>
+                     <p>We monitor usage of the CHPC cluster login nodes as they are a shared and limited
+                        resource.</p>
+                     <p>Our monitoring system, Arbiter, sends warnings if CPU or memory usage of a user exceeds
+                        limits on our login nodes. Even if one does not run time consuming calculations, sometimes
+                        applications such as FastX remote desktop puts enough load on the system to trigger
+                        these warnings.</p>
+                     <p>In the email you received from Arbiter, there will be a section detailing the high-impact
+                        processes that caused Arbiter to trigger, such as the one below.</p>
+                     <p><img src="/_resources/images/arbiter.png" alt="example arbiter email" width="1976" height="830"></p>
+                     <p>In the example above, you can see that the user was running a python process that
+                        exceeded the limits we place on our login nodes. At this point, it would be appropriate
+                        for the user to terminate any python process running on the login node and start the
+                        same job in an interactive session or on a compute node via SLURM.</p>
+                     <p>If you suspect it is your FastX session that triggered Arbiter, please login using
+                        FastX to the affected cluster and terminate the FastX session. Keep in mind that FastX
+                        sessions stay alive after closing the session and need to be terminated to quit them.</p>
+                     <p>If you are still unsure what is triggering the Arbiter warnings, please contact us
+                        at <a href="mailto:helpdesk@chpc.utah.edu">helpdesk@chpc.utah.edu.</a></p>
+                     <p>_____________________________________________________________________________________________________________________________</p>
+                     <h4><a id="partitions"></a>13. I don't understand what the different SLURM partitions mean.</h4>
+                     <p>While the CHPC has different clusters that you can submit jobs to, the CHPC has set
+                        different SLURM partitions to access a variety of different resources in order to
+                        meet the varying research needs of our users. These <span style="text-decoration: underline;">partitions</span> are virtual 'groups' of our different node types and node configurations. Below is
+                        a layout to understand their naming schema:</p>
+                     <p>Please note that, below, &lt;cluster&gt; refers to any of the CHPC clusters, such as notchpeak,
+                        kingspeak, lonepeak, and redwood.</p>
+                     <ul>
+                        <li>Partition: &lt;cluster&gt;
+                           
+                           <ul>
+                              <li>This partition would have the naming mechanism notchpeak, kingspeak, lonepeak, or
+                                 redwood. With this partition, when you submit a job, your job receives that whole
+                                 node or set of nodes and no other job can run on this/these node(s).</li>
+                           </ul>
+                        </li>
+                        <li>Partition: &lt;cluster&gt;-shared
+                           
+                           <ul>
+                              <li>This partition allows multiple jobs to run on the same node. If your job does not
+                                 require all CPUs and/or memory of a whole node, it is beneficial to use this partition.</li>
+                           </ul>
+                        </li>
+                        <li>Partition: &lt;cluster&gt;-guest
+                           
+                           <ul>
+                              <li>This partition allows for jobs to run on owner nodes. Please note that jobs run on
+                                 owner nodes are subject to <a href="/documentation/software/slurm.php#preempt">preemption</a>.</li>
+                           </ul>
+                        </li>
+                        <li>Partition: &lt;cluster&gt;-shared-guest
+                           
+                           <ul>
+                              <li>This partition allows multiple jobs to run on the same owner node(s). This partition
+                                 may have shorter wait times, but jobs that run on owner nodes are subject to <a href="/documentation/software/slurm.php#preempt">preemption</a>.</li>
+                           </ul>
+                        </li>
+                        <li>Partition: &lt;cluster&gt;-gpu
+                           
+                           <ul>
+                              <li>This partition allows users access to GPU nodes. Please note that users are not automatically
+                                 given access to GPU resources. If your research requires access to GPU resources,
+                                 please contact us at <a href="mailto:helpdesk@chpc.utah.edu">helpdesk@chpc.utah.edu</a> and tell us why you need access to GPU resources.</li>
+                           </ul>
+                        </li>
+                        <li>Partition: &lt;cluster&gt;-dtn
+                           
+                           <ul>
+                              <li>This partition is connected to our <a href="/documentation/data_services.php#dtn">Data Transfer Nodes</a> and is useful for transferring large amounts of data at fast speeds, <span>high performance, and low latency.</span></li>
+                           </ul>
+                        </li>
+                        <li><span>Partition: &lt;cluster&gt;-freecycle</span><ul>
+                              <li><span>Your job should run on the freecycle partition only if you ran out of an allocation
+                                    for the notchpeak (general) or redwood (protected environment) clusters. Freecycle
+                                    jobs do not require an allocation, but are subject to <a href="/documentation/software/slurm.php#preempt">preemption</a>.</span></li>
+                           </ul>
+                        </li>
+                     </ul>
+                     <p><span>_____________________________________________________________________________________________________________________________</span></p>
+                     <h4><a id="slurmtroubleshooting"></a>14. My SLURM job won't start.</h4>
+                     <p>There are many reasons why your SLURM job may not have begun. Here are a common list
+                        of reasons that may have prevented your SLURM job from starting:</p>
+                     <ul>
+                        <li>
+                           <p><span style="text-decoration: underline;"><a id="invalidaccount"></a>Batch job submission failed: Invalid account or account/partition combination specified</span></p>
+                           <p>This error message can indicate one of two things:&nbsp; 1) you supplied the incorrect
+                              account name or account/partition information to SLURM. 2) you<span style="color: var(--cms-region--primary-black);"> are attempting to run a job on the notchpeak cluster, but your research group does
+                                 not have an allocation or has used all of their allocation for the current quarter.</span></p>
+                           <p><span style="color: var(--cms-region--primary-black);"></span></p><span style="color: var(--cms-region--primary-black);"><strong>Solution to 1)</strong> If you suspect that you supplied the incorrect account name or account/partition
+                              information to SLURM, you can check your allocation with the&nbsp; <strong><code style="background-color: lightgray;">myallocation</code></strong> command. The output to this command will give you the correct account and partition
+                              combination for each SLURM partition that you have access to. Check the spelling in
+                              your batch script or interactive command and be sure you have access to the account
+                              and partition that you are requesting.</span></li>
+                     </ul>
+                     <p style="padding-left: 40px;"><strong>Solution to 2)</strong> To view your allocation status, and if you have run out of allocation for the current
+                        quarter<span style="color: var(--cms-region--primary-black);">, see </span><a style="background-color: #ffffff;" href="/usage/cluster/current-project-general.php">this page</a><span style="color: var(--cms-region--primary-black);">. If your group is either not listed<strong>&nbsp;</strong></span><span style="color: var(--cms-region--primary-black);">in the first table on this page or there is a 0 in the first column (allocation amount)
+                           your group does not have a current allocation. In this case, your group may want to
+                           consider completing a </span><a style="background-color: #ffffff;" href="/userservices/allocations.php#quickallocation">quick allocation request</a><span style="color: var(--cms-region--primary-black);"> to supply your group with a small allocation for the remainder of the quarter. To
+                           receive a larger allocation for future quarters, you will need to <a href="/userservices/allocations.php#normalallocation">submit an allocation request</a> before the next deadline.</span></p>
+                     <p style="padding-left: 40px;"><span style="color: var(--cms-region--primary-black);">If you ran out of an allocation for the quarter, you must run your job either on our
+                           kingspeak or lonepeak clusters (if you need the general environment), on owner nodes,
+                           or on the <a href="/documentation/guides/#parts">freecycle partition</a>. Jobs on the freecycle partition</span> will have lower priority and will be preemptable.</p>
+                     <ul>
+                        <li><!-- Main level -->
+                           <p><span style="text-decoration: underline;"><a id="nodecount"></a>Batch job submission failed: Node count specification invalid</span></p>
+                           <p>The number of nodes that can be used for a single job is limited; attempting to submit
+                              a job that uses more resources than available will result in the above error. This
+                              limit of nodes one can request is approximately 1/2 the total number of general nodes
+                              on each cluster (currently 32 on notchpeak, 24 on kingspeak, and 106 on lonepeak).
+                              Detailed information on resources available for each cluster can be found <a href="/resources/HPC_Clusters.php">here</a>.</p>
+                           <p>The limit on the number of nodes can be exceeded with a reservation or QOS specification.
+                              Requests are evaluated on a case-by-case basis; please <a href="mailto:helpdesk@chpc.utah.edu">contact us (helpdesk@chpc.utah.edu)</a> to learn more.</p>
+                        </li>
+                        <!-- Main level -->
+                        <li><!-- Main level -->
+                           <p><span style="text-decoration: underline;"><a id="nodedown"></a>Required node not available (down, drained, or reserved) or job has "reason code"
+                                 ReqNodeNotAvail</span><em><br></em></p>
+                           <p>This occurs when a reservation is in place on one or more of the nodes requested by
+                              the job. The "Required node not available (down, drained, or reserved)" message can
+                              occur when submitting a job interactively (with <span class="faux-code">srun</span>, for instance); when submitting a script (often with <span class="faux-code">sbatch</span>), however, the job will enter the queue without complaint and SLURM will assign it
+                              the "reason code" (which provides some insight into why the job has not yet started)
+                              "ReqNodeNotAvail."</p>
+                           <p>The presence of a reservation on a node likely means it is in maintenance. It is possible
+                              there is a downtime on the cluster in question; please check the <a href="/news/latest_news/2022newshistory/index.php">news page</a> and subscribe to the mailing list via the <a href="/role/">User Portal</a> so you will be notified of impactful maintenance periods</p>
+                        </li>
+                     </ul>
+                     <p>_____________________________________________________________________________________________________________________________</p>
+                     <h4><a id="clustersubmit"></a>15. How do I know what cluster to submit my jobs to?</h4>
+                     <p>To answer this question, first answer: does your job belong in the general environment
+                        or <a href="/resources/ProtectedEnvironment.php">protected environment (PE)</a>? If working with Protected Health Information (PHI) connected with an IRB, it belongs
+                        in the PE on our <a href="/documentation/guides/redwood.php"><em>redwood cluster</em></a>.</p>
+                     <p>If your job belongs in the <span style="text-decoration: underline;">general environment</span>, you can submit to any of our three general environment clusters - notchpeak, kingspeak,
+                        or lonepeak -&nbsp; depending on your allocation. Notchpeak requires an allocation, while
+                        kingspeak and lonepeak do not require allocations.</p>
+                     <p>You can view how busy each of our clusters are in the 'System Status' column to the
+                        right of the <a href="https://chpc.utah.edu/">CHPC Homepage</a>. If your job belongs in the general environment, we recommend submitting your job
+                        to the least busy cluster to reduce wait time.</p>
+                     <p>_____________________________________________________________________________________________________________________________</p>
+                     <h4>&nbsp;<a id="io"></a>16. My calculations or other file operations complain that the file can't be accessed,
+                        or it does not exist, even though I have just created or modified it.</h4>
+                     <p>This error may have many incarnations but it may look something like this:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>ERROR on proc 0: Cannot open input script in.npt-218K-continue (../lammps.cpp:327)</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>It also occurs randomly, sometimes the program works, sometimes not.</p>
+                     <p>This error is most likely due to the way the file system writes files. For performance
+                        reasons, it writes parts of the file into a memory buffer, which gets periodically
+                        written to the disk. If another machine tries to access the file before the machine
+                        that writes the file writes it to the disk, this error occurs. For NFS, which we use
+                        for all our home directories and group spaces, it is <a href="https://www.avidandrew.com/understanding-nfs-caching.html">well described here</a>. There are several ways to deal with this:</p>
+                     <ol>
+                        <li>Use the Linux <a href="http://man7.org/linux/man-pages/man1/sync.1.html">sync</a> command to forcefully flush the buffers to the disk. Do this both at the machine
+                           where the file writing and file reading occurs BEFORE the file is accessed. To ensure
+                           that all compute nodes in the job sync, do "srun -n $SLURM_NNODES --ntasks-per-node=1
+                           sync ".</li>
+                        <li>Sometimes adding the Linux <a href="http://man7.org/linux/man-pages/man1/sleep.1.html">sleep</a> command can help, to provide an extra time window for the syncing to occur.</li>
+                        <li>Inside of the code, use <a href="http://man7.org/linux/man-pages/man3/fflush.3.html">fflush</a> for C/C++ or <a href="https://gcc.gnu.org/onlinedocs/gfortran/FLUSH.html">flush</a> for Fortran. For other languages, such as Python and Matlab, google the language
+                           with "for flush" to see what options are there.</li>
+                     </ol>
+                     <p>If neither of these help, please, try another file system to see if the error persists
+                        (e.g. /scratch/general/vast or /scratch/local), and <a href="mailto:helpdesk@chpc.utah.edu?subject=File%20I%2FO%20problem">let us know</a>.</p>
+                     <p>_____________________________________________________________________________________________________________________________</p>
+                     <h4><a id="jupgroup"></a>17. I can't access files from my group space or scratch in Jupyter or RStudio Server.</h4>
+                     <p><span class="tabs2_section tabs2_section_1 tabs2_section1 tab_section" data-header-only="false" tab_caption="Description" tab_caption_raw="Description" id="section_tab.1c9dc6d62b41d2007c6de6f019da15da" data-section-id="1c9dc6d62b41d2007c6de6f019da15da" style="display: block;" role="tabpanel" aria-hidden="false" aria-labelledby="section_tab.1c9dc6d62b41d2007c6de6f019da15da"><span id="section-1c9dc6d62b41d2007c6de6f019da15da" data-header-only="false" class="section "><span><span style="word-wrap: break-word; display: block;">Unfortunately, both Jupyter and RStudio Server set one's home as a root of its file
+                                    system, so, one can't step "one directory down" and then browse back up to the group
+                                    file spaces.<br><br>There's a trick to get these portals to access the group space, or a scratch space
+                                    - create a symbolic link from that space to your home directory. To do this, in a
+                                    terminal window, run</span></span></span></span></p>
+                     <pre><span class="tabs2_section tabs2_section_1 tabs2_section1 tab_section" data-header-only="false" tab_caption="Description" tab_caption_raw="Description" id="section_tab.1c9dc6d62b41d2007c6de6f019da15da" data-section-id="1c9dc6d62b41d2007c6de6f019da15da" style="display: block;" role="tabpanel" aria-hidden="false" aria-labelledby="section_tab.1c9dc6d62b41d2007c6de6f019da15da"><span id="section-1c9dc6d62b41d2007c6de6f019da15da" data-header-only="false" class="section "><span><span style="word-wrap: break-word; display: block;">ln -s /uufs/chpc.utah.edu/common/home/my-group1 ~/</span></span></span></span></pre>
+                     <p><span class="tabs2_section tabs2_section_1 tabs2_section1 tab_section" data-header-only="false" tab_caption="Description" tab_caption_raw="Description" id="section_tab.1c9dc6d62b41d2007c6de6f019da15da" data-section-id="1c9dc6d62b41d2007c6de6f019da15da" style="display: block;" role="tabpanel" aria-hidden="false" aria-labelledby="section_tab.1c9dc6d62b41d2007c6de6f019da15da"><span id="section-1c9dc6d62b41d2007c6de6f019da15da" data-header-only="false" class="section "><span><span style="word-wrap: break-word; display: block;">Replace the <code style="background-color: lightgray;">my-group1</code>&nbsp; with the appropriate group space name. You'll then see the <code style="background-color: lightgray;">my-group1</code> directory in the root of your home and access it this way.</span></span></span></span></p>
+                     <p>Similarly, for the scratch spaces, e.g. for <code style="background-color: lightgray;">/scratch/general/vast</code>, we can do:</p>
+                     <pre><span class="tabs2_section tabs2_section_1 tabs2_section1 tab_section" data-header-only="false" tab_caption="Description" tab_caption_raw="Description" data-section-id="1c9dc6d62b41d2007c6de6f019da15da" style="display: block;" role="tabpanel" aria-hidden="false" aria-labelledby="section_tab.1c9dc6d62b41d2007c6de6f019da15da"><span data-header-only="false" class="section "><span><span style="word-wrap: break-word; display: block;">ln -s /scratch/general/vast/$USER ~/vast</span></span></span></span><span class="tabs2_section tabs2_section_1 tabs2_section1 tab_section" data-header-only="false" tab_caption="Description" tab_caption_raw="Description" data-section-id="1c9dc6d62b41d2007c6de6f019da15da" style="display: block;" role="tabpanel" aria-hidden="false" aria-labelledby="section_tab.1c9dc6d62b41d2007c6de6f019da15da"><span data-header-only="false" class="section "><span><span style="word-wrap: break-word; display: block;">_____________________________________________________________________________________________________________________________<br><br></span></span></span></span></pre>
+                     <h4><a id="rss"></a>18. My RStudio Server session does not start, or crashes on start.</h4>
+                     <p>Sometimes, the RStudio Server session files stored in user's home directory get corrupted,
+                        preventing starting new RStudio Server sessions. This is especially common if one
+                        chooses to automatically save the work space and doesn't terminate the RStudio Server
+                        session before deleting the job that runs it (e.g. in Open OnDemand).</p>
+                     <p>Many of these situations can be prevented if one terminates the Open OnDemand RStudio
+                        Server session via its menu <strong>File - Quit Session</strong>, rather than just closing the web browser tab and deleting the job.</p>
+                     <p>To remedy this situation, first try to remove the session files, by running&nbsp;</p>
+                     <p><code style="background-color: lightgray;">rm -rf ~/.local/share/rstudio/sessions/*</code>.</p>
+                     <p>If that does not help, move the whole RStudio settings directories.</p>
+                     <p><code style="background-color: lightgray;">mv ~/.local/share/rstudio ~/.local/share/rstudio-old</code>.</p>
+                     <p>Be aware that this will reset some customizations you may have done. If this does
+                        not work, move the user settings, &nbsp;</p>
+                     <p><code style="background-color: lightgray;">mv ~.config/rstudio ~/.config/rstudio-old</code> .</p>
+                     <p>Finally, if none of these steps work, <a href="mailto:helpdesk@chpc.utah.edu?subject=RStudio%20Server%20problem">contact our help desk</a>. We have seen cases where the RStudio project files were saved in certain user home
+                        directories that were corrupted and they had to be removed by a member of the CHPC
+                        staff.</p>
+                     <p><span class="tabs2_section tabs2_section_1 tabs2_section1 tab_section" data-header-only="false" tab_caption="Description" tab_caption_raw="Description" id="section_tab.1c9dc6d62b41d2007c6de6f019da15da" data-section-id="1c9dc6d62b41d2007c6de6f019da15da" style="display: block;" role="tabpanel" aria-hidden="false" aria-labelledby="section_tab.1c9dc6d62b41d2007c6de6f019da15da"><span id="section-1c9dc6d62b41d2007c6de6f019da15da" data-header-only="false" class="section "><span><span style="word-wrap: break-word; display: block;"><span class="tabs2_section tabs2_section_1 tabs2_section1 tab_section" data-header-only="false" tab_caption="Description" tab_caption_raw="Description" data-section-id="1c9dc6d62b41d2007c6de6f019da15da" style="display: block;" role="tabpanel" aria-hidden="false" aria-labelledby="section_tab.1c9dc6d62b41d2007c6de6f019da15da"><span data-header-only="false" class="section ">_____________________________________________________________________________________________________________________________</span></span></span></span></span></span></p>
+                     <h4><a id="emacs"></a>19. Starting Emacs editor is very slow.</h4>
+                     <p>Emacs's initialization includes accessing many files, which can be slow in the network
+                        file system environment. The workaround is to run EMacs in the <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Emacs-Server.html">server mode</a> (as a daemon), and start each terminal session using <a href="https://www.emacswiki.org/emacs/EmacsClient">emacsclient</a> command. The Emacs daemon stays in the background even if one disconnects from that
+                        particular system, so, it needs to be started only once per system start.</p>
+                     <p>The easiest way is to create an alias for the emacs command as</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>alias emacs emacsclient -a \"\"</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>Note the escaped double quote characters (\"\"). This will start the emacs as a daemon
+                        if it's not started already, and proceeds to run in client mode.</p>
+                     <p>Note that by default emacsclient starts in the terminal. To force start Emacs GUI,
+                        add the "<a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/emacsclient-Options.html">-c</a>" flag, e.g. (assuming the aforementioned alias is in place) "</p>
+                     <pre>emacs -c myfile.txt</pre>
+                     <p>Another solution, suggested by a user, is to add this line to your .emacs file in
+                        your home directory:</p>
+                     <pre>(setq locate-dominating-stop-dir-regexp "\\`\\(?:/uufs/chpc.utah.edu/common/home/[^\\/]+/\\|~/\\)\\'")</pre>
+                     <p><span class="tabs2_section tabs2_section_1 tabs2_section1 tab_section" data-header-only="false" tab_caption="Description" tab_caption_raw="Description" data-section-id="1c9dc6d62b41d2007c6de6f019da15da" style="display: block;" role="tabpanel" aria-hidden="false" aria-labelledby="section_tab.1c9dc6d62b41d2007c6de6f019da15da"><span data-header-only="false" class="section "><span><span style="word-wrap: break-word; display: block;">_____________________________________________________________________________________________________________________________</span></span></span></span></p>
+                     <h4><a id="emacsfile"></a>20. Opening Emacs file is very slow.</h4>
+                     <p>We have yet to find the root of this problem but it's most likely caused by the number
+                        of files in a directory and the type of the file that Emacs is filtering through.
+                        The workaround is to read the file without any contents conversion:</p>
+                     <p>&nbsp;<code style="background-color: lightgray;"><a href="https://kb.iu.edu/d/acqm">M-x</a> find-file-literally &lt;Enter&gt; filename &lt;Enter&gt;</code></p>
+                     <p>After opening the file, one can tell Emacs to encode the file accordingly, e.g. to
+                        syntax highlight shell scripts:</p>
+                     <p><code style="background-color: lightgray;">M-x sh-mode &lt;Enter&gt;</code></p>
+                     <p>To make this change permanent, open the ~/.emacs file to add:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>(global-set-key "\C-c\C-f" 'find-file-literally)</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p><span class="tabs2_section tabs2_section_1 tabs2_section1 tab_section" data-header-only="false" tab_caption="Description" tab_caption_raw="Description" data-section-id="1c9dc6d62b41d2007c6de6f019da15da" style="display: block;" role="tabpanel" aria-hidden="false" aria-labelledby="section_tab.1c9dc6d62b41d2007c6de6f019da15da"><span data-header-only="false" class="section "><span><span style="word-wrap: break-word; display: block;">_____________________________________________________________________________________________________________________________</span></span></span></span></p>
+                     <p>&nbsp;</p>
+                     <h4>&nbsp;<a id="tmp"></a>21. <span>My program crashed because /tmp filled up.</span></h4>
+                     <p><span>Linux defines temporary file systems at <code style="background-color: lightgray;">/tmp</code> or&nbsp;<code style="background-color: lightgray;">/var/tmp</code>, where temporary user and system files are stored. CHPC cluster nodes set up temporary
+                           file systems as a RAM disk with limited capacity. All interactive and compute nodes
+                           have also a spinning disk local storage at <code style="background-color: lightgray;">/scratch/local</code>. </span></p>
+                     <p><span>If a user program is known to need temporary storage, it is advantageous to set environment
+                           variable, <a href="https://en.wikipedia.org/wiki/TMPDIR">TMPDIR</a>, which defines the location of the temporary storage, and point it to <code style="background-color: lightgray;">/scratch/local</code>. Or, even better, create a user specific directory, <code style="background-color: lightgray;">/scratch/local/$USER</code>, and set <code style="background-color: lightgray;">/scratch/local</code> to that as shown in our sample at <code style="background-color: lightgray;">/uufs/chpc.utah.edu/sys/modulefiles/templates/custom.[csh,sh]</code> .</span></p>
+                     <p><span><span class="tabs2_section tabs2_section_1 tabs2_section1 tab_section" data-header-only="false" tab_caption="Description" tab_caption_raw="Description" data-section-id="1c9dc6d62b41d2007c6de6f019da15da" style="display: block;" role="tabpanel" aria-hidden="false" aria-labelledby="section_tab.1c9dc6d62b41d2007c6de6f019da15da"><span data-header-only="false" class="section "><span style="word-wrap: break-word; display: block;">_____________________________________________________________________________________________________________________________</span></span></span></span></p>
+                     <h4><a id="eff"></a>22. How do I check that my job is running efficiently?</h4>
+                     <p>One possibility is that you are not utilizing all of the available CPUs that you requested.
+                        To find this information, run the following command:</p>
+                     <p><code style="background-color: lightgray;">pestat -u $USER</code></p>
+                     <p><code style="background-color: lightgray;"></code>Any information shown in red is a warning sign. In the example output below the user's
+                        jobs are only utilizing one CPU out of 16 or 28 available:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>Hostname&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Partition&nbsp;&nbsp;&nbsp;&nbsp; Node Num_CPU&nbsp; CPUload&nbsp; Memsize&nbsp; Freemem&nbsp; Joblist<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; State Use/Tot&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (MB)&nbsp;&nbsp;&nbsp;&nbsp; (MB)&nbsp; JobId User ...<br>&nbsp;&nbsp; kp016&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; kingspeak*&nbsp;&nbsp;&nbsp; alloc&nbsp; 16&nbsp; 16&nbsp;&nbsp;&nbsp; 1.00*&nbsp;&nbsp;&nbsp; 64000&nbsp;&nbsp;&nbsp; 55494&nbsp; 7430561 u0123456 &nbsp;<br>&nbsp;&nbsp; kp378&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; schmidt-kp&nbsp;&nbsp;&nbsp; alloc&nbsp; 28&nbsp; 28&nbsp;&nbsp;&nbsp; 1.00*&nbsp;&nbsp; 256000&nbsp;&nbsp; 250656&nbsp; 7430496 u0123456&nbsp; </pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>&nbsp;Another possibility is that the job is running low on memory, although we now limit
+                        the maximum memory used by the job via SLURM so this is much less common than it used
+                        to be. However, if you notice low free memory along with low CPU utilization, like
+                        in the example below, try to submit on nodes with more memory by using the <code style="background-color: lightgray;">#SBATCH --mem=xxx</code> option.</p>
+                     <p>An example of pestat output of a high memory job with a low CPU utilization is below:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>Hostname Partition Node  Num_CPU CPUload Memsize Freemem Joblist<br>                   State Use/Tot         (MB)    (MB)    JobId User ...<br> kp296   emcore-kp alloc 24 24    1.03* 128000   2166*   7430458 u0123456 </pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>&nbsp;</p>
+                     <p><span class="tabs2_section tabs2_section_1 tabs2_section1 tab_section" data-header-only="false" tab_caption="Description" tab_caption_raw="Description" data-section-id="1c9dc6d62b41d2007c6de6f019da15da" style="display: block;" role="tabpanel" aria-hidden="false" aria-labelledby="section_tab.1c9dc6d62b41d2007c6de6f019da15da"><span data-header-only="false" class="section "><span><span style="word-wrap: break-word; display: block;">_____________________________________________________________________________________________________________________________</span></span></span></span><span class="tabs2_section tabs2_section_1 tabs2_section1 tab_section" data-header-only="false" tab_caption="Description" tab_caption_raw="Description" data-section-id="1c9dc6d62b41d2007c6de6f019da15da" style="display: block;" role="tabpanel" aria-hidden="false" aria-labelledby="section_tab.1c9dc6d62b41d2007c6de6f019da15da"><span data-header-only="false" class="section "><span><span style="word-wrap: break-word; display: block;"></span></span></span></span></p>
+                     <h4>&nbsp;<a id="slow"></a>23. My calculations are running slower than expected?</h4>
+                     <p>First, <a href="#eff">check how efficiently are your jobs using the compute nodes</a>. This can give some clues as to what the problem is.</p>
+                     <p>There can be multiple reasons for this, ranging from user mistakes to hardware and
+                        software issues. Here are the most common causes, in the order of commonality:</p>
+                     <ul>
+                        <li><span style="text-decoration: underline;">Not parallelizing the calculation</span>. In an HPC environment, we obtain speed by distributing the workload onto many processors.
+                           There are different ways to parallelize depending on the program workflow, starting
+                           from <a href="/documentation/software/serial-jobs.php">independent calculations</a> to explicit parallelization of the program using OpenMP, MPI, or interpreted languages
+                           like Python, R or Matlab. For some basic information on how to use explicit parallelization,
+                           see our <a href="/presentations/IntroParallel.php">Introduction to Parallel Computing lecture</a>&nbsp;or <a href="mailto:helpdesk@chpc.utah.edu?subject=Parallelization%20help">contact us</a>.</li>
+                        <li><span style="text-decoration: underline;">User does not supply the correct number of parallel tasks or hard coded the number
+                              of tasks to run</span> instead of using SLURM variables like $SLURM_NTASKS or $SLURM_CPUS_PER_NODE. Check
+                           your SLURM script and program input files for this. If in doubt, <a href="mailto:helpdesk@chpc.utah.edu?subject=Parallelization%20help">contact us</a>.</li>
+                        <li><span style="text-decoration: underline;">Inefficient parallelization</span>. MPI can especially be sensitive to how efficiently the program parallelization is
+                           implemented. If you need help in analyzing and fixing the parallel performance, <a href="mailto:helpdesk@chpc.utah.edu?subject=Parallelization%20help">contact us</a>.</li>
+                        <li><span style="text-decoration: underline;">Hardware or software issues on the cluster</span>. If you rule out any of the issues listed above, please <a href="mailto:helpdesk@chpc.utah.edu?subject=Parallelization%20help">contact us</a>.</li>
+                     </ul>
+                     <p><span class="tabs2_section tabs2_section_1 tabs2_section1 tab_section" data-header-only="false" tab_caption="Description" tab_caption_raw="Description" data-section-id="1c9dc6d62b41d2007c6de6f019da15da" style="display: block;" role="tabpanel" aria-hidden="false" aria-labelledby="section_tab.1c9dc6d62b41d2007c6de6f019da15da"><span data-header-only="false" class="section "><span><span style="word-wrap: break-word; display: block;">_____________________________________________________________________________________________________________________________</span></span></span></span></p>
+                     <h4><a id="mem"></a>24. I'm receiving a 'Killed' or 'OOM' error from Slurm.</h4>
+                     <p>The CHPC keeps strict memory limits in jobs through the SLURM scheduler. If your job
+                        ends prematurely, please check if the job output has "<strong>Killed</strong>" or "<strong>OOM</strong>" at or near the end of the output. That would signalize that the job was killed due
+                        to being low on memory.</p>
+                     <p>Occasionally the SLURM memory check does not work and your jobs end up either slowing
+                        down the nodes where the job runs or puts the nodes into a bad state. This requires
+                        sysadmin interaction to recover the nodes, and we usually notify the user and ask
+                        to correct their behavior - either by asking more memory for the job (with the <code style="background-color: lightgray;">#SBATCH --mem=xxx</code> option), or by checking what they are doing and lowering their memory needs.</p>
+                     <p>In either case, in these situations it is imperative to monitor the memory usage of
+                        the job. A good initial check is to run the <a href="#eff">pestat command</a>. If you notice that the memory is low, the next step would be to ssh to the affected
+                        node and run the <code style="background-color: lightgray;">top</code> command. Observe the memory load of the program and if it is high and you notice
+                        <code style="background-color: lightgray;">kswapd</code> processes taking some CPU time, this indicates that the program is using too much
+                        memory. Delete the job before it ends up putting the node in a bad state, remedy the
+                        memory needs as suggested above.</p>
+                     <p><span class="tabs2_section tabs2_section_1 tabs2_section1 tab_section" data-header-only="false" tab_caption="Description" tab_caption_raw="Description" data-section-id="1c9dc6d62b41d2007c6de6f019da15da" style="display: block;" role="tabpanel" aria-hidden="false" aria-labelledby="section_tab.1c9dc6d62b41d2007c6de6f019da15da"><span data-header-only="false" class="section "><span><span style="word-wrap: break-word; display: block;">_____________________________________________________________________________________________________________________________</span></span></span></span></p>
+                     <h4><a id="multinode"></a>25. How can I use all processors in a multi-node job with different CPU core counts
+                        per node?</h4>
+                     <p>In some cases (e.g. when an owner has several generations of nodes) it is desireable
+                        to run a multi-node job that spans nodes with different CPU core counts. To utilize
+                        all the CPUs on these nodes, instead of defining the job's process count with the
+                        SLURM_NTASKS variable provided by SLURM, one has to explicitly specify the total CPU
+                        core count on these nodes.</p>
+                     <p>This is achieved by specifying <em>only</em><code style="background-color: lightgray;">--nodes</code>, <span style="text-decoration: underline;">not</span><code style="background-color: lightgray;">--ntasks</code>, in the node/tasks request part of the SLURM batch script. The second step is to
+                        calculate how many CPU cores are available on all the job's nodes, which is stored
+                        in the JOB_TASKS variable. This variable is supplied (e.g. to mpirun) to specify the
+                        number of tasks.</p>
+                     <p><span class="tabs2_section tabs2_section_1 tabs2_section1 tab_section" data-header-only="false" tab_caption="Description" tab_caption_raw="Description" id="section_tab.1c9dc6d62b41d2007c6de6f019da15da" data-section-id="1c9dc6d62b41d2007c6de6f019da15da" style="display: block;" role="tabpanel" aria-hidden="false" aria-labelledby="section_tab.1c9dc6d62b41d2007c6de6f019da15da"><span id="section-1c9dc6d62b41d2007c6de6f019da15da" data-header-only="false" class="section "><span><span style="word-wrap: break-word; display: block;">#!/bin/bash<br>#SBATCH --nodes=12<br>....<br>JOB_TASKS=`echo $SLURM_JOB_CPUS_PER_NODE | sed -e 's/[()]//g' -e 's/x/*/g' -e 's/,/+/g'
+                                    | bc`<br><br>mpirun -np $JOB_TASKS program_to_run<br><br><span class="tabs2_section tabs2_section_1 tabs2_section1 tab_section" data-header-only="false" tab_caption="Description" tab_caption_raw="Description" data-section-id="1c9dc6d62b41d2007c6de6f019da15da" style="display: block;" role="tabpanel" aria-hidden="false" aria-labelledby="section_tab.1c9dc6d62b41d2007c6de6f019da15da"><span data-header-only="false" class="section ">_____________________________________________________________________________________________________________________________</span></span></span></span></span></span><span class="tabs2_section tabs2_section_1 tabs2_section1 tab_section" data-header-only="false" tab_caption="Description" tab_caption_raw="Description" id="section_tab.1c9dc6d62b41d2007c6de6f019da15da" data-section-id="1c9dc6d62b41d2007c6de6f019da15da" style="display: block;" role="tabpanel" aria-hidden="false" aria-labelledby="section_tab.1c9dc6d62b41d2007c6de6f019da15da"><span id="section-1c9dc6d62b41d2007c6de6f019da15da" data-header-only="false" class="section "><span><span style="word-wrap: break-word; display: block;"></span></span></span></span></p>
+                     <h4><span class="tabs2_section tabs2_section_1 tabs2_section1 tab_section" data-header-only="false" tab_caption="Description" tab_caption_raw="Description" data-section-id="1c9dc6d62b41d2007c6de6f019da15da" style="display: block;" role="tabpanel" aria-hidden="false" aria-labelledby="section_tab.1c9dc6d62b41d2007c6de6f019da15da"><span data-header-only="false" class="section "><span><span style="word-wrap: break-word; display: block;"><span class="tabs2_section tabs2_section_1 tabs2_section1 tab_section" data-header-only="false" tab_caption="Description" tab_caption_raw="Description" data-section-id="1c9dc6d62b41d2007c6de6f019da15da" style="display: block;" role="tabpanel" aria-hidden="false" aria-labelledby="section_tab.1c9dc6d62b41d2007c6de6f019da15da"><span data-header-only="false" class="section "><a id="gpus"></a>26. My job needs access to GPU resources. How do I request a GPU node for my job?</span></span></span></span></span></span></h4>
+                     <p><span class="tabs2_section tabs2_section_1 tabs2_section1 tab_section" data-header-only="false" tab_caption="Description" tab_caption_raw="Description" data-section-id="1c9dc6d62b41d2007c6de6f019da15da" style="display: block;" role="tabpanel" aria-hidden="false" aria-labelledby="section_tab.1c9dc6d62b41d2007c6de6f019da15da"><span data-header-only="false" class="section "><span style="word-wrap: break-word; display: block;"><span class="tabs2_section tabs2_section_1 tabs2_section1 tab_section" data-header-only="false" tab_caption="Description" tab_caption_raw="Description" data-section-id="1c9dc6d62b41d2007c6de6f019da15da" style="display: block;" role="tabpanel" aria-hidden="false" aria-labelledby="section_tab.1c9dc6d62b41d2007c6de6f019da15da"><span data-header-only="false" class="section ">If your job needs access to GPU resources, please first <em>check that you have access to our GPU partitions</em> by running the <code style="background-color: lightgray;">myallocation</code> command. In the output, if you do not see &lt;cluster&gt;-gpu (where cluster is either
+                                       notchpeak, lonepeak, kingspeak, or redwood), please contact us at <a href="mailto:helpdesk@chpc.utah.edu">helpdesk@chpc.utah.edu</a> and tell us why you need GPU resources.</span></span></span></span></span></p>
+                     <p><em>If you do have access to GPU partitions</em>, you can request GPU node(s) either in your SLURM batch script or through Open OnDemand.</p>
+                     <p><span style="text-decoration: underline;">via SLURM:</span></p>
+                     <p>Add the following to your batch script:</p>
+                     <pre>#SBATCH --gres=gpu</pre>
+                     <p>You can alternatively request certain types and counts of GPU resources as such:</p>
+                     <pre>#SBATCH --gres=gpu:v100:4</pre>
+                     <p>The above request 4 v100 GPUs.</p>
+                     <p><span style="text-decoration: underline;">via Open OnDemand:</span></p>
+                     <p>You can request access to GPUs when running software on Open OnDemand.&nbsp; When filling
+                        out the fields to request CHPC resources for your software, you will see a field called
+                        'Advanced Options', such as below:&nbsp;</p>
+                     <p><img src="/_resources/images/advanced-options.png" alt="advanced options ood" width="500" height="549"></p>
+                     <p>You must click on the 'Advanced Options' box for GPU options to appear. There, you
+                        can click 'GPU type' to request GPU resources and specify what types of GPUs you need
+                        for your job. Put 'any' if you just need any GPU.</p>
+                     <p><em>**by not clicking advanced options and not specifying a GPU type, your Open OnDemand
+                           session will not have GPU resources.</em></p>
+                     <h4><a id="rpath"></a>27. My program crashes with error "error while loading shared libraries:...: No such
+                        file or directory".</h4>
+                     <p>This error means that the program can't find shared libraries on which it depends.
+                        The full error message specifies the library name, e.g. "<em>error while loading shared libraries: libnetcdf.so.19: cannot open shared object file:
+                           No such file or directory</em>".&nbsp;</p>
+                     <p>To get the program running, one needs to tell the program the path where the library
+                        is, either by setting this path to the <a href="https://www.hpc.dtu.dk/?page_id=1180" target="_blank" rel="noopener">LD_LIBRARY_PATH</a> environment variable, or by loading a module that has this library (which sets the
+                        LD_LIBRARY_PATH). To list all the shared libraries that are needed by the executable,
+                        use the <code style="background-color: lightgray;">ldd</code>&nbsp;command, e.g. <code style="background-color: lightgray;">ldd myprogram</code>.&nbsp;&nbsp;</p>
+                     <p>If one builds a program from source, it's the best to modify the <code style="background-color: lightgray;"><a href="https://en.wikipedia.org/wiki/Rpath" target="_blank" rel="noopener">rpath</a></code>&nbsp;of the program by adding linker flag <code style="background-color: lightgray;">-Wl,-rpath=PATH</code>, <code style="background-color: lightgray;">PATH</code>&nbsp; being the path where the library is located. For example, in the above mentioned
+                        missing NetCDF library, one could achieve this by loading the <code style="background-color: lightgray;">gcc/8.5.0 netcdf/4.9.0</code>&nbsp;modules and in their link line or LDFLAGS, set <code style="background-color: lightgray;">-Wl,-rpath=$NETCDF_ROOT/lib.</code>&nbsp; The <code style="background-color: lightgray;">NETCDF_ROOT</code> environment variable is defined in the <code style="background-color: lightgray;">netcdf/4.9.0</code> module and points to the path where the libnetcdf.so is located.</p>
+                     <h4><a id="glibc"></a>28. I am getting an error like "<span>libc.so.6:&nbsp;</span>version GLIBC_2.33 not found" when trying to run a program</h4>
+                     <p>This means that the program executable was built on a newer operating system, than
+                        what our clusters run. Different OS versions use different base OS library called
+                        <a href="https://sourceware.org/glibc/" target="_blank" rel="noopener">glibc</a>, which is backward, but not forward compatible. That is, programs built with newer
+                        glibc don't run on older OSes. In the error message above, glibc 2.33 is referenced.
+                        The Rocky Linux 8, which is at the time of this writing used at CHPC clusters, uses
+                        glibc 2.28, i.e. an older glibc than the program above requires.&nbsp;</p>
+                     <p>If the program supplies binaries for different Linux OSes, try to get one that's close
+                        to Rocky Linux 8 / RHEL8 that we run. A list of Linux distributions and their respective
+                        glibc versions can be found <a href="https://repology.org/project/glibc/versions" target="_blank" rel="noopener">here</a>.</p>
+                     <p>Another option is to see if the program can be easily built from the source natively
+                        on our systems, or with a package manager like <a href="/documentation/software/spack.php">Spack</a>.</p>
+                     <p>If other binary is not available, and building from the source is cumbersome, either
+                        look if this program is available in a <a href="/documentation/software/singularity.php#docker" target="_blank" rel="noopener">container</a>, or create a container that runs the OS on which this program was built on, and run
+                        it in this container. <a href="mailto:helpdesk@chpc.utah.edu?subject=Running%20newer%20OS%20binary">Contact us</a> if you need help.</p>
+                     <p><em><span class="tabs2_section tabs2_section_1 tabs2_section1 tab_section" data-header-only="false" tab_caption="Description" tab_caption_raw="Description" id="section_tab.1c9dc6d62b41d2007c6de6f019da15da" data-section-id="1c9dc6d62b41d2007c6de6f019da15da" style="display: block;" role="tabpanel" aria-hidden="false" aria-labelledby="section_tab.1c9dc6d62b41d2007c6de6f019da15da"><span id="section-1c9dc6d62b41d2007c6de6f019da15da" data-header-only="false" class="section "><span><span style="word-wrap: break-word; display: block;"><span class="tabs2_section tabs2_section_1 tabs2_section1 tab_section" data-header-only="false" tab_caption="Description" tab_caption_raw="Description" data-section-id="1c9dc6d62b41d2007c6de6f019da15da" style="display: block;" role="tabpanel" aria-hidden="false" aria-labelledby="section_tab.1c9dc6d62b41d2007c6de6f019da15da"><span data-header-only="false" class="section ">_____________________________________________________________________________________________________________________________</span></span></span></span></span></span></em></p>
+                     <h4><span class="tabs2_section tabs2_section_1 tabs2_section1 tab_section" data-header-only="false" tab_caption="Description" tab_caption_raw="Description" data-section-id="1c9dc6d62b41d2007c6de6f019da15da" style="display: block;" role="tabpanel" aria-hidden="false" aria-labelledby="section_tab.1c9dc6d62b41d2007c6de6f019da15da"><span data-header-only="false" class="section "><span><span style="word-wrap: break-word; display: block;"><a id="contactchpc"></a>29. Is your question not on this list?</span></span></span></span></h4>
+                     <p><span class="tabs2_section tabs2_section_1 tabs2_section1 tab_section" data-header-only="false" tab_caption="Description" tab_caption_raw="Description" data-section-id="1c9dc6d62b41d2007c6de6f019da15da" style="display: block;" role="tabpanel" aria-hidden="false" aria-labelledby="section_tab.1c9dc6d62b41d2007c6de6f019da15da"><span data-header-only="false" class="section "><span style="word-wrap: break-word; display: block;">If our FAQ section did not answer your question(s), please email us at <a href="mailto:helpdesk@chpc.utah.edu,">helpdesk@chpc.utah.edu</a> and one of our dedicated team members will assist you.</span></span></span></p>
+                  </div>
+                  <!-- END REGION 1 -->
+                  <!-- SECTION FOOTER -->
+                  
+                  <div class="uu-section__footer  ">
+                     <p></p>
+                  </div>
+                  <!-- END SECTION FOOTER -->
+                  </div>
+            </section>
+            <!-- END SECTION 1 -->
+            <!-- SECTION 2 -->
+            <!-- END SECTION 2 -->
+            <!-- SECTION 3 -->
+            <!-- END SECTION 3 -->
+            <!-- SECTION 4 -->
+            <!-- END SECTION 4 -->
+            <!-- SECTION 5 -->
+            <!-- END SECTION 5 -->
+            </main>
+         <!-- END MAIN CONTENT -->
+         <!-- FOOTER -->
+         
+         <footer class="uu-footer"><div class="uu-footer__top">
+   <div class="uu-footer__top-container">
+      <div class="uu-footer__top-col1"><a href="https://www.utah.edu"><img src="https://templates.utah.edu/_main-v3-1/images/template/blocku.svg" alt="The University of Utah" class="uu-block-logo"></a><div class="department-name">
+            <h2>The Center For High Performance Computing</h2>
+         </div>
+         <div class="department-address">
+            <p>155 S 1452 E, RM. 405<br>SLC, UT 84112-0190<br>801.585.3791&nbsp;</p>
+         </div>
+      </div>
+      <div class="uu-footer__top-col2">
+         <h2 class="footer-heading">Stay in Touch</h2>
+         <hr>
+         <ul>
+            <li><a href="https://map.utah.edu/index.html?code=inscc">Find Us</a></li>
+            <li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Us</a></li>
+            <li><a href="mailto:helpdesk@chpc.utah.edu">Webmaster</a></li>
+         </ul>
+      </div>
+      <div class="uu-footer__top-col5">
+         <h2 class="footer-heading">Quick Links</h2>
+         <hr>
+         <ul>
+            <li><a href="https://www.utah.edu/a-z/">A-Z Index</a></li>
+            <li><a href="https://people.utah.edu/uWho/basic.hml">Campus Directory</a></li>
+            <li><a href="https://www.map.utah.edu">Campus Map</a></li>
+            <li><a href="https://map.utah.edu/?allshuttle=on">Shuttle Tracker </a></li>
+            <li><a href="https://cis.utah.edu/">CIS</a></li>
+            <li><a href="https://www.umail.utah.edu/">UMail</a></li>
+            <li><a href="https://attheu.utah.edu/">@ The U</a></li>
+         </ul>
+      </div>
+   </div>
+</div><div class="uu-footer__bottom">
+   <div class="uu-footer__bottom-container">
+      <div class="uu-footer__bottom-col1"><a href="https://www.utah.edu/"><img src="https://templates.utah.edu/_main-v3-1/images/template/university-of-utah-logo.svg" alt="The University of Utah" class="uu-site-logo"></a></div>
+      <div class="uu-footer__bottom-col2">
+         <div class="legal">
+            <p>© 2024 The University of Utah</p>
+            <ul>
+               <li><a href="https://www.utah.edu/indigenous-land-acknowledgment/index.php">Indigenous Land Acknowledgment</a></li>
+               <li><a href="https://www.utah.edu/nondiscrimination/">Nondiscrimination &amp; Accessibility</a></li>
+               <li><a href="https://www.utah.edu/disclaimer/">Disclaimer</a></li>
+               <li><a href="https://www.utah.edu/privacy/">Privacy</a></li>
+               <li><a href="https://www.utah.edu/credits-v3.php">Credits &amp; Attributions</a></li>
+               <li><a href="https://attheu.utah.edu/media-contacts/">Media Contacts</a></li>
+               <li><span id="directedit"></span></li>
+            </ul>
+         </div>
+      </div>
+      <div class="uu-footer__bottom-col3">
+         <ul class="uu-social-list">
+            <li><a href="https://twitter.com/uutah"><span class="fa-brands fa-x-twitter" aria-hidden="true"></span><span class="sr-only">X</span></a></li>
+            <li><a href="https://www.facebook.com/universityofutah"><span class="fab fa-facebook" aria-hidden="true"></span><span class="sr-only">Facebook</span></a></li>
+            <li><a href="https://www.instagram.com/universityofutah/"><span class="fab fa-instagram" aria-hidden="true"></span><span class="sr-only">Instagram</span></a></li>
+            <li><a href="https://www.youtube.com/user/theuniversityofutah"><span class="fab fa-youtube" aria-hidden="true"></span><span class="sr-only">Youtube</span></a></li>
+         </ul>
+      </div>
+   </div>
+</div></footer>
+         <!-- END FOOTER -->
+         </div>
+      <!-- FOOT CODE -->
+      <script src="//templates.utah.edu/_main-v3-1/js/main.min.js"></script>
+      
+      
+      
+      
+      
+      
+      
+      <script src="//templates.utah.edu/_main-v3-1/js/directedit.js"></script><script><!--
+window.onload = function(){ directedit(); }
+//
+			--></script>
+      <script src="/_resources/js/custom.js"></script>
+            
+      <!-- END FOOT CODE -->
+      
+      <div id="hidden"><a id="de" href="https://a.cms.omniupdate.com/11/?skin=utah&amp;account=utah_home&amp;site=chpc2&amp;action=de&amp;path=/documentation/hpcfaq.pcf">Last Updated: 8/22/24</a></div>
+      <!-- END PAGE BODY -->
+      </body>
+</html>

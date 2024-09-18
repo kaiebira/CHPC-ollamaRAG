@@ -1,0 +1,581 @@
+<!DOCTYPE HTML><html lang="en-US" class="no-js">
+   <head><!-- PAGE HEAD -->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+      <title>Math Libraries - Center for High Performance Computing - The University of Utah</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="robots" content="index,follow">
+      <link rel="icon" href="//templates.utah.edu/_main-v3-1/images/template/favicon.ico">
+      <link rel="apple-touch-icon-precomposed" href="//templates.utah.edu/_main-v3-1/images/template/apple-touch-icon.png">
+      <link rel="stylesheet" href="//templates.utah.edu/_main-v3-1/css/main.min.css" type="text/css"><noscript>
+         <link rel="stylesheet" href="//templates.utah.edu/_main-v3-1/css/assets/fontawesome/css/all.min.css" type="text/css"></noscript><link href="/_resources/css/custom.css" rel="stylesheet" type="text/css">
+      <script src="//templates.utah.edu/_main-v3-1/js/head-code.min.js"></script>
+      <!-- HEAD CODE -->
+      
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y160DVJ0DZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y160DVJ0DZ');
+</script>
+
+      
+      <!-- END HEAD CODE -->
+      <!-- END PAGE HEAD -->
+      </head>
+   <body class="has-headernav"><!-- PAGE BODY -->
+      <a class="uu-skip-link" href="#skip-link-target">Skip to content</a>
+      <!-- BODY TOP CODE -->
+            <!-- END BODY TOP CODE -->
+      
+      <div id="uu-top-target" class="uu-site"><!-- SEARCH -->
+         <div class="uu-search" role="search">
+    <div class="uu-search__container">
+        <!-- SITE SEARCH -->
+        <form method="get" id="search-site" class="uu-search__form" action="/search/index.php">
+
+            <label for="inputSearchSite" class="sr-only">Search Site:</label>
+            <input type="text" id="inputSearchSite" name="q" value="" placeholder="Search Site" />
+            <input type="hidden" name="gcse_action" value="site" />
+
+            <div class="form-powered-by">
+                <span>Powered by</span> 
+                <img src="https://templates.utah.edu/_main-v3-1/images/template/google-logo.png" alt="Google Search">
+            </div>
+
+        </form>
+        <!-- END SITE SEARCH -->
+        <!-- CAMPUS SEARCH -->
+        <form method="get" id="search-campus" class="uu-search__form" action="/search/index.php">
+
+            <label for="inputSearchCampus" class="sr-only">Search Campus:</label>
+            <input type="text" id="inputSearchCampus" name="q" value="" placeholder="Search Campus" />
+            <input type="hidden" name="gcse_action" value="campus" />
+
+            <div class="form-powered-by">
+                <span>Powered by</span> 
+                <img src="https://templates.utah.edu/_main-v3-1/images/template/google-logo.png" alt="Google Search">
+            </div>
+        </form>
+        <!-- END CAMPUS SEARCH -->
+
+        <!-- SEARCH TYPE TOGGLE -->
+        <div class="search-type-toggle">
+            <label class="uu-switch" for="search_campus_checkbox">
+                <input type="checkbox" name="search_campus_checkbox" value="" id="search_campus_checkbox">
+                <span class="uu-switch-slider"></span>
+                <span class="uu-switch-label">Search Campus</span>
+            </label>
+        </div>
+        <!-- END SEARCH TYPE TOGGLE -->
+
+    </div>
+</div><!-- END SEARCH -->
+         <!-- HEADER -->
+         
+         <header class="uu-header">
+            <div class="uu-header__container">
+               <!-- ALERT AREA -->
+               <div id="alert_bar" class="uu-alert-bar"> 
+	<a href="https://coronavirus.utah.edu/">University of Utah COVID-19 Updates</a>
+</div><!-- END ALERT AREA -->
+               
+               <div class="uu-header__top"> <a href="https://www.utah.edu/" class="uu-header__logo"><span class="sr-only">The University of Utah</span></a>                  <div class="uu-header__middle">
+                     <!-- HEADER TITLE -->
+                     <div class="uu-header__title">
+<h2><a href="/">CHPC - Research Computing and Data Support for the University</a></h2>
+<!-- <h3><a href="http://it.utah.edu">University Information Technology</a></h3> --></div><!-- END HEADER TITLE -->
+                     <!-- HEADER NAVIGATION -->
+                     
+<nav class="uu-header__nav">
+	
+<ul class="uu-menu__level1">
+<ul class="uu-menu__level1">
+<li class="has-sub"><a href="#">About Us</a>
+<ul class="sub-menu">
+<li><a href="/about/index.php">About Us</a></li>
+<li><a href="https://www.chpc.utah.edu/about/vision.php">Vision</a></li>
+<li><a href="/about/staff.php">Staff</a></li>
+<li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Information</a></li>
+<li><a href="https://www.chpc.utah.edu/about/acknowledge.php">Acknowledging CHPC</a></li>
+<li><a href="https://www.chpc.utah.edu/highlights.php">Research Highlights</a></li>
+<li><a href="https://www.chpc.utah.edu/about/partners.php">Partners</a></li>
+<li><a href="/news/index.php">News</a></li>
+<li><a href="/about/governance.php">Governance</a></li>
+</ul>
+</li>
+<li class="has-sub"><a href="#">Resources</a>
+<ul class="sub-menu">
+<li><a href="https://www.chpc.utah.edu/resources/index.php">Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/HPC_Clusters.php">HPC Clusters</a></li>
+<li><a href="/resources/storage_services.php">Storage Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="/resources/virtualmachines.php">Virtual Machines</a></li>
+<li><a href="/resources/hosting.php">Hosting Services</a></li>
+<li><a href="/resources/Networking.php">Networking</a></li>
+<li><a href="/resources/ProtectedEnvironment.php">Protected Environment</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="/userservices/index.php">User Services</a></li>
+</ul>
+</li>
+<li class="has-sub sub-width-lg"><a href="#">Documentation</a>
+<ul class="sub-menu">
+<li><a href="https://www.chpc.utah.edu/documentation/index.php">Documentation</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/gettingstarted.php">Getting Started</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/access.php">Accessing Our Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/videos/index.php">Short Training Videos</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/index.php">Cluster Guides</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/beehive.php">Beehive User Guide (Windows Server)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/gpus-accelerators.php">GPU &amp; Accelerators</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/frisco-nodes.php">Frisco Nodes</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/narwhal.php">Narwhal User Guide (Protected Environment Statistics)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/software/index.php">Software</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php">Programming Guide</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/policies/index.php">Policy Manual</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/HelloWorldMPI.php">HPC Basics - Hello World MPI</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/faq.php">Frequently Asked Questions</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/white_papers/index.php">White Papers</a></li>
+</ul>
+</li>
+<li class="has-sub"><a href="#">User Services</a>
+<ul class="sub-menu">
+<li><a href="/userservices/index.php">User Services</a></li>
+<li><a href="https://www.chpc.utah.edu/userservices/accounts.php">Accounts</a></li>
+<li><a href="/userservices/allocations.php">Allocations</a></li>
+<li><a href="/userservices/gettinghelp.php">Getting Help</a></li>
+<li><a href="https://www.chpc.utah.edu/presentations/index.php">Training</a></li>
+</ul>
+</li>
+<li class="has-sub sub-width-lg"><a href="#">Usage</a>
+<ul class="sub-menu">
+<li><a href="/usage/cluster/index.php">Cluster Usage</a>
+<ul>
+<li><a href="/usage/cluster/current-project-general.php">General Allocation Pool</a></li>
+<li><a href="/usage/cluster/current-project-lonepeak.php">Lonepeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-kingspeak.php">Kingspeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-ash.php">Ash Cluster</a></li>
+<li><a href="/usage/cluster/current-project-redwood.php">Redwood Cluster</a></li>
+</ul>
+</li>
+<li><a href="/usage/graphs.php?g=cluster%20utilization&amp;host=combined&amp;type=daily_utilization">Cluster Utilization Graphs</a></li>
+<li><a href="/usage/graphs.php?g=hpc%20cluster%20scratch&amp;host=chpc_gen&amp;type=cpu">HPC Cluster Scratch</a></li>
+<li><a href="/usage/graphs.php?g=network&amp;host=Campus+Gateway&amp;type=daily_traffic">Network</a>
+<ul>
+<li><a href="/resources/maddash-dashboards.php">Maddash Dashboards</a></li>
+</ul>
+</li>
+<li><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">UEN Weathermap (Only Available on UEN Networks)</a></li>
+<li><a href="http://snapp2.bldc.grnoc.iu.edu/i2al2s/#&amp;p=3%2C42&amp;ccid=3&amp;tab=1&amp;search=undefined&amp;pwidth=undefined&amp;ccat=undefined&amp;url=show-graph.cgi%3Fcollection_ids%3D145%26end%3D1461772131%26start%3D1461771831%26cf%3DAVERAGE%26ds%3Doutput%2Cinput%26collection_ids%3D145" target="_blank" rel="noopener">UEN Aggregate Utilization</a></li>
+<li><a href="http://uofu.status.io">UofU IT Services Status</a></li>
+<li><a href="https://status.it.utah.edu">University Application Heath Summary - NOC</a></li>
+</ul>
+</li>
+<li><a href="/role/">My Account</a></li>
+</ul>
+</ul>	
+</nav>
+
+<!-- END HEADER NAVIGATION -->
+                     </div>
+                  <div class="uu-search-toggle"><button class="uu-search__trigger"><span class="far fa-search" aria-hidden="true"></span><span class="sr-only">Search</span></button></div><button id="jsNavTrigger" class="uu-nav__trigger" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Reveal Menu</span><span></span></button></div>
+            </div>
+         </header>
+         <!-- END HEADER -->
+         <!-- PUSH NAVIGATION -->
+         
+         <section class="uu-nav">
+            <div class="uu-nav__container"><button id="jsMobileNavTrigger" class="uu-nav__trigger" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Reveal Menu</span><span></span></button><header class="uu-nav__header">
+                  <h2 class="sr-only">Main Navigation</h2>
+                  <!-- Navigation Logo -->
+<a href="https://utah.edu/" class="uu-nav__logo">
+	<img src="https://templates.utah.edu/_main-v3-1/images/template/university-of-utah-logo.svg" alt="The University of Utah"/>
+</a></header>
+               <nav class="uu-menu" aria-label="main"><p><h2 class="uu-menu__title">Main Menu</h2>
+<hr />
+<ul class="uu-menu__level1">
+<li><a href="/">Home</a></li>
+<li class="has-sublist"><a href="#">About Us</a>
+<ul class="uu-menu__level2">
+<li><a href="/about/index.php">About Us</a></li>
+<li><a href="https://www.chpc.utah.edu/about/vision.php">Vision</a></li>
+<li><a href="/about/staff.php">Staff</a></li>
+<li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Information</a></li>
+<li><a href="https://www.chpc.utah.edu/about/acknowledge.php">Acknowledging CHPC</a></li>
+<!--<li><a href="/about/bibliography/CHPC%20BIB.pdf" target="_blank" rel="noopener">CHPC Bibliography</a></li>-->
+<li><a href="https://www.chpc.utah.edu/about/SupportedResearch.php">Supported Research</a></li>
+<li><a href="https://www.chpc.utah.edu/highlights.php">Research Highlights</a></li>
+<li><a href="https://www.chpc.utah.edu/about/partners.php">Partners</a></li>
+<li><a href="/news/index.php">News</a></li>
+<li><a title="University Information Technology" href="https://it.utah.edu/" target="_blank" rel="noopener">UIT</a></li>
+<li><a href="/about/governance.php">Governance</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Resources</a>
+<ul class="uu-menu__level2">
+<li><a href="https://www.chpc.utah.edu/resources/index.php">Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/HPC_Clusters.php">HPC Clusters</a></li>
+<li><a href="/resources/storage_services.php">Storage Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="/resources/virtualmachines.php">Virtual Machines</a></li>
+<li><a href="/resources/hosting.php">Hosting Services</a></li>
+<li><a href="/resources/Networking.php">Networking</a></li>
+<li><a href="/resources/ProtectedEnvironment.php">Protected Environment</a></li>
+<li><a href="/documentation/software/ai.php">AI/ML Resources</a></li>
+<li><a href="/userservices/index.php">User Services</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Documentation</a>
+<ul class="uu-menu__level2">
+<li><a href="https://www.chpc.utah.edu/documentation/index.php">Documentation</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/gettingstarted.php">Getting Started</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/access.php">Accessing Our Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/videos/index.php">Short Training Videos</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/index.php">Cluster Guides</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/beehive.php">Beehive User Guide (Windows Server)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/gpus-accelerators.php">GPU &amp; Accelerators</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/frisco-nodes.php">Frisco Nodes</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/narwhal.php">Narwhal User Guide (Protected Environment Statistics)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/software/index.php">Software</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php">Programming Guide</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/policies/index.php">Policy Manual</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/HelloWorldMPI.php">HPC Basics - Hello World MPI</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/faq.php">Frequently Asked Questions</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/white_papers/index.php">White Papers</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">User Services</a>
+<ul class="uu-menu__level2">
+<li><a href="/userservices/index.php">User Services</a></li>
+<li><a href="https://www.chpc.utah.edu/userservices/accounts.php">Accounts</a></li>
+<li><a href="/userservices/allocations.php">Allocations</a></li>
+<li><a href="/userservices/gettinghelp.php">Getting Help</a></li>
+<li><a href="https://www.chpc.utah.edu/presentations/index.php">Training</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Usage</a>
+<ul class="uu-menu__level2">
+<li class="has-sublist"><a href="/usage/cluster/index.php">Cluster Usage</a>
+<ul class="uu-menu__level3">
+<li><a href="/usage/cluster/current-project-general.php">General Allocation Pool</a></li>
+<li><a href="/usage/cluster/current-project-lonepeak.php">Lonepeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-kingspeak.php">Kingspeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-ash.php">Ash Cluster</a></li>
+<li><a href="/usage/cluster/current-project-redwood.php">Redwood Cluster</a></li>
+</ul>
+</li>
+<li><a href="/usage/graphs.php?g=cluster%20utilization&amp;host=combined&amp;type=daily_utilization">Cluster Utilization Graphs</a></li>
+<li><a href="/usage/graphs.php?g=hpc%20cluster%20scratch&amp;host=chpc_gen&amp;type=cpu">HPC Cluster Scratch</a></li>
+<li class="has-sublist"><a href="/usage/graphs.php?g=network&amp;host=Campus+Gateway&amp;type=daily_traffic">Network</a>
+<ul class="uu-menu__level3">
+<li><a href="/resources/maddash-dashboards.php">Maddash Dashboards</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">UEN Weathermap</a>
+<ul class="uu-menu__level3">
+<li><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">(Only Available on UEN Networks)</a></li>
+</ul>
+</li>
+<li><a href="http://snapp2.bldc.grnoc.iu.edu/i2al2s/#&amp;p=3%2C42&amp;ccid=3&amp;tab=1&amp;search=undefined&amp;pwidth=undefined&amp;ccat=undefined&amp;url=show-graph.cgi%3Fcollection_ids%3D145%26end%3D1461772131%26start%3D1461771831%26cf%3DAVERAGE%26ds%3Doutput%2Cinput%26collection_ids%3D145" target="_blank" rel="noopener">UEN Aggregate Utilization</a></li>
+<li><a href="http://uofu.status.io">UofU IT Services Status</a></li>
+<li><a href="https://status.it.utah.edu">University Application Heath Summary - NOC</a></li>
+</ul>
+</li>
+<li><a href="/role/">My Account</a></li>
+</ul></p></nav>
+            </div>
+         </section>
+         <!-- END PUSH NAVIGATION -->
+         
+         <!-- MAIN CONTENT -->
+         <main class="uu-main" id="skip-link-target">
+            <nav aria-label="Breadcrumb" class="uu-breadcrumb">
+               <ol>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/documentation/">documentation</a></li>
+                  <li><a href="/documentation/software/">software</a></li>
+                  <li><span class="sr-only">current page: </span>Math Libraries</li>
+               </ol>
+            </nav>
+            <!-- SECTION 1 -->
+            
+            <section class="uu-section bg-white text-default uu-section--region-1" style="">
+               <div class="uu-section__container"><!-- SECTION HEADER -->
+                  
+                  <div class="uu-section__header  ">
+                     <h1>CHPC Software: Math Libraries</h1>
+                     <p>By the term Math library in this document we consider a software package that includes
+                        functions that perform certain mathematical operations. This is a very wide term and
+                        as such the list below is not exhaustive, but, it represents the most commonly used
+                        math functions in scientific and engineering computations.<br><br>Math libraries can be roughly divided into general libraries, which provide multitude
+                        of functionality, and specialized libraries that provide specific functionality. Among
+                        the general libraries we include Intel Math Kernel Library (MKL) library, or GNU Scientific
+                        Library (GSL). The pecialized libraries include BLAS and LAPACK linear algebra libraries,
+                        FFTW Fast Fourier Transform library, etc. The general libraries often provide optimized
+                        functionality of the specialized libraries, or use them underneath.<br><br>The below listed libraries are the most common libraries that we provide, if you don't
+                        see the one you need on the list, please, contact us.</p>
+                     <ul id="in_text_nav">
+                        <li>General libraries
+                           
+                           <ul>
+                              <li><a href="#mkl">Intel Math Kernel Library (MKL)</a></li>
+                              <li><a href="#gsl">GNU Scientific Library (GSL)</a></li>
+                           </ul>
+                        </li>
+                        <li>Specialized libraries
+                           
+                           <ul>
+                              <li><a href="#openblas">OpenBLAS</a></li>
+                              <li><a href="#lapack">LAPACK</a></li>
+                              <li><a href="#scalapack">ScaLAPACK</a></li>
+                              <li><a href="#fftw">FFTW</a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+                  <!-- END SECTION HEADER -->
+                  <!-- REGION 1 -->
+                  
+                  <div class="uu-section__region bg-white text-default no-border">
+                     <h2><a id="mkl"></a>Intel Math Kernel Library</h2>
+                     <p>MKL contains highly optimized math routines. It includes full optimized BLAS, LAPACK,
+                        sparse solvers, vector math library, random number generators and and fast Fourier
+                        transform routines (including FFTW wrappers). For more information, consult the&nbsp;<a href="http://software.intel.com/en-us/articles/intel-math-kernel-library-documentation/" target="_blank" rel="noopener">Intel Math Kernel Library Documentation</a>.</p>
+                     <p>MKL is supplied as an independent module, depending on a compiler. For example to
+                        use MKL with the Intel compiler, we need to load both the compiler and the MKL module:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <p class="wall">module load intel-oneapi-compilers intel-oneapi-mkl</p>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>&nbsp;</p>
+                     <p><strong>Compilation instructions:</strong></p>
+                     <p>The examples below (diagonalization of a symmetric matrix) require the source files<a class="confluence-link" href="https://wiki.chpc.utah.edu/download/attachments/511279765/lapack1.f90?version=1&amp;modificationDate=1399579386000&amp;api=v2" data-linked-resource-container-id="511279765" data-linked-resource-id="511737882" data-linked-resource-type="attachment" data-linked-resource-default-alias="lapack1.f90" data-base-url="https://wiki.chpc.utah.edu">&nbsp;lapack1.f90</a>&nbsp;and&nbsp;<a class="confluence-link" href="https://wiki.chpc.utah.edu/download/attachments/511279765/lapack1.c?version=1&amp;modificationDate=1399579386000&amp;api=v2" data-linked-resource-container-id="511279765" data-linked-resource-id="511737881" data-linked-resource-type="attachment" data-linked-resource-default-alias="lapack1.c" data-base-url="https://wiki.chpc.utah.edu">lapack1.c</a></p>
+                     <p><strong>Intel Fortran (using dynamic linking)</strong></p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <p class="wall">ifort lapack1.f90 -o lapack1_ifort -L$MKLROOT/lib/intel64 -lmkl_intel_lp64 -lmkl_sequential
+                           -lmkl_core -lpthread -Wl,-rpath=$MKLROOT/lib/intel64</p>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>&nbsp;</p>
+                     <p><strong>Intel C/C++ (using dynamic linking)</strong></p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <p class="wall">icc lapack1.c -o lapack1_icc -L$MKLROOT/lib/intel64 -lmkl_intel_lp64 -lmkl_sequential
+                           -lmkl_core -lpthread -Wl,-rpath=$MKLROOT/lib/intel64</p>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>&nbsp;</p>
+                     <p>If you use the C++ compiler, please replace icc by icpc and change the suffix .c into
+                        .cc in the previous statement.</p>
+                     <p>It is also possible to incorporate OpenMP-threaded MKL into an OpenMP or mixed MPI/OpenMP
+                        code. To do so, parallelize your code with OpenMP but leave the MKL calls unthreaded,
+                        and instead link the threaded MKL library as e.g.:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <p class="wall">icc lapack1.c -o lapack1_icc_mt -L$MKLROOT/lib/intel64 -Wl,-rpath=$MKLROOT/lib/intel64
+                           -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -liomp5 -lpthread</p>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>&nbsp;</p>
+                     <p>Then run as you usually would with given OMP_NUM_THREADS and MKL calls will run over
+                        that many threads as well.</p>
+                     <p>For distributed (MPI) parallel linear algebra routines, ScaLAPACK is also fully implemented
+                        inside MKL and recommended to use instead of the reference ScaLAPACK distribution.
+                        From release 11.2 (2015), MKL also includes cluster <a href="https://software.intel.com/en-us/articles/intel-mkl-pardiso" target="_blank" rel="noopener">sparse matrix solvers</a> based on PARDISO. Large sparse eigenproblems can be solved, to certain tolerance,
+                        using <a href="https://github.com/primme/primme" target="_blank" rel="noopener">PRIMME</a>, which can be linked to MKL for LAPACK/BLAS.</p>
+                     <p><span style="line-height: 1.75;">These and other advanced MKL routines require relatively complex linking schemes for
+                           which the best is to use the </span><a style="line-height: 1.75;" href="https://software.intel.com/en-us/articles/intel-mkl-link-line-advisor" target="_blank" rel="noopener">MKL Link Line Advisor page</a><span style="line-height: 1.75;">. The MKL Link Advisor also lets you define link flags for GNU and PGI compilers,
+                           which we recommend to use as MKL generally provides superior performance. To use GNU
+                           or PGI compilers with MKL, first load the intel module, then load the GNU or PGI module,
+                           and then other potential libraries to use with GNU or PGI compiler.<br></span></p>
+                     <p>MKL also includes interface for FFTW - commonly used Fast Fourier Transform library.
+                        It is advantageous to use this interface especially when building multi CPU architecture
+                        binaries with the -ax Intel compiler flag. The header files for the FFTW interface
+                        are at <code style="background-color: lightgray;">$MKLROOT/include/fftw</code>.</p>
+                     <h2><a id="gsl"></a>GNU Scientific Library (GSL)</h2>
+                     <p><a href="http://www.gnu.org/software/gsl/" target="_blank" rel="noopener">GSL</a> is a numerical library for C/C++ provides a wide range of mathematical routines such
+                        as random number generators, special functions and least-squares fitting. There are
+                        over 1000 functions in total with an extensive test suite. While GSL is not parallel,
+                        it is reasonably thread safe and its routines should be callable from parallel code
+                        sections. One can also link a parallel BLAS library such as MKL or ACML and utilize
+                        the shared memory parallelism they provide.</p>
+                     <p><strong>GNU gcc</strong></p>
+                     <p><code style="background-color: lightgray;">module load gcc/8.5.0 gsl<br>gcc source.c -o executable -I$GSL_ROOT/include -L$GSL_ROOT/lib -lgsl -lcblas -Wl,-rpath=$GSL_ROOT/lib</code></p>
+                     <p>This links with the generic unoptimized version of BLAS. $GSL_INCDIR and $GSL_LIBDIR
+                        are environment variables defined in the gsl module.</p>
+                     <p><strong>Intel C/C++</strong></p>
+                     <p><code style="background-color: lightgray;">module load intel-oneapi-compilers gsl intel-oneapi-mkl<br>icc</code> (or <code style="background-color: lightgray;">icpc</code>) <code style="background-color: lightgray;">source.c -O3 -axCORE-AVX2,AVX,SSE4.2 -o executable -I$GSL_ROOT/include -L$GSL_ROOT/lib
+                           -lgsl -L$MKLROOT/lib/intel64 -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -lpthread
+                           -Wl,-rpath=$GSL_ROOT/lib -Wl,-rpath=$MKLROOT/lib/intel64</code></p>
+                     <p>This links with MKL threaded BLAS library for optimal performance and OpenMP parallelism.</p>
+                     <h2><a id="openblas"></a>OpenBLAS Library</h2>
+                     <p><a href="http://www.openblas.net/" target="_blank" rel="noopener">OpenBLAS</a> is is an optimized BLAS library based on GotoBLAS2. Its advantage is a relative simplicity,
+                        disadvantage is a low maturity. Some of the applications we build link to OpenBLAS
+                        for simplicity, but we recommend that everyone uses MKL instead. OpenBLAS is available
+                        via module load, e.g. <code style="background-color: lightgray;">module load gcc/8.5.0 openblas</code>. Linking is relatively simple with adding the following to the link line: <code style="background-color: lightgray;">-Wl,-rpath=$OPENBLAS_ROOT/lib -L$OPENBLAS_ROOT/lib -lopenblas.</code></p>
+                     <h2><a id="lapack"></a>LAPACK Library</h2>
+                     <p><a href="http://www.netlib.org/lapack/" target="_blank" rel="noopener">LAPACK</a> (Linear Algebra PACKage) provides routines for solving systems of simultaneous linear
+                        equations, least-squares solutions of linear systems of equations, eigenvalue problems,
+                        and singular value problems. It runs on single processor only. The CentOS 7 operation
+                        system comes with reference LAPACK (and BLAS), but we highly recommend to use the
+                        Intel MKL which includes full LAPACK for optimal performance. Linking LAPACK with
+                        MKL is the same as linking BLAS, <a href="#mkl">described above</a>.</p>
+                     <h2><a id="scalapack"></a>ScaLAPACK Library</h2>
+                     <div class="boxbody">
+                        <p>The <a href="http://www.netlib.org/scalapack/scalapack_home.html" target="_blank" rel="noopener">ScaLAPACK</a> (or Scalable LAPACK) library includes a subset of LAPACK routines redesigned for
+                           distributed memory MIMD parallel computers. It is written in a Single-Program- Multiple-Data
+                           style using explicit message passing for interprocessor communication. It assumes
+                           matrices are laid out in a two-dimensional block cyclic decomposition.</p>
+                        The fundamental building blocks of the ScaLAPACK library are distributed memory versions
+                        <a href="http://www.netlib.org/scalapack/html/pblas_qref.html" target="_blank" rel="noopener">(PBLAS)</a> of the <a href="http://www.netlib.org/blas/" target="_blank" rel="noopener">Level 1, 2 and 3 BLAS</a>, and a set of Basic Linear Algebra Communication Subprograms <a href="http://www.netlib.org/blacs/index.html" target="_blank" rel="noopener">(BLACS)</a> for communication tasks that arise frequently in parallel linear algebra computations.
+                        In the ScaLAPACK routines, all interprocessor communication occurs within the PBLAS
+                        and the BLACS. One of the design goals of ScaLAPACK was to have the ScaLAPACK routines
+                        resemble their LAPACK equivalents as much as possible.</div>
+                     <div class="boxbody">&nbsp;</div>
+                     <div class="boxbody">Intel MKL provides full ScaLAPACK and we recommend using it along with the Intel compilers
+                        and Intel MPI library for optimal performance. See the <a href="https://software.intel.com/en-us/articles/intel-mkl-link-line-advisor" target="_blank" rel="noopener">Intel MKL Link Line Advisor</a>&nbsp;for the correct compiler and linker flags. The following will link hybrid MPI and
+                        OpenMP program with ScaLAPACK from MKL, with Intel Fortran and Intel MPI, and with
+                        long integer support (64 bit integers) for large data sizes:</div>
+                     <div class="boxbody">&nbsp;</div>
+                     <div class="boxbody"><code style="background-color: lightgray;">module load intel-oneapi-compilers intel-oneapi-mpi<br></code></div>
+                     <div class="boxbody"><code style="background-color: lightgray;"></code></div>
+                     <div class="boxbody"><code style="background-color: lightgray;">mpiifort -openmp -o executable program.f90 -Wl,-rpath=$MKLROOT/lib/intel64 -L$MKLROOT/lib/intel64
+                           -lmkl_scalapack_ilp64 -lmkl_intel_ilp64 -lmkl_core -lmkl_intel_thread -lmkl_blacs_intelmpi_ilp64
+                           -liomp5 -lpthread -lm&nbsp; -I$MKLROOT/lib/include</code></div>
+                     <div class="boxbody"><code style="background-color: lightgray;"></code></div>
+                     <h2 class="boxbody"><a id="fftw"></a>FFTW Library</h2>
+                     <p><a href="http://www.fftw.org/" target="_blank" rel="noopener">Fastest Fourier Transform in the West (FFTW)</a> is a high performance Fast Fourier Transform (FFT) library. Apart from being optimized
+                        for most PC architectures it also includes OpenMP and MPI parallelism. Latest serial
+                        and threaded OpenMP builds with the three compilers that we support (GNU, Intel and
+                        NVHPC) can be accessed through their respective modules.&nbsp; To link serial FFTW with
+                        e.g. Intel compiler, simply add <code style="background-color: lightgray;">-L$FFTW_ROOT/lib -lfftw3</code>to the link line. To link OpenMP FFTW, add <code style="background-color: lightgray;">-lfftw3_omp</code> to the serial link line.</p>
+                     <p>For example, for the Intel compiler with OpenMP:</p>
+                     <!-- PANEL -->
+                     <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                        <pre>module load intel-oneapi-compilers fftw<br>pgcc myprog.c -o myprog.exe -I$FFTW_ROOT/include -L$FFTW_ROOT/lib -Wl,-rpath=$FFTW_ROOT/lib -lfftw3 -lfftw3_omp</pre>
+                     </div>
+                     <!-- END PANEL -->
+                     
+                     <p>&nbsp;</p>
+                     <p>Please, note that there is also FFTW version 2 which is still used in some of the
+                        codes, which is incompatible with FFTW 3. This one is available as module <code style="background-color: lightgray;">fftw/2.1.5</code>.</p>
+                     <p>Also note that the Intel MKL includes FFTW wrappers with the FFT performance being
+                        on par with FFTW, for the information how to link see our <a href="#mkl">MKL documentation</a>.</p>
+                  </div>
+                  <!-- END REGION 1 -->
+                  <!-- SECTION FOOTER -->
+                  
+                  <div class="uu-section__footer  ">
+                     <p></p>
+                  </div>
+                  <!-- END SECTION FOOTER -->
+                  </div>
+            </section>
+            <!-- END SECTION 1 -->
+            <!-- SECTION 2 -->
+            <!-- END SECTION 2 -->
+            <!-- SECTION 3 -->
+            <!-- END SECTION 3 -->
+            <!-- SECTION 4 -->
+            <!-- END SECTION 4 -->
+            <!-- SECTION 5 -->
+            <!-- END SECTION 5 -->
+            </main>
+         <!-- END MAIN CONTENT -->
+         <!-- FOOTER -->
+         
+         <footer class="uu-footer"><div class="uu-footer__top">
+   <div class="uu-footer__top-container">
+      <div class="uu-footer__top-col1"><a href="https://www.utah.edu"><img src="https://templates.utah.edu/_main-v3-1/images/template/blocku.svg" alt="The University of Utah" class="uu-block-logo"></a><div class="department-name">
+            <h2>The Center For High Performance Computing</h2>
+         </div>
+         <div class="department-address">
+            <p>155 S 1452 E, RM. 405<br>SLC, UT 84112-0190<br>801.585.3791&nbsp;</p>
+         </div>
+      </div>
+      <div class="uu-footer__top-col2">
+         <h2 class="footer-heading">Stay in Touch</h2>
+         <hr>
+         <ul>
+            <li><a href="https://map.utah.edu/index.html?code=inscc">Find Us</a></li>
+            <li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Us</a></li>
+            <li><a href="mailto:helpdesk@chpc.utah.edu">Webmaster</a></li>
+         </ul>
+      </div>
+      <div class="uu-footer__top-col5">
+         <h2 class="footer-heading">Quick Links</h2>
+         <hr>
+         <ul>
+            <li><a href="https://www.utah.edu/a-z/">A-Z Index</a></li>
+            <li><a href="https://people.utah.edu/uWho/basic.hml">Campus Directory</a></li>
+            <li><a href="https://www.map.utah.edu">Campus Map</a></li>
+            <li><a href="https://map.utah.edu/?allshuttle=on">Shuttle Tracker </a></li>
+            <li><a href="https://cis.utah.edu/">CIS</a></li>
+            <li><a href="https://www.umail.utah.edu/">UMail</a></li>
+            <li><a href="https://attheu.utah.edu/">@ The U</a></li>
+         </ul>
+      </div>
+   </div>
+</div><div class="uu-footer__bottom">
+   <div class="uu-footer__bottom-container">
+      <div class="uu-footer__bottom-col1"><a href="https://www.utah.edu/"><img src="https://templates.utah.edu/_main-v3-1/images/template/university-of-utah-logo.svg" alt="The University of Utah" class="uu-site-logo"></a></div>
+      <div class="uu-footer__bottom-col2">
+         <div class="legal">
+            <p>© 2024 The University of Utah</p>
+            <ul>
+               <li><a href="https://www.utah.edu/indigenous-land-acknowledgment/index.php">Indigenous Land Acknowledgment</a></li>
+               <li><a href="https://www.utah.edu/nondiscrimination/">Nondiscrimination &amp; Accessibility</a></li>
+               <li><a href="https://www.utah.edu/disclaimer/">Disclaimer</a></li>
+               <li><a href="https://www.utah.edu/privacy/">Privacy</a></li>
+               <li><a href="https://www.utah.edu/credits-v3.php">Credits &amp; Attributions</a></li>
+               <li><a href="https://attheu.utah.edu/media-contacts/">Media Contacts</a></li>
+               <li><span id="directedit"></span></li>
+            </ul>
+         </div>
+      </div>
+      <div class="uu-footer__bottom-col3">
+         <ul class="uu-social-list">
+            <li><a href="https://twitter.com/uutah"><span class="fa-brands fa-x-twitter" aria-hidden="true"></span><span class="sr-only">X</span></a></li>
+            <li><a href="https://www.facebook.com/universityofutah"><span class="fab fa-facebook" aria-hidden="true"></span><span class="sr-only">Facebook</span></a></li>
+            <li><a href="https://www.instagram.com/universityofutah/"><span class="fab fa-instagram" aria-hidden="true"></span><span class="sr-only">Instagram</span></a></li>
+            <li><a href="https://www.youtube.com/user/theuniversityofutah"><span class="fab fa-youtube" aria-hidden="true"></span><span class="sr-only">Youtube</span></a></li>
+         </ul>
+      </div>
+   </div>
+</div></footer>
+         <!-- END FOOTER -->
+         </div>
+      <!-- FOOT CODE -->
+      <script src="//templates.utah.edu/_main-v3-1/js/main.min.js"></script>
+      
+      
+      
+      
+      
+      
+      
+      <script src="//templates.utah.edu/_main-v3-1/js/directedit.js"></script><script><!--
+window.onload = function(){ directedit(); }
+//
+			--></script>
+      <script src="/_resources/js/custom.js"></script>
+            
+      <!-- END FOOT CODE -->
+      
+      <div id="hidden"><a id="de" href="https://a.cms.omniupdate.com/11/?skin=utah&amp;account=utah_home&amp;site=chpc2&amp;action=de&amp;path=/documentation/software/mathlibraries.pcf">Last Updated: 6/4/24</a></div>
+      <!-- END PAGE BODY -->
+      </body>
+</html>

@@ -1,0 +1,770 @@
+<!DOCTYPE HTML><html lang="en-US" class="no-js">
+   <head><!-- PAGE HEAD -->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+      <title>Running independent serial calculations - Center for High Performance Computing - The University of Utah</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="robots" content="index,follow">
+      <link rel="icon" href="//templates.utah.edu/_main-v3-1/images/template/favicon.ico">
+      <link rel="apple-touch-icon-precomposed" href="//templates.utah.edu/_main-v3-1/images/template/apple-touch-icon.png">
+      <link rel="stylesheet" href="//templates.utah.edu/_main-v3-1/css/main.min.css" type="text/css"><noscript>
+         <link rel="stylesheet" href="//templates.utah.edu/_main-v3-1/css/assets/fontawesome/css/all.min.css" type="text/css"></noscript><link href="/_resources/css/custom.css" rel="stylesheet" type="text/css">
+      <script src="//templates.utah.edu/_main-v3-1/js/head-code.min.js"></script>
+      <!-- HEAD CODE -->
+      
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y160DVJ0DZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y160DVJ0DZ');
+</script>
+
+      
+      <!-- END HEAD CODE -->
+      <!-- END PAGE HEAD -->
+      </head>
+   <body class="has-headernav"><!-- PAGE BODY -->
+      <a class="uu-skip-link" href="#skip-link-target">Skip to content</a>
+      <!-- BODY TOP CODE -->
+            <!-- END BODY TOP CODE -->
+      
+      <div id="uu-top-target" class="uu-site"><!-- SEARCH -->
+         <div class="uu-search" role="search">
+    <div class="uu-search__container">
+        <!-- SITE SEARCH -->
+        <form method="get" id="search-site" class="uu-search__form" action="/search/index.php">
+
+            <label for="inputSearchSite" class="sr-only">Search Site:</label>
+            <input type="text" id="inputSearchSite" name="q" value="" placeholder="Search Site" />
+            <input type="hidden" name="gcse_action" value="site" />
+
+            <div class="form-powered-by">
+                <span>Powered by</span> 
+                <img src="https://templates.utah.edu/_main-v3-1/images/template/google-logo.png" alt="Google Search">
+            </div>
+
+        </form>
+        <!-- END SITE SEARCH -->
+        <!-- CAMPUS SEARCH -->
+        <form method="get" id="search-campus" class="uu-search__form" action="/search/index.php">
+
+            <label for="inputSearchCampus" class="sr-only">Search Campus:</label>
+            <input type="text" id="inputSearchCampus" name="q" value="" placeholder="Search Campus" />
+            <input type="hidden" name="gcse_action" value="campus" />
+
+            <div class="form-powered-by">
+                <span>Powered by</span> 
+                <img src="https://templates.utah.edu/_main-v3-1/images/template/google-logo.png" alt="Google Search">
+            </div>
+        </form>
+        <!-- END CAMPUS SEARCH -->
+
+        <!-- SEARCH TYPE TOGGLE -->
+        <div class="search-type-toggle">
+            <label class="uu-switch" for="search_campus_checkbox">
+                <input type="checkbox" name="search_campus_checkbox" value="" id="search_campus_checkbox">
+                <span class="uu-switch-slider"></span>
+                <span class="uu-switch-label">Search Campus</span>
+            </label>
+        </div>
+        <!-- END SEARCH TYPE TOGGLE -->
+
+    </div>
+</div><!-- END SEARCH -->
+         <!-- HEADER -->
+         
+         <header class="uu-header">
+            <div class="uu-header__container">
+               <!-- ALERT AREA -->
+               <div id="alert_bar" class="uu-alert-bar"> 
+	<a href="https://coronavirus.utah.edu/">University of Utah COVID-19 Updates</a>
+</div><!-- END ALERT AREA -->
+               
+               <div class="uu-header__top"> <a href="https://www.utah.edu/" class="uu-header__logo"><span class="sr-only">The University of Utah</span></a>                  <div class="uu-header__middle">
+                     <!-- HEADER TITLE -->
+                     <div class="uu-header__title">
+<h2><a href="/">CHPC - Research Computing and Data Support for the University</a></h2>
+<!-- <h3><a href="http://it.utah.edu">University Information Technology</a></h3> --></div><!-- END HEADER TITLE -->
+                     <!-- HEADER NAVIGATION -->
+                     
+<nav class="uu-header__nav">
+	
+<ul class="uu-menu__level1">
+<ul class="uu-menu__level1">
+<li class="has-sub"><a href="#">About Us</a>
+<ul class="sub-menu">
+<li><a href="/about/index.php">About Us</a></li>
+<li><a href="https://www.chpc.utah.edu/about/vision.php">Vision</a></li>
+<li><a href="/about/staff.php">Staff</a></li>
+<li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Information</a></li>
+<li><a href="https://www.chpc.utah.edu/about/acknowledge.php">Acknowledging CHPC</a></li>
+<li><a href="https://www.chpc.utah.edu/highlights.php">Research Highlights</a></li>
+<li><a href="https://www.chpc.utah.edu/about/partners.php">Partners</a></li>
+<li><a href="/news/index.php">News</a></li>
+<li><a href="/about/governance.php">Governance</a></li>
+</ul>
+</li>
+<li class="has-sub"><a href="#">Resources</a>
+<ul class="sub-menu">
+<li><a href="https://www.chpc.utah.edu/resources/index.php">Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/HPC_Clusters.php">HPC Clusters</a></li>
+<li><a href="/resources/storage_services.php">Storage Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="/resources/virtualmachines.php">Virtual Machines</a></li>
+<li><a href="/resources/hosting.php">Hosting Services</a></li>
+<li><a href="/resources/Networking.php">Networking</a></li>
+<li><a href="/resources/ProtectedEnvironment.php">Protected Environment</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="/userservices/index.php">User Services</a></li>
+</ul>
+</li>
+<li class="has-sub sub-width-lg"><a href="#">Documentation</a>
+<ul class="sub-menu">
+<li><a href="https://www.chpc.utah.edu/documentation/index.php">Documentation</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/gettingstarted.php">Getting Started</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/access.php">Accessing Our Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/videos/index.php">Short Training Videos</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/index.php">Cluster Guides</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/beehive.php">Beehive User Guide (Windows Server)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/gpus-accelerators.php">GPU &amp; Accelerators</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/frisco-nodes.php">Frisco Nodes</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/narwhal.php">Narwhal User Guide (Protected Environment Statistics)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/software/index.php">Software</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php">Programming Guide</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/policies/index.php">Policy Manual</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/HelloWorldMPI.php">HPC Basics - Hello World MPI</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/faq.php">Frequently Asked Questions</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/white_papers/index.php">White Papers</a></li>
+</ul>
+</li>
+<li class="has-sub"><a href="#">User Services</a>
+<ul class="sub-menu">
+<li><a href="/userservices/index.php">User Services</a></li>
+<li><a href="https://www.chpc.utah.edu/userservices/accounts.php">Accounts</a></li>
+<li><a href="/userservices/allocations.php">Allocations</a></li>
+<li><a href="/userservices/gettinghelp.php">Getting Help</a></li>
+<li><a href="https://www.chpc.utah.edu/presentations/index.php">Training</a></li>
+</ul>
+</li>
+<li class="has-sub sub-width-lg"><a href="#">Usage</a>
+<ul class="sub-menu">
+<li><a href="/usage/cluster/index.php">Cluster Usage</a>
+<ul>
+<li><a href="/usage/cluster/current-project-general.php">General Allocation Pool</a></li>
+<li><a href="/usage/cluster/current-project-lonepeak.php">Lonepeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-kingspeak.php">Kingspeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-ash.php">Ash Cluster</a></li>
+<li><a href="/usage/cluster/current-project-redwood.php">Redwood Cluster</a></li>
+</ul>
+</li>
+<li><a href="/usage/graphs.php?g=cluster%20utilization&amp;host=combined&amp;type=daily_utilization">Cluster Utilization Graphs</a></li>
+<li><a href="/usage/graphs.php?g=hpc%20cluster%20scratch&amp;host=chpc_gen&amp;type=cpu">HPC Cluster Scratch</a></li>
+<li><a href="/usage/graphs.php?g=network&amp;host=Campus+Gateway&amp;type=daily_traffic">Network</a>
+<ul>
+<li><a href="/resources/maddash-dashboards.php">Maddash Dashboards</a></li>
+</ul>
+</li>
+<li><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">UEN Weathermap (Only Available on UEN Networks)</a></li>
+<li><a href="http://snapp2.bldc.grnoc.iu.edu/i2al2s/#&amp;p=3%2C42&amp;ccid=3&amp;tab=1&amp;search=undefined&amp;pwidth=undefined&amp;ccat=undefined&amp;url=show-graph.cgi%3Fcollection_ids%3D145%26end%3D1461772131%26start%3D1461771831%26cf%3DAVERAGE%26ds%3Doutput%2Cinput%26collection_ids%3D145" target="_blank" rel="noopener">UEN Aggregate Utilization</a></li>
+<li><a href="http://uofu.status.io">UofU IT Services Status</a></li>
+<li><a href="https://status.it.utah.edu">University Application Heath Summary - NOC</a></li>
+</ul>
+</li>
+<li><a href="/role/">My Account</a></li>
+</ul>
+</ul>	
+</nav>
+
+<!-- END HEADER NAVIGATION -->
+                     </div>
+                  <div class="uu-search-toggle"><button class="uu-search__trigger"><span class="far fa-search" aria-hidden="true"></span><span class="sr-only">Search</span></button></div><button id="jsNavTrigger" class="uu-nav__trigger" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Reveal Menu</span><span></span></button></div>
+            </div>
+         </header>
+         <!-- END HEADER -->
+         <!-- PUSH NAVIGATION -->
+         
+         <section class="uu-nav">
+            <div class="uu-nav__container"><button id="jsMobileNavTrigger" class="uu-nav__trigger" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Reveal Menu</span><span></span></button><header class="uu-nav__header">
+                  <h2 class="sr-only">Main Navigation</h2>
+                  <!-- Navigation Logo -->
+<a href="https://utah.edu/" class="uu-nav__logo">
+	<img src="https://templates.utah.edu/_main-v3-1/images/template/university-of-utah-logo.svg" alt="The University of Utah"/>
+</a></header>
+               <nav class="uu-menu" aria-label="main"><p><h2 class="uu-menu__title">Main Menu</h2>
+<hr />
+<ul class="uu-menu__level1">
+<li><a href="/">Home</a></li>
+<li class="has-sublist"><a href="#">About Us</a>
+<ul class="uu-menu__level2">
+<li><a href="/about/index.php">About Us</a></li>
+<li><a href="https://www.chpc.utah.edu/about/vision.php">Vision</a></li>
+<li><a href="/about/staff.php">Staff</a></li>
+<li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Information</a></li>
+<li><a href="https://www.chpc.utah.edu/about/acknowledge.php">Acknowledging CHPC</a></li>
+<!--<li><a href="/about/bibliography/CHPC%20BIB.pdf" target="_blank" rel="noopener">CHPC Bibliography</a></li>-->
+<li><a href="https://www.chpc.utah.edu/about/SupportedResearch.php">Supported Research</a></li>
+<li><a href="https://www.chpc.utah.edu/highlights.php">Research Highlights</a></li>
+<li><a href="https://www.chpc.utah.edu/about/partners.php">Partners</a></li>
+<li><a href="/news/index.php">News</a></li>
+<li><a title="University Information Technology" href="https://it.utah.edu/" target="_blank" rel="noopener">UIT</a></li>
+<li><a href="/about/governance.php">Governance</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Resources</a>
+<ul class="uu-menu__level2">
+<li><a href="https://www.chpc.utah.edu/resources/index.php">Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/HPC_Clusters.php">HPC Clusters</a></li>
+<li><a href="/resources/storage_services.php">Storage Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="/resources/virtualmachines.php">Virtual Machines</a></li>
+<li><a href="/resources/hosting.php">Hosting Services</a></li>
+<li><a href="/resources/Networking.php">Networking</a></li>
+<li><a href="/resources/ProtectedEnvironment.php">Protected Environment</a></li>
+<li><a href="/documentation/software/ai.php">AI/ML Resources</a></li>
+<li><a href="/userservices/index.php">User Services</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Documentation</a>
+<ul class="uu-menu__level2">
+<li><a href="https://www.chpc.utah.edu/documentation/index.php">Documentation</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/gettingstarted.php">Getting Started</a></li>
+<li><a href="https://www.chpc.utah.edu/resources/access.php">Accessing Our Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/videos/index.php">Short Training Videos</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/index.php">Cluster Guides</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/beehive.php">Beehive User Guide (Windows Server)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/gpus-accelerators.php">GPU &amp; Accelerators</a></li>
+<li><a href="/documentation/software/ai.php">ML/AI Resources</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/frisco-nodes.php">Frisco Nodes</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/narwhal.php">Narwhal User Guide (Protected Environment Statistics)</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/software/index.php">Software</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/ProgrammingGuide.php">Programming Guide</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/policies/index.php">Policy Manual</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/data_services.php">Data Transfer Services</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/guides/HelloWorldMPI.php">HPC Basics - Hello World MPI</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/faq.php">Frequently Asked Questions</a></li>
+<li><a href="https://www.chpc.utah.edu/documentation/white_papers/index.php">White Papers</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">User Services</a>
+<ul class="uu-menu__level2">
+<li><a href="/userservices/index.php">User Services</a></li>
+<li><a href="https://www.chpc.utah.edu/userservices/accounts.php">Accounts</a></li>
+<li><a href="/userservices/allocations.php">Allocations</a></li>
+<li><a href="/userservices/gettinghelp.php">Getting Help</a></li>
+<li><a href="https://www.chpc.utah.edu/presentations/index.php">Training</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="#">Usage</a>
+<ul class="uu-menu__level2">
+<li class="has-sublist"><a href="/usage/cluster/index.php">Cluster Usage</a>
+<ul class="uu-menu__level3">
+<li><a href="/usage/cluster/current-project-general.php">General Allocation Pool</a></li>
+<li><a href="/usage/cluster/current-project-lonepeak.php">Lonepeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-kingspeak.php">Kingspeak Cluster</a></li>
+<li><a href="/usage/cluster/current-project-ash.php">Ash Cluster</a></li>
+<li><a href="/usage/cluster/current-project-redwood.php">Redwood Cluster</a></li>
+</ul>
+</li>
+<li><a href="/usage/graphs.php?g=cluster%20utilization&amp;host=combined&amp;type=daily_utilization">Cluster Utilization Graphs</a></li>
+<li><a href="/usage/graphs.php?g=hpc%20cluster%20scratch&amp;host=chpc_gen&amp;type=cpu">HPC Cluster Scratch</a></li>
+<li class="has-sublist"><a href="/usage/graphs.php?g=network&amp;host=Campus+Gateway&amp;type=daily_traffic">Network</a>
+<ul class="uu-menu__level3">
+<li><a href="/resources/maddash-dashboards.php">Maddash Dashboards</a></li>
+</ul>
+</li>
+<li class="has-sublist"><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">UEN Weathermap</a>
+<ul class="uu-menu__level3">
+<li><a href="http://weathermap.uen.net/" target="_blank" rel="noopener">(Only Available on UEN Networks)</a></li>
+</ul>
+</li>
+<li><a href="http://snapp2.bldc.grnoc.iu.edu/i2al2s/#&amp;p=3%2C42&amp;ccid=3&amp;tab=1&amp;search=undefined&amp;pwidth=undefined&amp;ccat=undefined&amp;url=show-graph.cgi%3Fcollection_ids%3D145%26end%3D1461772131%26start%3D1461771831%26cf%3DAVERAGE%26ds%3Doutput%2Cinput%26collection_ids%3D145" target="_blank" rel="noopener">UEN Aggregate Utilization</a></li>
+<li><a href="http://uofu.status.io">UofU IT Services Status</a></li>
+<li><a href="https://status.it.utah.edu">University Application Heath Summary - NOC</a></li>
+</ul>
+</li>
+<li><a href="/role/">My Account</a></li>
+</ul></p></nav>
+            </div>
+         </section>
+         <!-- END PUSH NAVIGATION -->
+         
+         <!-- MAIN CONTENT -->
+         <main class="uu-main" id="skip-link-target">
+            <nav aria-label="Breadcrumb" class="uu-breadcrumb">
+               <ol>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/documentation/">documentation</a></li>
+                  <li><a href="/documentation/software/">software</a></li>
+                  <li><span class="sr-only">current page: </span>Running independent serial calculations</li>
+               </ol>
+            </nav>
+            <!-- SECTION 1 -->
+            
+            <section class="uu-section bg-white text-default uu-section--region-1" style="">
+               <div class="uu-section__container"><!-- SECTION HEADER -->
+                  
+                  <div class="uu-section__header  ">
+                     <h1>Running independent serial calculations</h1>
+                     <ul id="in_text_nav" class="crawl_skip">
+                        <li class="crawl_skip" style="margin-left: 0px;"><a href="#iscwsrt"> Independent serial calculations with similar run time</a></li>
+                        <li class="crawl_skip" style="margin-left: 30px;"><a href="#bkg-wait">Multiple calculations in the background</a></li>
+                        <li class="crawl_skip" style="margin-left: 30px;"><a href="#multiprog">srun multiple program configuration</a></li>
+                        <li class="crawl_skip" style="margin-left: 0px;"><a href="#iscwvrt">Independent serial calculations with variable run time</a></li>
+                        <li class="crawl_skip" style="margin-left: 30px;"><a href="#gpar">Gnu Parallel</a></li>
+                        <li class="crawl_skip" style="margin-left: 30px;"><a href="#submit">submit mini-scheduler</a></li>
+                        <li class="crawl_skip" style="margin-left: 30px;"><a href="#xargs">Xargs</a></li>
+                        <li class="crawl_skip" style="margin-left: 30px;"><a href="#Launcher">Launcher</a></li>
+                     </ul>
+                     <!--crawl_skip-->
+                     <p>Some data analyses require running a lot of similar independent serial calculations.
+                        Due to logistics in setting up these calculations, and to CHPC cluster scheduling
+                        policies, it is adviseable not to run each single calculation as a separate job. Depending
+                        on the characteristics of the calculations, strategies on how to implement them may
+                        differ. In this page we list and detail available strategies.</p>
+                     <p>If the calculations take about the same time, there are many ways how to pack them
+                        into a single job. If the job runs on a single node, we can combine <a href="#bkg-wait">execution in the background with the wait statement</a>. On multiple nodes, similar thing may be achieved with <a href="https://www.gnu.org/software/parallel/" target="_blank" rel="noopener">GNU Parallel</a>, however, calculation distribution is easier with SLURM's <a href="#multiprog">srun --multi-prog</a> option.</p>
+                     <p>If the calculations have variable runtime, they need to be somehow scheduled inside
+                        of the job in order to efficiently use all available CPU cores on the allocated nodes.
+                        GNU Parallel is the easiest choice for running within a single node. For multiple
+                        nodes, we have developed a mini-scheduler, called <a href="#submit">submit</a>, for this purpose.</p>
+                     <p>If the number of calculations is larger (&gt; ~100), we recommend to either split the
+                        <a href="#multiprog">srun --multi-prog</a> into multiple jobs, or chain the calculations one after with GNU Parallel (on a single
+                        node), or with using <a href="#submit">submit </a>(on multiple nodes). The reason for this is that it takes longer to allocate a larger
+                        job, and, in case of using owner-guest queue, the chances of preemption increase as
+                        well.</p>
+                     <p>Finally, if there are a lot of serial calculations and unless they are very short,
+                        the <a href="https://www.opensciencegrid.org/">Open Science Grid</a> (OSG) may be the best choice due to the vast amount resources the OSG provides.</p>
+                     <p>Below is a table that summarizes the best strategies for different types of serial
+                        calculations:</p>
+                     <table border="1">
+                        <tbody>
+                           <tr>
+                              <td style="vertical-align: bottom;">
+                                 <p>&nbsp;</p>
+                              </td>
+                              <td>About the same runtime</td>
+                              <td>Variable runtime</td>
+                           </tr>
+                           <tr>
+                              <td>Single calculation runtime &lt; 15 min</td>
+                              <td>
+                                 <p><a href="#multiprog">srun --multi-prog</a> for &lt; ~100 calculations</p>
+                                 <p><a href="#bkg-wait">shell script loop</a> - only on a single node</p>
+                                 <p><a href="#submit">submit</a> for chaining &gt; ~100 calculations</p>
+                              </td>
+                              <td>
+                                 <p><a href="#gpar">GNU Parallel</a></p>
+                                 <p><a href="#submit">submit</a></p>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>Single calculation runtime &gt; 15 min</td>
+                              <td>
+                                 <p><a href="#multiprog">srun --multi-prog</a>, multiple jobs if &gt; ~100 calculations</p>
+                                 <p><a href="https://www.opensciencegrid.org/" target="_blank" rel="noopener">Open Science Grid</a></p>
+                              </td>
+                              <td>
+                                 <p><a href="#gpar">GNU Parallel</a></p>
+                                 <p><a href="#submit">submit</a></p>
+                                 <p><a href="https://www.opensciencegrid.org/" target="_blank" rel="noopener">Open Science Grid</a></p>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <p>&nbsp;</p>
+                     <p>If the calculation is thread-parallelized, it is also possible to use <a href="https://www.chpc.utah.edu/documentation/software/slurm.php#jobarr">SLURM job arrays</a> to submit multiple jobs at once, each occupying one full node.</p>
+                  </div>
+                  <!-- END SECTION HEADER -->
+                  <!-- REGION 1 -->
+                  
+                  <div class="uu-section__region bg-white text-default no-border">
+                     <!-- ACCORDION -->
+                     <div class="accordion-group  ">
+                        <section class="accordion-group__accordion">
+                           <header class="accordion-group__accordion-head">
+                              <h3 class="accordion-group__accordion-heading"><button type="button" class="accordion-group__accordion-btn"><a id="iscwsrt"></a><strong><a href="#iscwsrt">Independent serial calculations with similar run time</a></strong></button></h3>
+                           </header>
+                           <div class="accordion-group__accordion-panel">
+                              <div class="accordion-group__accordion-content">
+                                 <!-- ACCORDION -->
+                                 <div class="accordion-group  ">
+                                    <section class="accordion-group__accordion">
+                                       <header class="accordion-group__accordion-head">
+                                          <h3 class="accordion-group__accordion-heading"><button type="button" class="accordion-group__accordion-btn"><a id="bkg-wait"></a><strong><a href="#bkg-wait">Multiple calculations in the background</a></strong></button></h3>
+                                       </header>
+                                       <div class="accordion-group__accordion-panel">
+                                          <div class="accordion-group__accordion-content">
+                                             <p>This is the simplest way to run multiple programs within a single job, however, it
+                                                works only on a single node.</p>
+                                             <p>If we only run on a single node, the process is very simple, e.g. in bash:</p>
+                                             <!-- PANEL -->
+                                             <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                                                <pre>#!/bin/bash<br>for (( i=0; i &lt; $SLURM_NTASKS ; i++ )); do<br>  /path_to/myprogram $i &amp;<br>done<br>wait</pre>
+                                             </div>
+                                             <!-- END PANEL -->
+                                             
+                                             <p>We differentiate between the calculations inside of myprogram through the loop index
+                                                $i. The &amp; will put the processes in the background, thus allowing to launch all $SLURM_NTASKS
+                                                of them. The wait statement will cause the script to wait till all of the background
+                                                processes finish.</p>
+                                             <p>The advantage of this approach is the simplicity, the drawback is that it only works
+                                                on a single node, and for calculations that roughly take the same amount of time.</p>
+                                          </div>
+                                       </div>
+                                    </section>
+                                    <section class="accordion-group__accordion">
+                                       <header class="accordion-group__accordion-head">
+                                          <h3 class="accordion-group__accordion-heading"><button type="button" class="accordion-group__accordion-btn"><a id="multiprog"></a><strong><a href="#multiprog">Scrun multiple program configuration</a></strong></button></h3>
+                                       </header>
+                                       <div class="accordion-group__accordion-panel">
+                                          <div class="accordion-group__accordion-content">
+                                             <p>The <code style="background-color: lightgray;">--multi-prog</code>&nbsp;option allows to assign each task in the job a different option. This allows to differentiate
+                                                serial runs from each other and run them inside a single parallel Slurm job. This
+                                                is our preferred way to launch independent serial calculations that take about the
+                                                same time. A basic Slurm job script can look like this:</p>
+                                             <!-- PANEL -->
+                                             <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                                                <pre>#!/bin/sh<br>#SBATCH -n 16 <br>#SBATCH -N 1<br><span style="line-height: 1.75;">#SBATCH -t 1-03:00:00 # 1 day and 3 hours<br></span>#SBATCH -p CLUSTER # partition name<br>#SBATCH -A chpc # account name<br>#SBATCH -J my_job_name # job name<br><span style="line-height: 1.75;"><br>srun --multi-prog my.conf</span></pre>
+                                             </div>
+                                             <!-- END PANEL -->
+                                             
+                                             <p>Here we submit a job on one node with 16 tasks, and then run the srun with the&nbsp;<code style="background-color: lightgray;">--multi-prog</code>&nbsp;option, which is followed by configuration file for the multiple programs. This file
+                                                has the following three fields per line, separated by spaces:</p>
+                                             <ul>
+                                                <li>task number</li>
+                                                <li>executable file</li>
+                                                <li>arguments to the executable file</li>
+                                             </ul>
+                                             <p>The executable arguments may be augmented by expression "%t" which gets replaced by
+                                                the task number, and "%o" which gets replaced with task's offset within this range.</p>
+                                             <p>Please, note that if the executable is not in the default PATH (as defined when new
+                                                shell is opened), the full path to this executable has to be specified. The same is
+                                                true if the executable is a script that is then calling a program. Due to our modules
+                                                setup, running this script will reset the module environment and as such program modules
+                                                need to be loaded again inside of this script.</p>
+                                             <p>For example, to run quantum chemistry program Mopac, we have <span class="faux-code">mopac.conf</span> as follows:</p>
+                                             <!-- PANEL -->
+                                             <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                                                <pre>0-11 ./example.sh %t</pre>
+                                             </div>
+                                             <!-- END PANEL -->
+                                             
+                                             <p>Where <span class="faux-code">example.sh</span> script contains:</p>
+                                             <!-- PANEL -->
+                                             <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                                                <pre>#!/bin/tcsh<br>module load mopac<br>mopac example-$1.mop</pre>
+                                             </div>
+                                             <!-- END PANEL -->
+                                             
+                                             <p>A complete example for<a href="https://www.chpc.utah.edu/documentation/software/r-language.php#rmulti"> running multiple serial R simulations</a> using --multi-prog is described on our R documentation page.</p>
+                                             <p>We have also developed a simpler multiple serial program launch script which can be
+                                                obtained <a href="https://www.chpc.utah.edu/documentation/software/scripts/multiscript.slr">here</a>. This script runs as many serial tasks as specified in the #SLURM -n line, each of
+                                                which uses one entry from the WORKDIR and PROGRAM arrays listed, copies data from
+                                                WORKDIR to unique scratch directory for each serial task and runs PROGRAM which can
+                                                be the same or unique for each serial task</p>
+                                             <h2 id="iscwvrt"></h2>
+                                          </div>
+                                       </div>
+                                    </section>
+                                 </div>
+                                 <!-- END ACCORDION -->
+                                 </div>
+                           </div>
+                        </section>
+                        <section class="accordion-group__accordion">
+                           <header class="accordion-group__accordion-head">
+                              <h3 class="accordion-group__accordion-heading"><button type="button" class="accordion-group__accordion-btn">
+                                    <p id="iscwvrt"><a id="iscwvrt"></a><strong><a href="#iscwvrt">Independent serial calculations with variable run time</a></strong></p></button></h3>
+                           </header>
+                           <div class="accordion-group__accordion-panel">
+                              <div class="accordion-group__accordion-content">
+                                 <!-- ACCORDION -->
+                                 <div class="accordion-group  ">
+                                    <section class="accordion-group__accordion">
+                                       <header class="accordion-group__accordion-head">
+                                          <h3 class="accordion-group__accordion-heading"><button type="button" class="accordion-group__accordion-btn"><strong><a id="gpar"></a><a href="#gpar">Gnu Parallel</a></strong></button></h3>
+                                       </header>
+                                       <div class="accordion-group__accordion-panel">
+                                          <div class="accordion-group__accordion-content">
+                                             <p>GNU Parallel is an easy way to run the same program or script with different arguments
+                                                (e.g. input files). It also schedules the calculations in case there are more calculations
+                                                than the job tasks, thus allowing to "queue" the calculations inside of the job and
+                                                process them as the previous calculations finish. Running GNU Parallel in a single
+                                                node job is very simple. For example, to compress all the text files in the current
+                                                directory and its subdirectories:</p>
+                                             <pre>$ find . -name "*.txt" -print | parallel -j $SLURM_NTASKS gzip</pre>
+                                             <p>A good short tutorial on a single node GNU parallel use is <a href="https://ulhpc-tutorials.readthedocs.io/en/latest/sequential/gnu-parallel/" target="_blank" rel="noopener">here</a>.</p>
+                                             <p>GNU Parallel is also capable of running on multiple nodes, but the easy way using
+                                                the --sshloginfile option to list the nodes to run on is not very efficient since
+                                                all the jobs are sent to the remote nodes at the start. There is a <a href="https://ulhpc-tutorials.readthedocs.io/en/latest/sequential/manytasks-manynodes/" target="_blank" rel="noopener">tutorial </a>to set up a GNU parallel queue for each node, however, that load ballance the calculations
+                                                only within each node, not across all the nodes. Submit or Launcher would be a better
+                                                choice for a multi-node job.</p>
+                                          </div>
+                                       </div>
+                                    </section>
+                                    <section class="accordion-group__accordion">
+                                       <header class="accordion-group__accordion-head">
+                                          <h3 class="accordion-group__accordion-heading"><button type="button" class="accordion-group__accordion-btn"><a id="submit"></a><strong><a href="#submit">Submit mini- scheduler</a></strong></button></h3>
+                                       </header>
+                                       <div class="accordion-group__accordion-panel">
+                                          <div class="accordion-group__accordion-content">
+                                             <p>The <span class="faux-code">submit</span> program allows to run many serial calculations inside of a parallel cluster job using
+                                                master-worker model. The program is a simple MPI based scheduler which reads a list
+                                                of calculations to do from a file, one per line, and runs them in parallel, filling
+                                                as many calculations as there are parallel tasks. Once one calculation is finished,
+                                                the worker asks for another calculation, which keeps repeating until all calculations
+                                                are done.</p>
+                                             <p>This is our preferred way to run independent serial calculations that may take different
+                                                amount of time to finish, as long as there are many more calculations than job tasks,
+                                                as this allows to chain the calculations one after another and fill in the resources
+                                                better. If one roughly knows the runtime of each calculation, listing them with respect
+                                                to the calculation time in the descending order, the longest first, will provide the
+                                                best packing of the calculations on the job tasks.</p>
+                                             <p>For the basic documentation, example and source code see the&nbsp;<a href="https://github.com/CHPC-UofU/submit" target="_blank" rel="noopener"><span class="faux-code">submit</span>GitHub page</a>.</p>
+                                             <p>The <span class="faux-code">submit</span> program reads in input file called <span class="faux-code">job.list</span>, which syntax is as follows:<br>first line - # of serial jobs to run<br>other lines - command line for these serial jobs (including program arguments). Make
+                                                sure there is only single space between the program arguments - more that single space
+                                                will break the command line.<br><br>For example (for testing purpose), you can make <span class="faux-code">job.list</span> as:</p>
+                                             <!-- PANEL -->
+                                             <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                                                <pre>4<br>/bin/hostname -i<br>/bin/hostname -i<br>/bin/hostname -i<br>/bin/hostname -i</pre>
+                                             </div>
+                                             <!-- END PANEL -->
+                                             
+                                             <p>This will run 4 serial jobs, executing the&nbsp; <span class="faux-code">hostname</span> command - which returns name of the node this command ran on.</p>
+                                             <p>NOTE - since&nbsp;<span class="faux-code">submit</span> launches the items in&nbsp;<span class="faux-code">job.list</span> directly, it does not use the environment. Therefore we need to specify full path
+                                                to the command, or, run a shell script (with a full path to the shell script in <span class="faux-code">job.list</span>, where the shell script initializes a new shell session with user default environment).</p>
+                                             <p>The differentiation between different calculations can be built into the <span class="faux-code">job.list</span> through program arguments, as shown in the example below.</p>
+                                             <p>A complete example using SLURM and a set of serial R calculations, similar to the
+                                                srun --multi-prog example shown above, can be found on the&nbsp;<a href="https://github.com/CHPC-UofU/submit/tree/master/examples/R" target="_blank" rel="noopener">submit github page</a> or at <span class="faux-code">/uufs/chpc.utah.edu/sys/installdir/submit/std/examples/R</span>.</p>
+                                          </div>
+                                       </div>
+                                    </section>
+                                    <section class="accordion-group__accordion">
+                                       <header class="accordion-group__accordion-head">
+                                          <h3 class="accordion-group__accordion-heading"><button type="button" class="accordion-group__accordion-btn">
+                                                <p><a id="xargs"></a><strong><a href="#xargs">Running Multiple Tasks on a Single Node with Xargs</a></strong></p></button></h3>
+                                       </header>
+                                       <div class="accordion-group__accordion-panel">
+                                          <div class="accordion-group__accordion-content">
+                                             <p>If you intend to run multiple independent tasks in parallel on a single node, the
+                                                Linux shell command xargs is a great tool. In its simplest form xargs reads values
+                                                from the standard input and applies a command to each value that was read. For example,
+                                                to compress all the text files in the current directory and its subdirectories:</p>
+                                             <!-- PANEL -->
+                                             <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                                                <pre>$ find . -name "*.txt" -print | xargs gzip</pre>
+                                             </div>
+                                             <!-- END PANEL -->
+                                             
+                                             <p>&nbsp;To run these commands in parallel, simply add the -P option, specifying the number
+                                                of processes to run concurrently:</p>
+                                             <!-- PANEL -->
+                                             <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                                                <pre>$ find . -name "*.txt" -print | xargs -P 5 gzip</pre>
+                                             </div>
+                                             <!-- END PANEL -->
+                                             
+                                             <p>This works nicely with SLURM, since the SLURM_NTASKS environment variable is set automatically
+                                                when the job starts. This variable can be used to define the number of cores to be
+                                                used for the task:</p>
+                                             <!-- PANEL -->
+                                             <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                                                <pre>$ find . -name "*.txt" -print | xargs -P $SLURM_NTASKS gzip</pre>
+                                             </div>
+                                             <!-- END PANEL -->
+                                             
+                                             <p>The command passed to xargs can even be a shell function, assuming your SLURM script
+                                                uses bash, and the function has been exported using "export -f". An alternative to
+                                                reading the command arguments from the standard input is to specify a file of commands
+                                                using the -a or --arg-file options. Consult the manual page on xargs for more details.</p>
+                                          </div>
+                                       </div>
+                                    </section>
+                                    <section class="accordion-group__accordion">
+                                       <header class="accordion-group__accordion-head">
+                                          <h3 class="accordion-group__accordion-heading"><button type="button" class="accordion-group__accordion-btn"><a id="Launcher"></a><strong><a href="#Launcher">Launcher</a></strong></button></h3>
+                                       </header>
+                                       <div class="accordion-group__accordion-panel">
+                                          <div class="accordion-group__accordion-content">
+                                             <p>Launcher is a utility from the Texas Advanced Computing Center (TACC) that simplifies
+                                                the task of running multiple parallel tasks within a single multi-node SLURM job.
+                                                To use launcher you must enter your commands into a file, create a SLURM script to
+                                                start launcher, and submit your SLURM script using sbatch. Here is an example launcher
+                                                SLURM script:</p>
+                                             <!-- PANEL -->
+                                             <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                                                <pre>#!/bin/bash <br># <br># Simple SLURM script for submitting multiple serial jobs (e.g. &nbsp;<br># parametric studies) using launcher to launch the jobs. <br># &nbsp;<br>#SBATCH -J Parametric &nbsp;<br>#SBATCH -N 4 <br>#SBATCH -n 8 <br>#SBATCH -o Parametric.o%j <br>#SBATCH -t 00:05:00 <br>#SBATCH --account=<em>your_cluster_account</em><br>#SBATCH --partition=<em>your_cluster_partition</em><br><br># The script must load the launcher module:<br>module load launcher<br># The script must set the LAUNCHER_JOB_FILE environment variable to the name of your command file:<br>export LAUNCHER_JOB_FILE=helloworldmulti <br># Finally, your script must call the "paramrun" command: <br>paramrun</pre>
+                                             </div>
+                                             <!-- END PANEL -->
+                                             
+                                             <p>Finally, submit your SLURM script with the sbatch command. In this example, the job
+                                                will use 4 nodes (-N 4) and will run your commands in parallel, 2 on each node, for
+                                                a total of 8 concurrent processes (-n 8). The output will be written to the file Parametric.o#####,
+                                                where ##### is the SLURM job id number. Here is a snippet of the command file from
+                                                this example:</p>
+                                             <!-- PANEL -->
+                                             <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                                                <pre>echo "Hello, World! from job $LAUNCHER_JID running on task $LAUNCHER_TSK_ID, host `hostname`"<br>echo "Hello, World! from job $LAUNCHER_JID running on task $LAUNCHER_TSK_ID, host `hostname`"<br>echo "Hello, World! from job $LAUNCHER_JID running on task $LAUNCHER_TSK_ID, host `hostname`"<br>echo "Hello, World! from job $LAUNCHER_JID running on task $LAUNCHER_TSK_ID, host `hostname`"<br>...</pre>
+                                             </div>
+                                             <!-- END PANEL -->
+                                             
+                                             <!-- ACCORDION -->
+                                             <div class="accordion-group  ">
+                                                <section class="accordion-group__accordion">
+                                                   <header class="accordion-group__accordion-head">
+                                                      <h3 class="accordion-group__accordion-heading"><button type="button" class="accordion-group__accordion-btn">Calculating the number of cores per task</button></h3>
+                                                   </header>
+                                                   <div class="accordion-group__accordion-panel">
+                                                      <div class="accordion-group__accordion-content">
+                                                         <p>If the commands in your command file need to specify the number of cores to use for
+                                                            each task (for example, if your command file consists of "mpirun -np $cores_per_task
+                                                            ..." commands) then you need to calculate the number of cores yourself; unfortunately,
+                                                            there is no single launcher or SLURM variable that contains this information. However,
+                                                            the core count per task can be calculated in your SLURM script using values provided
+                                                            by SLURM. Depending upon the shell you use:</p>
+                                                         <!-- PANEL -->
+                                                         <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                                                            <pre># In bash:<br>export cores_per_task=$(( $SLURM_CPUS_ON_NODE * $SLURM_NNODES / $SLURM_NTASKS ))</pre>
+                                                         </div>
+                                                         <!-- END PANEL -->
+                                                         
+                                                         <p>&nbsp;</p>
+                                                         <!-- PANEL -->
+                                                         <div class="c-panel bg-light-gray text-default has-filter  " data-filter-terms="sample1 sample2" style=" ">
+                                                            <pre># In csh / tcsh:<br>@ cores_per_task = $SLURM_CPUS_ON_NODE * $SLURM_NNODES / $SLURM_NTASKS</pre>
+                                                         </div>
+                                                         <!-- END PANEL -->
+                                                         
+                                                         <p>&nbsp;Notice that the variable "cores_per_task" is exported to the environment by the SLURM
+                                                            script - this is required for the value to be available in the commands started by
+                                                            launcher.</p>
+                                                         <p>Launcher is described in more detail here: <a href="https://www.tacc.utexas.edu/research-development/tacc-software/the-launcher">https://www.tacc.utexas.edu/research-development/tacc-software/the-launcher</a> and here: <a href="https://github.com/TACC/launcher">https://github.com/TACC/launcher</a> .</p>
+                                                      </div>
+                                                   </div>
+                                                </section>
+                                             </div>
+                                             <!-- END ACCORDION -->
+                                             </div>
+                                       </div>
+                                    </section>
+                                 </div>
+                                 <!-- END ACCORDION -->
+                                 </div>
+                           </div>
+                        </section>
+                     </div>
+                     <!-- END ACCORDION -->
+                     
+                     <p>&nbsp;</p>
+                  </div>
+                  <!-- END REGION 1 -->
+                  <!-- SECTION FOOTER -->
+                  
+                  <div class="uu-section__footer  ">
+                     <p></p>
+                  </div>
+                  <!-- END SECTION FOOTER -->
+                  </div>
+            </section>
+            <!-- END SECTION 1 -->
+            <!-- SECTION 2 -->
+            <!-- END SECTION 2 -->
+            <!-- SECTION 3 -->
+            <!-- END SECTION 3 -->
+            <!-- SECTION 4 -->
+            <!-- END SECTION 4 -->
+            <!-- SECTION 5 -->
+            <!-- END SECTION 5 -->
+            </main>
+         <!-- END MAIN CONTENT -->
+         <!-- FOOTER -->
+         
+         <footer class="uu-footer"><div class="uu-footer__top">
+   <div class="uu-footer__top-container">
+      <div class="uu-footer__top-col1"><a href="https://www.utah.edu"><img src="https://templates.utah.edu/_main-v3-1/images/template/blocku.svg" alt="The University of Utah" class="uu-block-logo"></a><div class="department-name">
+            <h2>The Center For High Performance Computing</h2>
+         </div>
+         <div class="department-address">
+            <p>155 S 1452 E, RM. 405<br>SLC, UT 84112-0190<br>801.585.3791&nbsp;</p>
+         </div>
+      </div>
+      <div class="uu-footer__top-col2">
+         <h2 class="footer-heading">Stay in Touch</h2>
+         <hr>
+         <ul>
+            <li><a href="https://map.utah.edu/index.html?code=inscc">Find Us</a></li>
+            <li><a href="https://www.chpc.utah.edu/about/contact.php">Contact Us</a></li>
+            <li><a href="mailto:helpdesk@chpc.utah.edu">Webmaster</a></li>
+         </ul>
+      </div>
+      <div class="uu-footer__top-col5">
+         <h2 class="footer-heading">Quick Links</h2>
+         <hr>
+         <ul>
+            <li><a href="https://www.utah.edu/a-z/">A-Z Index</a></li>
+            <li><a href="https://people.utah.edu/uWho/basic.hml">Campus Directory</a></li>
+            <li><a href="https://www.map.utah.edu">Campus Map</a></li>
+            <li><a href="https://map.utah.edu/?allshuttle=on">Shuttle Tracker </a></li>
+            <li><a href="https://cis.utah.edu/">CIS</a></li>
+            <li><a href="https://www.umail.utah.edu/">UMail</a></li>
+            <li><a href="https://attheu.utah.edu/">@ The U</a></li>
+         </ul>
+      </div>
+   </div>
+</div><div class="uu-footer__bottom">
+   <div class="uu-footer__bottom-container">
+      <div class="uu-footer__bottom-col1"><a href="https://www.utah.edu/"><img src="https://templates.utah.edu/_main-v3-1/images/template/university-of-utah-logo.svg" alt="The University of Utah" class="uu-site-logo"></a></div>
+      <div class="uu-footer__bottom-col2">
+         <div class="legal">
+            <p>© 2024 The University of Utah</p>
+            <ul>
+               <li><a href="https://www.utah.edu/indigenous-land-acknowledgment/index.php">Indigenous Land Acknowledgment</a></li>
+               <li><a href="https://www.utah.edu/nondiscrimination/">Nondiscrimination &amp; Accessibility</a></li>
+               <li><a href="https://www.utah.edu/disclaimer/">Disclaimer</a></li>
+               <li><a href="https://www.utah.edu/privacy/">Privacy</a></li>
+               <li><a href="https://www.utah.edu/credits-v3.php">Credits &amp; Attributions</a></li>
+               <li><a href="https://attheu.utah.edu/media-contacts/">Media Contacts</a></li>
+               <li><span id="directedit"></span></li>
+            </ul>
+         </div>
+      </div>
+      <div class="uu-footer__bottom-col3">
+         <ul class="uu-social-list">
+            <li><a href="https://twitter.com/uutah"><span class="fa-brands fa-x-twitter" aria-hidden="true"></span><span class="sr-only">X</span></a></li>
+            <li><a href="https://www.facebook.com/universityofutah"><span class="fab fa-facebook" aria-hidden="true"></span><span class="sr-only">Facebook</span></a></li>
+            <li><a href="https://www.instagram.com/universityofutah/"><span class="fab fa-instagram" aria-hidden="true"></span><span class="sr-only">Instagram</span></a></li>
+            <li><a href="https://www.youtube.com/user/theuniversityofutah"><span class="fab fa-youtube" aria-hidden="true"></span><span class="sr-only">Youtube</span></a></li>
+         </ul>
+      </div>
+   </div>
+</div></footer>
+         <!-- END FOOTER -->
+         </div>
+      <!-- FOOT CODE -->
+      <script src="//templates.utah.edu/_main-v3-1/js/main.min.js"></script>
+      
+      <script src="//templates.utah.edu/_main-v3-1/js/assets/accordion.min.js"></script>
+      
+      
+      
+      
+      
+      
+      <script src="//templates.utah.edu/_main-v3-1/js/directedit.js"></script><script><!--
+window.onload = function(){ directedit(); }
+//
+			--></script>
+      <script src="/_resources/js/custom.js"></script>
+            
+      <!-- END FOOT CODE -->
+      
+      <div id="hidden"><a id="de" href="https://a.cms.omniupdate.com/11/?skin=utah&amp;account=utah_home&amp;site=chpc2&amp;action=de&amp;path=/documentation/software/serial-jobs.pcf">Last Updated: 4/30/24</a></div>
+      <!-- END PAGE BODY -->
+      </body>
+</html>
