@@ -1,8 +1,9 @@
 import logging
 import os
 import glob
-from typing import List, Tuple, Type
+from typing import List, Tuple, Type, Optional
 from multiprocessing import Pool
+import re
 from tqdm import tqdm
 
 import nltk
@@ -19,9 +20,9 @@ from qdrant_client import QdrantClient
 from qdrant_client.http.models import Distance, VectorParams
 
 # Constants
-SOURCE_DIRECTORY = os.environ.get('SOURCE_DIRECTORY', 'source_documents')
+SOURCE_DIRECTORY = os.environ.get('SOURCE_DIRECTORY', 'source_documents_scraper')
 EMBEDDINGS_MODEL_NAME = os.environ.get('EMBEDDINGS_MODEL_NAME', 'all-mpnet-base-v2')
-QDRANT_COLLECTION_NAME = os.environ.get('QDRANT_COLLECTION_NAME', 'chpc-rag')
+QDRANT_COLLECTION_NAME = os.environ.get('QDRANT_COLLECTION_NAME', 'chpc-rag_scraped')
 CHUNK_SIZE = 1500
 CHUNK_OVERLAP = 500
 
@@ -58,6 +59,12 @@ LOADER_MAPPING: dict[str, Tuple[Type, dict]] = {
 }
 
 
+def extract_source_url(content: str) -> Optional[str]:
+    """Extract source URL from HTML comments at the start of the file."""
+    url_pattern = r'<!--\s*Original URL:\s*(https?://[^\s>]+)\s*-->'
+    match = re.search(url_pattern, content[:500])  # Only search start of file
+    return match.group(1) if match else None
+
 def load_single_document(file_path: str) -> List[Document]:
     """Load a single document from a file path."""
     if os.path.getsize(file_path) == 0:
@@ -71,11 +78,47 @@ def load_single_document(file_path: str) -> List[Document]:
 
     loader_class, loader_args = LOADER_MAPPING[ext]
     try:
+        # For HTML files, extract source URL
+        source_url = None
+        if ext == '.html':
+            with open(file_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+            source_url = extract_source_url(content)
+
+        # Load the document using the appropriate loader
         loader = loader_class(file_path, **loader_args)
-        return loader.load()
+        documents = loader.load()
+
+        # Add metadata to each document
+        for doc in documents:
+            if not doc.metadata:
+                doc.metadata = {}
+            doc.metadata['file_path'] = file_path
+            if source_url:
+                doc.metadata['source_url'] = source_url
+            # Keep track of original source for deduplication
+            doc.metadata['source'] = source_url if source_url else file_path
+
+        return documents
+
     except Exception as e:
         logging.warning(f"Error loading file {file_path}: {e}")
         return []
+
+def get_existing_sources(client: QdrantClient) -> List[str]:
+    """Get existing document sources from the Qdrant collection."""
+    existing_docs = client.scroll(
+        collection_name=QDRANT_COLLECTION_NAME,
+        scroll_filter=None,
+        limit=10000,
+        with_payload=True,
+        with_vectors=False,
+    )[0]
+    return [
+        doc.payload.get('source_url', doc.payload.get('source')) 
+        for doc in existing_docs 
+        if doc.payload
+    ]
 
 
 def load_documents(source_dir: str, ignored_files: List[str] = []) -> List[Document]:
@@ -86,7 +129,7 @@ def load_documents(source_dir: str, ignored_files: List[str] = []) -> List[Docum
         if f not in ignored_files
     ]
 
-    with Pool(processes=os.cpu_count()) as pool:
+    with Pool(processes=8) as pool:
         results = []
         with tqdm(total=len(all_files), desc='Loading new documents', ncols=80) as pbar:
             for docs in pool.imap_unordered(load_single_document, all_files):
@@ -162,7 +205,6 @@ def main():
         logging.info("Ingestion complete.")
     else:
         logging.info("No new documents to process.")
-
 
 if __name__ == "__main__":
     main()
