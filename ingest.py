@@ -115,8 +115,8 @@ def get_existing_sources(client: QdrantClient) -> List[str]:
         with_vectors=False,
     )[0]
     return [
-        doc.payload.get('source_url', doc.payload.get('source')) 
-        for doc in existing_docs 
+        doc.payload.get('source_url', doc.payload.get('source'))
+        for doc in existing_docs
         if doc.payload
     ]
 
@@ -207,4 +207,3 @@ def main():
         logging.info("No new documents to process.")
 
 if __name__ == "__main__":
-    main()
