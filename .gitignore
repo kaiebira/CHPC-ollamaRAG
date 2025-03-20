@@ -1,1 +1,4 @@
 langchain_qdrant/
+source_documents/
+source_documents_scraper/
+scrape.py
