@@ -13,16 +13,16 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.docstore.document import Document
 from langchain_community.document_loaders import (
     CSVLoader, EverNoteLoader, PyMuPDFLoader, TextLoader, UnstructuredEPubLoader,
-    UnstructuredHTMLLoader, UnstructuredMarkdownLoader, UnstructuredODTLoader,
+    BSHTMLLoader, UnstructuredMarkdownLoader, UnstructuredODTLoader,
     UnstructuredPowerPointLoader, UnstructuredWordDocumentLoader
 )
 from qdrant_client import QdrantClient
 from qdrant_client.http.models import Distance, VectorParams
 
 # Constants
-SOURCE_DIRECTORY = os.environ.get('SOURCE_DIRECTORY', 'source_documents_scraper')
+SOURCE_DIRECTORY = os.environ.get('SOURCE_DIRECTORY', 'source_documents/chpc_utah')
 EMBEDDINGS_MODEL_NAME = os.environ.get('EMBEDDINGS_MODEL_NAME', 'all-mpnet-base-v2')
-QDRANT_COLLECTION_NAME = os.environ.get('QDRANT_COLLECTION_NAME', 'chpc-rag_scraped')
+QDRANT_COLLECTION_NAME = os.environ.get('QDRANT_COLLECTION_NAME', 'chpc-rag')
 CHUNK_SIZE = 1500
 CHUNK_OVERLAP = 500
 
@@ -49,7 +49,7 @@ LOADER_MAPPING: dict[str, Tuple[Type, dict]] = {
     ".docx": (UnstructuredWordDocumentLoader, {}),
     ".enex": (EverNoteLoader, {}),
     ".epub": (UnstructuredEPubLoader, {}),
-    ".html": (UnstructuredHTMLLoader, {}),
+    ".html": (BSHTMLLoader, {"get_text_separator": " "}), # Use BSHTMLLoader for HTML
     ".md": (UnstructuredMarkdownLoader, {}),
     ".odt": (UnstructuredODTLoader, {}),
     ".pdf": (PyMuPDFLoader, {}),
@@ -93,10 +93,12 @@ def load_single_document(file_path: str) -> List[Document]:
         for doc in documents:
             if not doc.metadata:
                 doc.metadata = {}
+            # BSHTMLLoader puts source in metadata by default, but ensure file_path is there
             doc.metadata['file_path'] = file_path
             if source_url:
                 doc.metadata['source_url'] = source_url
             # Keep track of original source for deduplication
+            # Use source_url if available, otherwise use file_path
             doc.metadata['source'] = source_url if source_url else file_path
 
         return documents
@@ -105,20 +107,18 @@ def load_single_document(file_path: str) -> List[Document]:
         logging.warning(f"Error loading file {file_path}: {e}")
         return []
 
+
 def get_existing_sources(client: QdrantClient) -> List[str]:
     """Get existing document sources from the Qdrant collection."""
     existing_docs = client.scroll(
         collection_name=QDRANT_COLLECTION_NAME,
         scroll_filter=None,
-        limit=10000,
+        limit=10000, # Adjust limit as needed, or implement pagination
         with_payload=True,
         with_vectors=False,
     )[0]
-    return [
-        doc.payload.get('source_url', doc.payload.get('source'))
-        for doc in existing_docs
-        if doc.payload
-    ]
+    # Ensure payload exists before trying to access 'source'
+    return [doc.payload.get('source') for doc in existing_docs if doc.payload and doc.payload.get('source')]
 
 
 def load_documents(source_dir: str, ignored_files: List[str] = []) -> List[Document]:
@@ -179,24 +179,18 @@ def setup_vector_store(client: QdrantClient, embeddings: HuggingFaceEmbeddings) 
     )
 
 
-def get_existing_sources(client: QdrantClient) -> List[str]:
-    """Get existing document sources from the Qdrant collection."""
-    existing_docs = client.scroll(
-        collection_name=QDRANT_COLLECTION_NAME,
-        scroll_filter=None,
-        limit=10000,
-        with_payload=True,
-        with_vectors=False,
-    )[0]
-    return [doc.payload.get('source') for doc in existing_docs if doc.payload]
-
-
 def main():
     client = setup_qdrant_client()
     embeddings = HuggingFaceEmbeddings(model_name=EMBEDDINGS_MODEL_NAME)
     vector_store = setup_vector_store(client, embeddings)
 
+    # NOTE: This current implementation fetches all existing source identifiers
+    # and skips processing files whose source identifier is already in Qdrant.
+    # This means if a file is updated, it WILL NOT be re-ingested unless
+    # the Qdrant collection is cleared first or a more sophisticated update
+    # mechanism (checking modification times/hashes) is implemented.
     existing_sources = get_existing_sources(client)
+    logging.info(f"Found {len(existing_sources)} existing sources in Qdrant. These will be skipped.")
     chunks = process_documents(ignored_files=existing_sources)
 
     if chunks:
@@ -207,3 +201,4 @@ def main():
         logging.info("No new documents to process.")
 
 if __name__ == "__main__":
+    main()
