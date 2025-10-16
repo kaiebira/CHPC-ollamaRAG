@@ -1,6 +1,25 @@
-nltk
-langchain
-langchain_qdrant
-langchain_huggingface
-langchain_community
-unstructured
+# Core dependencies
+langchain>=0.1.0
+langchain-community>=0.0.10
+langchain-huggingface>=0.0.1
+langchain-ollama>=0.1.0
+langchain-qdrant>=0.1.0
+
+# Qdrant vector database
+qdrant-client>=2.7.0
+
+# Web scraping
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+
+# Embeddings and ML
+sentence-transformers>=2.2.0
+
+# API server
+uvicorn>=0.24.0
+starlette>=0.35.0
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+
+# Utilities
+tqdm>=4.66.0
